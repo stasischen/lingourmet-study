@@ -308,17 +308,26 @@ function prepare(canonical,locale){
  return projection.doc;
 }
 function meaningful(tokens){return tokens.some(token=>token.kind!=='separator'&&/[\p{L}\p{N}]/u.test(token.text));}
+function speakerLabel(text){return /^[\p{L}\p{M}\p{N} .'’·・_-]{1,40}[:：]\s*$/u.test(text);}
 function catalog(doc){
- const targets=[],coveredUnits=new Set();
+ const targets=[],coveredUnits=new Set(),seenRanges=new Set(),seenMeanings=new Set();
  function add(kind,ref,extra={}){
   const {unit,tokens}=M.selected(doc,ref);
   if((unit.lang||doc.metadata.targetLanguage)!==doc.metadata.targetLanguage||!meaningful(tokens))return;
+  const text=tokens.map(token=>token.text).join(''),explanation=M.meaning(doc,ref);
+  if(speakerLabel(text)||speakerLabel(unit.tokens.map(token=>token.text).join('')))return;
+  const rangeKey=JSON.stringify([unit.id,tokens[0].id,tokens[tokens.length-1].id]);
+  const meaningKey=explanation?JSON.stringify([text,explanation]):null;
+  // Same source range is always redundant. Across occurrences, deduplicate
+  // only exact text with an explicit matching contextual meaning. A missing
+  // meaning does not establish equivalence, and different meanings stay apart.
+  if(seenRanges.has(rangeKey)||(meaningKey&&seenMeanings.has(meaningKey)))return;
   // Bound the caller's checkbox/control allocation as well as generated text.
   // Reject visibly rather than silently omitting source IDs from the catalog.
   if(targets.length>=LIMITS.maxAvailableTargets)fail('targets','This lesson has more than '+LIMITS.maxAvailableTargets+' roleplay targets; use a smaller lesson.','resource_limit');
-  const text=tokens.map(token=>token.text).join('');
   const id=JSON.stringify(kind==='note'?[kind,extra.noteId]:kind==='chunk'?[kind,unit.id,extra.chunkId]:[kind,unit.id]);
-  targets.push({id,kind,label:text.length>100?text.slice(0,100)+'…':text,text,explanation:M.meaning(doc,ref),ref:{...ref},...extra});
+  targets.push({id,kind,label:text.length>100?text.slice(0,100)+'…':text,text,explanation,ref:{...ref},...extra});
+  seenRanges.add(rangeKey);if(meaningKey)seenMeanings.add(meaningKey);
  }
  // A roleplay target is a source expression, not a separate generated card for
  // every exercise direction. Keep the first eligible authored note per unit.
@@ -326,6 +335,10 @@ function catalog(doc){
   if(coveredUnits.has(note.unit))continue;
   add('note',{unit:note.unit},{noteId:note.id});coveredUnits.add(note.unit);
  }
+ // Authored practice expressions are the primary learning targets. Extra
+ // dialogue names, repetitions and display chunks should not crowd that list.
+ if(targets.length>=LIMITS.minTargets)return targets;
+ // Reading-only/incomplete-practice lessons still support source-based roleplay.
  for(const unit of doc.units){
   if(!coveredUnits.has(unit.id))add('unit',{unit:unit.id});
   for(const chunk of unit.chunks||[])add('chunk',{unit:unit.id,from:chunk.from,to:chunk.to},{chunkId:chunk.id});
