@@ -1211,7 +1211,7 @@ function appendExpressionLinks(container,ref,sourceKey){
  const rows=lessonExpressions().filter(entry=>entry.bindings.some(binding=>binding.ref.unit===ref.unit&&(!sourceKey||binding.source.key===sourceKey)));
  if(!rows.length)return;
  const links=node('div',undefined,'source-links sentence-expression-links');links.setAttribute('aria-label','這句的表達與文法');
- for(const entry of rows){const link=button(entry.forms.join(' · '),()=>{if(link.isConnected)openExpression(entry.id,link,activeIndex);},'source-link');link.setAttribute('aria-label','查表達與文法：'+expressionLabel(entry));links.append(link);}
+ for(const entry of rows){const link=button(expressionLabel(entry),()=>{if(link.isConnected)openExpression(entry.id,link,activeIndex);},'source-link');link.setAttribute('aria-label','查表達與文法：'+expressionLabel(entry));links.append(link);}
  container.append(links);
 }
 function courseExpressions(content){
