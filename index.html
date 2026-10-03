@@ -1,0 +1,646 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lingourmet · 教材工作室</title><style>
+:root{color-scheme:light dark;--bg:#f5f3ec;--fg:#20302b;--card:#fffefa;--muted:#596960;--line:#d9dfd8;--accent:#216b52;--on:#fff;--chip:#e7f1ea}html[data-theme=dark]{--bg:#151d1a;--fg:#e8eee9;--card:#202b25;--muted:#b7c6bc;--line:#405348;--accent:#82d5aa;--on:#15291e;--chip:#2d4738}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 system-ui,sans-serif}header,main{max-width:860px;margin:auto;padding:20px}header{display:flex;align-items:center;justify-content:space-between}h1{font-size:clamp(26px,5vw,38px);line-height:1.3}h2{font-size:24px}h3{font-size:19px}button,input,textarea,select{font:inherit}select{min-height:44px;max-width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg)}button{cursor:pointer;min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--fg);padding:8px 15px}button:hover{border-color:var(--accent)}button:focus-visible,a:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}button.primary{background:var(--accent);color:var(--on);border-color:transparent}button:disabled{opacity:.6;cursor:default}.row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0}.muted,small{color:var(--muted)}.eyebrow{letter-spacing:.08em;font-size:13px}.unit{font-size:1.18em;white-space:pre-wrap;overflow-wrap:anywhere;line-height:2.4}.word{display:inline;min-height:44px;padding:3px 2px;margin:0 1px;border:0;border-bottom:1px dotted var(--accent);border-radius:3px;background:transparent;line-height:2.4;white-space:pre-wrap;overflow-wrap:anywhere}.word:hover{background:var(--chip)}.inline-ref{border-bottom:2px solid var(--accent)}.para{white-space:pre-wrap;overflow-wrap:anywhere;line-height:2.4;margin:20px 0}.translation{color:var(--muted);padding:10px 0}.pill{background:var(--chip);border:0}.actions{display:flex;justify-content:space-between;gap:10px;margin-top:24px}.practice{min-height:230px;display:flex;flex-direction:column;justify-content:center;text-align:center}.prompt{font-size:25px}.answer{border-top:1px solid var(--line);padding-top:18px;margin-top:18px}textarea{width:100%;min-height:170px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}dialog{max-width:min(680px,94vw);max-height:90vh;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--fg);padding:24px}dialog::backdrop{background:#0008}#status{min-height:1.7em;overflow-wrap:anywhere}.sample{flex:1;min-width:230px;text-align:left;padding:20px}.tabs{margin:20px 0}.tabs [aria-pressed=true]{background:var(--accent);color:var(--on)}[hidden]{display:none!important}@media(max-width:500px){header,main{padding:14px}.card{padding:18px}.actions{flex-wrap:wrap}.actions button{flex:1}.sample{min-width:100%}.prompt{font-size:22px}}
+/* Native ruby groups can be unbreakable: scroll inside the text area, never the page. */
+.reader-card,.para,.prompt,.answer{max-width:100%;overflow-x:auto}.para,.prompt{padding:6px}.answer{padding-inline:6px;padding-bottom:6px}
+ruby{ruby-position:over;ruby-align:center}rt{font-size:.55em;line-height:1.1;font-weight:400;user-select:none}#readings[aria-pressed=true]{background:var(--chip);border-color:var(--accent)}.reading-help{font-size:13px;margin:6px 0}.reading-options{margin:-8px 0 18px}
+#word-dialog{position:fixed;inset:auto 12px 12px;z-index:20;width:calc(100% - 24px);max-width:836px;max-height:35vh;overflow:auto;margin:0 auto;padding:14px 20px;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--fg);box-shadow:0 8px 32px #0004}#word-dialog{overflow-wrap:anywhere}#word-dialog h2{font-size:22px;margin:0}#word-dialog p{margin:4px 0}#word-dialog .actions{margin-top:10px}body.word-open{padding-bottom:calc(35vh + 24px)}
+.reading-chunk{margin:0;padding:3px 2px;border-bottom-style:solid;box-decoration-break:clone;-webkit-box-decoration-break:clone}.reading-chunk[aria-expanded=true],.token-part[aria-pressed=true]{background:var(--chip)}#word-parts{border-top:1px solid var(--line);margin-top:10px;padding-top:6px}#word-parts .token-parts{display:block;max-width:100%;overflow-x:auto;padding:6px 2px}#word-context{font-size:14px}#expand-word{margin:8px 0}#content:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.locale-settings{display:flex;flex-wrap:wrap;gap:14px 24px;margin:12px 0}.locale-settings>details{align-self:center}.locale-settings label{display:flex;flex-direction:column;gap:4px}.locale-settings p{flex-basis:100%;margin:0}.coverage{border-left:3px solid var(--accent);padding-left:12px}.missing-locale{color:var(--muted);font-style:italic}.coverage-details{font-size:14px}.coverage-details ul{padding-left:22px}.coverage-details li{overflow-wrap:anywhere}</style></head><body><header><strong>Lingourmet</strong><div class="row"><button id="home">教材</button><button id="theme" aria-pressed="false">深色模式</button></div></header><main><p class="eyebrow">用內容學語言</p><div id="status" role="status" aria-live="polite"></div><section id="locale-settings" class="locale-settings" aria-label="語言設定" hidden><label>學習語言<span id="target-language"></span></label><label for="teaching-locale">教學語言<select id="teaching-locale" aria-describedby="locale-coverage"></select></label><details id="ui-language-settings"><summary>介面語言</summary><label for="ui-locale">顯示語言<select id="ui-locale" disabled aria-describedby="ui-locale-help"><option value="zh-Hant">繁體中文</option></select></label><p id="ui-locale-help" class="muted reading-help">介面目前使用繁體中文，可獨立選擇教材的教學語言。</p></details><p id="locale-coverage" class="coverage" role="status" aria-live="polite"></p><details id="locale-missing" class="coverage-details" hidden><summary>翻譯與解說</summary><ul id="locale-coverage-list"></ul><ul id="locale-missing-list"></ul></details></section><section id="library"><h1>今天，想怎麼學？</h1><p class="muted">從一篇文章開始，或跟著解說學會一個表達。</p><div id="samples" class="row"></div><div id="material-tools" class="card" hidden><h2>目前教材</h2><p id="material-title"></p><div class="row"><label for="export-scope">匯出範圍</label><select id="export-scope"><option value="all">全部教學語言</option><option value="selected">目前教學語言</option></select><button id="export">匯出教材</button></div><p id="export-help" class="muted reading-help">保留原始教材、文字、語塊與練習識別。</p></div><div class="card"><h2>帶入自己的教材</h2><p>匯入教材檔案，或貼上教材內容。</p><div class="row"><button id="choose">選擇 JSON 檔案</button><button id="paste">貼上 JSON</button><input id="file" type="file" accept="application/json,.json" hidden></div></div><p class="muted">這是教材格式的試作。接受 lingourmet.lesson v1／v2；不接受其他教材格式或圖片、錄音包。</p></section><section id="lesson" hidden><div class="row"><span id="mode" class="eyebrow"></span><span id="languages" class="muted"></span></div><h1 id="title"></h1><p id="goal" class="muted"></p><nav class="row tabs" aria-label="學習階段"><button id="read-tab" aria-pressed="true">閱讀與解說</button><button id="practice-tab" aria-pressed="false">練習</button></nav><div id="reading-options" class="reading-options" hidden><button id="readings" aria-pressed="true" aria-describedby="reading-help">顯示讀音</button><p id="reading-help" class="muted reading-help">日文讀音會顯示在文字上方；練習題面先隱藏，顯示答案後才出現。</p></div><div id="content" tabindex="-1" aria-label="教材內容"></div></section></main><dialog id="import-dialog"><h2>匯入教材</h2><div id="paste-box"><label for="json">教材 JSON</label><textarea id="json" spellcheck="false"></textarea><button id="check">檢查教材</button></div><div id="import-preview" hidden></div><p id="import-error" role="alert"></p><div class="actions"><button id="cancel-import">取消</button><button id="confirm-import" class="primary" hidden>開啟教材</button></div></dialog><section id="word-dialog" role="region" aria-label="語塊與詞語提示" hidden><h2 id="word-text"></h2><p id="word-reading" class="muted"></p><p id="word-meaning"></p><p id="word-grammar" class="muted"></p><p id="word-context" class="muted"></p><button id="expand-word" aria-expanded="false" aria-controls="word-parts" hidden>拆開看單字與助詞</button><div id="word-parts" hidden></div><p id="word-status" role="status" aria-live="polite"></p><div class="actions"><button id="close-word">收合</button><button id="play-word" class="primary">再聽一次</button></div></section>
+<script>(function(root){
+'use strict';
+const TYPES=['recognition','production','listening','cloze'];
+const MAX=1024*1024;
+function fail(path,message){throw new Error(`${path}: ${message}`);}
+function object(v,path,keys,required=[]){if(!v||typeof v!=='object'||Array.isArray(v))fail(path,'需要物件');for(const k of Object.keys(v))if(!keys.includes(k))fail(`${path}.${k}`,'不支援的欄位');for(const k of required)if(!(k in v))fail(`${path}.${k}`,'缺少欄位');return v;}
+function str(v,p,max=10000){if(typeof v!=='string'||!v.length||v.length>max)fail(p,'需要非空文字');return v;}
+function list(v,p,max=500){if(!Array.isArray(v)||v.length>max)fail(p,'需要陣列，且不能超過限制');return v;}
+function language(v,p){str(v,p,40);if(!/^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(v))fail(p,'語言標記格式不正確');}
+function identifier(v,p){str(v,p,100);if(!/^[A-Za-z0-9][A-Za-z0-9_.:-]*$/.test(v))fail(p,'ID 只能使用英數及 _ . : -');}
+function unique(items,p){const seen=new Set();for(const x of items){identifier(x.id,p+'.id');if(seen.has(x.id))fail(p,'ID 重複');seen.add(x.id);}}
+function strings(v,p){list(v,p,100).forEach((s,i)=>str(s,p+'['+i+']',1000));}
+function dictionaryRef(v,p){
+ object(v,p,['namespace','entryId','senseId','revision'],['namespace','entryId']);
+ str(v.namespace,p+'.namespace',100);if(!/^[a-z0-9][a-z0-9_.:-]*$/.test(v.namespace))fail(p+'.namespace','需要小寫英數及 _ . : - 的命名空間');
+ for(const k of ['entryId','senseId','revision'])if(k in v){str(v[k],p+'.'+k,200);if(/[\s\u0000-\u001f\u007f-\u009f]/u.test(v[k]))fail(p+'.'+k,'字典識別值不能含空白或控制字元');}
+}
+function ruby(v,surface,p){
+ list(v,p,100);if(!v.length)fail(p,'讀音對齊至少需要一段');
+ for(const [i,s]of v.entries()){const q=p+'['+i+']';object(s,q,['text','reading'],['text']);str(s.text,q+'.text',2000);if('reading'in s){str(s.reading,q+'.reading',2000);if(!s.reading.trim())fail(q+'.reading','讀音不能只有空白');}}
+ if(v.map(s=>s.text).join('')!==surface)fail(p,'讀音對齊文字必須精確重建 token.text');
+ if(v.length>1){
+  if(typeof Intl==='undefined'||typeof Intl.Segmenter!=='function')fail(p,'此瀏覽器無法檢查多段讀音對齊；請使用單段整詞註記或更新瀏覽器');
+  const boundaries=new Set([...new Intl.Segmenter(undefined,{granularity:'grapheme'}).segment(surface)].map(s=>s.index));let end=0;
+  for(const s of v.slice(0,-1)){end+=s.text.length;if(!boundaries.has(end))fail(p,'讀音對齊不能拆開同一字形（例如組合字元或代理對）');}
+ }
+}
+// Conservative display budget: every annotated segment adds ruby/base/rt/text
+// nodes. Count even currently hidden or non-Japanese hints before allocating UI.
+function displayCost(tokens){let nodes=0,chars=0;for(const t of tokens){nodes++;chars+=t.text.length;const segments=t.ruby||(t.reading&&t.reading!==t.text?[{text:t.text,reading:t.reading}]:[{text:t.text}]);for(const s of segments){nodes+='reading'in s?4:1;chars+=(s.reading||'').length;}}return {nodes,chars};}
+// At most one selected group is expanded into child controls at a time. Reserve
+// its duplicate surface/ruby allocation as well as the original reader view.
+function chunkExpansionCost(unit){let nodes=0,chars=0;for(const c of unit.chunks||[]){const ts=range(unit,c,'chunks');if(ts.length<2)continue;const cost=displayCost(ts);nodes=Math.max(nodes,cost.nodes+24);chars=Math.max(chars,cost.chars+100);}return {nodes,chars};}
+function range(unit,ref,p){const a=unit.tokens.findIndex(t=>t.id===ref.from),b=unit.tokens.findIndex(t=>t.id===ref.to);if(a<0||b<a)fail(p,'文字範圍不存在或順序不正確');return unit.tokens.slice(a,b+1);}
+function selected(doc,ref){const u=doc.units.find(u=>u.id===ref.unit);if(!u)fail('reference','找不到文字');return {unit:u,tokens:ref.from===undefined?u.tokens:range(u,ref,'range')};}
+// Display groups are authored wrappers, never inferred lexical or review units.
+// Partial selections only use fully contained chunks; edge tokens stay visible.
+function readingGroups(doc,ref){
+ const {unit,tokens}=selected(doc,ref),positions=new Map(tokens.map((t,i)=>[t.id,i]));
+ const starts=new Map((unit.chunks||[]).filter(c=>positions.has(c.from)&&positions.has(c.to)).map(c=>[c.from,c]));
+ const groups=[];for(let i=0;i<tokens.length;){const chunk=starts.get(tokens[i].id),end=chunk?positions.get(chunk.to):i;const group={from:tokens[i].id,to:tokens[end].id,tokens:tokens.slice(i,end+1)};if(chunk)group.chunk=chunk;groups.push(group);i=end+1;}
+ return groups;
+}
+function text(doc,ref){return selected(doc,ref).tokens.map(t=>t.text).join('');}
+function meaning(doc,ref){const {unit:u,tokens}=selected(doc,ref);if(ref.from===undefined)return u.translation||'';const exact=(u.spans||[]).find(s=>s.from===ref.from&&s.to===ref.to);return exact?.translation||(tokens.length===1?tokens[0].translation||'':'');}
+function speech(doc,ref){const {unit:u,tokens}=selected(doc,ref);const lang=u.lang||doc.metadata.targetLanguage;const annotation=(u.spans||[]).find(s=>s.from===ref.from&&s.to===ref.to);return {lang,text:annotation?.reading||tokens.map(t=>t.reading||t.text).join('')};}
+function validate(doc){
+ object(doc,'$', ['format','version','revision','id','mode','metadata','units','blocks','notes','assets'],['format','version','revision','id','mode','metadata','units','blocks']);
+ if(doc.format!=='lingourmet.lesson'||doc.version!==1)fail('format','不支援的教材格式版本');
+ identifier(doc.id,'id');if(!Number.isSafeInteger(doc.revision)||doc.revision<1)fail('revision','需要正整數');
+ if(!['article','teaching'].includes(doc.mode))fail('mode','需要 article 或 teaching');
+ const m=object(doc.metadata,'metadata',['title','targetLanguage','supportLanguage','author','license','topic','goals','tags','level'],['title','targetLanguage','supportLanguage']);
+ str(m.title,'metadata.title',200);language(m.targetLanguage,'metadata.targetLanguage');language(m.supportLanguage,'metadata.supportLanguage');
+ for(const k of ['author','license','topic','level'])if(k in m)str(m[k],'metadata.'+k,1000);
+ for(const k of ['goals','tags'])if(k in m)strings(m[k],'metadata.'+k);
+ list(doc.units,'units');if(!doc.units.length)fail('units','至少需要一份文字');unique(doc.units,'units');
+ for(const u of doc.units){const p='units.'+u.id;object(u,p,['id','lang','translation','tokens','spans','chunks'],['id','tokens']);if('lang'in u)language(u.lang,p+'.lang');if('translation'in u)str(u.translation,p+'.translation');list(u.tokens,p+'.tokens',2000);if(!u.tokens.length)fail(p,'沒有文字');unique(u.tokens,p+'.tokens');
+  for(const t of u.tokens){const q=p+'.tokens.'+t.id;object(t,q,['id','text','kind','reading','translation','lemma','grammar','dictionaryRef','ruby'],['id','text']);str(t.text,q+'.text',2000);if(t.kind==='separator'?!/^\s+$/.test(t.text):/\s/.test(t.text))fail(q,'請將空白獨立存為 separator');if('kind'in t&&!['word','separator'].includes(t.kind))fail(q,'無效斷詞類型');for(const k of ['reading','translation','lemma'])if(k in t)str(t[k],q+'.'+k,2000);if('grammar'in t)strings(t.grammar,q+'.grammar');if(t.kind==='separator'&&['reading','translation','lemma','grammar','dictionaryRef','ruby'].some(k=>k in t))fail(q,'分隔符不能有詞彙註解');if('dictionaryRef'in t)dictionaryRef(t.dictionaryRef,q+'.dictionaryRef');if('ruby'in t)ruby(t.ruby,t.text,q+'.ruby');}
+  if('spans'in u){list(u.spans,p+'.spans');unique(u.spans,p+'.spans');const seen=new Set();for(const s of u.spans){const q=p+'.spans.'+s.id;object(s,q,['id','from','to','translation','reading','grammar','dictionaryRef'],['id','from','to']);const ts=range(u,s,q);const key=s.from+'|'+s.to;if(seen.has(key))fail(p,'重複語塊範圍');seen.add(key);for(const k of ['translation','reading'])if(k in s)str(s[k],q+'.'+k);if('grammar'in s)strings(s.grammar,q+'.grammar');if('dictionaryRef'in s){if(ts.every(t=>t.kind==='separator'))fail(q,'分隔符不能有字典引用');dictionaryRef(s.dictionaryRef,q+'.dictionaryRef');}}}
+  if('chunks'in u){
+   list(u.chunks,p+'.chunks');const ids=new Set(),positions=new Map(u.tokens.map((t,i)=>[t.id,i]));let previous=-1;
+   for(const [i,c]of u.chunks.entries()){
+    const q=p+'.chunks['+i+']';object(c,q,['id','from','to'],['id','from','to']);identifier(c.id,q+'.id');identifier(c.from,q+'.from');identifier(c.to,q+'.to');
+    if(ids.has(c.id))fail(q+'.id','ID 重複');ids.add(c.id);
+    const ts=range(u,c,q),start=positions.get(c.from),end=positions.get(c.to);
+    if(start<=previous)fail(q,'閱讀分組必須按 token 順序排列且不能重疊');
+    if(ts[0].kind==='separator'||ts[ts.length-1].kind==='separator')fail(q,'閱讀分組的起訖不能是空白分隔符');
+    previous=end;
+   }
+  }
+  const cost=displayCost(u.tokens),expansion=chunkExpansionCost(u);if(cost.nodes+9+expansion.nodes>5000||cost.chars+(u.translation||'').length+expansion.chars>50000)fail(p,'單份文字內容太多，請拆成數份');
+ }
+ const units=new Map(doc.units.map(u=>[u.id,u]));const notes='notes'in doc?doc.notes:[];list(notes,'notes');unique(notes,'notes');
+ for(const n of notes){const p='notes.'+n.id;object(n,p,['id','unit','templates','prompt','clozes','tags'],['id','unit','templates']);const u=units.get(n.unit);if(!u)fail(p,'文字引用不存在');list(n.templates,p+'.templates',4);if(!n.templates.length||new Set(n.templates).size!==n.templates.length||n.templates.some(t=>!TYPES.includes(t)))fail(p,'題型不正確或重複');if('prompt'in n)str(n.prompt,p+'.prompt');if('tags'in n)strings(n.tags,p+'.tags');if(n.templates.some(t=>['recognition','production','listening'].includes(t))&&!u.translation)fail(p,'此題型需要翻譯');
+  if('clozes'in n){list(n.clozes,p+'.clozes',100);unique(n.clozes,p+'.clozes');for(const c of n.clozes){object(c,p+'.cloze',['id','ranges'],['id','ranges']);list(c.ranges,p+'.ranges',50);if(!c.ranges.length)fail(p,'挖空範圍為空');const covered=new Set();for(const r of c.ranges){object(r,p+'.range',['from','to'],['from','to']);for(const t of range(u,r,p)){if(covered.has(t.id))fail(p,'挖空範圍重疊');covered.add(t.id);}}}}
+  if(n.templates.includes('cloze')&&!n.clozes?.length)fail(p,'挖空題缺少範圍');
+ }
+ let cardCount=0,cardChars=0;for(const n of notes){const u=units.get(n.unit);const size=displayCost(u.tokens).chars+(u.translation||'').length+(n.prompt||'').length;const total=n.templates.filter(t=>t!=='cloze').length+(n.templates.includes('cloze')?n.clozes.length:0);cardCount+=total;cardChars+=total*(2*size+50);}if(cardCount>500||cardChars>2000000)fail('notes','練習總量超過試作限制，請拆成較小的教材');const noteIds=new Set(notes.map(n=>n.id));list(doc.blocks,'blocks');if(!doc.blocks.length)fail('blocks','需要內容');unique(doc.blocks,'blocks');
+ for(const b of doc.blocks){const p='blocks.'+b.id;if(b.type==='paragraph'){object(b,p,['id','type','stage','runs'],['id','type','runs']);list(b.runs,p+'.runs',1000);if(!b.runs.length)fail(p,'段落為空');for(const r of b.runs){if('text'in r){object(r,p+'.run',['text','lang'],['text']);str(r.text,p+'.text');if('lang'in r)language(r.lang,p+'.lang');}else{object(r,p+'.run',['unit','from','to'],['unit']);if(!units.has(r.unit))fail(p,'文字引用不存在');if(('from'in r)!==('to'in r))fail(p,'範圍起訖必須一起提供');if('from'in r)range(units.get(r.unit),r,p);}}}else if(b.type==='activity'){object(b,p,['id','type','stage','notes'],['id','type','notes']);list(b.notes,p+'.notes');if(!b.notes.length||new Set(b.notes).size!==b.notes.length||b.notes.some(n=>!noteIds.has(n)))fail(p,'題目引用不存在或重複');}else fail(p,'不支援的內容區塊');if('stage'in b&&!['understand','practice','apply'].includes(b.stage))fail(p,'無效學習階段');}
+ for(const b of doc.blocks){if(b.type!=='paragraph')continue;let nodes=1,chars=0,panelNodes=0,panelChars=0;for(const r of b.runs){if('text'in r){nodes+=2;chars+=r.text.length;}else{const u=units.get(r.unit);const ts=r.from===undefined?u.tokens:range(u,r,'block');const cost=displayCost(ts),expansion=r.from===undefined?chunkExpansionCost(u):ts.length>1?{nodes:cost.nodes+24,chars:cost.chars+100}:{nodes:0,chars:0};nodes+=cost.nodes+(r.from===undefined?9:1);chars+=cost.chars+(r.from===undefined?(u.translation||'').length:0);panelNodes=Math.max(panelNodes,expansion.nodes);panelChars=Math.max(panelChars,expansion.chars);}if(nodes+panelNodes>5000||chars+panelChars>50000)fail('blocks.'+b.id,'單段內容太多，請拆成數段');}}
+ if('assets'in doc){list(doc.assets,'assets');if(doc.assets.length)fail('assets','這版試作僅支援文字與裝置發音，尚不支援附加檔案');}
+ return doc;
+}
+function noDuplicateKeys(raw){
+ let i=0;const ws=()=>{while(/\s/.test(raw[i]||'')&&i<raw.length)i++;};
+ function quoted(){const start=i++;while(i<raw.length){if(raw[i]==='\\'){i+=2;continue;}if(raw[i++]==='"')return JSON.parse(raw.slice(start,i));}throw new Error('未結束的字串');}
+ function value(depth){if(depth>80)fail('$','結構太深');ws();if(raw[i]==='{'){i++;const keys=new Set();ws();if(raw[i]==='}'){i++;return;}while(i<raw.length){ws();if(raw[i]!== '"')throw new Error('JSON 物件鍵格式錯誤');const k=quoted();if(keys.has(k))fail('$','重複欄位：'+k);keys.add(k);ws();if(raw[i++]!==':')throw new Error('缺少冒號');value(depth+1);ws();const ch=raw[i++];if(ch==='}')return;if(ch!==',')throw new Error('JSON 分隔格式錯誤');}throw new Error('未結束的物件');}if(raw[i]==='['){i++;ws();if(raw[i]===']'){i++;return;}while(i<raw.length){value(depth+1);ws();const ch=raw[i++];if(ch===']')return;if(ch!==',')throw new Error('JSON 陣列格式錯誤');}throw new Error('未結束的陣列');}if(raw[i]==='"'){quoted();return;}const start=i;while(i<raw.length&&!/[\s,}\]]/.test(raw[i]))i++;if(i===start)throw new Error('JSON 值錯誤');}
+ value(0);ws();if(i!==raw.length)throw new Error('JSON 結尾有多餘內容');
+}
+function decode(raw){if(typeof raw!=='string'||new TextEncoder().encode(raw).length>MAX)fail('$','檔案超過 1 MiB');noDuplicateKeys(raw);return JSON.parse(raw);}
+function parse(raw){const doc=validate(decode(raw));stringify(doc);return doc;}
+function stringify(doc){validate(doc);const raw=JSON.stringify(doc,null,2)+'\n';if(new TextEncoder().encode(raw).length>MAX)fail('$','檔案超過 1 MiB');return raw;}
+function cards(doc,noteIds){const ids=noteIds?new Set(noteIds):null;const result=[];for(const n of doc.notes||[]){if(ids&&!ids.has(n.id))continue;for(const kind of n.templates){const cs=kind==='cloze'?n.clozes:[null];for(const c of cs){const unit=doc.units.find(u=>u.id===n.unit);const hidden=new Set(c?c.ranges.flatMap(r=>range(unit,r,'cloze').map(t=>t.id)):[]);let inside=false;const masked=unit.tokens.map(t=>{if(hidden.has(t.id)){if(inside)return '';inside=true;return '［　］';}inside=false;return t.text;}).join('');result.push({id:JSON.stringify([doc.id,n.id,kind,c?.id||'']),unit:n.unit,kind,prompt:kind==='production'?(n.prompt||unit.translation):kind==='recognition'?text(doc,{unit:n.unit}):kind==='cloze'?masked:'聽完後，試著說出意思。',answer:['production','cloze'].includes(kind)?text(doc,{unit:n.unit}):unit.translation});}}}return result;}
+const api={validate,parse,stringify,decode,text,meaning,speech,cards,selected,readingGroups,MAX};root.LessonModel=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window!=='undefined'?window:globalThis);
+</script>
+<script>(function(root){
+'use strict';
+// The v1 renderer is a projection only. Canonical v2 content never acquires UI
+// preferences, fallback translations, generated cards or private study events.
+const M=root.LessonModel||(typeof require==='function'?require('./model.js'):null);
+if(!M)throw new Error('Load model.js before model-v2.js');
+const V1={...M}, TYPES=['recognition','production','listening','cloze'];
+const FORBIDDEN=new Set(['__proto__','constructor','prototype']);
+function fail(path,message,code='invalid_content'){const e=new Error(path+': '+message);e.code=code;e.path=path;throw e;}
+function object(v,p,keys,required=[]){if(!v||typeof v!=='object'||Array.isArray(v))fail(p,'Expected object');for(const k of Object.keys(v))if(!keys.includes(k))fail(p+'.'+k,'Unsupported field','unknown_field');for(const k of required)if(!Object.hasOwn(v,k))fail(p+'.'+k,'Missing field','missing_field');return v;}
+function str(v,p,max=10000){if(typeof v!=='string'||!v.trim()||v.length>max)fail(p,'Expected nonempty text');return v;}
+function list(v,p,max=500){if(!Array.isArray(v)||v.length>max)fail(p,'Expected bounded array');return v;}
+function id(v,p){str(v,p,100);if(!/^[A-Za-z0-9][A-Za-z0-9_.:-]*$/.test(v)||FORBIDDEN.has(v))fail(p,'Invalid ID');return v;}
+function lang(v,p){str(v,p,40);if(!/^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(v))fail(p,'Invalid language tag');return v;}
+function integer(v,p){if(!Number.isSafeInteger(v)||v<1)fail(p,'Expected positive revision');}
+function enumValue(v,p,values){if(!values.includes(v))fail(p,'Expected '+values.join(' | '));}
+function strings(v,p){list(v,p,100).forEach((s,i)=>str(s,p+'['+i+']',1000));}
+function clone(v){return JSON.parse(JSON.stringify(v));}
+function get(object,...keys){let value=object;for(const key of keys){if(!value||!Object.hasOwn(value,key))return undefined;value=value[key];}return value;}
+function safeJSON(v,p='$',depth=0){if(depth>80)fail(p,'Structure too deep');if(v===null||typeof v==='string'||typeof v==='boolean')return;if(typeof v==='number'){if(!Number.isFinite(v))fail(p,'Non-finite number');return;}if(!v||typeof v!=='object')fail(p,'Non-JSON value');if(!Array.isArray(v)&&Object.getPrototypeOf(v)!==Object.prototype&&Object.getPrototypeOf(v)!==null)fail(p,'Non-JSON object');for(const k of Object.keys(v)){if(FORBIDDEN.has(k)||(k==='id'&&FORBIDDEN.has(v[k])))fail(p+'.'+k,'Unsafe key or ID','unknown_field');safeJSON(v[k],p+'.'+k,depth+1);}}
+function map(v,p,check,max=2000){if(!v||typeof v!=='object'||Array.isArray(v))fail(p,'Expected ID-keyed object');const entries=Object.entries(v);if(entries.length>max)fail(p,'Too many entries');for(const [k,x]of entries){id(k,p+'.'+k);check(x,p+'.'+k,k);}}
+function ref(r,p,units){object(r,p,['unit','from','to'],['unit']);const u=units.get(r.unit);if(!u)fail(p,'Unknown unit reference','invalid_reference');if(('from'in r)!==('to'in r))fail(p,'Both range endpoints required','invalid_reference');if('from'in r){const a=u.tokens.findIndex(t=>t.id===r.from),b=u.tokens.findIndex(t=>t.id===r.to);if(a<0||b<a)fail(p,'Invalid token range','invalid_reference');}}
+function source(s,p){object(s,p,['repository','commit','path','pointer','url'],[]);if(!('url'in s)&&!('repository'in s))fail(p,'Source needs URL or pinned repository');for(const k of Object.keys(s))str(s[k],p+'.'+k,2000);if('repository'in s&&(!s.commit||!s.path))fail(p,'Repository source requires commit and path');if('commit'in s&&!/^[a-fA-F0-9]{7,40}$/.test(s.commit))fail(p+'.commit','Pin a commit hash, not a moving branch');if('url'in s&&!/^https:\/\//.test(s.url))fail(p+'.url','Source URL must be HTTPS');if('pointer'in s&&!/^(?:|\/.*)$/.test(s.pointer))fail(p+'.pointer','Expected JSON pointer');}
+function rights(r,p){object(r,p,['status','license','evidence'],['status']);enumValue(r.status,p+'.status',['unspecified','unknown','permission-granted','licensed','public-domain']);if('license'in r)str(r.license,p+'.license',1000);if('evidence'in r)str(r.evidence,p+'.evidence',2000);if(['permission-granted','licensed','public-domain'].includes(r.status)&&!r.evidence)fail(p,'Rights assertion requires evidence');}
+function review(r,p){object(r,p,['content','linguistic','native','publication','evidence'],['content','linguistic','native','publication']);enumValue(r.content,p+'.content',['ai-draft','human-draft','legacy-unreviewed']);for(const k of ['linguistic','native'])enumValue(r[k],p+'.'+k,['pending','reviewed','needs-fixes']);enumValue(r.publication,p+'.publication',['not-approved','approved']);if('evidence'in r)strings(r.evidence,p+'.evidence');if((r.linguistic==='reviewed'||r.native==='reviewed'||r.publication==='approved')&&!r.evidence?.length)fail(p,'Review assertion requires evidence');}
+function provenance(v,p){object(v,p,['kind','author','sources','rights','adaptation'],['kind','sources','rights']);enumValue(v.kind,p+'.kind',['original-ai-assisted','original-human','adapted','source-excerpt','legacy-unspecified']);if('author'in v)str(v.author,p+'.author',1000);rights(v.rights,p+'.rights');const ids=new Set();list(v.sources,p+'.sources',100).forEach((s,i)=>{const q=p+'.sources['+i+']';object(s,q,['id','source','attribution','rights'],['id','source','attribution','rights']);id(s.id,q+'.id');if(ids.has(s.id))fail(q,'Duplicate source');ids.add(s.id);source(s.source,q+'.source');str(s.attribution,q+'.attribution',2000);rights(s.rights,q+'.rights');});if('adaptation'in v){object(v.adaptation,p+'.adaptation',['sourceIds','summary'],['sourceIds','summary']);str(v.adaptation.summary,p+'.adaptation.summary');list(v.adaptation.sourceIds,p+'.adaptation.sourceIds',100).forEach(x=>{if(!ids.has(x))fail(p+'.adaptation.sourceIds','Unknown source','invalid_reference');});}if(['adapted','source-excerpt'].includes(v.kind)&&!v.sources.length)fail(p,'Source material needs source attribution');if(v.kind==='adapted'&&!v.adaptation)fail(p,'Adapted material needs change summary');}
+function curriculum(v,p,units){object(v,p,['themeId','themeSource','canDoRefs','knowledgeRefs','bindingIntents'],['canDoRefs','knowledgeRefs','bindingIntents']);if('themeId'in v){id(v.themeId,p+'.themeId');if(!v.themeSource)fail(p,'themeId requires source evidence');}if('themeSource'in v)source(v.themeSource,p+'.themeSource');list(v.canDoRefs,p+'.canDoRefs',100).forEach((r,i)=>{const q=p+'.canDoRefs['+i+']';object(r,q,['id','source'],['source']);if('id'in r)id(r.id,q+'.id');source(r.source,q+'.source');});list(v.knowledgeRefs,p+'.knowledgeRefs',100).forEach((r,i)=>{const q=p+'.knowledgeRefs['+i+']';object(r,q,['namespace','entryId','revision'],['namespace','entryId']);for(const k of Object.keys(r)){str(r[k],q+'.'+k,200);if(/[\s\u0000-\u001f\u007f-\u009f]/u.test(r[k]))fail(q+'.'+k,'Invalid provider identifier');}if(!/^[a-z0-9][a-z0-9_.:-]*$/.test(r.namespace))fail(q+'.namespace','Invalid namespace');});const ids=new Set();list(v.bindingIntents,p+'.bindingIntents',100).forEach((r,i)=>{const q=p+'.bindingIntents['+i+']';object(r,q,['id','kind','ref','status','description'],['id','kind','ref','status','description']);id(r.id,q+'.id');if(ids.has(r.id))fail(q,'Duplicate binding intent');ids.add(r.id);enumValue(r.kind,q+'.kind',['function','vocab','grammar','frame','pragmatics','phonology_orthography','discourse','strategy']);ref(r.ref,q+'.ref',units);if(r.status!=='unresolved')fail(q+'.status','Binding intent must stay unresolved');str(r.description,q+'.description');});}
+function bareSnapshot(core,locale){const out={format:'lingourmet.lesson',version:1,id:core.id,revision:core.revision,mode:core.mode,metadata:{title:core.id,targetLanguage:core.targetLanguage,supportLanguage:locale},units:clone(core.units),blocks:[],notes:[]};for(const k of ['level','tags'])if(k in core)out.metadata[k]=clone(core[k]);return out;}
+function checkCore(core){
+ object(core,'core',['id','courseId','revision','mode','targetLanguage','level','tags','units','blocks','notes','curriculum','provenance','review','assets'],['id','revision','mode','targetLanguage','units','blocks','curriculum','provenance','review']);id(core.id,'core.id');if('courseId'in core)id(core.courseId,'core.courseId');integer(core.revision,'core.revision');lang(core.targetLanguage,'core.targetLanguage');enumValue(core.mode,'core.mode',['article','teaching']);if('level'in core)str(core.level,'core.level',100);if('tags'in core)strings(core.tags,'core.tags');list(core.units,'core.units');const units=new Map(core.units.map(u=>[u.id,u]));
+ for(const [i,u]of core.units.entries()){const p='core.units['+i+']';object(u,p,['id','lang','tokens','spans','chunks'],['id','tokens']);list(u.tokens,p+'.tokens',2000);for(const [j,t]of u.tokens.entries())object(t,p+'.tokens['+j+']',['id','text','kind','reading','lemma','dictionaryRef','ruby'],['id','text']);for(const [j,s]of (u.spans||[]).entries())object(s,p+'.spans['+j+']',['id','from','to','reading','dictionaryRef'],['id','from','to']);}
+ const notes=Object.hasOwn(core,'notes')?core.notes:[];list(notes,'core.notes');const shell=bareSnapshot(core,'en');shell.units.forEach(u=>u.translation='validation-only');shell.notes=clone(notes);
+ for(const [i,n]of shell.notes.entries()){const p='core.notes['+i+']';object(n,p,['id','unit','templates','clozes','tags','localizationRequirements'],['id','unit','templates']);if('localizationRequirements'in n){object(n.localizationRequirements,p+'.localizationRequirements',['prompts','feedback'],['prompts','feedback']);for(const k of ['prompts','feedback']){const values=list(n.localizationRequirements[k],p+'.localizationRequirements.'+k,4);if(new Set(values).size!==values.length||values.some(x=>!n.templates.includes(x)))fail(p,'Requirements must name unique note templates');}delete n.localizationRequirements;}}
+ list(core.blocks,'core.blocks');for(const b of core.blocks){const p='core.blocks.'+b.id;if(b.type==='teaching'){object(b,p,['id','type','stage'],['id','type']);shell.blocks.push({id:b.id,type:'paragraph',...('stage'in b?{stage:b.stage}:{}),runs:[{unit:core.units[0]?.id}]});}else if(b.type==='paragraph'){object(b,p,['id','type','stage','runs'],['id','type','runs']);list(b.runs,p+'.runs',1000);for(const r of b.runs){if('text'in r){object(r,p+'.run',['text'],['text']);if(typeof r.text!=='string'||!/^\s+$/.test(r.text))fail(p+'.run','Core literal runs can contain whitespace only');}else ref(r,p+'.run',units);}shell.blocks.push(clone(b));}else shell.blocks.push(clone(b));}
+ if('assets'in core)shell.assets=clone(core.assets);V1.validate(shell);curriculum(core.curriculum,'core.curriculum',units);provenance(core.provenance,'core.provenance');review(core.review,'core.review');return units;
+}
+function checkLocale(loc,p,key,core,units){
+ object(loc,p,['locale','revision','basedOnCoreRevision','status','title','summary','topic','goals','units','blocks','notes','review'],['locale','revision','basedOnCoreRevision','status','units','blocks','notes','review']);lang(loc.locale,p+'.locale');if(loc.locale!==key)fail(p+'.locale','Locale key must exactly match locale','locale_mismatch');integer(loc.revision,p+'.revision');integer(loc.basedOnCoreRevision,p+'.basedOnCoreRevision');if(loc.basedOnCoreRevision!==core.revision)fail(p+'.basedOnCoreRevision','Localization is based on a different core revision','stale_core_revision');enumValue(loc.status,p+'.status',['draft','complete','partial','needs-review']);for(const k of ['title','summary','topic'])if(k in loc)str(loc[k],p+'.'+k,k==='title'?200:10000);if('goals'in loc)strings(loc.goals,p+'.goals');review(loc.review,p+'.review');
+ map(loc.units,p+'.units',(entry,q,uid)=>{const u=units.get(uid);if(!u)fail(q,'Unknown unit','invalid_reference');object(entry,q,['translation','tokens','spans','chunks']);if('translation'in entry)str(entry.translation,q+'.translation');for(const [field,label]of [['tokens','gloss'],['spans','meaning'],['chunks','translation']])if(field in entry)map(entry[field],q+'.'+field,(e,z,k)=>{const target=(u[field]||[]).find(x=>x.id===k);if(!target)fail(z,'Unknown '+field+' occurrence','invalid_reference');object(e,z,field==='chunks'?[label]:[label,'grammar']);if(!Object.keys(e).length)fail(z,'Empty annotation');if(label in e)str(e[label],z+'.'+label,field==='tokens'?2000:10000);if('grammar'in e)strings(e.grammar,z+'.grammar');if(field==='tokens'&&target.kind==='separator')fail(z,'Separator cannot have localized annotation');});});
+ const blocks=new Map(core.blocks.map(b=>[b.id,b]));map(loc.blocks,p+'.blocks',(entry,q,bid)=>{if(blocks.get(bid)?.type!=='teaching')fail(q,'Expected core teaching slot','invalid_reference');object(entry,q,['runs'],['runs']);list(entry.runs,q+'.runs',1000);if(!entry.runs.length)fail(q,'Teaching runs cannot be empty');for(const r of entry.runs){if('text'in r){object(r,q+'.run',['text','lang'],['text']);if(typeof r.text!=='string'||!r.text.length||r.text.length>10000)fail(q+'.run','Expected text');if('lang'in r){lang(r.lang,q+'.lang');if(r.lang!==key)fail(q+'.lang','Teaching prose language must match selected locale','locale_mismatch');}}else ref(r,q+'.run',units);}});
+ const notes=new Map((core.notes||[]).map(n=>[n.id,n]));map(loc.notes,p+'.notes',(entry,q,nid)=>{const n=notes.get(nid);if(!n)fail(q,'Unknown note','invalid_reference');object(entry,q,['prompts','feedback']);for(const k of ['prompts','feedback'])if(k in entry)map(entry[k],q+'.'+k,(value,z,template)=>{if(!n.templates.includes(template))fail(z,'Unknown note template','invalid_reference');str(value,z);},4);});
+}
+function validateV2(doc){safeJSON(doc);object(doc,'$',['format','version','core','localizations'],['format','version','core','localizations']);if(doc.format!=='lingourmet.lesson'||doc.version!==2)fail('$','Unsupported format version','unsupported_version');const units=checkCore(doc.core);if(!doc.localizations||typeof doc.localizations!=='object'||Array.isArray(doc.localizations))fail('localizations','Expected locale-keyed object');const locales=Object.entries(doc.localizations);if(!locales.length||locales.length>30)fail('localizations','Expected 1 to 30 locale layers');const normalized=new Set();for(const [key,loc]of locales){lang(key,'localizations.'+key);let lower=key.toLowerCase();try{if(typeof Intl!=='undefined'&&Intl.getCanonicalLocales)lower=Intl.getCanonicalLocales(key)[0].toLowerCase();}catch{fail('localizations.'+key,'Invalid BCP 47 locale');}if(normalized.has(lower))fail('localizations','Ambiguous duplicate locale');normalized.add(lower);checkLocale(loc,'localizations.'+key,key,doc.core,units);}for(const [locale]of locales){const projected=projectV2(doc,locale);if(doc.localizations[locale].status==='complete'&&projected.issues.length)fail('localizations.'+locale+'.status','Complete locale has required gaps','incomplete_locale');let chars=0;for(const n of projected.doc.notes){const u=projected.doc.units.find(u=>u.id===n.unit),base=u.tokens.reduce((sum,t)=>sum+t.text.length+(t.reading||'').length+(t.ruby||[]).reduce((a,r)=>a+(r.reading||'').length,0),0)+(u.translation||'').length;for(const template of n.templates){const count=template==='cloze'?n.clozes.length:1,entry=get(doc.localizations,locale,'notes',n.id);chars+=count*(4*base+2*(entry?.prompts?.[template]||'').length+(entry?.feedback?.[template]||'').length+50);}}if(chars>2000000)fail('localizations.'+locale+'.notes','Practice text exceeds display budget','resource_limit');const budget=clone(projected.doc);delete budget.projection;if(!budget.blocks.length)budget.blocks=[{id:'validation-only',type:'paragraph',runs:[{unit:doc.core.units[0].id}]}];V1.validate(budget);}return doc;}
+function projectV2(canonical,locale){
+ const core=canonical.core,loc=get(canonical.localizations,locale),availableLocales=Object.keys(canonical.localizations),issues=[],disabledNoteIds=[],disabledBlockIds=[],disabledTemplates=[];
+ const issue=(code,path,fields={})=>{const value={code,path,locale,...fields};issues.push(value);return value;};
+ if(!loc)issue('missing_locale','localizations.'+locale);
+ const doc=bareSnapshot(core,locale);if(loc?.title)doc.metadata.title=loc.title;else issue('missing_title','localizations.'+locale+'.title');
+ for(const k of ['topic','goals'])if(loc&&k in loc)doc.metadata[k]=clone(loc[k]);
+ for(const u of doc.units){const localized=get(loc,'units',u.id);if(localized?.translation)u.translation=localized.translation;for(const t of u.tokens){const a=get(localized,'tokens',t.id);if(a?.gloss)t.translation=a.gloss;if(a?.grammar)t.grammar=clone(a.grammar);}for(const s of u.spans||[]){const a=get(localized,'spans',s.id);if(a?.meaning)s.translation=a.meaning;if(a?.grammar)s.grammar=clone(a.grammar);}}
+ for(const n of core.notes||[]){const projected=clone(n);delete projected.localizationRequirements;projected.templates=[];const localized=get(loc,'notes',n.id);for(const template of n.templates){const missing=[];const add=(code,field)=>missing.push(issue(code,'localizations.'+locale+'.'+field,{noteId:n.id,unitId:n.unit,template,field}));if(['recognition','production','listening'].includes(template)&&!get(loc,'units',n.unit,'translation'))add('missing_translation','units.'+n.unit+'.translation');const required=n.localizationRequirements||{prompts:[],feedback:[]};if((template==='listening'||required.prompts.includes(template))&&!localized?.prompts?.[template])add('missing_prompt','notes.'+n.id+'.prompts.'+template);if(required.feedback.includes(template)&&!localized?.feedback?.[template])add('missing_feedback','notes.'+n.id+'.feedback.'+template);if(!loc&&!missing.length)add('missing_locale','notes.'+n.id);if(missing.length)disabledTemplates.push({noteId:n.id,template,issues:missing});else projected.templates.push(template);}if(projected.templates.length){if(localized?.prompts?.production)projected.prompt=localized.prompts.production;doc.notes.push(projected);}else disabledNoteIds.push(n.id);}
+ const eligible=new Set(doc.notes.map(n=>n.id));for(const b of core.blocks){if(b.type==='teaching'){const localized=get(loc,'blocks',b.id);if(localized)doc.blocks.push({id:b.id,type:'paragraph',...('stage'in b?{stage:b.stage}:{}),runs:clone(localized.runs)});else{issue('missing_teaching','localizations.'+locale+'.blocks.'+b.id,{blockId:b.id});disabledBlockIds.push(b.id);}}else if(b.type==='activity'){const notes=b.notes.filter(n=>eligible.has(n));if(notes.length)doc.blocks.push({...clone(b),notes});else disabledBlockIds.push(b.id);}else doc.blocks.push(clone(b));}
+ doc.projection={locale,notes:clone(loc?.notes||{}),chunks:{}};for(const [uid,entry]of Object.entries(loc?.units||{}))if(entry.chunks)doc.projection.chunks[uid]=clone(entry.chunks);return {doc,locale,availableLocales,issues,disabledNoteIds,disabledBlockIds,disabledTemplates,coverage:coverageFor(core,loc)};
+}
+function availableLocales(doc){return doc.version===2?Object.keys(doc.localizations):[doc.metadata.supportLanguage];}
+function projectLegacy(input,locale){
+ const doc=clone(input),present=locale===input.metadata.supportLanguage,issues=[],disabledBlockIds=[],disabledNoteIds=[],disabledTemplates=[];
+ const add=(code,path,fields={})=>{const x={code,path,locale,...fields};issues.push(x);return x;};
+ if(!present){add('missing_locale','metadata.supportLanguage');add('missing_title','metadata.title');doc.metadata={title:doc.id,targetLanguage:input.metadata.targetLanguage,supportLanguage:locale};for(const u of doc.units){delete u.translation;for(const value of [...u.tokens,...(u.spans||[])]){delete value.translation;delete value.grammar;}}for(const n of input.notes||[]){disabledNoteIds.push(n.id);for(const template of n.templates)disabledTemplates.push({noteId:n.id,template,issues:[add('missing_locale','notes.'+n.id,{noteId:n.id,unitId:n.unit,template})]});}doc.notes=[];doc.blocks=input.blocks.flatMap(b=>{if(b.type==='activity'){disabledBlockIds.push(b.id);return [];}if(b.runs.some(r=>'text'in r&&!/^\s+$/.test(r.text))){disabledBlockIds.push(b.id);add('missing_teaching','blocks.'+b.id,{blockId:b.id});return [];}return [clone(b)];});}
+ const core={units:input.units,notes:input.notes||[],blocks:input.blocks.map(b=>b.type==='paragraph'&&b.runs.some(r=>'text'in r&&!/^\s+$/.test(r.text))?{id:b.id,type:'teaching'}:b)},loc={units:Object.create(null),blocks:Object.create(null),notes:Object.create(null)};
+ if(present){for(const u of input.units){const value={};if(u.translation)value.translation=u.translation;for(const [field,label]of [['tokens','gloss'],['spans','meaning']]){value[field]=Object.create(null);for(const t of u[field]||[])if(t.translation||t.grammar)value[field][t.id]={...(t.translation?{[label]:t.translation}:{}),...(t.grammar?{grammar:t.grammar}:{})};}loc.units[u.id]=value;}for(const b of core.blocks)if(b.type==='teaching')loc.blocks[b.id]={runs:[]};for(const n of input.notes||[])if(n.prompt)loc.notes[n.id]={prompts:{production:n.prompt}};}
+ return {doc,locale,availableLocales:[input.metadata.supportLanguage],issues,disabledNoteIds,disabledBlockIds,disabledTemplates,coverage:coverageFor(core,present?loc:undefined)};
+}
+function project(doc,locale){validate(doc);lang(locale,'locale');return doc.version===2?projectV2(doc,locale):projectLegacy(doc,locale);}
+function validate(doc){if(doc?.version===2)return validateV2(doc);if(doc?.version===1)return V1.validate(doc);fail('version','Unsupported format version','unsupported_version');}
+function parse(raw){const doc=V1.decode(raw);validate(doc);stringify(doc);return doc;}
+function stringify(doc){validate(doc);const raw=JSON.stringify(doc,null,2)+'\n';if(new TextEncoder().encode(raw).length>M.MAX)fail('$','File exceeds 1 MiB','resource_limit');return raw;}
+function exportLocales(doc,locales){validate(doc);list(locales,'locales',30);if(!locales.length||new Set(locales).size!==locales.length)fail('locales','Choose unique nonempty locale list');for(const locale of locales)if(!availableLocales(doc).includes(locale))fail('locales','Requested locale is unavailable: '+locale,'missing_locale');if(doc.version===1)return clone(doc);const out={format:doc.format,version:2,core:clone(doc.core),localizations:{}};for(const locale of locales)out.localizations[locale]=clone(doc.localizations[locale]);validate(out);return out;}
+function cards(doc,noteIds){const result=V1.cards(doc,noteIds),context=doc.projection;if(!context)return result;for(const card of result){const [,noteId]=JSON.parse(card.id),entry=get(context.notes,noteId);const prompt=entry?.prompts?.[card.kind];if(prompt){if(card.kind==='listening'||card.kind==='production')card.prompt=prompt;else card.instruction=prompt;}if(entry?.feedback?.[card.kind])card.feedback=entry.feedback[card.kind];}return result;}
+function meaning(doc,r){if(doc.projection&&r.from!==undefined){const unit=doc.units.find(u=>u.id===r.unit),chunk=unit?.chunks?.find(c=>c.from===r.from&&c.to===r.to),exact=unit?.spans?.find(s=>s.from===r.from&&s.to===r.to);if(exact?.translation)return exact.translation;if(chunk&&get(doc.projection.chunks,r.unit,chunk.id,'translation'))return get(doc.projection.chunks,r.unit,chunk.id,'translation');}return V1.meaning(doc,r);}
+function coverageFor(core,loc){
+ const out=Object.fromEntries(['units','tokens','spans','chunks','teaching','prompts','feedback'].map(k=>[k,{total:0,present:0,missing:[]}]))
+ const add=(kind,present,ref)=>{out[kind].total++;if(present)out[kind].present++;else out[kind].missing.push(ref);};
+ const lexical=t=>t.kind!=='separator'&&!/^[\s\p{P}]+$/u.test(t.text);
+ for(const u of core.units){const entry=get(loc,'units',u.id);add('units',!!entry?.translation,{unitId:u.id});for(const t of u.tokens)if(lexical(t))add('tokens',!!get(entry,'tokens',t.id,'gloss'),{unitId:u.id,tokenId:t.id});for(const span of u.spans||[]){const from=u.tokens.findIndex(t=>t.id===span.from),to=u.tokens.findIndex(t=>t.id===span.to);if(u.tokens.slice(from,to+1).some(lexical))add('spans',!!get(entry,'spans',span.id,'meaning'),{unitId:u.id,spanId:span.id});}for(const c of u.chunks||[]){const from=u.tokens.findIndex(t=>t.id===c.from),to=u.tokens.findIndex(t=>t.id===c.to);if(u.tokens.slice(from,to+1).some(lexical))add('chunks',!!get(entry,'chunks',c.id,'translation'),{unitId:u.id,chunkId:c.id});}}
+ for(const b of core.blocks)if(b.type==='teaching')add('teaching',!!get(loc,'blocks',b.id),{blockId:b.id});for(const n of core.notes||[])for(const template of n.templates){const requirements=n.localizationRequirements||{prompts:[],feedback:[]};for(const k of ['prompts','feedback'])add(k,!!get(loc,'notes',n.id,k,template),{noteId:n.id,template,required:requirements[k].includes(template)||(k==='prompts'&&template==='listening')});}return out;
+}
+function pendingReview(content='ai-draft'){return {content,linguistic:'pending',native:'pending',publication:'not-approved'};}
+function migrateV1(input){
+ safeJSON(input);V1.validate(input);const old=clone(input),locale=old.metadata.supportLanguage,core={id:old.id,revision:old.revision,mode:old.mode,targetLanguage:old.metadata.targetLanguage,units:old.units,blocks:[],notes:old.notes||[],curriculum:{canDoRefs:[],knowledgeRefs:[],bindingIntents:[]},provenance:{kind:'legacy-unspecified',sources:[],rights:{status:'unspecified'}},review:pendingReview('legacy-unreviewed')};for(const k of ['level','tags'])if(k in old.metadata)core[k]=old.metadata[k];if(old.metadata.author)core.provenance.author=old.metadata.author;if(old.metadata.license)core.provenance.rights.license=old.metadata.license;if('assets'in old)core.assets=old.assets;
+ const layer={locale,revision:1,basedOnCoreRevision:core.revision,status:'needs-review',title:old.metadata.title,units:{},blocks:{},notes:{},review:pendingReview('legacy-unreviewed')};for(const k of ['topic','goals'])if(k in old.metadata)layer[k]=old.metadata[k];
+ for(const u of core.units){const target={};if('translation'in u){target.translation=u.translation;delete u.translation;}for(const [field,label]of [['tokens','gloss'],['spans','meaning']]){const annotations={};for(const value of u[field]||[]){const entry={};if('translation'in value){entry[label]=value.translation;delete value.translation;}if('grammar'in value){entry.grammar=value.grammar;delete value.grammar;}if(Object.keys(entry).length)annotations[value.id]=entry;}if(Object.keys(annotations).length)target[field]=annotations;}if(Object.keys(target).length)layer.units[u.id]=target;}
+ for(const b of old.blocks){if(b.type==='paragraph'&&b.runs.some(r=>'text'in r&&!/^\s+$/.test(r.text))){for(const r of b.runs)if('text'in r&&r.lang&&r.lang!==locale)fail('blocks.'+b.id,'Mixed-language literal cannot be migrated safely; turn target examples into refs','migration_required');core.blocks.push({id:b.id,type:'teaching',...('stage'in b?{stage:b.stage}:{})});layer.blocks[b.id]={runs:b.runs};}else{if(b.type==='paragraph')for(const r of b.runs)if('text'in r)delete r.lang;core.blocks.push(b);}}
+ for(const n of core.notes){const entry={};if(n.prompt){entry.prompts={production:n.prompt};delete n.prompt;}if(n.templates.includes('listening')){const prompt=/^zh(?:-|$)/i.test(locale)?'聽完後，試著說出意思。':/^en(?:-|$)/i.test(locale)?'Listen, then try to recall the meaning.':null;if(prompt)entry.prompts={...(entry.prompts||{}),listening:prompt};}if(Object.keys(entry).length)layer.notes[n.id]=entry;}
+ const out={format:'lingourmet.lesson',version:2,core,localizations:{[locale]:layer}};return validateV2(out);
+}
+Object.assign(M,{validate,parse,stringify,project,availableLocales,exportLocales,migrateV1,cards,meaning});root.LessonModel=M;if(typeof module!=='undefined')module.exports=M;
+})(typeof window!=='undefined'?window:globalThis);
+</script>
+<script>(function(root){
+'use strict';
+const M=typeof module!=='undefined'&&module.exports?require('./model-v2.js'):root.LessonModel;
+if(!M)throw new Error('Load model-v2.js before import-policy.js');
+const clone=value=>JSON.parse(JSON.stringify(value));
+
+// JSON object key order is presentation; array order and exact strings are
+// authored content. Never normalize text, hash it into identity, or use dates.
+function equal(a,b){
+ if(a===b)return true;
+ if(!a||!b||typeof a!=='object'||typeof b!=='object'||Array.isArray(a)!==Array.isArray(b))return false;
+ const keys=Object.keys(a);
+ return keys.length===Object.keys(b).length&&keys.every(key=>Object.hasOwn(b,key)&&equal(a[key],b[key]));
+}
+const identity=doc=>doc.version===2?doc.core.id:doc.id;
+function conflict(code,scope,current,incoming,locale){
+ return {code,scope,...(locale?{locale}:{}),currentRevision:current.revision,incomingRevision:incoming.revision};
+}
+function compareRevision(current,incoming,scope,locale){
+ if(incoming.revision<current.revision)return conflict('downgrade',scope,current,incoming,locale);
+ if(incoming.revision===current.revision&&!equal(current,incoming))return conflict('same_revision_content',scope,current,incoming,locale);
+ return null;
+}
+
+// This compares only the currently loaded canonical lesson, not an unseen
+// library. Validation and merging are pure: no storage, preferences or events.
+function planImport(current,incoming){
+ M.stringify(incoming); // Authoritative semantic validation AND export budget.
+ if(current!==null&&current!==undefined)M.stringify(current);
+ const result={status:'added',document:null,conflicts:[],changes:{core:false,addedLocales:[],updatedLocales:[],keptLocales:[],removedLocales:[]}};
+ const reject=issues=>({...result,status:'conflict',document:null,conflicts:issues});
+ const accept=(document,status)=>({...result,status,document:clone(document)});
+ if(!current||identity(current)!==identity(incoming))return accept(incoming,'added');
+ if(current.version!==incoming.version)return reject([{code:'format_change',scope:'lesson',currentVersion:current.version,incomingVersion:incoming.version}]);
+ if(incoming.version===1){
+  const issue=compareRevision(current,incoming,'lesson');
+  if(issue)return reject([issue]);
+  result.changes.core=incoming.revision>current.revision;
+  return accept(result.changes.core?incoming:current,result.changes.core?'updated':'unchanged');
+ }
+ const coreIssue=compareRevision(current.core,incoming.core,'core');
+ if(coreIssue)return reject([coreIssue]);
+ const conflicts=[];
+ for(const [locale,layer]of Object.entries(incoming.localizations)){
+  if(!Object.hasOwn(current.localizations,locale)){result.changes.addedLocales.push(locale);continue;}
+  const existing=current.localizations[locale];
+  const issue=compareRevision(existing,layer,'locale',locale);
+  if(issue)conflicts.push(issue);
+  else if(layer.revision>existing.revision)result.changes.updatedLocales.push(locale);
+  else result.changes.keptLocales.push(locale);
+ }
+ if(conflicts.length)return reject(conflicts);
+ result.changes.core=incoming.core.revision>current.core.revision;
+ if(result.changes.core){
+  // Omitted old layers refer to a previous core. Do not relabel or carry them
+  // forward. A locale rebased onto a new core is itself a changed revision.
+  result.changes.removedLocales=Object.keys(current.localizations).filter(locale=>!Object.hasOwn(incoming.localizations,locale));
+  return accept(incoming,'updated');
+ }
+ const merged=clone(current);
+ for(const locale of [...result.changes.addedLocales,...result.changes.updatedLocales])merged.localizations[locale]=clone(incoming.localizations[locale]);
+ for(const locale of Object.keys(current.localizations))if(!Object.hasOwn(incoming.localizations,locale))result.changes.keptLocales.push(locale);
+ // Individually valid files can exceed the combined size/locale limits or
+ // introduce BCP 47 aliases. Fail atomically before exposing a candidate.
+ try{M.stringify(merged);}catch{return reject([{code:'combined_invalid',scope:'lesson'}]);}
+ return accept(merged,result.changes.addedLocales.length||result.changes.updatedLocales.length?'updated':'unchanged');
+}
+const api={planImport};
+root.LessonImportPolicy=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window!=='undefined'?window:globalThis);
+</script>
+<script>window.LESSON_EXAMPLES=[{"format":"lingourmet.lesson","version":1,"revision":2,"id":"demo-cafe-article","mode":"article","metadata":{"title":"在咖啡店","targetLanguage":"ja","supportLanguage":"zh-Hant","license":"unspecified","topic":"咖啡店","goals":["理解點飲料與入座的簡短文章"],"tags":["demo","beginner","cafe"],"author":"AI-generated demonstration"},"units":[{"id":"u-order","translation":"請給我一杯咖啡。","tokens":[{"id":"t1","text":"コーヒー","kind":"word","reading":"コーヒー","translation":"咖啡"},{"id":"t2","text":"を","kind":"word","grammar":["受詞助詞"]},{"id":"t3","text":"一杯","kind":"word","reading":"いっぱい","translation":"一杯"},{"id":"t4","text":"ください","kind":"word","lemma":"くださる","translation":"請給我"},{"id":"t5","text":"。","kind":"word"}],"spans":[{"from":"t3","to":"t4","translation":"請給我一杯","id":"span-1"}],"chunks":[{"id":"c-coffee","from":"t1","to":"t2"},{"id":"c-quantity","from":"t3","to":"t3"},{"id":"c-request","from":"t4","to":"t4"}]},{"id":"u-thanks","translation":"謝謝。","tokens":[{"id":"t1","text":"ありがとう","kind":"word","translation":"謝謝"},{"id":"t2","text":"ございます","kind":"word","grammar":["禮貌表達"]},{"id":"t3","text":"。","kind":"word"}],"chunks":[{"id":"c-thanks","from":"t1","to":"t2"}]},{"id":"u-seat","translation":"我坐在窗邊的座位上。","tokens":[{"id":"t1","text":"窓際","kind":"word","reading":"まどぎわ","translation":"窗邊"},{"id":"t2","text":"の","kind":"word","grammar":["連接名詞"]},{"id":"t3","text":"席","kind":"word","reading":"せき","translation":"座位"},{"id":"t4","text":"に","kind":"word","grammar":["著落點助詞"]},{"id":"t5","text":"座ります","kind":"word","reading":"すわります","lemma":"座る","translation":"坐下"},{"id":"t6","text":"。","kind":"word"}],"chunks":[{"id":"c-window","from":"t1","to":"t2"},{"id":"c-seat","from":"t3","to":"t4"},{"id":"c-sit","from":"t5","to":"t5"}]}],"blocks":[{"id":"b-article","type":"paragraph","stage":"understand","runs":[{"unit":"u-order"},{"text":"\n"},{"unit":"u-thanks"},{"text":"\n"},{"unit":"u-seat"}]},{"id":"b-review","type":"activity","stage":"practice","notes":["n-order"]}],"notes":[{"id":"n-order","unit":"u-order","tags":["ordering"],"templates":["recognition","production","listening"]}]},{"format":"lingourmet.lesson","version":1,"revision":2,"id":"demo-cafe-teaching","mode":"teaching","metadata":{"title":"用禮貌句型點咖啡","targetLanguage":"ja","supportLanguage":"zh-Hant","license":"unspecified","topic":"咖啡店","goals":["理解受詞助詞與禮貌請求","練習說出點咖啡的句子"],"tags":["demo","beginner","cafe"],"author":"AI-generated demonstration"},"units":[{"id":"u-order","translation":"請給我一杯咖啡。","tokens":[{"id":"t1","text":"コーヒー","kind":"word","reading":"コーヒー","translation":"咖啡"},{"id":"t2","text":"を","kind":"word","grammar":["受詞助詞"]},{"id":"t3","text":"一杯","kind":"word","reading":"いっぱい","translation":"一杯"},{"id":"t4","text":"ください","kind":"word","lemma":"くださる","translation":"請給我"},{"id":"t5","text":"。","kind":"word"}],"spans":[{"from":"t3","to":"t4","translation":"請給我一杯","id":"span-1"}],"chunks":[{"id":"c-coffee","from":"t1","to":"t2"},{"id":"c-quantity","from":"t3","to":"t3"},{"id":"c-request","from":"t4","to":"t4"}]},{"id":"u-thanks","translation":"謝謝。","tokens":[{"id":"t1","text":"ありがとう","kind":"word","translation":"謝謝"},{"id":"t2","text":"ございます","kind":"word","grammar":["禮貌表達"]},{"id":"t3","text":"。","kind":"word"}],"chunks":[{"id":"c-thanks","from":"t1","to":"t2"}]}],"blocks":[{"id":"b-explanation","type":"paragraph","stage":"understand","runs":[{"text":"點咖啡時，可以說："},{"unit":"u-order"},{"text":"其中，"},{"unit":"u-order","from":"t2","to":"t2"},{"text":"標示請求的東西，"},{"unit":"u-order","from":"t4","to":"t4"},{"text":"是「請給我」的禮貌說法。"}]},{"id":"b-quantity","type":"paragraph","stage":"understand","runs":[{"text":"加上數量時，"},{"unit":"u-order","from":"t3","to":"t3"},{"text":"表示一杯。先聽整句，再跟著說一次："},{"unit":"u-order"}]},{"id":"b-review","type":"activity","stage":"practice","notes":["n-request"]},{"id":"b-apply","type":"activity","stage":"apply","notes":["n-thanks"]}],"notes":[{"id":"n-request","unit":"u-order","tags":["polite-request"],"clozes":[{"id":"cloze-request","ranges":[{"from":"t4","to":"t4"}]}],"templates":["production","cloze"]},{"id":"n-thanks","unit":"u-thanks","templates":["production"],"prompt":"店員把飲料交給你。請用日文向店員道謝。"}]},{"format":"lingourmet.lesson","version":1,"revision":1,"id":"demo-japanese-reading","mode":"teaching","metadata":{"title":"日文讀音：整詞與送假名","targetLanguage":"ja","supportLanguage":"zh-Hant","author":"AI-generated demonstration","license":"unspecified","goals":["區分整詞讀音與漢字／假名對齊"]},"units":[{"id":"u-eat","translation":"今天吃。","tokens":[{"id":"t-today","text":"今日","reading":"きょう","translation":"今天","ruby":[{"text":"今日","reading":"きょう"}],"dictionaryRef":{"namespace":"example.org.examples","entryId":"demo-today","senseId":"day-present","revision":"demo-1"}},{"id":"t-eat","text":"食べる","reading":"たべる","lemma":"食べる","translation":"吃","ruby":[{"text":"食","reading":"た"},{"text":"べる"}]},{"id":"t-end","text":"。"}],"spans":[{"id":"s-today-eat","from":"t-today","to":"t-eat","translation":"今天吃","reading":"きょうたべる","dictionaryRef":{"namespace":"example.org.examples","entryId":"demo-today-eat"}}]}],"blocks":[{"id":"b-reading","type":"paragraph","stage":"understand","runs":[{"text":"整詞讀音依實際讀法標註："},{"unit":"u-eat","from":"t-today","to":"t-today"},{"text":"。帶送假名的詞可對齊到漢字部分："},{"unit":"u-eat","from":"t-eat","to":"t-eat"},{"text":"。完整例句："},{"unit":"u-eat"}]},{"id":"b-review","type":"activity","stage":"practice","notes":["n-eat"]}],"notes":[{"id":"n-eat","unit":"u-eat","templates":["recognition","production","listening","cloze"],"clozes":[{"id":"c-eat","ranges":[{"from":"t-eat","to":"t-eat"}]}]}]},{"format":"lingourmet.lesson","version":2,"core":{"id":"demo-cafe-multilingual","revision":2,"mode":"teaching","targetLanguage":"ja","units":[{"id":"u-order","tokens":[{"id":"t1","text":"コーヒー","kind":"word","reading":"コーヒー"},{"id":"t2","text":"を","kind":"word"},{"id":"t3","text":"一杯","kind":"word","reading":"いっぱい"},{"id":"t4","text":"ください","kind":"word","lemma":"くださる"},{"id":"t5","text":"。","kind":"word"}],"spans":[{"from":"t3","to":"t4","id":"span-1"}],"chunks":[{"id":"c-coffee","from":"t1","to":"t2"},{"id":"c-quantity","from":"t3","to":"t3"},{"id":"c-request","from":"t4","to":"t4"}]},{"id":"u-thanks","tokens":[{"id":"t1","text":"ありがとう","kind":"word"},{"id":"t2","text":"ございます","kind":"word"},{"id":"t3","text":"。","kind":"word"}],"chunks":[{"id":"c-thanks","from":"t1","to":"t2"}]}],"blocks":[{"id":"b-explanation","type":"teaching","stage":"understand"},{"id":"b-quantity","type":"teaching","stage":"understand"},{"id":"b-review","type":"activity","stage":"practice","notes":["n-request"]},{"id":"b-apply","type":"activity","stage":"apply","notes":["n-thanks"]}],"notes":[{"id":"n-request","unit":"u-order","tags":["polite-request"],"clozes":[{"id":"cloze-request","ranges":[{"from":"t4","to":"t4"}]}],"templates":["production","cloze"],"localizationRequirements":{"prompts":["production","cloze"],"feedback":["production","cloze"]}},{"id":"n-thanks","unit":"u-thanks","templates":["production"],"localizationRequirements":{"prompts":["production"],"feedback":["production"]}}],"curriculum":{"canDoRefs":[],"knowledgeRefs":[],"bindingIntents":[]},"provenance":{"kind":"original-ai-assisted","sources":[],"rights":{"status":"unspecified","license":"unspecified"},"author":"AI-generated demonstration"},"review":{"content":"ai-draft","linguistic":"pending","native":"pending","publication":"not-approved"},"tags":["demo","beginner","cafe"]},"localizations":{"zh-Hant":{"locale":"zh-Hant","revision":1,"basedOnCoreRevision":2,"status":"needs-review","title":"同一句日文，用中文或英文學習","units":{"u-order":{"translation":"請給我一杯咖啡。","tokens":{"t1":{"gloss":"咖啡"},"t2":{"grammar":["受詞助詞"]},"t3":{"gloss":"一杯"},"t4":{"gloss":"請給我"}},"spans":{"span-1":{"meaning":"請給我一杯"}},"chunks":{"c-coffee":{"translation":"咖啡（請求的對象）"}}},"u-thanks":{"translation":"謝謝。","tokens":{"t1":{"gloss":"謝謝"},"t2":{"grammar":["禮貌表達"]}}}},"blocks":{"b-explanation":{"runs":[{"text":"點咖啡時，可以說："},{"unit":"u-order"},{"text":"其中，"},{"unit":"u-order","from":"t2","to":"t2"},{"text":"標示請求的東西，"},{"unit":"u-order","from":"t4","to":"t4"},{"text":"是「請給我」的禮貌說法。"}]},"b-quantity":{"runs":[{"text":"加上數量時，"},{"unit":"u-order","from":"t3","to":"t3"},{"text":"表示一杯。先聽整句，再跟著說一次："},{"unit":"u-order"}]}},"notes":{"n-thanks":{"prompts":{"production":"店員把飲料交給你。請用日文向店員道謝。"},"feedback":{"production":"用完整的禮貌表達向店員道謝。"}},"n-request":{"prompts":{"production":"請用日文點一杯咖啡。","cloze":"補上禮貌請求的說法。"},"feedback":{"production":"對照示範答案，確認咖啡、數量和禮貌請求。","cloze":"這裡用本課的禮貌請求表達。"}}},"review":{"content":"ai-draft","linguistic":"pending","native":"pending","publication":"not-approved"},"topic":"咖啡店","goals":["理解受詞助詞與禮貌請求","練習說出點咖啡的句子"]},"en":{"locale":"en","revision":1,"basedOnCoreRevision":2,"status":"needs-review","title":"One Japanese core, two teaching languages","topic":"A café","goals":["Ask politely for one coffee","Thank the server"],"units":{"u-order":{"translation":"One coffee, please.","tokens":{"t1":{"gloss":"coffee"},"t2":{"grammar":["object marker"]},"t3":{"gloss":"one cup"},"t4":{"gloss":"please give me"}},"spans":{"span-1":{"meaning":"one cup, please"}},"chunks":{"c-coffee":{"translation":"coffee (the requested item)"}}},"u-thanks":{"translation":"Thank you.","tokens":{"t1":{"gloss":"thanks"},"t2":{"grammar":["polite expression"]}}}},"blocks":{"b-explanation":{"runs":[{"text":"To order a coffee, say: "},{"unit":"u-order"},{"text":"The marker "},{"unit":"u-order","from":"t2","to":"t2"},{"text":" marks the requested item. Finish with "},{"unit":"u-order","from":"t4","to":"t4"},{"text":" for a polite request."}]},"b-quantity":{"runs":[{"text":"Japanese uses a counter for cups. "},{"unit":"u-order","from":"t3","to":"t3"},{"text":" means one cup. Listen to the complete request, then try it: "},{"unit":"u-order"}]}},"notes":{"n-request":{"prompts":{"production":"Order one coffee in Japanese.","cloze":"Restore the polite request."},"feedback":{"production":"Compare with the model answer: item, quantity, then polite request.","cloze":"Use the polite request taught here."}},"n-thanks":{"prompts":{"production":"The server gives you the drink. Thank them in Japanese."},"feedback":{"production":"Use the full polite expression to thank the server."}}},"review":{"content":"ai-draft","linguistic":"pending","native":"pending","publication":"not-approved"}}}}];</script>
+<script>(function(){
+'use strict';
+const M=window.LessonModel,ImportPolicy=window.LessonImportPolicy,$=id=>document.getElementById(id),KEY='lingourmet.studio.lesson.v1',EVENTS='lingourmet.studio.events.v1',READINGS='lingourmet.studio.readings.v1',TEACHING='lingourmet.studio.teaching-locale.v1';
+let savedPractice=null,practiceScope=null,readIndex=0,afterPractice=null,rawDoc=null,doc=null,projection=null,displayBlocks=[],deck=[],position=0,revealed=false,pending=null,generation=0,speechGeneration=0,events=[];
+let wordTrigger=null,panelRoot=null,activeUtterance=null,startupTimer=null,showReadings=true,inspectedRef=null,preferredTeachingLocale=null,practiceNotice='',practiceAnchor=null,visitedCards=new Set(),remainingOnly=false;
+// Content language is independent of the UI language. This slice ships one UI.
+const languageSettings={teachingLocale:null,uiLocale:'zh-Hant'};
+const readingTargets=new Map(),referenceTargets=new Map();
+const LABELS={recognition:'看句子，回想意思',production:'看情境，試著說',listening:'聽聲音，回想意思',cloze:'補出缺少的語塊'};
+function status(s){$('status').textContent=s;if(!$('word-dialog').hidden)$('word-status').textContent=s;}
+function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
+function button(text,fn,cls){const e=node('button',text,cls);e.type='button';e.onclick=fn;return e;}
+function clearSpeechTimer(){clearTimeout(startupTimer);startupTimer=null;}
+function stop(){speechGeneration++;clearSpeechTimer();const synth=window.speechSynthesis;if(activeUtterance||synth?.speaking||synth?.pending)synth?.cancel();activeUtterance=null;}
+function speak(ref){
+ stop();const selected=M.speech(doc,ref),synth=window.speechSynthesis;
+ if(!synth||!window.SpeechSynthesisUtterance){status('這個瀏覽器暫不支援發音。');return;}
+ const tag=selected.lang.replaceAll('_','-');const lang=({ja:'ja-JP',th:'th-TH',en:'en-US',ko:'ko-KR',zh:'zh-TW'})[tag.toLowerCase()]||tag;
+ const ticket=speechGeneration;
+ try{
+  const u=new SpeechSynthesisUtterance(selected.text);activeUtterance=u;u.lang=lang;
+  // Android may enumerate incomplete voice lists. Let its engine resolve lang
+  // synchronously in this user gesture; do not force a voice or gate on getVoices.
+  u.onstart=()=>{if(ticket!==speechGeneration)return;clearSpeechTimer();};
+  u.onend=()=>{if(ticket!==speechGeneration)return;clearSpeechTimer();activeUtterance=null;};
+  u.onerror=e=>{if(ticket!==speechGeneration)return;clearSpeechTimer();activeUtterance=null;status(`發音失敗（${e.error||'unknown'}；${lang}）。請再試一次；若仍失敗，請把這段訊息告訴我們。`);};
+  startupTimer=setTimeout(()=>{if(ticket!==speechGeneration||activeUtterance!==u)return;stop();status(`語音引擎尚未回應（${lang}）。請再點一次發音。`);},8000);
+  status('');if(synth.paused)synth.resume();synth.speak(u);
+ }catch{clearSpeechTimer();activeUtterance=null;status('無法啟動發音，請重新點擊。');}
+}
+function clearParts(){
+ for(const element of $('word-parts').querySelectorAll('button')){readingTargets.delete(element);referenceTargets.delete(element);}
+ $('word-parts').replaceChildren();$('word-parts').hidden=true;
+ $('expand-word').setAttribute('aria-expanded','false');$('expand-word').textContent='拆開看單字與助詞';
+}
+function hideWord(stopAudio=true){
+ const restore=$('word-dialog').contains(document.activeElement);
+ $('word-dialog').hidden=true;document.body.classList.remove('word-open');
+ if(restore&&wordTrigger?.isConnected)wordTrigger.focus();
+ wordTrigger?.setAttribute('aria-expanded','false');wordTrigger=null;panelRoot=null;inspectedRef=null;clearParts();
+ for(const id of ['word-text','word-reading','word-meaning','word-grammar','word-context','word-status'])$(id).textContent='';
+ $('expand-word').hidden=true;$('play-word').onclick=null;
+ if(stopAudio)stop();
+}
+function inspectDetails(ref,play=true){
+ inspectedRef=ref;
+ const {tokens,unit}=M.selected(doc,ref),surface=M.text(doc,ref),spoken=M.speech(doc,ref);
+ $('word-status').textContent='';$('word-text').textContent=surface;$('word-text').lang=unit.lang||doc.metadata.targetLanguage;
+ $('word-reading').textContent=spoken.text===surface?'':spoken.text;$('word-reading').lang=unit.lang||doc.metadata.targetLanguage;
+ const meaning=M.meaning(doc,ref);$('word-meaning').textContent=meaning||(rawDoc.version===2?`這個片段尚無 ${localeName(languageSettings.teachingLocale)} 解說。`:'這個片段尚未附解說。');$('word-meaning').lang=meaning?languageSettings.teachingLocale:languageSettings.uiLocale;
+ const exact=(unit.spans||[]).find(s=>s.from===ref.from&&s.to===ref.to);
+ $('word-grammar').textContent=[...(exact?.grammar||[]),...tokens.flatMap(t=>t.grammar||[]),...tokens.filter(t=>t.lemma&&t.lemma!==t.text).map(t=>'原形：'+t.lemma)].join('；');
+ const isPart=panelRoot&&ref!==panelRoot.ref;
+ $('word-context').textContent=isPart?'所在語塊：'+M.text(doc,panelRoot.ref):'';
+ for(const b of $('word-parts').querySelectorAll('[data-token]'))b.setAttribute('aria-pressed',String(isPart&&b.dataset.token===ref.from));
+ $('play-word').onclick=()=>speak(ref);if(play)speak(ref);
+}
+function inspect(ref,trigger,play=true){
+ // Replacing an expanded group must not leave keyboard focus on a removed token.
+ if($('word-parts').contains(document.activeElement))trigger?.focus();
+ wordTrigger?.setAttribute('aria-expanded','false');wordTrigger=trigger||null;
+ clearParts();const {tokens,unit}=M.selected(doc,ref);panelRoot={ref,tokens,unit};
+ $('expand-word').hidden=tokens.filter(inspectable).length<2;
+ if($('expand-word').hidden&&document.activeElement===$('expand-word'))trigger?.focus();
+ $('word-dialog').hidden=false;document.body.classList.add('word-open');
+ wordTrigger?.setAttribute('aria-expanded','true');inspectDetails(ref,play);
+}
+function inspectable(t){return t.kind!=='separator'&&!/^[\s\p{P}]+$/u.test(t.text);}
+function expandWord(){
+ if(!panelRoot)return;
+ if(!$('word-parts').hidden){
+  if($('word-parts').contains(document.activeElement))$('expand-word').focus();
+  $('word-parts').hidden=true;$('expand-word').setAttribute('aria-expanded','false');$('expand-word').textContent='拆開看單字與助詞';return;
+ }
+ if(!$('word-parts').childNodes.length){
+  const root=panelRoot,parts=node('div',undefined,'unit token-parts'),lang=root.unit.lang||doc.metadata.targetLanguage;
+  for(const t of root.tokens){
+   if(!inspectable(t)){parts.append(document.createTextNode(t.text));continue;}
+   const ref={unit:root.unit.id,from:t.id,to:t.id};
+   const b=referenceButton(ref,[t],lang,'word token-part',()=>{if(panelRoot===root)inspectDetails(ref);});
+   b.dataset.token=t.id;b.setAttribute('aria-pressed','false');parts.append(b);
+  }
+  $('word-parts').append(node('p','點選單字或助詞，查看它在這裡的讀音與用法。','muted'),parts,button('聽整個語塊',()=>{if(panelRoot===root)inspectDetails(root.ref);},'pill'));
+ }
+ $('word-parts').hidden=false;$('expand-word').setAttribute('aria-expanded','true');$('expand-word').textContent='收起單字與助詞';
+}
+function japanese(lang){return /^ja(?:-|$)/i.test(lang);}
+function rubySegments(token,lang){
+ if(!japanese(lang)||token.kind==='separator')return null;
+ if(token.ruby)return token.ruby;
+ return token.reading&&token.reading!==token.text?[{text:token.text,reading:token.reading}]:null;
+}
+function renderTokenText(element,tokens,lang){
+ element.replaceChildren();
+ for(const token of tokens){
+  const segments=showReadings&&rubySegments(token,lang);
+  if(!segments){element.append(document.createTextNode(token.text));continue;}
+  for(const segment of segments){
+   if(!segment.reading){element.append(document.createTextNode(segment.text));continue;}
+   const ruby=node('ruby',segment.text),rt=node('rt',segment.reading);
+   // The button's accessible name remains the exact surface and action. Do not
+   // repeat ruby text to screen readers or derive speech from rendered DOM.
+   rt.setAttribute('aria-hidden','true');ruby.append(rt);element.append(ruby);
+  }
+ }
+}
+function referenceButton(ref,tokens,lang,cls='word',onSelect){
+ const b=button(undefined,()=>onSelect?onSelect():inspect(ref,b),cls);b.lang=lang;
+ renderTokenText(b,tokens,lang);
+ b.dataset.unit=ref.unit;if(ref.from!==undefined){b.dataset.from=ref.from;b.dataset.to=ref.to;}referenceTargets.set(b,ref);
+ b.setAttribute('aria-label',tokens.map(t=>t.text).join('')+'：發音與解說');b.setAttribute('aria-controls','word-dialog');
+ if(tokens.some(t=>rubySegments(t,lang)?.some(s=>s.reading)))readingTargets.set(b,{tokens,lang});
+ return b;
+}
+function updateReadings(){
+ $('readings').setAttribute('aria-pressed',String(showReadings));
+ for(const [element,{tokens,lang}]of readingTargets){if(element.isConnected)renderTokenText(element,tokens,lang);else readingTargets.delete(element);}
+}
+function unitView(ref){
+ const {unit:u}=M.selected(doc,ref),span=node('span',undefined,'unit');span.lang=u.lang||doc.metadata.targetLanguage;
+ for(const group of M.readingGroups(doc,ref)){
+  if(!group.chunk&&!inspectable(group.tokens[0])){span.append(document.createTextNode(group.tokens[0].text));continue;}
+  const b=referenceButton({unit:u.id,from:group.from,to:group.to},group.tokens,span.lang,group.chunk?'word reading-chunk':'word');
+  if(group.chunk)b.dataset.chunk=group.chunk.id;
+  span.append(b);
+ }
+ return span;
+}
+function paragraph(b){
+ const div=node('div',undefined,'para');
+ for(const r of b.runs){
+  if('text'in r){const span=node('span',r.text);span.lang=r.lang||languageSettings.teachingLocale;div.append(span);}
+  else if(r.from!==undefined){const {unit,tokens}=M.selected(doc,r);div.append(referenceButton(r,tokens,unit.lang||doc.metadata.targetLanguage,'word inline-ref'));}
+  else{
+   const wrap=node('span');wrap.append(unitView(r),button('▶',()=>speak(r),'pill'));wrap.lastChild.setAttribute('aria-label','播放這句');
+   const translation=M.meaning(doc,r);
+   if(translation){const details=node('details'),text=node('div',translation,'translation');text.lang=languageSettings.teachingLocale;details.append(node('summary','看翻譯'),text);wrap.append(details);}
+   else if(rawDoc.version===2)wrap.append(node('div',`尚無 ${localeName(languageSettings.teachingLocale)} 翻譯。`,'translation missing-locale'));
+   div.append(wrap);
+  }
+ }
+ return div;
+}
+function resetContent(){
+ const content=$('content'),restore=content.contains(document.activeElement)||$('word-dialog').contains(document.activeElement);
+ hideWord(false);stop();readingTargets.clear();referenceTargets.clear();content.replaceChildren();
+ // The focused navigation/token control is about to disappear. Keep the next
+ // keyboard step in the new content instead of dropping focus onto the body.
+ if(restore)content.focus();
+ return content;
+}
+function unavailableNotes(ids){const scope=ids?new Set(ids):null;return (projection.disabledTemplates||[]).filter(item=>!scope||scope.has(item.noteId));}
+function practiceWarning(ids){const count=unavailableNotes(ids).length;return count?`${localeName(languageSettings.teachingLocale)} 尚缺 ${count} 個練習題型的必要教學內容；這些題目已略過。`:'';}
+function read(){
+ const content=resetContent();$('read-tab').setAttribute('aria-pressed','true');$('practice-tab').setAttribute('aria-pressed','false');
+ if(savedPractice){
+  content.append(button('回到剛才的練習',restorePractice,'primary'));
+  if(savedPractice.fallback){const card=node('div',undefined,'card reader-card');card.append(unitView({unit:savedPractice.unit}),node('p',M.meaning(doc,{unit:savedPractice.unit})||`尚無 ${localeName(languageSettings.teachingLocale)} 翻譯。`),button('▶ 聽示範',()=>speak({unit:savedPractice.unit})));content.append(card);return;}
+ }
+ const block=displayBlocks[readIndex];content.append(node('p',`第 ${readIndex+1} / ${displayBlocks.length} 段`,'muted'));
+ const card=node('div',undefined,'card reader-card');card.dataset.block=block.id;
+ if((projection.disabledBlockIds||[]).includes(block.id))card.append(node('p',`這段尚缺 ${localeName(languageSettings.teachingLocale)} 教學內容。請切換教學語言，或略過這段。`,'missing-locale'));
+ if(block.type==='paragraph')card.append(paragraph(block));
+ else if(block.type==='activity'){
+  const start=button('開始這段練習',()=>{afterPractice=readIndex+1;practice(block.notes,true);},'primary');
+  start.disabled=!M.cards(doc,block.notes).length;
+  card.append(node('h2',block.stage==='apply'?'換個情境試試':'自己想一想'));
+  const warning=practiceWarning(block.notes);if(warning)card.append(node('p',warning,'missing-locale'));
+  if(start.disabled&&!warning)card.append(node('p','這段目前沒有可用的練習。','missing-locale'));card.append(start);
+ }
+ content.append(card);const actions=node('div',undefined,'actions');const prev=button('上一段',()=>{readIndex--;read();});prev.disabled=readIndex===0;actions.append(prev);
+ if(readIndex<displayBlocks.length-1)actions.append(button(block.type==='activity'?'略過這段':'下一段',()=>{readIndex++;read();},'primary'));
+ else actions.append(button('完成閱讀',()=>{hideWord();$('lesson').hidden=true;$('library').hidden=false;},'primary'));content.append(actions);
+}
+function practice(ids,fromBlock=false){
+ stop();savedPractice=null;practiceNotice='';practiceAnchor=null;visitedCards=new Set();remainingOnly=false;if(!fromBlock)afterPractice=null;practiceScope=ids?[...ids]:null;deck=M.cards(doc,ids);position=0;revealed=false;
+ $('read-tab').setAttribute('aria-pressed','false');$('practice-tab').setAttribute('aria-pressed','true');draw();
+}
+function draw(){
+ if(deck.length&&position>=deck.length){const unseen=deck.findIndex(card=>!visitedCards.has(card.id));if(unseen>=0){position=unseen;revealed=false;remainingOnly=true;practiceNotice='接著練習這個教學語言提供的其他題目。';}}
+ const content=resetContent(),warning=practiceWarning(practiceScope);
+ if(practiceNotice)content.append(node('p',practiceNotice,'coverage'));if(warning)content.append(node('p',warning,'missing-locale'));
+ if(!deck.length){content.append(node('p',unavailableNotes(practiceScope).length?'目前教學語言沒有可用的練習。請切換教學語言或回到內容。':'這份教材還沒有練習題。'),button('回到內容',read));return;}
+ if(position>=deck.length){
+  content.append(node('h2',warning?'目前可用的練習已完成':'這輪練習完成'),node('p','下次再試著回想，看看哪些表達還記得。'));
+  if(afterPractice!==null&&afterPractice<displayBlocks.length)content.append(button('繼續下一段',()=>{readIndex=afterPractice;afterPractice=null;read();},'primary'));
+  if(afterPractice===null||afterPractice>=displayBlocks.length)content.append(button('完成學習',()=>{hideWord();$('lesson').hidden=true;$('library').hidden=false;},'primary'));
+  content.append(button('再練一輪',()=>practice(practiceScope,true)),button('回到內容',read));return;
+ }
+ const c=deck[position];content.append(node('p',`${LABELS[c.kind]} · ${position+1} / ${deck.length}`,'muted'));
+ const card=node('div',undefined,'card practice');card.dataset.card=c.id;
+ if(c.instruction&&c.instruction!==c.prompt){const instruction=node('p',c.instruction,'instruction');instruction.lang=languageSettings.teachingLocale;card.append(instruction);}
+ if(c.kind==='listening')card.append(button('▶ 聽這句',()=>speak({unit:c.unit}),'primary'));
+ const prompt=node('p',undefined,'prompt');prompt.lang=['production','listening'].includes(c.kind)?languageSettings.teachingLocale:doc.metadata.targetLanguage;
+ if(revealed&&['recognition','cloze'].includes(c.kind))prompt.append(unitView({unit:c.unit}));else prompt.textContent=c.prompt;card.append(prompt);
+ if(revealed){
+  const answer=node('div',undefined,'answer');if(['production','listening'].includes(c.kind))answer.append(unitView({unit:c.unit}));
+  const translation=M.meaning(doc,{unit:c.unit});if(translation&&(c.kind!=='production'||translation!==c.prompt)){const text=node('p',translation);text.lang=languageSettings.teachingLocale;answer.append(text);}
+  if(c.feedback){const feedback=node('p',c.feedback,'feedback');feedback.lang=languageSettings.teachingLocale;answer.append(feedback);}
+  answer.append(button('▶ 聽示範',()=>speak({unit:c.unit})));card.append(answer);
+  const row=node('div',undefined,'row');for(const [label,value]of[['還沒想起來','again'],['想起來了','recalled']])row.append(button(label,()=>rate(c,value),'primary'));card.append(row);
+ }else card.append(button('顯示答案',()=>{if(deck[position]!==c)return;revealed=true;practiceAnchor=null;draw();},'primary'));
+ content.append(card);const actions=node('div',undefined,'actions');const prev=button('上一題',()=>{if(deck[position]!==c)return;position--;remainingOnly=false;revealed=false;practiceNotice='';practiceAnchor=null;draw();});prev.disabled=position===0;
+ actions.append(prev,button('略過',()=>{if(deck[position]!==c)return;visitedCards.add(c.id);advancePractice();revealed=false;practiceNotice='';practiceAnchor=null;draw();}),button('查看教材',context));content.append(actions);
+}
+function context(){const unit=deck[position].unit;savedPractice={deck,position,revealed,scope:practiceScope,after:afterPractice,readIndex,unit,fallback:false,notice:practiceNotice,anchor:practiceAnchor,visited:new Set(visitedCards),remainingOnly};const source=displayBlocks.findIndex(b=>b.type==='paragraph'&&b.runs.some(r=>r.unit===unit));if(source>=0)readIndex=source;else savedPractice.fallback=true;read();}
+function restorePractice(){if(!savedPractice)return;const saved=savedPractice;savedPractice=null;deck=saved.deck;position=saved.position;revealed=saved.revealed;practiceScope=saved.scope;afterPractice=saved.after;readIndex=saved.readIndex;practiceNotice=saved.notice||'';practiceAnchor=saved.anchor||null;visitedCards=new Set(saved.visited);remainingOnly=saved.remainingOnly;$('read-tab').setAttribute('aria-pressed','false');$('practice-tab').setAttribute('aria-pressed','true');draw();}
+function advancePractice(){position++;if(remainingOnly)while(position<deck.length&&visitedCards.has(deck[position].id))position++;}
+function rate(card,result){if(deck[position]!==card||!revealed)return;visitedCards.add(card.id);const event={card:card.id,revision:doc.revision,result,at:new Date().toISOString()};const next=[...events,event].slice(-2000);try{localStorage.setItem(EVENTS,JSON.stringify(next));events=next;status('');}catch{status('這次自評無法儲存，但可以繼續練習。');}advancePractice();revealed=false;practiceNotice='';practiceAnchor=null;draw();}
+function localeName(locale){
+ let label=locale;try{label=new Intl.DisplayNames(['zh-Hant'],{type:'language'}).of(locale)||locale;}catch{}
+ return label===locale?locale:`${label}（${locale}）`;
+}
+function locales(value){return value.version===1?[value.metadata.supportLanguage]:Object.keys(value.localizations);}
+function initialLocale(value){return preferredTeachingLocale||locales(value)[0];}
+function project(value,locale){return M.project(value,locale);}
+function setProjection(){
+ projection=project(rawDoc,languageSettings.teachingLocale);doc=projection.doc;
+ const projected=new Map(doc.blocks.map(block=>[block.id,block])),source=rawDoc.version===2?rawDoc.core.blocks:rawDoc.blocks;
+ displayBlocks=source.map(block=>{
+  const available=projected.get(block.id);
+  if(block.type==='activity')return {...(available||block),notes:[...block.notes]};
+  return available||{id:block.id,type:'unavailable',stage:block.stage};
+ });
+}
+function issueText(issue){
+ const labels={missing_locale:'尚未提供這個教學語言',missing_title:'教材標題',missing_teaching:'段落解說',missing_translation:'翻譯',missing_prompt:'練習提示',missing_feedback:'練習回饋'};
+ let subject='教材';
+ if(issue.blockId)subject=`第 ${displayBlocks.findIndex(block=>block.id===issue.blockId)+1} 段`;
+ else if(issue.unitId){const text=M.text(doc,{unit:issue.unitId});subject=text.length>50?text.slice(0,50)+'…':text;}
+ else if(issue.noteId)subject='練習';
+ return `${subject}：${labels[issue.code]||'教學內容'}${issue.template?'（'+(LABELS[issue.template]||issue.template)+'）':''}`;
+}
+function updateLocaleControls(){
+ const available=locales(rawDoc),selected=languageSettings.teachingLocale,select=$('teaching-locale');select.replaceChildren();
+ for(const locale of available){const option=node('option',localeName(locale));option.value=locale;select.append(option);}
+ if(!available.includes(selected)){const option=node('option',localeName(selected)+'（此教材未提供）');option.value=selected;select.append(option);}
+ select.value=selected;select.disabled=available.length===1&&available.includes(selected);
+ $('locale-settings').hidden=false;$('target-language').textContent=doc.metadata.targetLanguage;$('ui-locale').value=languageSettings.uiLocale;
+ const issues=projection.issues||[],disabled=projection.disabledTemplates||[];
+ const locations=new Map();for(const issue of issues){if(!locations.has(issue.code))locations.set(issue.code,new Set());locations.get(issue.code).add(issue.path);}
+ const counts=new Map([...locations].map(([code,paths])=>[code,paths.size]));
+ const parts=[];if(counts.has('missing_teaching'))parts.push(`${counts.get('missing_teaching')} 段解說尚缺`);if(counts.has('missing_translation'))parts.push(`${counts.get('missing_translation')} 處翻譯尚缺`);
+ if(disabled.length)parts.push(`${disabled.length} 個練習題型不可用`);
+ if(issues.length&&!parts.length)parts.push('仍有教學內容尚缺');
+ $('locale-coverage').hidden=!issues.length;
+ $('locale-coverage').textContent=!available.includes(selected)?`${localeName(selected)} 尚未提供。僅顯示共用的目標語內容；請選擇可用教學語言。`:`${localeName(selected)}：${issues.length?parts.join('；'):'所需教學欄位已提供'}。`;
+ const coverage=$('locale-coverage-list');coverage.replaceChildren();let gaps=false;
+ for(const [key,label]of [['units','句子翻譯'],['tokens','單字翻譯'],['teaching','段落解說']]){
+  const count=projection.coverage?.[key];if(!count?.total)continue;
+  const item=node('li',`${label}：${count.present} / ${count.total}`);item.dataset.coverage=key;coverage.append(item);if(count.present<count.total)gaps=true;
+ }
+ $('locale-missing').hidden=!issues.length&&!gaps;$('locale-missing').querySelector('summary').textContent=issues.length?'查看尚缺的內容':'翻譯與解說';
+ const list=$('locale-missing-list');list.replaceChildren();for(const issue of issues.slice(0,100))list.append(node('li',issueText(issue)));
+ if(issues.length>100)list.append(node('li',`另有 ${issues.length-100} 項尚缺內容。`));
+ $('export-scope').querySelector('[value="selected"]').disabled=!available.includes(selected);
+ if(!available.includes(selected))$('export-scope').value='all';
+ $('export-help').textContent=`可保留全部 ${available.length} 個教學語言，或只匯出目前選擇的語言。`;
+}
+function displayTitle(view=projection){return view.issues.some(issue=>issue.code==='missing_title')?'尚未提供此教學語言的標題':view.doc.metadata.title;}
+function refreshContinue(){
+ if(!doc)return;let b=$('continue-current');if(!b){b=button('',()=>load(rawDoc),'sample');b.id='continue-current';$('samples').append(b);}b.textContent='繼續上次：'+displayTitle();
+}
+function updateLessonMetadata(){
+ $('title').textContent=displayTitle();$('title').lang=projection.issues.some(issue=>issue.code==='missing_title')?languageSettings.uiLocale:languageSettings.teachingLocale;$('material-title').textContent=displayTitle();$('material-tools').hidden=false;
+ $('mode').textContent=doc.mode==='article'?'閱讀教材':'主題教學';$('languages').textContent=`學習：${doc.metadata.targetLanguage} · 教學：${languageSettings.teachingLocale}`;
+ $('goal').textContent=(doc.metadata.goals||[]).join(' · ');$('goal').lang=languageSettings.teachingLocale;
+ $('practice-tab').disabled=!(rawDoc.version===1?rawDoc.notes:rawDoc.core.notes)?.length;
+ $('reading-options').hidden=!doc.units.some(u=>u.tokens.some(t=>rubySegments(t,u.lang||doc.metadata.targetLanguage)?.some(s=>s.reading)));
+ updateLocaleControls();updateReadings();refreshContinue();
+}
+function load(value,persist=true){
+ generation++;clearImportPreview();
+ stop();rawDoc=M.validate(value);languageSettings.teachingLocale=initialLocale(rawDoc);setProjection();
+ deck=[];practiceScope=null;position=0;revealed=false;savedPractice=null;readIndex=0;afterPractice=null;pending=null;practiceNotice='';practiceAnchor=null;visitedCards=new Set();remainingOnly=false;
+ $('library').hidden=true;$('lesson').hidden=false;updateLessonMetadata();
+ if(persist){try{localStorage.setItem(KEY,M.stringify(rawDoc));status('');}catch{status('教材已開啟，但裝置無法儲存。請匯出保留副本。');}}read();
+}
+function remapPractice(oldDeck,oldPosition,nextDeck,wasRevealed,anchor,visited){
+ const current=anchor||(oldDeck[oldPosition]?{id:oldDeck[oldPosition].id,after:oldDeck.slice(oldPosition+1).map(c=>c.id),revealed:wasRevealed}:null);
+ if(!current){const unseen=nextDeck.findIndex(card=>!visited.has(card.id));return {position:unseen<0?nextDeck.length:unseen,revealed:false,anchor:null,same:true,resumed:unseen>=0&&visited.size>0};}
+ const index=nextDeck.findIndex(c=>c.id===current.id);if(index>=0)return {position:index,revealed:current.revealed,anchor:null,same:true};
+ // Remember an unavailable card until the learner acts on a different card.
+ // Switching back can then restore the exact identity and prior reveal state.
+ for(const id of current.after){const next=nextDeck.findIndex(c=>c.id===id);if(next>=0)return {position:next,revealed:false,anchor:current,same:false};}
+ return {position:nextDeck.length,revealed:false,anchor:current,same:false};
+}
+function refKey(ref){return JSON.stringify([ref.unit,ref.from??null,ref.to??null]);}
+function changeTeachingLocale(locale){
+ if(!rawDoc||locale===languageSettings.teachingLocale)return;
+ const activePractice=$('practice-tab').getAttribute('aria-pressed')==='true',blockId=displayBlocks[readIndex]?.id;
+ const panel=panelRoot&&!$('word-dialog').hidden?{root:panelRoot.ref,selected:inspectedRef,expanded:!$('word-parts').hidden}:null;
+ const wasLibrary=!$('library').hidden;stop();languageSettings.teachingLocale=locale;preferredTeachingLocale=locale;
+ setProjection();
+ const nextDeck=deck.length||activePractice?M.cards(doc,practiceScope):[],mapped=remapPractice(deck,position,nextDeck,revealed,practiceAnchor,visitedCards);deck=nextDeck;position=mapped.position;revealed=mapped.revealed;practiceAnchor=mapped.anchor;remainingOnly=remainingOnly||!!mapped.resumed;
+ practiceNotice=mapped.resumed?'接著練習這個教學語言提供的其他題目。':mapped.same?'':'剛才的題目缺少所選語言的必要教學內容，已略過。';
+ if(savedPractice){
+  const next=M.cards(doc,savedPractice.scope),move=remapPractice(savedPractice.deck,savedPractice.position,next,savedPractice.revealed,savedPractice.anchor,savedPractice.visited);
+  savedPractice={...savedPractice,deck:next,position:move.position,revealed:move.revealed,anchor:move.anchor,remainingOnly:savedPractice.remainingOnly||!!move.resumed,notice:move.resumed?'接著練習這個教學語言提供的其他題目。':move.same?'':'剛才的題目缺少所選語言的必要教學內容，已略過。'};
+ }
+ const index=displayBlocks.findIndex(b=>b.id===blockId);readIndex=index>=0?index:Math.min(readIndex,displayBlocks.length-1);
+ updateLessonMetadata();if(activePractice)draw();else read();
+ if(panel){
+  const trigger=[...referenceTargets].find(([element,ref])=>element.isConnected&&refKey(ref)===refKey(panel.root))?.[0];
+  if(trigger){inspect(panel.root,trigger,false);if(panel.expanded)expandWord();if(panel.selected&&refKey(panel.selected)!==refKey(panel.root))inspectDetails(panel.selected,false);}
+ }
+ if(wasLibrary){hideWord();$('lesson').hidden=true;$('library').hidden=false;}
+ try{localStorage.setItem(TEACHING,locale);status('教學語言已切換；學習進度與讀音設定已保留。');}catch{status('教學語言已切換，但無法記住設定。');}
+}
+function clearImportPreview(){pending=null;$('confirm-import').hidden=true;$('confirm-import').disabled=true;$('import-preview').hidden=true;}
+function dismissImport(){generation++;clearImportPreview();$('import-dialog').close();}
+function openImport(paste){hideWord();generation++;clearImportPreview();$('import-error').textContent='';$('json').value='';$('paste-box').hidden=!paste;$('import-dialog').showModal();}
+function importConflictText(issue){
+ if(issue.code==='format_change')return '相同教材編號使用不同格式版本，此處尚不支援直接轉換或合併。請保留目前教材，先在作者端確認格式轉換。';
+ if(issue.code==='combined_invalid')return '合併後超出教材大小、語言數量限制，或有重複的語言代碼。請調整檔案後再匯入。';
+ const subject=issue.scope==='locale'?`${localeName(issue.locale)} 教學內容`:issue.scope==='core'?'共用核心內容':'教材內容';
+ if(issue.code==='downgrade')return `${subject}不能自動降版：檔案是第 ${issue.incomingRevision} 版，目前是第 ${issue.currentRevision} 版。請確認內容並產生較高修訂版，再重新匯入。`;
+ return `${subject}有版本衝突：第 ${issue.incomingRevision} 版包含不同內容。請確認修改並提高該內容的修訂版，再重新匯入。`;
+}
+function importPlanText(plan){
+ if(plan.status==='added')return '新增教材。這裡只保留最近開啟的教材，不會更新其他未開啟的教材。';
+ if(plan.status==='unchanged')return '沒有變更：內容與修訂版相同，保留目前教材與已有教學語言。';
+ if(plan.changes.core){
+  const revision=plan.document.version===2?plan.document.core.revision:plan.document.revision;
+  return `更新教材${plan.document.version===2?'核心':''}至第 ${revision} 版。${plan.document.version===2?'只使用這份檔案附上的教學語言，舊核心的語言層不會沿用。':''}${plan.changes.removedLocales.length?'本次移除未附上的教學語言：'+plan.changes.removedLocales.map(localeName).join('、')+'。':''}`;
+ }
+ const details=[];
+ for(const [key,label]of [['addedLocales','新增教學語言'],['updatedLocales','更新教學語言'],['keptLocales','保留教學語言']])if(plan.changes[key].length)details.push(label+'：'+plan.changes[key].map(localeName).join('、'));
+ return '更新教材。'+details.join('；')+'。共用核心與卡片編號保持不變。';
+}
+function importErrorText(error){
+ if(error.code==='stale_core_revision')return '教學語言層與核心修訂版不一致，請先檢查並更新對應內容。';
+ if(error.code==='unsupported_version')return '不支援這個教材格式版本。';
+ if(error.code==='resource_limit'||/1 MiB/.test(error.message))return '教材超出檔案大小或顯示容量限制。';
+ return '教材格式或內容無效。請檢查 JSON、欄位、教材引用與修訂版後重試。';
+}
+function preview(raw){
+ clearImportPreview();if(!$('import-dialog').open)return;
+ try{
+  const source=M.parse(raw),plan=ImportPolicy.planImport(rawDoc,source);
+  if(plan.status==='conflict'){$('import-error').textContent='匯入衝突：'+plan.conflicts.map(importConflictText).join(' ');return;}
+  const value=plan.document,locale=initialLocale(value),view=project(value,locale);
+  pending={plan,base:rawDoc,generation};
+  $('import-preview').textContent=importPlanText(plan)+` ${displayTitle(view)} · v${value.version} · 學習 ${view.doc.metadata.targetLanguage} · 教學語言：${locales(value).map(localeName).join('、')} · ${view.doc.units.length} 份文字、目前 ${localeName(locale)} 可用 ${M.cards(view.doc).length} 道練習${view.issues.length?'；有尚缺的教學內容':''}`;
+  $('import-preview').hidden=false;$('confirm-import').hidden=false;$('confirm-import').disabled=false;$('import-error').textContent='';
+ }catch(e){$('import-error').textContent='無法匯入：'+importErrorText(e);}
+}
+$('choose').onclick=()=>{$('file').value='';$('file').click();};$('file').onchange=async()=>{const file=$('file').files[0];if(!file)return;openImport(false);const ticket=generation;if(file.size>M.MAX){$('import-error').textContent='檔案超過 1 MiB。';return;}try{const raw=await file.text();if(ticket===generation&&$('import-dialog').open)preview(raw);}catch{if(ticket===generation)$('import-error').textContent='檔案讀取失敗。';}};
+$('paste').onclick=()=>openImport(true);$('check').onclick=()=>preview($('json').value);$('json').oninput=()=>{clearImportPreview();$('import-error').textContent='';};$('cancel-import').onclick=dismissImport;
+$('import-dialog').addEventListener('cancel',()=>{generation++;clearImportPreview();});
+$('import-dialog').addEventListener('close',()=>{if(!$('import-dialog').open){generation++;clearImportPreview();}});
+$('confirm-import').onclick=()=>{if(!pending||$('confirm-import').disabled||!$('import-dialog').open||pending.generation!==generation||pending.base!==rawDoc)return;const {plan}=pending;dismissImport();load(plan.document,plan.status!=='unchanged');};
+$('expand-word').onclick=expandWord;$('close-word').onclick=()=>hideWord();document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('import-dialog').open&&!$('word-dialog').hidden){e.preventDefault();hideWord();}});
+$('home').onclick=()=>{hideWord();stop();savedPractice=null;$('lesson').hidden=true;$('library').hidden=false;};$('read-tab').onclick=()=>{if($('read-tab').getAttribute('aria-pressed')==='true')return;if(deck.length&&position<deck.length)context();else read();};$('practice-tab').onclick=()=>{if(savedPractice){restorePractice();return;}if($('practice-tab').getAttribute('aria-pressed')==='true')return;if(deck.length){$('read-tab').setAttribute('aria-pressed','false');$('practice-tab').setAttribute('aria-pressed','true');draw();}else practice();};
+$('export').onclick=()=>{
+ try{
+  const selected=$('export-scope').value==='selected',locale=languageSettings.teachingLocale;
+  if(selected&&!locales(rawDoc).includes(locale))throw new Error('教材未提供所選教學語言。');
+  const value=selected&&rawDoc.version===2?M.exportLocales(rawDoc,[locale]):rawDoc,raw=M.stringify(value);
+  const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=node('a');a.href=url;a.download=doc.id+(selected?'-'+locale:'')+'.json';
+  document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status('教材下載已準備，請確認瀏覽器的下載結果。');
+ }catch(e){status('匯出失敗：'+e.message);}
+};
+$('teaching-locale').onchange=()=>changeTeachingLocale($('teaching-locale').value);
+try{const locale=localStorage.getItem(TEACHING);if(locale&&locale.length<=40&&/^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(locale))preferredTeachingLocale=locale;}catch{}
+try{showReadings=localStorage.getItem(READINGS)!=='hidden';}catch{}
+updateReadings();
+$('readings').onclick=()=>{showReadings=!showReadings;updateReadings();try{localStorage.setItem(READINGS,showReadings?'shown':'hidden');}catch{status('讀音已切換，但無法記住設定。');}};
+function theme(dark){document.documentElement.dataset.theme=dark?'dark':'light';$('theme').setAttribute('aria-pressed',String(dark));}
+try{const saved=localStorage.getItem('lingourmet.theme.v1');theme(saved==='dark'||(!saved&&window.matchMedia?.('(prefers-color-scheme: dark)').matches));}catch{theme(!!window.matchMedia?.('(prefers-color-scheme: dark)').matches);}
+$('theme').onclick=()=>{const dark=document.documentElement.dataset.theme!=='dark';theme(dark);try{localStorage.setItem('lingourmet.theme.v1',dark?'dark':'light');}catch{status('外觀已切換，但無法記住設定。');}};
+for(const example of window.LESSON_EXAMPLES||[]){
+ const view=project(example,locales(example)[0]).doc,b=button('',()=>load(structuredClone(example)),'sample');
+ b.append(node('strong',example.version===2?'切換教學語言':example.id==='demo-japanese-reading'?'看日文讀音標示':example.mode==='article'?'讀一篇日文文章':'用中文學日文表達'),node('div',view.metadata.title,'muted'));$('samples').append(b);
+}
+try{const raw=localStorage.getItem(EVENTS);if(raw){const parsed=JSON.parse(raw);if(Array.isArray(parsed))events=parsed;}}catch{}
+try{const raw=localStorage.getItem(KEY);if(raw){rawDoc=M.parse(raw);languageSettings.teachingLocale=initialLocale(rawDoc);setProjection();updateLessonMetadata();}}catch{status('上次教材無法讀取，請重新匯入。');}
+window.addEventListener('pagehide',stop);
+})();
+</script>
+</body></html>

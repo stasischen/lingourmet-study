@@ -1,0 +1,15 @@
+{
+  "format": "lingourmet.static-export.v1",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "index.html",
+      "bytes": 104599,
+      "sha256": "cb4345837d3e960528c652a1d5bf8752907eceaf495c357fc32cbc62ef025f1d"
+    }
+  ]
+}
