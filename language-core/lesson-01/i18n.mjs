@@ -28,3 +28,11 @@ UI['zh-Hant'].usage='用法';UI.en.usage='Usage';UI.ja.usage='使い方';
 Object.assign(UI['zh-Hant'],{cardScope:'翻卡範圍',lexicalCards:'詞語與表達',sentenceCards:'原句'});Object.assign(UI.en,{cardScope:'Card set',lexicalCards:'Words and expressions',sentenceCards:'Sentences'});Object.assign(UI.ja,{cardScope:'カードの範囲',lexicalCards:'ことば・表現',sentenceCards:'文'});
 
 Object.assign(UI['zh-Hant'],{cardProduction:'看意思，想原文',cardListening:'聽原文，想意思',cardPlay:'播放原文'});Object.assign(UI.en,{cardProduction:'Read the meaning, recall the Japanese',cardListening:'Listen, recall the meaning',cardPlay:'Play Japanese'});Object.assign(UI.ja,{cardProduction:'意味を見て原文を思い出す',cardListening:'原文を聞いて意味を思い出す',cardPlay:'原文を再生'});
+
+Object.assign(UI['zh-Hant'],{selectedTitle:'自選',addSelected:'加入自選',removeSelected:'移出自選',selectedEmpty:'尚未加入句子或詞語。',practiceSelectedCards:'練習自選翻卡',practiceSelectedSentences:'自選句子組句',selectedSaveError:'自選清單未能儲存，請重試。',selectedReadError:'自選清單無法讀取，原記錄已保留。',selectedRetry:'重試',selectedStale:'內容已更新，這一項需要重新加入。',selectedUnavailable:'這一項目前無法練習。'});
+Object.assign(UI.en,{selectedTitle:'My selections',addSelected:'Add to my selections',removeSelected:'Remove from my selections',selectedEmpty:'No sentences or words selected yet.',practiceSelectedCards:'Practice selected flashcards',practiceSelectedSentences:'Build selected sentences',selectedSaveError:'Your selection could not be saved. Please retry.',selectedReadError:'Your selections could not be read. The saved record has been preserved.',selectedRetry:'Retry',selectedStale:'This content has changed. Select it again to practice.',selectedUnavailable:'This selection is not available for practice.'});
+Object.assign(UI.ja,{selectedTitle:'選択リスト',addSelected:'リストに追加',removeSelected:'リストから削除',selectedEmpty:'文やことばはまだ選ばれていません。',practiceSelectedCards:'選んだカードを練習',practiceSelectedSentences:'選んだ文を組み立てる',selectedSaveError:'選択リストを保存できませんでした。もう一度お試しください。',selectedReadError:'選択リストを読み込めませんでした。保存済みの記録は残っています。',selectedRetry:'再試行',selectedStale:'内容が更新されています。もう一度選び直してください。',selectedUnavailable:'この項目は現在練習できません。'});
+
+UI['zh-Hant'].lessonPractice='課程練習';UI.en.lessonPractice='Lesson practice';UI.ja.lessonPractice='レッスンの練習';
+
+UI['zh-Hant'].selectedAssemblyUnavailable='這個句子目前無法組句練習。';UI.en.selectedAssemblyUnavailable='Sentence building is unavailable for this selection.';UI.ja.selectedAssemblyUnavailable='この文は現在、並べ替え練習に使えません。';
