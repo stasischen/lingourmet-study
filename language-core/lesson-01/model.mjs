@@ -35,6 +35,14 @@ export function validateLesson(data,catalog){
   for(const ref of item.sourceRefs??[]){try{tokensForRange(units[ref.unit],ref.from,ref.to);}catch(e){errors.push(`${item.id??item.entryId}: ${e.message}`);}}
   if(item.entryId&&!catalog?.entries?.[item.entryId])errors.push(`Missing knowledge entry ${item.entryId}`);
  }
+ if(data.practice){
+  const goals=data.goalOrder??[];if(!goals.length||new Set(goals).size!==goals.length)errors.push('Missing or duplicate shared goals');
+  for(const loc of Object.values(data.localizations??{}))if(goals.some(id=>typeof loc.goals?.[id]!=='string'))errors.push('Missing localized goal');
+  for(const item of data.practice.items??[]){
+   if(!Array.isArray(item.entryRefs)||!item.entryRefs.length||item.entryRefs.some(id=>!catalog?.entries?.[id]))errors.push('Missing practice entry reference');
+   if(item.responseType==='choice'){const ids=item.options?.map(o=>o.id)??[];if(!ids.length||ids.some(id=>!id)||new Set(ids).size!==ids.length||!ids.includes(item.answer))errors.push('Invalid stable choice IDs');}
+  }
+ }
  for(const [id,entry] of Object.entries(catalog?.entries??{})){
   for(const ref of entry.relatedRefs??[])if(!catalog.entries[ref])errors.push(`${id}: missing related entry ${ref}`);
   for(const ref of entry.exampleRefs??[])if(!data.examples?.[ref]&&!catalog.examples?.[ref])errors.push(`${id}: missing example ${ref}`);

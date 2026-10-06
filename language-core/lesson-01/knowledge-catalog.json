@@ -245,243 +245,22 @@
     }
   },
   "localizations": {
-    "zh-Hant": {
-      "units": {
-        "X01.s1": {
-          "tokens": {
-            "t1": {
-              "gloss": "初次見面時的開場問候"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "初次見面時的開場問候"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "初次見面時的開場問候"
-            }
-          },
-          "meaning": "初次見面。"
-        },
-        "X01.s2": {
-          "tokens": {
-            "t1": {
-              "gloss": "ナオ（虛構姓名）"
-            },
-            "t2": {
-              "gloss": "此處接在姓名或身分名詞後，構成禮貌句尾"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "我是ナオ"
-            }
-          },
-          "spans": {},
-          "meaning": "我是ナオ。"
-        },
-        "X01.s3": {
-          "tokens": {
-            "t1": {
-              "gloss": "在此是表達希望好好相處之慣用語的一部分，不單獨逐字翻譯"
-            },
-            "t2": {
-              "gloss": "在此是結語中的禮貌請託部分；與よろしく合看，非另提具體要求"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "在這個共同活動情境中，表達希望接下來好好相處、合作的心意"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "在這個共同活動情境中，表達希望接下來好好相處、合作的心意"
-            }
-          },
-          "meaning": "請多關照。（希望接下來好好相處、合作。）"
-        },
-        "T03.s1": {
-          "meaning": "我是學生。",
-          "tokens": {
-            "t1": {
-              "gloss": "學生"
-            },
-            "t2": {
-              "gloss": "此處接在姓名或身分名詞後，構成禮貌句尾"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "我是學生"
-            }
-          },
-          "spans": {}
-        },
-        "T03.s2": {
-          "meaning": "レン，你呢？（承接剛才的身分話題。）",
-          "tokens": {
-            "t1": {
-              "gloss": "レン（虛構姓名）"
-            },
-            "t2": {
-              "gloss": "接在對方姓名後的禮貌稱呼"
-            },
-            "t3": {
-              "gloss": "這裡讀わ；以對方為話題，承接剛才的身分問題"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "レン，你呢？（接著問身分）"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "レン，你呢？（接著問身分）"
-            }
-          }
-        },
-        "T04.s1": {
-          "meaning": "我是公司職員。",
-          "tokens": {
-            "t1": {
-              "gloss": "公司職員"
-            },
-            "t2": {
-              "gloss": "此處接在姓名或身分名詞後，構成禮貌句尾"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "我是公司職員"
-            }
-          },
-          "spans": {}
-        }
-      }
-    },
-    "en": {
-      "units": {
-        "X01.s1": {
-          "tokens": {
-            "t1": {
-              "gloss": "a greeting used on meeting someone for the first time"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "a greeting used on meeting someone for the first time"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "a greeting used on meeting someone for the first time"
-            }
-          },
-          "meaning": "Nice to meet you."
-        },
-        "X01.s2": {
-          "tokens": {
-            "t1": {
-              "gloss": "Nao (fictional personal name)"
-            },
-            "t2": {
-              "gloss": "a polite ending after the name or role noun here"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "I'm Nao"
-            }
-          },
-          "spans": {},
-          "meaning": "I'm Nao."
-        },
-        "X01.s3": {
-          "tokens": {
-            "t1": {
-              "gloss": "part of the conventional expression for a good cooperative relationship here; not a standalone word-for-word equivalent"
-            },
-            "t2": {
-              "gloss": "the polite request component of the closing here; read with よろしく, rather than as a separate concrete request"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "expresses a wish to get along and work together well in this shared activity"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "expresses a wish to get along and work together well in this shared activity"
-            }
-          },
-          "meaning": "I hope we can get along and work together well."
-        },
-        "T03.s1": {
-          "meaning": "I'm a student.",
-          "tokens": {
-            "t1": {
-              "gloss": "student"
-            },
-            "t2": {
-              "gloss": "a polite ending after the name or role noun here"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "I'm a student"
-            }
-          },
-          "spans": {}
-        },
-        "T03.s2": {
-          "meaning": "And you, Ren? (Continuing the topic of their roles.)",
-          "tokens": {
-            "t1": {
-              "gloss": "Ren (fictional personal name)"
-            },
-            "t2": {
-              "gloss": "a polite form of address attached to the other person’s name"
-            },
-            "t3": {
-              "gloss": "pronounced わ here; marks the other person as the topic of the understood question about their role"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "And you, Ren? (asking about the role just mentioned)"
-            }
-          },
-          "spans": {
-            "e1": {
-              "meaning": "And you, Ren? (asking about the role just mentioned)"
-            }
-          }
-        },
-        "T04.s1": {
-          "meaning": "I'm a company employee.",
-          "tokens": {
-            "t1": {
-              "gloss": "company employee"
-            },
-            "t2": {
-              "gloss": "a polite ending after the name or role noun here"
-            }
-          },
-          "chunks": {
-            "c1": {
-              "meaning": "I'm a company employee"
-            }
-          },
-          "spans": {}
-        }
-      }
-    },
     "ja": {
+      "examples": {
+        "X01": {
+          "meaning": "初めて会った人にナオという名前を伝え、これから仲よくしたいという気持ちを表しています。"
+        },
+        "X02": {
+          "meaning": "学生という立場を伝えています。"
+        },
+        "X03": {
+          "meaning": "会社員という立場を伝えています。"
+        },
+        "X04": {
+          "meaning": "ミナは自分が学生だと伝え、レンにも立場を聞きます。レンは会社員だと答えています。",
+          "context": "ミナが自分の立場を伝えてから、レンに聞きます。"
+        }
+      },
       "units": {
         "X01.s1": {
           "tokens": {
@@ -507,7 +286,7 @@
               "gloss": "架空の人物の名前「ナオ」"
             },
             "t2": {
-              "gloss": "ここでは名前や立場の名詞の後で文を丁寧に終える形"
+              "gloss": "名前や立場の後に付ける丁寧な語尾"
             }
           },
           "chunks": {
@@ -521,23 +300,23 @@
         "X01.s3": {
           "tokens": {
             "t1": {
-              "gloss": "ここでは、これからのよい関係を願う決まった表現の一部。一語だけの直訳にしない"
+              "gloss": "これから仲よくしたい気持ちを表す表現の前半"
             },
             "t2": {
-              "gloss": "ここでは、結びの中で丁寧にお願いする部分。「よろしく」と一緒に理解し、別の具体的なお願いとは考えない"
+              "gloss": "「よろしく」と合わせて、丁寧な表現にする部分"
             }
           },
           "chunks": {
             "c1": {
-              "meaning": "この共同活動の場面で、これから仲よく、一緒に活動したい気持ちを伝える"
+              "meaning": "これから仲よくしたい気持ち"
             }
           },
           "spans": {
             "e1": {
-              "meaning": "この共同活動の場面で、これから仲よく、一緒に活動したい気持ちを伝える"
+              "meaning": "これから仲よくしたい気持ち"
             }
           },
-          "meaning": "これから仲よく、一緒に活動したいという気持ちを伝えています。"
+          "meaning": "これから仲よくしたい気持ちを伝えています。"
         },
         "T03.s1": {
           "meaning": "自分は学生だと伝えています。",
@@ -546,7 +325,7 @@
               "gloss": "学校などで勉強する人"
             },
             "t2": {
-              "gloss": "ここでは名前や立場の名詞の後で文を丁寧に終える形"
+              "gloss": "名前や立場の後に付ける丁寧な語尾"
             }
           },
           "chunks": {
@@ -557,7 +336,7 @@
           "spans": {}
         },
         "T03.s2": {
-          "meaning": "レンにも、今話した立場について聞いています。",
+          "meaning": "レンにも同じことを聞いています。",
           "tokens": {
             "t1": {
               "gloss": "架空の人物の名前「レン」"
@@ -566,17 +345,17 @@
               "gloss": "相手の名前の後に付ける丁寧な呼び方"
             },
             "t3": {
-              "gloss": "ここでは「わ」と読む。相手を話題にし、直前の立場について聞く"
+              "gloss": "相手を話題にして、同じことを聞く"
             }
           },
           "chunks": {
             "c1": {
-              "meaning": "レンにも、直前に話した立場について聞いている"
+              "meaning": "レンにも立場を聞いている"
             }
           },
           "spans": {
             "e1": {
-              "meaning": "レンにも、直前に話した立場について聞いている"
+              "meaning": "レンにも立場を聞いている"
             }
           }
         },
@@ -587,12 +366,278 @@
               "gloss": "会社で働く人"
             },
             "t2": {
-              "gloss": "ここでは名前や立場の名詞の後で文を丁寧に終える形"
+              "gloss": "名前や立場の後に付ける丁寧な語尾"
             }
           },
           "chunks": {
             "c1": {
               "meaning": "自分は会社で働く人だと伝えています"
+            }
+          },
+          "spans": {}
+        }
+      }
+    },
+    "zh-Hant": {
+      "examples": {
+        "X01": {
+          "meaning": "初次見面。我是ナオ。請多關照。"
+        },
+        "X02": {
+          "meaning": "我是學生。"
+        },
+        "X03": {
+          "meaning": "我是公司職員。"
+        },
+        "X04": {
+          "meaning": "ミナ：「我是學生。レン，你呢？」レン：「我是公司職員。」",
+          "context": "ミナ先介紹自己的身分，再問レン。"
+        }
+      },
+      "units": {
+        "X01.s1": {
+          "tokens": {
+            "t1": {
+              "gloss": "初次見面時的開場問候"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "初次見面時的開場問候"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "初次見面時的開場問候"
+            }
+          },
+          "meaning": "初次見面。"
+        },
+        "X01.s2": {
+          "tokens": {
+            "t1": {
+              "gloss": "ナオ（虛構姓名）"
+            },
+            "t2": {
+              "gloss": "接在姓名或身分後的禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我是ナオ"
+            }
+          },
+          "spans": {},
+          "meaning": "我是ナオ。"
+        },
+        "X01.s3": {
+          "tokens": {
+            "t1": {
+              "gloss": "「請多關照」這個表達的前半部"
+            },
+            "t2": {
+              "gloss": "與よろしく合用，禮貌地表達「請多關照」"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "請多關照"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "請多關照"
+            }
+          },
+          "meaning": "請多關照。"
+        },
+        "T03.s1": {
+          "meaning": "我是學生。",
+          "tokens": {
+            "t1": {
+              "gloss": "學生"
+            },
+            "t2": {
+              "gloss": "接在姓名或身分後的禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我是學生"
+            }
+          },
+          "spans": {}
+        },
+        "T03.s2": {
+          "meaning": "レン，你呢？",
+          "tokens": {
+            "t1": {
+              "gloss": "レン（虛構姓名）"
+            },
+            "t2": {
+              "gloss": "接在對方姓名後的禮貌稱呼"
+            },
+            "t3": {
+              "gloss": "以對方為話題，接著問對方的身分"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "レン，你呢？（問身分）"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "レン，你呢？（問身分）"
+            }
+          }
+        },
+        "T04.s1": {
+          "meaning": "我是公司職員。",
+          "tokens": {
+            "t1": {
+              "gloss": "公司職員"
+            },
+            "t2": {
+              "gloss": "接在姓名或身分後的禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我是公司職員"
+            }
+          },
+          "spans": {}
+        }
+      }
+    },
+    "en": {
+      "examples": {
+        "X01": {
+          "meaning": "Nice to meet you. I'm Nao. I hope we can get along well."
+        },
+        "X02": {
+          "meaning": "I'm a student."
+        },
+        "X03": {
+          "meaning": "I'm a company employee."
+        },
+        "X04": {
+          "meaning": "Mina: “I’m a student. And you, Ren?” Ren: “I’m a company employee.”",
+          "context": "Mina gives their role, then asks Ren."
+        }
+      },
+      "units": {
+        "X01.s1": {
+          "tokens": {
+            "t1": {
+              "gloss": "a greeting used on meeting someone for the first time"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "a greeting used on meeting someone for the first time"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "a greeting used on meeting someone for the first time"
+            }
+          },
+          "meaning": "Nice to meet you."
+        },
+        "X01.s2": {
+          "tokens": {
+            "t1": {
+              "gloss": "Nao (fictional personal name)"
+            },
+            "t2": {
+              "gloss": "a polite ending after a name or role"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I'm Nao"
+            }
+          },
+          "spans": {},
+          "meaning": "I'm Nao."
+        },
+        "X01.s3": {
+          "tokens": {
+            "t1": {
+              "gloss": "the first part of the expression wishing for a good relationship"
+            },
+            "t2": {
+              "gloss": "completes よろしくお願いします as a polite expression"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "a wish to get along well"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "a wish to get along well"
+            }
+          },
+          "meaning": "I hope we can get along well."
+        },
+        "T03.s1": {
+          "meaning": "I'm a student.",
+          "tokens": {
+            "t1": {
+              "gloss": "student"
+            },
+            "t2": {
+              "gloss": "a polite ending after a name or role"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I'm a student"
+            }
+          },
+          "spans": {}
+        },
+        "T03.s2": {
+          "meaning": "And you, Ren?",
+          "tokens": {
+            "t1": {
+              "gloss": "Ren (fictional personal name)"
+            },
+            "t2": {
+              "gloss": "a polite form of address attached to the other person’s name"
+            },
+            "t3": {
+              "gloss": "marks the other person as the topic of the follow-up question"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "And you, Ren? (asking about their role)"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "And you, Ren? (asking about their role)"
+            }
+          }
+        },
+        "T04.s1": {
+          "meaning": "I'm a company employee.",
+          "tokens": {
+            "t1": {
+              "gloss": "company employee"
+            },
+            "t2": {
+              "gloss": "a polite ending after a name or role"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I'm a company employee"
             }
           },
           "spans": {}
@@ -605,15 +650,15 @@
       "localizations": {
         "zh-Hant": {
           "title": "初次見面的開場",
-          "explanation": "第一次與某人見面、開始介紹自己時，可以用「はじめまして」。例如，成人第一次參加讀書會，向尚未認識的成員打招呼，再接自己的姓名。這句標示的是初次見面，不是每次見面都重複的問候；下週再遇到同一個人時，已不符合這個用法的條件。它只是開場，不會單獨提供姓名或完成整段自介。姓名可用姓名＋です接續，再依場合加上表達希望好好相處的結語。"
+          "explanation": "第一次與對方見面、開始介紹自己時，可以說「はじめまして」，表示「初次見面」。接著說「ナオです」，就介紹了自己的姓名。"
         },
         "en": {
           "title": "Opening a first meeting",
-          "explanation": "Use はじめまして when meeting someone for the first time and beginning an introduction. For example, an adult attending a reading group for the first time can greet a member they have not met, then give their name. The expression marks a first meeting; it is not a greeting to repeat at every encounter. Meeting the same person again the following week no longer fits that use. It is an opening, not a name statement or a complete introduction by itself. A name + です statement can follow, with a closing suited to the relationship and activity."
+          "explanation": "Use はじめまして when you meet someone for the first time: “Nice to meet you.” Follow it with ナオです to say “I’m Nao.”"
         },
         "ja": {
           "title": "初めて会う時のあいさつ",
-          "explanation": "相手に初めて会い、自己紹介を始める時に「はじめまして」を使います。たとえば、初めて読書会に来た大人が、まだ会ったことのないメンバーにあいさつし、その後で名前を伝えます。これは初対面のあいさつで、毎回使うものではありません。来週、同じ人にまた会う時は、この使い方の条件に合いません。このあいさつだけでは名前は伝わらず、自己紹介全体にもなりません。続けて名前＋ですを使い、相手や活動に合う結びを加えられます。"
+          "explanation": "初めて会う人に自己紹介を始める時、「はじめまして」と言います。続けて「ナオです」と言うと、自分の名前を伝えられます。"
         }
       },
       "relatedRefs": [
@@ -629,15 +674,15 @@
       "localizations": {
         "zh-Hant": {
           "title": "表達希望好好相處的結語",
-          "explanation": "在初次參加共同活動、向新認識的成員介紹自己後，「よろしくお願いします」可以表達希望接下來好好相處、合作的心意。這裡把它作為完整慣用表達理解，不把每個詞的翻譯拼起來當成整句意思；它沒有放諸所有情境的逐字對譯，也不能一律等同英文 look forward to。對方可用「こちらこそ」回應相同心意，並接同一結語。其他場合也可能使用這個表達，但意義與合宜性須依當時的請託、關係和情境判斷；不能在任何請求後都機械地加上它。它不代替初見開場或姓名句。"
+          "explanation": "初次見面、介紹完自己後，可以說「よろしくお願いします」，表示「請多關照」。對方常用「こちらこそ、よろしくお願いします」回應。"
         },
         "en": {
           "title": "Closing with a wish for a good relationship",
-          "explanation": "After introducing yourself to new members of a shared activity, よろしくお願いします can express a wish to get along and work together well. Understand it as a whole conventional expression in this setting, rather than building its meaning from word-for-word translations. There is no single literal equivalent for every situation, and it is not universally equivalent to “look forward to.” A listener can return the sentiment with こちらこそ and the same closing. The expression also occurs in other settings, but its meaning and suitability depend on the request, relationship, and situation; it should not be added mechanically to every request. It does not replace the first-meeting opening or the name statement."
+          "explanation": "After introducing yourself at a first meeting, use よろしくお願いします to express “I hope we can get along well.” A common reply is こちらこそ、よろしくお願いします, returning the same wish."
         },
         "ja": {
           "title": "これから仲よくしたい気持ちを伝える結び",
-          "explanation": "一緒に活動する新しいメンバーに自己紹介をした後、「よろしくお願いします」で、これから仲よく、一緒に活動したい気持ちを伝えられます。この場面では、一つの決まった表現として理解します。一語ずつの訳をつないでも、表現全体の意味になるとは限りません。どんな場面にも合う一つの直訳はなく、英語の look forward to といつも同じではありません。相手は「こちらこそ」と同じ結びで、その気持ちを返せます。ほかの場面でも使いますが、何をお願いするか、相手との関係、場面によって意味や合う使い方が変わります。どんなお願いにもそのまま付けるわけではありません。初対面のあいさつや名前を伝える文の代わりにはなりません。"
+          "explanation": "初めて会った人に自己紹介をした後、「よろしくお願いします」と言って、これから仲よくしたい気持ちを伝えます。相手はよく「こちらこそ、よろしくお願いします」と返します。"
         }
       },
       "relatedRefs": [
@@ -653,15 +698,15 @@
       "localizations": {
         "zh-Hant": {
           "title": "用姓名或身分＋です作禮貌介紹",
-          "explanation": "在禮貌的自我介紹中，把姓名或表示身分的名詞放在です前，可以告訴對方自己的名字或身分。例如，學生與公司職員都是可放在這個位置的身分名詞；替換身分時，不同時改變時態或禮貌程度。若上下文已清楚是在介紹自己，就不必每句都明說「我」。這裡只說明肯定、非過去的姓名／身分名詞句。です在此構成禮貌句尾，不是中文「是」或英文 is 的萬用對譯，不能直接附在任意詞、動詞或形式後。這個有限規則不教否定、過去或形容詞變化；使用禮貌形式仍須配合對象與場合。自介自己的姓名時，不加用來禮貌稱呼對方的さん。"
+          "explanation": "介紹姓名或身分時，可以用「姓名／身分＋です」。例如「学生です」是「我是學生」，是禮貌的說法。介紹自己的姓名時不加さん。"
         },
         "en": {
           "title": "Introducing a name or role with です",
-          "explanation": "In a polite self-introduction, put the name or a noun describing your role before です to identify yourself. Student and company employee are examples of role nouns that can fill this position; changing only the role keeps the tense and level of politeness the same. When the context makes it clear that you are introducing yourself, an explicit “I” is not needed in every sentence. This entry covers affirmative, nonpast statements of names and roles only. Here です forms a polite ending; it is not a universal equivalent of English “is” or Chinese 是, and cannot simply be added to any word, verb, or form. This bounded pattern does not teach negative forms, past forms, or adjective changes. Polite form must still fit the people and situation. When introducing your own name, do not add さん, the polite form of address used for the other person."
+          "explanation": "To introduce your name or role politely, put it before です. For example, 学生です means “I’m a student.” Leave off さん when giving your own name."
         },
         "ja": {
           "title": "名前・立場＋ですで丁寧に紹介する",
-          "explanation": "丁寧に自己紹介する時、名前や立場を表す名詞を「です」の前に置いて、自分の名前や立場を伝えられます。「学生」と「会社員」は、ここに入れられる立場のことばです。立場のことばだけを変えれば、時や丁寧さは変わりません。自分のことを話しているとわかる時は、毎回「わたしは」と言う必要はありません。ここで扱うのは、肯定・非過去の名前や立場の文だけです。「です」は文を丁寧に終える形で、英語の is や中国語の「是」といつも同じではありません。どんなことばや動詞、どんな形にも、そのまま付けられるわけではありません。この限られた規則から、否定、過去、形容詞の形は学べません。丁寧な形でも、相手や場面に合うか考える必要があります。自分の名前を紹介する時、相手を丁寧に呼ぶための「さん」は付けません。"
+          "explanation": "名前や立場を丁寧に伝える時は、その後に「です」を付けます。たとえば「学生です」は、自分が学生だと伝える文です。自分の名前には「さん」を付けません。"
         }
       },
       "relatedRefs": [
@@ -678,15 +723,15 @@
       "localizations": {
         "zh-Hant": {
           "title": "沿著剛才的話題問「你呢？」",
-          "explanation": "在已經談到某個話題時，可以用對方姓名＋さん＋は？把同一個話題轉問對方。例如，先說自己的身分，再問「レンさんは？」，就是接著問レン的身分。さん接在對方姓名後，是禮貌稱呼；此處的助詞は讀わ。完整問題的一部分由前文補足，因此這不是不需上下文就能任意使用的通用問句。換了話題，省略的內容也可能不同；不能把は一概翻成「是」。這裡只說明如何理解省略式接話，不由此推導所有助詞規則。"
+          "explanation": "說完自己的身分後，可以用「レンさんは？」問「レン，你呢？」。這裡接著問對方的身分；さん是接在對方姓名後的禮貌稱呼。"
         },
         "en": {
           "title": "Returning the same topic with “And you?”",
-          "explanation": "Once a topic has been established, the other person’s name + さん + は？ can turn that same topic back to them. For example, after stating your own role, レンさんは？ asks about Ren’s role. さん is a polite form of address after the other person’s name; here the particle は is pronounced わ. The preceding context supplies part of the question, so this is not a general-purpose question independent of context. When the topic changes, the understood part may also change; は is not a general equivalent of “is.” This explanation helps you understand a shortened conversational response; it does not establish all particle rules."
+          "explanation": "After stating your role, ask レンさんは？: “And you, Ren?” Here you are asking about Ren’s role. さん is a polite form of address after the other person’s name."
         },
         "ja": {
           "title": "同じ話題を相手にも聞く",
-          "explanation": "すでに話題がある時、相手の名前＋さん＋は？で、同じことを相手にも聞けます。たとえば、自分の立場を言った後の「レンさんは？」は、レンにも立場を聞いています。「さん」は相手の名前の後に付ける丁寧な呼び方で、ここの助詞「は」は「わ」と読みます。質問の一部は前の話からわかるので、前の話がなくても何にでも使える質問ではありません。話題が変われば、省いた内容も変わることがあります。「は」をいつも「です」や is と同じ意味だとは考えません。ここでは、短くした返事や質問の意味を理解します。助詞の規則全部を説明するものではありません。"
+          "explanation": "自分の立場を話した後、「レンさんは？」で、レンにも立場を聞けます。「さん」は、相手の名前の後に付ける丁寧な呼び方です。"
         }
       },
       "relatedRefs": [

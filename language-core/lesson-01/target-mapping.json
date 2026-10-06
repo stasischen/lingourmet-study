@@ -1,0 +1,2387 @@
+{
+  "version": 1,
+  "status": "explicit reviewed targets; validate fingerprints before use",
+  "offsetUnit": "UTF-16 code units",
+  "fields": [
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:first-meeting-opening",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 21,
+          "end": 27,
+          "text": "はじめまして",
+          "reading": "はじめまして",
+          "provenanceTargetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "text": "ナオです",
+          "reading": "ナオです",
+          "provenanceTargetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:first-meeting-opening",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 10,
+          "text": "はじめまして",
+          "reading": "はじめまして",
+          "provenanceTargetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 88,
+          "end": 92,
+          "text": "ナオです",
+          "reading": "ナオです",
+          "provenanceTargetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:first-meeting-opening",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 18,
+          "end": 24,
+          "text": "はじめまして",
+          "reading": "はじめまして",
+          "provenanceTargetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 35,
+          "end": 39,
+          "text": "ナオです",
+          "reading": "ナオです",
+          "provenanceTargetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:cooperative-closing",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 16,
+          "end": 26,
+          "text": "よろしくお願いします",
+          "reading": "よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T05.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 42,
+          "end": 58,
+          "text": "こちらこそ、よろしくお願いします",
+          "reading": "こちらこそ、よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T06.s1",
+            "from": "t1",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:cooperative-closing",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 51,
+          "end": 61,
+          "text": "よろしくお願いします",
+          "reading": "よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T05.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 123,
+          "end": 139,
+          "text": "こちらこそ、よろしくお願いします",
+          "reading": "こちらこそ、よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T06.s1",
+            "from": "t1",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:cooperative-closing",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 18,
+          "end": 28,
+          "text": "よろしくお願いします",
+          "reading": "よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T05.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 59,
+          "end": 75,
+          "text": "こちらこそ、よろしくお願いします",
+          "reading": "こちらこそ、よろしくおねがいします",
+          "provenanceTargetRef": {
+            "unit": "T06.s1",
+            "from": "t1",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 19,
+          "end": 21,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 26,
+          "end": 30,
+          "text": "学生です",
+          "reading": "がくせいです",
+          "provenanceTargetRef": {
+            "unit": "T03.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 56,
+          "end": 58,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "zh-Hant",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 7,
+          "end": 9,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 55,
+          "end": 57,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 72,
+          "end": 76,
+          "text": "学生です",
+          "reading": "がくせいです",
+          "provenanceTargetRef": {
+            "unit": "T03.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 110,
+          "end": 112,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "en",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 32,
+          "end": 34,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 20,
+          "end": 22,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 34,
+          "end": 38,
+          "text": "学生です",
+          "reading": "がくせいです",
+          "provenanceTargetRef": {
+            "unit": "T03.s1",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 52,
+          "end": 54,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 63,
+          "end": 65,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:polite-noun-predicate",
+        "localizations",
+        "ja",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:topic-return-question",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 13,
+          "end": 19,
+          "text": "レンさんは？",
+          "reading": "レンさんわ？",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t1",
+            "to": "t4"
+          }
+        },
+        {
+          "start": 41,
+          "end": 43,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:topic-return-question",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 29,
+          "end": 35,
+          "text": "レンさんは？",
+          "reading": "レンさんわ？",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t1",
+            "to": "t4"
+          }
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:topic-return-question",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 12,
+          "end": 18,
+          "text": "レンさんは？",
+          "reading": "レンさんわ？",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t1",
+            "to": "t4"
+          }
+        },
+        {
+          "start": 34,
+          "end": 36,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "intro"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "sources",
+        "DIALOGUE",
+        "summary"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 9,
+          "end": 11,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "sources",
+        "INTRO",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "sources",
+        "INTRO",
+        "summary"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "examples",
+        "X01",
+        "meaning"
+      ],
+      "segments": [
+        {
+          "start": 7,
+          "end": 9,
+          "text": "ナオ",
+          "reading": "ナオ",
+          "provenanceTargetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "examples",
+        "X04",
+        "meaning"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "reading": "ミナ",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 9,
+          "end": 11,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "zh-Hant",
+        "examples",
+        "X04",
+        "context"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "reading": "ミナ",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "ja",
+        "intro"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 43,
+          "end": 45,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "ja",
+        "sources",
+        "DIALOGUE",
+        "summary"
+      ],
+      "segments": [
+        {
+          "start": 8,
+          "end": 10,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 11,
+          "end": 13,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "localizations",
+        "ja",
+        "sources",
+        "INTRO",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "ja",
+        "examples",
+        "X01",
+        "meaning"
+      ],
+      "segments": [
+        {
+          "start": 8,
+          "end": 10,
+          "text": "ナオ",
+          "reading": "ナオ",
+          "provenanceTargetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "ja",
+        "examples",
+        "X04",
+        "meaning"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "reading": "ミナ",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 25,
+          "end": 27,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "localizations",
+        "ja",
+        "examples",
+        "X04",
+        "context"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "reading": "ミナ",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 15,
+          "end": 17,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        0,
+        "context",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 8,
+          "end": 10,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        0,
+        "context",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 20,
+          "end": 22,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        1,
+        "context",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 14,
+          "end": 16,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        1,
+        "context",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 22,
+          "end": 24,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        3,
+        "context",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "teachingRefs",
+        3,
+        "context",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 59,
+          "end": 64,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 18,
+          "end": 23,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        },
+        {
+          "start": 32,
+          "end": 34,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        0,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        0,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        1,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        1,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        1,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 16,
+          "end": 19,
+          "text": "読書会",
+          "targetRef": {
+            "unit": "W01.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "どくしょかい"
+        },
+        {
+          "start": 26,
+          "end": 29,
+          "text": "会社員",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "かいしゃいん"
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q02",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        1,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 36,
+          "end": 39,
+          "text": "読書会",
+          "targetRef": {
+            "unit": "W01.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "どくしょかい"
+        },
+        {
+          "start": 88,
+          "end": 91,
+          "text": "会社員",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "かいしゃいん"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q02",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        1,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "読書会",
+          "targetRef": {
+            "unit": "W01.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "どくしょかい"
+        },
+        {
+          "start": 23,
+          "end": 26,
+          "text": "読書会",
+          "targetRef": {
+            "unit": "W01.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "どくしょかい"
+        },
+        {
+          "start": 39,
+          "end": 42,
+          "text": "会社員",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "かいしゃいん"
+        },
+        {
+          "start": 44,
+          "end": 46,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q02",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 3,
+          "end": 5,
+          "text": "ナオ",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 5,
+          "text": "ナオです",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "text": "ナオ",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q03",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "ナオです",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 66,
+          "end": 68,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q03",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 6,
+          "text": "ナオ",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 5,
+          "text": "ナオです",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q03",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "options",
+        0,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "options",
+        2,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ナオ",
+          "targetRef": {
+            "unit": "X01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 21,
+          "end": 27,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 5,
+          "end": 11,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q04",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "prompt",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 67,
+          "end": 73,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 10,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q04",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 21,
+          "end": 27,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        3,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 9,
+          "end": 15,
+          "text": "はじめまして",
+          "targetRef": {
+            "unit": "T01.s1",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q04",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 28,
+          "end": 30,
+          "text": "アキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N1"
+          }
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "text": "ユキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 11,
+          "end": 13,
+          "text": "アキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N1"
+          }
+        },
+        {
+          "start": 25,
+          "end": 27,
+          "text": "ユキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 39,
+          "end": 41,
+          "text": "アキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N1"
+          }
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "text": "ユキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "options",
+        0,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "アキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "options",
+        1,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ユキ",
+          "targetRef": {
+            "practiceId": "Q05",
+            "optionId": "N2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 6,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 14,
+          "end": 16,
+          "text": "さん",
+          "targetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "text": "さん",
+          "targetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "です",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 20,
+          "end": 22,
+          "text": "さん",
+          "targetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        2,
+        "answer"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "ナオです。"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q03",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "answer"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 23,
+          "text": "はじめまして。アキです。よろしくお願いします。",
+          "reading": "はじめまして。アキです。よろしくおねがいします。"
+        },
+        {
+          "start": 24,
+          "end": 47,
+          "text": "はじめまして。ユキです。よろしくお願いします。",
+          "reading": "はじめまして。ユキです。よろしくおねがいします。"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "modelAnswers",
+        "M1"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 23,
+          "text": "はじめまして。アキです。よろしくお願いします。",
+          "reading": "はじめまして。アキです。よろしくおねがいします。"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "modelAnswers",
+        "M2"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 23,
+          "text": "はじめまして。ユキです。よろしくお願いします。",
+          "reading": "はじめまして。ユキです。よろしくおねがいします。"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q05",
+        "phase": "answer"
+      }
+    }
+  ],
+  "notes": [
+    "Existing unit/token/range annotation surfaces use original source references and are excluded here.",
+    "Practice answer/modelAnswers payloads are unchanged; their full utterance playback remains owned by practice/audio integration.",
+    "Nonlisted portions of Japanese explanations are explanatory prose, not automatically target language exercises."
+  ],
+  "sourceSHA256": {
+    "lesson": "71e2e0eb3de7eb6ac7a9db6001d7b02f16930d3707ab078778b87ae54407c43f",
+    "catalog": "278c0efa24ac9f67bf91c377c745a2fcae2f91ba6f866e02a9a421c64a8bb4f8"
+  },
+  "unitTargets": [
+    {
+      "unit": "W01.s1",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "chunks": [
+        "c1",
+        "c2"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "T01.s1",
+      "sentence": true,
+      "tokens": [
+        "t1"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "T01.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "T02.s1",
+      "sentence": true,
+      "tokens": [
+        "t1"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "T02.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "T05.s1",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "T06.s1",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t3",
+        "t4"
+      ],
+      "chunks": [
+        "c1",
+        "c2"
+      ],
+      "spans": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "unit": "I01.s1",
+      "sentence": true,
+      "tokens": [
+        "t1"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "I01.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "I01.s3",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "I01.s4",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "X01.s1",
+      "sentence": true,
+      "tokens": [
+        "t1"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "X01.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "X01.s3",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "T03.s1",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    },
+    {
+      "unit": "T03.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "T04.s1",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": []
+    }
+  ]
+}
