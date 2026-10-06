@@ -1583,8 +1583,8 @@
           }
         },
         {
-          "start": 24,
-          "end": 26,
+          "start": 26,
+          "end": 28,
           "text": "です",
           "targetRef": {
             "unit": "T01.s2",
@@ -2135,7 +2135,7 @@
     "Nonlisted portions of Japanese explanations are explanatory prose, not automatically target language exercises."
   ],
   "sourceSHA256": {
-    "lesson": "a3c5bba34d8759c60a083c97757ccda764346ba2829feb6e3a00656baa8eb0b4",
+    "lesson": "6307f34c4fdff89cc641ecb70b111acf6a5c60e052b776bce1a4e993cb2975d5",
     "catalog": "278c0efa24ac9f67bf91c377c745a2fcae2f91ba6f866e02a9a421c64a8bb4f8"
   },
   "unitTargets": [

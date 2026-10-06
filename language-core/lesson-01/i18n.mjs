@@ -1,6 +1,6 @@
 export const LOCALES=['zh-Hant','en','ja'];
 export const h=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const localize=(value,locale)=>typeof value==='string'?value:value?.[locale]??'';
+export const localize=(value,locale)=>typeof value==='string'?value:value&&Object.hasOwn(value,locale)&&typeof value[locale]==='string'?value[locale]:'';
 export const t=(value,locale)=>h(localize(value,locale)).replace(/\n/g,'<br>');
 export const UI={
  'zh-Hant':{skip:'跳到內容',loading:'載入中…',interfaceLanguage:'介面語言',language:'教學語言',content:'內容',teaching:'教學',practice:'練習',draft:'第一課',goals:'學習目標',meaning:'意思',sentence:'句意',chunk:'閱讀分段',span:'表達',token:'詞語',selection:'原文',missing:'暫無譯義。',source:'查看原文',openEntry:'完整說明',related:'相關內容',examples:'例句',context:'本課情境',reveal:'答案',sample:'參考回答',selfCheck:'自我檢核',write:'回答',answer:'答案',explanation:'說明',alternatives:'其他說法',readingNotes:'閱讀提示',nextTeaching:'教學 →',nextPractice:'練習 →',top:'內容 ↑',back:'第一課',entryDraft:'語言筆記',footer:'練習回答與自評保存在這個瀏覽器。',error:'課程無法載入，請稍後重新整理。',entryMissing:'找不到這則說明。',close:'關閉'},

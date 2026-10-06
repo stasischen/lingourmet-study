@@ -6,7 +6,7 @@ export const PRACTICE_LABELS = {
  en:{start:'Start practice',reveal:'Show answer and explanation',remembered:'I recalled it',retry:'Not yet',previous:'Previous',skip:'Skip',material:'View material',back:'Back to practice',again:'Practice again',done:'Practice complete',answer:'Answer and examples',draft:'Your response',play:'Play',progress:'Question',saveError:'Your response hasn’t been saved yet. Retry to save it and continue.',saveAgain:'Retry saving',history:'Saved self-checks',summary:'Recalled / Not yet / Skipped',unavailable:'Practice history could not be read. The original record has been kept.',empty:'No practice questions yet.'},
  ja:{start:'練習を始める',reveal:'答えと解説を見る',remembered:'思い出せた',retry:'まだ思い出せない',previous:'前の問題',skip:'スキップ',material:'教材を見る',back:'練習に戻る',again:'もう一度練習する',done:'今回の練習は終わりです',answer:'答えと例',draft:'あなたの答え',play:'再生',progress:'問題',saveError:'回答をまだ保存できていません。もう一度保存してから進みましょう。',saveAgain:'もう一度保存',history:'保存した自己評価',summary:'思い出せた／まだ／スキップ',unavailable:'練習記録を読み込めませんでした。元の記録は残っています。',empty:'練習問題はまだありません。'}
 };
-const localized=(value,locale)=>typeof value==='string'?value:value?.[locale]??'';
+const localized=(value,locale)=>typeof value==='string'?value:value&&Object.hasOwn(value,locale)&&typeof value[locale]==='string'?value[locale]:'';
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const clone=value=>JSON.parse(JSON.stringify(value));
 export function practiceAnswerText(item,locale){const option=item.responseType==='choice'?(item.options??[]).find(o=>o.id===item.answer):null;return option?localized(option.text,locale):localized(item.answer,locale);}

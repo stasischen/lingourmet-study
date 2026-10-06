@@ -9,6 +9,6 @@ export function activePracticeView({mode,practiceState,flashState,lesson,cards,s
  const materialRefs=mode==='cards'?cards.find(c=>c.id===currentFlashcardId(state))?.sourceRefs:lesson.practice.items.find(q=>q.id===currentItemId(state))?.sourceRefs;
  let phase=state.phase;
  if(showLesson)phase='ready';
- else if(phase==='ready'&&(mode==='cards'||practiceState.phase!=='ready'||flashState.phase!=='ready'))phase='mode-ready';
+ else if(phase==='ready')phase='mode-ready';
  return {phase,materialRefs,canReturnToContent:!showLesson&&['ready','complete','ended'].includes(state.phase)};
 }

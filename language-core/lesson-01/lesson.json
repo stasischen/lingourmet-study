@@ -1429,9 +1429,9 @@
           }
         ],
         "prompt": {
-          "zh-Hant": "你扮演ナオ，用禮貌的方式介紹姓名。將下列三個片段各用一次，排成一句。",
-          "en": "You are Nao. Introduce your name politely. Arrange the three pieces below into one sentence, using each once.",
-          "ja": "あなたはナオです。名前を丁寧に紹介しましょう。下の三つの部分を一回ずつ使い、一文に並べてください。"
+          "zh-Hant": "你扮演ナオ，用禮貌的方式介紹姓名。將下列詞語各用一次，排成一句。",
+          "en": "You are Nao. Introduce your name politely. Arrange the words below into one sentence, using each once.",
+          "ja": "あなたはナオです。名前を丁寧に紹介しましょう。下の言葉を一回ずつ使い、一文に並べてください。"
         },
         "options": [
           {
@@ -1449,9 +1449,9 @@
         ],
         "answer": "ナオです。",
         "explanation": {
-          "zh-Hant": "「ナオです。」意思是「我是ナオ」。先放姓名，再接禮貌句尾です，最後加句號。",
-          "en": "ナオです。 means “I’m Nao.” Put the name first, then the polite ending です, then the full stop.",
-          "ja": "「ナオです。」で、自分の名前を伝えます。名前、「です」、句点の順に並べます。"
+          "zh-Hant": "「ナオです。」意思是「我是ナオ」。先放姓名，再接禮貌句尾です。",
+          "en": "ナオです。 means “I’m Nao.” Put the name first, then the polite ending です.",
+          "ja": "「ナオです。」で、自分の名前を伝えます。名前の後に「です」を置きます。"
         },
         "entryRefs": [
           "draft:ja:polite-noun-predicate"
