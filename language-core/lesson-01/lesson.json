@@ -475,7 +475,7 @@
   "localizations": {
     "ja": {
       "title": "初めて会う人に自己紹介する",
-      "intro": "ミナとレンは架空の大人で、初めて読書会に来ました。歓迎メッセージ、二人の初対面の会話、レンがまだ会っていないメンバーのために用意した自己紹介文を読みましょう。",
+      "intro": "ミナとレンは、初めて参加する読書会で、活動が始まる前に出会いました。",
       "goals": {
         "L1": "三つの文章から、場面、二人の名前と立場、最後のあいさつの意味がわかります。",
         "L2": "架空の名前で短く自己紹介し、始めのあいさつを使う場面がわかります。"
@@ -716,7 +716,7 @@
     },
     "zh-Hant": {
       "title": "初次見面與自我介紹",
-      "intro": "ミナ和レン是第一次參加讀書會的兩位虛構成人。先讀歡迎訊息，再看兩人的初見對話，最後讀レン為還沒見過面的成員準備的自介稿。",
+      "intro": "ミナ和レン第一次參加讀書會，在活動開始前認識了彼此。",
       "goals": {
         "L1": "讀懂三份素材的活動情境、人物姓名、身分與結語。",
         "L2": "用虛構姓名做簡短自介，並知道何時適合使用本課開場。"
@@ -957,7 +957,7 @@
     },
     "en": {
       "title": "Meeting someone and introducing yourself",
-      "intro": "Mina and Ren are fictional adults attending a reading group for the first time. Read the welcome message, their first conversation, and Ren’s introduction for members they have not met yet.",
+      "intro": "Mina and Ren are attending this reading group for the first time. They meet before the activity begins.",
       "goals": {
         "L1": "Understand the setting, names, roles, and closing expressions across the three materials.",
         "L2": "Give a short introduction using a fictional name, and recognize when the opening fits."

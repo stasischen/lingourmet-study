@@ -14,3 +14,17 @@ Object.assign(UI.ja,{play:'日本語の発音を聞く',audioUnavailable:'この
 
 
 UI['zh-Hant'].backContent='回到內容';UI.en.backContent='Back to content';UI.ja.backContent='本文に戻る';
+
+Object.assign(UI['zh-Hant'],{showTranslations:'顯示翻譯',hideTranslations:'隱藏翻譯'});
+Object.assign(UI.en,{showTranslations:'Show translations',hideTranslations:'Hide translations'});
+Object.assign(UI.ja,{showTranslations:'訳を表示',hideTranslations:'訳を隠す'});
+
+Object.assign(UI['zh-Hant'],{lemma:'原形',pos:'詞類',grammar:'文法',parts:'組成',dictionary:'辭典'});
+Object.assign(UI.en,{lemma:'Base form',pos:'Part of speech',grammar:'Grammar',parts:'Parts',dictionary:'Dictionary'});
+Object.assign(UI.ja,{lemma:'基本形',pos:'品詞',grammar:'文法',parts:'構成',dictionary:'辞書'});
+
+UI['zh-Hant'].usage='用法';UI.en.usage='Usage';UI.ja.usage='使い方';
+
+Object.assign(UI['zh-Hant'],{cardScope:'翻卡範圍',lexicalCards:'詞語與表達',sentenceCards:'原句'});Object.assign(UI.en,{cardScope:'Card set',lexicalCards:'Words and expressions',sentenceCards:'Sentences'});Object.assign(UI.ja,{cardScope:'カードの範囲',lexicalCards:'ことば・表現',sentenceCards:'文'});
+
+Object.assign(UI['zh-Hant'],{cardProduction:'看意思，想原文',cardListening:'聽原文，想意思',cardPlay:'播放原文'});Object.assign(UI.en,{cardProduction:'Read the meaning, recall the Japanese',cardListening:'Listen, recall the meaning',cardPlay:'Play Japanese'});Object.assign(UI.ja,{cardProduction:'意味を見て原文を思い出す',cardListening:'原文を聞いて意味を思い出す',cardPlay:'原文を再生'});

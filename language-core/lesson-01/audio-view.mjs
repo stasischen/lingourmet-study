@@ -1,3 +1,4 @@
+import {resolveLexicalAudioTarget} from './lexical-audio.mjs';
 import {h,UI} from './i18n.mjs';
 import {resolveUnitTarget,fieldMappingFor,fieldTargetHTML,pronunciationButtonHTML,createPronunciationController,bindPronunciation} from './pronunciation.mjs';
 /** One registry per rendered view. Targets and access checks never outlive their view. */
@@ -12,6 +13,7 @@ export function createAudioView({root,documents,mapping,getAccess=()=>({}),getUI
   return field?fieldTargetHTML(documents,gate?{...field,gate}:field,{register,ariaLabel:labels().play}).replace(/\n/g,'<br>'):h(value===''?labels().missing:value).replace(/\n/g,'<br>');
  };
  return {controller,renderField,
+  lexicalAudio:target=>{const resolved=resolveLexicalAudioTarget(documents,target);return resolved?pronunciationButtonHTML(register(resolved),{ariaLabel:labels().play}):'';},
   audio:(data,selection,{gate}={})=>pronunciationButtonHTML(register(resolveUnitTarget(data,selection,{gate})),{ariaLabel:labels().play}),
   begin(){binding?.dispose();binding=null;registry.clear();controller.cancel();},
   bind(){binding=bindPronunciation(root,{controller,resolveTarget:id=>registry.get(id),getAccess,unavailableLabel:labels().audioUnavailable,hiddenLabel:labels().audioHidden,onError:status});status(controller.getStatus());},

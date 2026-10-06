@@ -1,0 +1,3956 @@
+{
+  "format": "lingourmet.occurrence-analysis",
+  "version": 1,
+  "sourceFiles": {
+    "lesson": "8c0578753e71aa8d58f3c9be985626a1f189529d977447822c711efe59db0bea",
+    "catalog": "eae74889518e97c40c78e75b8d53051623f13b879767b1d14b741c31b9cbe80c"
+  },
+  "profileId": "ja-learner-occurrence",
+  "annotations": {
+    "lesson:W01.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "W01.s1",
+        "tokenId": "t1"
+      },
+      "surface": "読書会",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S4"
+          ],
+          "value": {
+            "text": "読書会",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S4"
+          ],
+          "value": "noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S4",
+            "A1"
+          ],
+          "value": "names_reading_group"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "W01.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "読書会"
+        }
+      }
+    },
+    "lesson:W01.s1:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "W01.s1",
+        "tokenId": "t2"
+      },
+      "surface": "へ",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S1"
+          ],
+          "value": {
+            "text": "へ",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S1"
+          ],
+          "value": "particle"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S1"
+          ],
+          "value": {
+            "directionRole": "destination_or_direction"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S1",
+            "A1"
+          ],
+          "value": "marks_welcomed_destination"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "W01.s1",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "へ"
+        }
+      }
+    },
+    "lesson:W01.s1:t3": {
+      "target": {
+        "document": "lesson",
+        "unitId": "W01.s1",
+        "tokenId": "t3"
+      },
+      "surface": "ようこそ",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S9"
+          ],
+          "value": {
+            "text": "ようこそ",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S9"
+          ],
+          "value": "adverb"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S9",
+            "A1"
+          ],
+          "value": "welcomes_participant"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "W01.s1",
+            "tokenId": "t3"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "ようこそ"
+        }
+      }
+    },
+    "lesson:T01.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s1",
+        "tokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": {
+            "text": "はじめまして",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": "interjection"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "lexicalized_phrase_no_historical_decomposition",
+          "evidenceRefs": [
+            "S14",
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1",
+            "A1"
+          ],
+          "value": "opens_first_meeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T01.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T01.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "はじめまして"
+        }
+      }
+    },
+    "lesson:T01.s2:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s2",
+        "tokenId": "t1"
+      },
+      "surface": "ミナ",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "ミナ",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "proper_noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "names_speaker"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T01.s2",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "ミナ"
+        }
+      }
+    },
+    "lesson:T01.s2:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s2",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_self_identification"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T01.s2",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "lesson:T02.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T02.s1",
+        "tokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": {
+            "text": "はじめまして",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": "interjection"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "lexicalized_phrase_no_historical_decomposition",
+          "evidenceRefs": [
+            "S14",
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1",
+            "A1"
+          ],
+          "value": "opens_first_meeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T02.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T02.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "はじめまして"
+        }
+      }
+    },
+    "lesson:T02.s2:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T02.s2",
+        "tokenId": "t1"
+      },
+      "surface": "レン",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "レン",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "proper_noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "names_speaker"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T02.s2",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "レン"
+        }
+      }
+    },
+    "lesson:T02.s2:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T02.s2",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_self_identification"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T02.s2",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "lesson:T05.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T05.s1",
+        "tokenId": "t1"
+      },
+      "surface": "よろしく",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": {
+            "text": "よろしく",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": "adverb"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5",
+            "A1"
+          ],
+          "value": "adds_goodwill_to_request"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T05.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T05.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "よろしく"
+        }
+      }
+    },
+    "lesson:T05.s1:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T05.s1",
+        "tokenId": "t2"
+      },
+      "surface": "お願いします",
+      "analysis": {
+        "lemma": {
+          "state": "not_applicable",
+          "reasonCode": "fused_multi_lexeme_no_single_lemma",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ]
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": "complex"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "S10",
+            "S13",
+            "S15",
+            "A2"
+          ],
+          "value": [
+            {
+              "id": "p1",
+              "start": 0,
+              "end": 1,
+              "surface": "お",
+              "pos": "prefix"
+            },
+            {
+              "id": "p2",
+              "start": 1,
+              "end": 3,
+              "surface": "願い",
+              "pos": "verb",
+              "lemma": {
+                "text": "願う",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p3",
+              "start": 3,
+              "end": 4,
+              "surface": "し",
+              "pos": "verb",
+              "lemma": {
+                "text": "する",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p4",
+              "start": 4,
+              "end": 6,
+              "surface": "ます",
+              "pos": "auxiliary"
+            }
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2",
+            "A1"
+          ],
+          "value": "politely_makes_request_in_greeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T05.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T05.s1",
+            "tokenId": "t2"
+          }
+        },
+        "parts": {
+          "p1": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T05.s1",
+              "tokenId": "t2"
+            },
+            "start": 0,
+            "end": 1,
+            "surface": "お",
+            "text": "お",
+            "reading": "お"
+          },
+          "p2": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T05.s1",
+              "tokenId": "t2"
+            },
+            "start": 1,
+            "end": 3,
+            "surface": "願い",
+            "text": "願い",
+            "reading": "ねがい",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "願う",
+              "reading": "ねがう"
+            }
+          },
+          "p3": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T05.s1",
+              "tokenId": "t2"
+            },
+            "start": 3,
+            "end": 4,
+            "surface": "し",
+            "text": "し",
+            "reading": "し",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "する",
+              "reading": "する"
+            }
+          },
+          "p4": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T05.s1",
+              "tokenId": "t2"
+            },
+            "start": 4,
+            "end": 6,
+            "surface": "ます",
+            "text": "ます",
+            "reading": "ます"
+          }
+        }
+      }
+    },
+    "lesson:T06.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "tokenId": "t1"
+      },
+      "surface": "こちらこそ",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S8",
+            "P1"
+          ],
+          "value": {
+            "text": "こちらこそ",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S8",
+            "P1"
+          ],
+          "value": "phrase"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "lexicalized_phrase_no_historical_decomposition",
+          "evidenceRefs": [
+            "S8",
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S8",
+            "P1",
+            "A1"
+          ],
+          "value": "reciprocates_goodwill"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T06.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T06.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "こちらこそ"
+        }
+      }
+    },
+    "lesson:T06.s1:t3": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "tokenId": "t3"
+      },
+      "surface": "よろしく",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": {
+            "text": "よろしく",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": "adverb"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5",
+            "A1"
+          ],
+          "value": "adds_goodwill_to_request"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T06.s1:e2"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T06.s1",
+            "tokenId": "t3"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "よろしく"
+        }
+      }
+    },
+    "lesson:T06.s1:t4": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "tokenId": "t4"
+      },
+      "surface": "お願いします",
+      "analysis": {
+        "lemma": {
+          "state": "not_applicable",
+          "reasonCode": "fused_multi_lexeme_no_single_lemma",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ]
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": "complex"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "S10",
+            "S13",
+            "S15",
+            "A2"
+          ],
+          "value": [
+            {
+              "id": "p1",
+              "start": 0,
+              "end": 1,
+              "surface": "お",
+              "pos": "prefix"
+            },
+            {
+              "id": "p2",
+              "start": 1,
+              "end": 3,
+              "surface": "願い",
+              "pos": "verb",
+              "lemma": {
+                "text": "願う",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p3",
+              "start": 3,
+              "end": 4,
+              "surface": "し",
+              "pos": "verb",
+              "lemma": {
+                "text": "する",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p4",
+              "start": 4,
+              "end": 6,
+              "surface": "ます",
+              "pos": "auxiliary"
+            }
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2",
+            "A1"
+          ],
+          "value": "politely_makes_request_in_greeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:T06.s1:e2"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T06.s1",
+            "tokenId": "t4"
+          }
+        },
+        "parts": {
+          "p1": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T06.s1",
+              "tokenId": "t4"
+            },
+            "start": 0,
+            "end": 1,
+            "surface": "お",
+            "text": "お",
+            "reading": "お"
+          },
+          "p2": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T06.s1",
+              "tokenId": "t4"
+            },
+            "start": 1,
+            "end": 3,
+            "surface": "願い",
+            "text": "願い",
+            "reading": "ねがい",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "願う",
+              "reading": "ねがう"
+            }
+          },
+          "p3": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T06.s1",
+              "tokenId": "t4"
+            },
+            "start": 3,
+            "end": 4,
+            "surface": "し",
+            "text": "し",
+            "reading": "し",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "する",
+              "reading": "する"
+            }
+          },
+          "p4": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "T06.s1",
+              "tokenId": "t4"
+            },
+            "start": 4,
+            "end": 6,
+            "surface": "ます",
+            "text": "ます",
+            "reading": "ます"
+          }
+        }
+      }
+    },
+    "lesson:I01.s1:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s1",
+        "tokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": {
+            "text": "はじめまして",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": "interjection"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "lexicalized_phrase_no_historical_decomposition",
+          "evidenceRefs": [
+            "S14",
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1",
+            "A1"
+          ],
+          "value": "opens_first_meeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:I01.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "はじめまして"
+        }
+      }
+    },
+    "lesson:I01.s2:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s2",
+        "tokenId": "t1"
+      },
+      "surface": "レン",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "レン",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "proper_noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "names_speaker"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s2",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "レン"
+        }
+      }
+    },
+    "lesson:I01.s2:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s2",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_self_identification"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s2",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "lesson:I01.s3:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s3",
+        "tokenId": "t1"
+      },
+      "surface": "会社員",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "会社員",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "states_occupation"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s3",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "会社員"
+        }
+      }
+    },
+    "lesson:I01.s3:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s3",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_occupation_statement"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s3",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "lesson:I01.s4:t1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s4",
+        "tokenId": "t1"
+      },
+      "surface": "よろしく",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": {
+            "text": "よろしく",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": "adverb"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5",
+            "A1"
+          ],
+          "value": "adds_goodwill_to_request"
+        }
+      },
+      "expressionRefs": [
+        "lesson:I01.s4:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s4",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "よろしく"
+        }
+      }
+    },
+    "lesson:I01.s4:t2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s4",
+        "tokenId": "t2"
+      },
+      "surface": "お願いします",
+      "analysis": {
+        "lemma": {
+          "state": "not_applicable",
+          "reasonCode": "fused_multi_lexeme_no_single_lemma",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ]
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": "complex"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "S10",
+            "S13",
+            "S15",
+            "A2"
+          ],
+          "value": [
+            {
+              "id": "p1",
+              "start": 0,
+              "end": 1,
+              "surface": "お",
+              "pos": "prefix"
+            },
+            {
+              "id": "p2",
+              "start": 1,
+              "end": 3,
+              "surface": "願い",
+              "pos": "verb",
+              "lemma": {
+                "text": "願う",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p3",
+              "start": 3,
+              "end": 4,
+              "surface": "し",
+              "pos": "verb",
+              "lemma": {
+                "text": "する",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p4",
+              "start": 4,
+              "end": 6,
+              "surface": "ます",
+              "pos": "auxiliary"
+            }
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2",
+            "A1"
+          ],
+          "value": "politely_makes_request_in_greeting"
+        }
+      },
+      "expressionRefs": [
+        "lesson:I01.s4:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s4",
+            "tokenId": "t2"
+          }
+        },
+        "parts": {
+          "p1": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "I01.s4",
+              "tokenId": "t2"
+            },
+            "start": 0,
+            "end": 1,
+            "surface": "お",
+            "text": "お",
+            "reading": "お"
+          },
+          "p2": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "I01.s4",
+              "tokenId": "t2"
+            },
+            "start": 1,
+            "end": 3,
+            "surface": "願い",
+            "text": "願い",
+            "reading": "ねがい",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "願う",
+              "reading": "ねがう"
+            }
+          },
+          "p3": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "I01.s4",
+              "tokenId": "t2"
+            },
+            "start": 3,
+            "end": 4,
+            "surface": "し",
+            "text": "し",
+            "reading": "し",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "する",
+              "reading": "する"
+            }
+          },
+          "p4": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "lesson",
+              "unitId": "I01.s4",
+              "tokenId": "t2"
+            },
+            "start": 4,
+            "end": 6,
+            "surface": "ます",
+            "text": "ます",
+            "reading": "ます"
+          }
+        }
+      }
+    },
+    "catalog:X01.s1:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s1",
+        "tokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": {
+            "text": "はじめまして",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1"
+          ],
+          "value": "interjection"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "lexicalized_phrase_no_historical_decomposition",
+          "evidenceRefs": [
+            "S14",
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S14",
+            "S16",
+            "P1",
+            "A1"
+          ],
+          "value": "opens_first_meeting"
+        }
+      },
+      "expressionRefs": [
+        "catalog:X01.s1:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "はじめまして"
+        }
+      }
+    },
+    "catalog:X01.s2:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s2",
+        "tokenId": "t1"
+      },
+      "surface": "ナオ",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "ナオ",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "proper_noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "names_speaker"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s2",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "ナオ"
+        }
+      }
+    },
+    "catalog:X01.s2:t2": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s2",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_self_identification"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s2",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "catalog:X01.s3:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s3",
+        "tokenId": "t1"
+      },
+      "surface": "よろしく",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": {
+            "text": "よろしく",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5"
+          ],
+          "value": "adverb"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S5",
+            "A1"
+          ],
+          "value": "adds_goodwill_to_request"
+        }
+      },
+      "expressionRefs": [
+        "catalog:X01.s3:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s3",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "よろしく"
+        }
+      }
+    },
+    "catalog:X01.s3:t2": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s3",
+        "tokenId": "t2"
+      },
+      "surface": "お願いします",
+      "analysis": {
+        "lemma": {
+          "state": "not_applicable",
+          "reasonCode": "fused_multi_lexeme_no_single_lemma",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ]
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": "complex"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "S10",
+            "S13",
+            "S15",
+            "A2"
+          ],
+          "value": [
+            {
+              "id": "p1",
+              "start": 0,
+              "end": 1,
+              "surface": "お",
+              "pos": "prefix"
+            },
+            {
+              "id": "p2",
+              "start": 1,
+              "end": 3,
+              "surface": "願い",
+              "pos": "verb",
+              "lemma": {
+                "text": "願う",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p3",
+              "start": 3,
+              "end": 4,
+              "surface": "し",
+              "pos": "verb",
+              "lemma": {
+                "text": "する",
+                "relation": "dictionary_form"
+              }
+            },
+            {
+              "id": "p4",
+              "start": 4,
+              "end": 6,
+              "surface": "ます",
+              "pos": "auxiliary"
+            }
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S7",
+            "A2",
+            "A1"
+          ],
+          "value": "politely_makes_request_in_greeting"
+        }
+      },
+      "expressionRefs": [
+        "catalog:X01.s3:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s3",
+            "tokenId": "t2"
+          }
+        },
+        "parts": {
+          "p1": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "catalog",
+              "unitId": "X01.s3",
+              "tokenId": "t2"
+            },
+            "start": 0,
+            "end": 1,
+            "surface": "お",
+            "text": "お",
+            "reading": "お"
+          },
+          "p2": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "catalog",
+              "unitId": "X01.s3",
+              "tokenId": "t2"
+            },
+            "start": 1,
+            "end": 3,
+            "surface": "願い",
+            "text": "願い",
+            "reading": "ねがい",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "願う",
+              "reading": "ねがう"
+            }
+          },
+          "p3": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "catalog",
+              "unitId": "X01.s3",
+              "tokenId": "t2"
+            },
+            "start": 3,
+            "end": 4,
+            "surface": "し",
+            "text": "し",
+            "reading": "し",
+            "lemma": {
+              "targetLanguage": "ja",
+              "text": "する",
+              "reading": "する"
+            }
+          },
+          "p4": {
+            "targetLanguage": "ja",
+            "source": {
+              "document": "catalog",
+              "unitId": "X01.s3",
+              "tokenId": "t2"
+            },
+            "start": 4,
+            "end": 6,
+            "surface": "ます",
+            "text": "ます",
+            "reading": "ます"
+          }
+        }
+      }
+    },
+    "catalog:T03.s1:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s1",
+        "tokenId": "t1"
+      },
+      "surface": "学生",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": {
+            "text": "学生",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "states_student_status"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "学生"
+        }
+      }
+    },
+    "catalog:T03.s1:t2": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s1",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_occupation_statement"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s1",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    },
+    "catalog:T03.s2:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s2",
+        "tokenId": "t1"
+      },
+      "surface": "レン",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "レン",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "proper_noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "names_addressee"
+        }
+      },
+      "expressionRefs": [
+        "catalog:T03.s2:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s2",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "レン"
+        }
+      }
+    },
+    "catalog:T03.s2:t2": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s2",
+        "tokenId": "t2"
+      },
+      "surface": "さん",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S11"
+          ],
+          "value": {
+            "text": "さん",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S11"
+          ],
+          "value": "suffix"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S11"
+          ],
+          "value": {
+            "register": "respectful_address"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S11",
+            "A1"
+          ],
+          "value": "respectfully_addresses_person"
+        }
+      },
+      "expressionRefs": [
+        "catalog:T03.s2:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s2",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "さん"
+        }
+      }
+    },
+    "catalog:T03.s2:t3": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s2",
+        "tokenId": "t3"
+      },
+      "surface": "は",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": {
+            "text": "は",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "particle"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": {
+            "topicRole": "topic"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "marks_followup_topic"
+        }
+      },
+      "expressionRefs": [
+        "catalog:T03.s2:e1"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s2",
+            "tokenId": "t3"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "は"
+        }
+      }
+    },
+    "catalog:T04.s1:t1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T04.s1",
+        "tokenId": "t1"
+      },
+      "surface": "会社員",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": {
+            "text": "会社員",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "noun"
+        },
+        "features": {
+          "state": "not_applicable",
+          "reasonCode": "no_useful_inflection_here",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "A1"
+          ],
+          "value": "states_occupation"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T04.s1",
+            "tokenId": "t1"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "会社員"
+        }
+      }
+    },
+    "catalog:T04.s1:t2": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T04.s1",
+        "tokenId": "t2"
+      },
+      "surface": "です",
+      "analysis": {
+        "lemma": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": {
+            "text": "です",
+            "relation": "dictionary_form"
+          }
+        },
+        "pos": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "S12"
+          ],
+          "value": "auxiliary"
+        },
+        "features": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2"
+          ],
+          "value": {
+            "politeness": "polite",
+            "polarity": "affirmative"
+          }
+        },
+        "parts": {
+          "state": "not_applicable",
+          "reasonCode": "no_subtoken_analysis_needed",
+          "evidenceRefs": [
+            "P1"
+          ]
+        },
+        "usage": {
+          "state": "known",
+          "reasonCode": "supported_occurrence_analysis",
+          "evidenceRefs": [
+            "S2",
+            "A1"
+          ],
+          "value": "polite_occupation_statement"
+        }
+      },
+      "expressionRefs": [],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T04.s1",
+            "tokenId": "t2"
+          }
+        },
+        "lemma": {
+          "targetLanguage": "ja",
+          "text": "です"
+        }
+      }
+    }
+  },
+  "expressions": {
+    "lesson:T01.s1:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:T01.s1:t1"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T01.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t1"
+          }
+        }
+      }
+    },
+    "lesson:T02.s1:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T02.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:T02.s1:t1"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T02.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t1"
+          }
+        }
+      }
+    },
+    "lesson:T05.s1:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T05.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t2"
+      },
+      "surface": "よろしくお願いします",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:T05.s1:t1",
+        "lesson:T05.s1:t2"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T05.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t2"
+          }
+        }
+      }
+    },
+    "lesson:T06.s1:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "surface": "こちらこそ",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:T06.s1:t1"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S8"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T06.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t1"
+          }
+        }
+      }
+    },
+    "lesson:T06.s1:e2": {
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "spanId": "e2",
+        "fromTokenId": "t3",
+        "toTokenId": "t4"
+      },
+      "surface": "よろしくお願いします",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:T06.s1:t3",
+        "lesson:T06.s1:t4"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "T06.s1",
+            "spanId": "e2",
+            "fromTokenId": "t3",
+            "toTokenId": "t4"
+          }
+        }
+      }
+    },
+    "lesson:I01.s1:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:I01.s1:t1"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t1"
+          }
+        }
+      }
+    },
+    "lesson:I01.s4:e1": {
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s4",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t2"
+      },
+      "surface": "よろしくお願いします",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "lesson:I01.s4:t1",
+        "lesson:I01.s4:t2"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "lesson",
+            "unitId": "I01.s4",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t2"
+          }
+        }
+      }
+    },
+    "catalog:X01.s1:e1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "surface": "はじめまして",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "catalog:X01.s1:t1"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s1",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t1"
+          }
+        }
+      }
+    },
+    "catalog:X01.s3:e1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "X01.s3",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t2"
+      },
+      "surface": "よろしくお願いします",
+      "kind": "routine_greeting",
+      "componentIds": [
+        "catalog:X01.s3:t1",
+        "catalog:X01.s3:t2"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "X01.s3",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t2"
+          }
+        }
+      }
+    },
+    "catalog:T03.s2:e1": {
+      "target": {
+        "document": "catalog",
+        "unitId": "T03.s2",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t3"
+      },
+      "surface": "レンさんは",
+      "kind": "elliptical_question",
+      "componentIds": [
+        "catalog:T03.s2:t1",
+        "catalog:T03.s2:t2",
+        "catalog:T03.s2:t3"
+      ],
+      "evidenceRefs": [
+        "A1",
+        "S3"
+      ],
+      "audioTargets": {
+        "surface": {
+          "targetLanguage": "ja",
+          "source": {
+            "document": "catalog",
+            "unitId": "T03.s2",
+            "spanId": "e1",
+            "fromTokenId": "t1",
+            "toTokenId": "t3"
+          }
+        }
+      }
+    }
+  },
+  "localizations": {
+    "ja": {
+      "annotations": {
+        "lesson:W01.s1:t1": {
+          "contextMeaning": "本を読んで感想を話し合う集まり",
+          "usage": "ここでは、相手を迎える活動の名前です。"
+        },
+        "lesson:W01.s1:t2": {
+          "contextMeaning": "向かう先を示す",
+          "usage": "読書会を、相手を迎える先として示します。"
+        },
+        "lesson:W01.s1:t3": {
+          "contextMeaning": "歓迎の気持ちを伝えることば",
+          "usage": "来てくれた相手を温かく迎えます。"
+        },
+        "lesson:T01.s1:t1": {
+          "contextMeaning": "初めて会ったときのあいさつ",
+          "usage": "名前を伝える前に、初対面のあいさつをします。"
+        },
+        "lesson:T01.s2:t1": {
+          "contextMeaning": "ミナという名前",
+          "usage": "自分の名前を相手に伝えています。"
+        },
+        "lesson:T01.s2:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "名前の後ろにつけて、丁寧に名乗ります。"
+        },
+        "lesson:T02.s1:t1": {
+          "contextMeaning": "初めて会ったときのあいさつ",
+          "usage": "名前を伝える前に、初対面のあいさつをします。"
+        },
+        "lesson:T02.s2:t1": {
+          "contextMeaning": "レンという名前",
+          "usage": "自分の名前を相手に伝えています。"
+        },
+        "lesson:T02.s2:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "名前の後ろにつけて、丁寧に名乗ります。"
+        },
+        "lesson:T05.s1:t1": {
+          "contextMeaning": "好意的に、よいように",
+          "usage": "お願いする表現に添えて、これからのよい関係を願います。"
+        },
+        "lesson:T05.s1:t2": {
+          "contextMeaning": "丁寧にお願いすることば",
+          "usage": "このあいさつでは、これからよい関係を築きたい気持ちを表します。",
+          "parts": {
+            "p1": {
+              "explanation": "相手への敬意を表す形を作る接頭語です。"
+            },
+            "p2": {
+              "explanation": "願うの連用形で、相手に頼む意味を担います。"
+            },
+            "p3": {
+              "explanation": "するの連用形で、依頼の形を作ります。"
+            },
+            "p4": {
+              "explanation": "聞き手に丁寧に話すための助動詞です。"
+            }
+          }
+        },
+        "lesson:T06.s1:t1": {
+          "contextMeaning": "私のほうこそ",
+          "usage": "相手のあいさつを受けて、自分も同じ気持ちだと伝えます。"
+        },
+        "lesson:T06.s1:t3": {
+          "contextMeaning": "好意的に、よいように",
+          "usage": "お願いする表現に添えて、これからのよい関係を願います。"
+        },
+        "lesson:T06.s1:t4": {
+          "contextMeaning": "丁寧にお願いすることば",
+          "usage": "このあいさつでは、これからよい関係を築きたい気持ちを表します。",
+          "parts": {
+            "p1": {
+              "explanation": "相手への敬意を表す形を作る接頭語です。"
+            },
+            "p2": {
+              "explanation": "願うの連用形で、相手に頼む意味を担います。"
+            },
+            "p3": {
+              "explanation": "するの連用形で、依頼の形を作ります。"
+            },
+            "p4": {
+              "explanation": "聞き手に丁寧に話すための助動詞です。"
+            }
+          }
+        },
+        "lesson:I01.s1:t1": {
+          "contextMeaning": "初めて会ったときのあいさつ",
+          "usage": "名前を伝える前に、初対面のあいさつをします。"
+        },
+        "lesson:I01.s2:t1": {
+          "contextMeaning": "レンという名前",
+          "usage": "自分の名前を相手に伝えています。"
+        },
+        "lesson:I01.s2:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "名前の後ろにつけて、丁寧に名乗ります。"
+        },
+        "lesson:I01.s3:t1": {
+          "contextMeaning": "会社に勤めている人",
+          "usage": "ここでは、自分の仕事を伝えています。"
+        },
+        "lesson:I01.s3:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "仕事や身分を表す名詞につけて、丁寧に自己紹介します。"
+        },
+        "lesson:I01.s4:t1": {
+          "contextMeaning": "好意的に、よいように",
+          "usage": "お願いする表現に添えて、これからのよい関係を願います。"
+        },
+        "lesson:I01.s4:t2": {
+          "contextMeaning": "丁寧にお願いすることば",
+          "usage": "このあいさつでは、これからよい関係を築きたい気持ちを表します。",
+          "parts": {
+            "p1": {
+              "explanation": "相手への敬意を表す形を作る接頭語です。"
+            },
+            "p2": {
+              "explanation": "願うの連用形で、相手に頼む意味を担います。"
+            },
+            "p3": {
+              "explanation": "するの連用形で、依頼の形を作ります。"
+            },
+            "p4": {
+              "explanation": "聞き手に丁寧に話すための助動詞です。"
+            }
+          }
+        },
+        "catalog:X01.s1:t1": {
+          "contextMeaning": "初めて会ったときのあいさつ",
+          "usage": "名前を伝える前に、初対面のあいさつをします。"
+        },
+        "catalog:X01.s2:t1": {
+          "contextMeaning": "ナオという名前",
+          "usage": "自分の名前を相手に伝えています。"
+        },
+        "catalog:X01.s2:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "名前の後ろにつけて、丁寧に名乗ります。"
+        },
+        "catalog:X01.s3:t1": {
+          "contextMeaning": "好意的に、よいように",
+          "usage": "お願いする表現に添えて、これからのよい関係を願います。"
+        },
+        "catalog:X01.s3:t2": {
+          "contextMeaning": "丁寧にお願いすることば",
+          "usage": "このあいさつでは、これからよい関係を築きたい気持ちを表します。",
+          "parts": {
+            "p1": {
+              "explanation": "相手への敬意を表す形を作る接頭語です。"
+            },
+            "p2": {
+              "explanation": "願うの連用形で、相手に頼む意味を担います。"
+            },
+            "p3": {
+              "explanation": "するの連用形で、依頼の形を作ります。"
+            },
+            "p4": {
+              "explanation": "聞き手に丁寧に話すための助動詞です。"
+            }
+          }
+        },
+        "catalog:T03.s1:t1": {
+          "contextMeaning": "学校で学んでいる人",
+          "usage": "ここでは、自分が学生だと伝えています。"
+        },
+        "catalog:T03.s1:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "仕事や身分を表す名詞につけて、丁寧に自己紹介します。"
+        },
+        "catalog:T03.s2:t1": {
+          "contextMeaning": "レンという名前",
+          "usage": "ここでは、質問する相手の名前を呼んでいます。"
+        },
+        "catalog:T03.s2:t2": {
+          "contextMeaning": "名前に添える敬称",
+          "usage": "レンを丁寧に呼ぶために、名前の後ろにつけています。"
+        },
+        "catalog:T03.s2:t3": {
+          "contextMeaning": "話題を示す",
+          "usage": "レンを話題にして、同じことを相手にも尋ねています。"
+        },
+        "catalog:T04.s1:t1": {
+          "contextMeaning": "会社に勤めている人",
+          "usage": "ここでは、自分の仕事を伝えています。"
+        },
+        "catalog:T04.s1:t2": {
+          "contextMeaning": "丁寧に言い切る語尾",
+          "usage": "仕事や身分を表す名詞につけて、丁寧に自己紹介します。"
+        }
+      },
+      "expressions": {
+        "lesson:T01.s1:e1": {
+          "meaning": "初対面のあいさつ",
+          "usage": "初めて会った相手に使います。"
+        },
+        "lesson:T02.s1:e1": {
+          "meaning": "初対面のあいさつ",
+          "usage": "初めて会った相手に使います。"
+        },
+        "lesson:T05.s1:e1": {
+          "meaning": "これからのよい関係を願うあいさつ",
+          "usage": "初めて会った相手に、好意を伝えます。"
+        },
+        "lesson:T06.s1:e1": {
+          "meaning": "私も同じ気持ちです",
+          "usage": "相手からのあいさつに応じて使います。"
+        },
+        "lesson:T06.s1:e2": {
+          "meaning": "これからのよい関係を願うあいさつ",
+          "usage": "初めて会った相手に、好意を伝えます。"
+        },
+        "lesson:I01.s1:e1": {
+          "meaning": "初対面のあいさつ",
+          "usage": "初めて会った相手に使います。"
+        },
+        "lesson:I01.s4:e1": {
+          "meaning": "これからのよい関係を願うあいさつ",
+          "usage": "初めて会った相手に、好意を伝えます。"
+        },
+        "catalog:X01.s1:e1": {
+          "meaning": "初対面のあいさつ",
+          "usage": "初めて会った相手に使います。"
+        },
+        "catalog:X01.s3:e1": {
+          "meaning": "これからのよい関係を願うあいさつ",
+          "usage": "初めて会った相手に、好意を伝えます。"
+        },
+        "catalog:T03.s2:e1": {
+          "meaning": "レンさんはどうですか",
+          "usage": "話題になっている仕事や身分について、レンにも尋ねます。"
+        }
+      },
+      "labels": {
+        "pos": {
+          "noun": "名詞",
+          "proper_noun": "固有名詞",
+          "particle": "助詞",
+          "adverb": "副詞",
+          "auxiliary": "助動詞",
+          "suffix": "接尾語",
+          "prefix": "接頭語",
+          "verb": "動詞",
+          "phrase": "連語",
+          "complex": "複合表現",
+          "interjection": "感動詞"
+        },
+        "features": {
+          "politeness": {
+            "polite": "丁寧体",
+            "plain": "普通体"
+          },
+          "polarity": {
+            "affirmative": "肯定",
+            "negative": "否定"
+          },
+          "directionRole": {
+            "destination_or_direction": "移動先・方向"
+          },
+          "topicRole": {
+            "topic": "話題"
+          },
+          "register": {
+            "respectful_address": "敬意を込めた呼び方"
+          }
+        }
+      }
+    },
+    "zh-Hant": {
+      "annotations": {
+        "lesson:W01.s1:t1": {
+          "contextMeaning": "讀書會",
+          "usage": "一起讀書、交流心得的聚會；這裡是歡迎對方參加的活動。"
+        },
+        "lesson:W01.s1:t2": {
+          "contextMeaning": "往、到",
+          "usage": "接在讀書會後，指出歡迎對方來到的活動。"
+        },
+        "lesson:W01.s1:t3": {
+          "contextMeaning": "歡迎",
+          "usage": "用來歡迎來參加讀書會的人。"
+        },
+        "lesson:T01.s1:t1": {
+          "contextMeaning": "初次見面，你好",
+          "usage": "第一次見面時，在介紹姓名前向對方打招呼。"
+        },
+        "lesson:T01.s2:t1": {
+          "contextMeaning": "Mina（人名）",
+          "usage": "說出自己的名字，向對方自我介紹。"
+        },
+        "lesson:T01.s2:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在人名後，禮貌地介紹自己的名字。"
+        },
+        "lesson:T02.s1:t1": {
+          "contextMeaning": "初次見面，你好",
+          "usage": "第一次見面時，在介紹姓名前向對方打招呼。"
+        },
+        "lesson:T02.s2:t1": {
+          "contextMeaning": "Ren（人名）",
+          "usage": "說出自己的名字，向對方自我介紹。"
+        },
+        "lesson:T02.s2:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在人名後，禮貌地介紹自己的名字。"
+        },
+        "lesson:T05.s1:t1": {
+          "contextMeaning": "友善地、好好地",
+          "usage": "與請託表達搭配，傳達希望彼此友好相處的心意。"
+        },
+        "lesson:T05.s1:t2": {
+          "contextMeaning": "拜託、請",
+          "usage": "這裡用禮貌的請託語氣，表達希望往後相處融洽。",
+          "parts": {
+            "p1": {
+              "explanation": "構成敬語表達的接頭詞。"
+            },
+            "p2": {
+              "explanation": "以動詞的連用形表達請託。"
+            },
+            "p3": {
+              "explanation": "以動詞的連用形構成請託表達。"
+            },
+            "p4": {
+              "explanation": "使說話語氣禮貌的助動詞。"
+            }
+          }
+        },
+        "lesson:T06.s1:t1": {
+          "contextMeaning": "我才是；彼此彼此",
+          "usage": "回應對方的問候，表示自己也懷著同樣的心意。"
+        },
+        "lesson:T06.s1:t3": {
+          "contextMeaning": "友善地、好好地",
+          "usage": "與請託表達搭配，傳達希望彼此友好相處的心意。"
+        },
+        "lesson:T06.s1:t4": {
+          "contextMeaning": "拜託、請",
+          "usage": "這裡用禮貌的請託語氣，表達希望往後相處融洽。",
+          "parts": {
+            "p1": {
+              "explanation": "構成敬語表達的接頭詞。"
+            },
+            "p2": {
+              "explanation": "以動詞的連用形表達請託。"
+            },
+            "p3": {
+              "explanation": "以動詞的連用形構成請託表達。"
+            },
+            "p4": {
+              "explanation": "使說話語氣禮貌的助動詞。"
+            }
+          }
+        },
+        "lesson:I01.s1:t1": {
+          "contextMeaning": "初次見面，你好",
+          "usage": "第一次見面時，在介紹姓名前向對方打招呼。"
+        },
+        "lesson:I01.s2:t1": {
+          "contextMeaning": "Ren（人名）",
+          "usage": "說出自己的名字，向對方自我介紹。"
+        },
+        "lesson:I01.s2:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在人名後，禮貌地介紹自己的名字。"
+        },
+        "lesson:I01.s3:t1": {
+          "contextMeaning": "公司職員",
+          "usage": "這裡用來介紹自己的職業。"
+        },
+        "lesson:I01.s3:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在職業或身分名詞後，禮貌地介紹自己。"
+        },
+        "lesson:I01.s4:t1": {
+          "contextMeaning": "友善地、好好地",
+          "usage": "與請託表達搭配，傳達希望彼此友好相處的心意。"
+        },
+        "lesson:I01.s4:t2": {
+          "contextMeaning": "拜託、請",
+          "usage": "這裡用禮貌的請託語氣，表達希望往後相處融洽。",
+          "parts": {
+            "p1": {
+              "explanation": "構成敬語表達的接頭詞。"
+            },
+            "p2": {
+              "explanation": "以動詞的連用形表達請託。"
+            },
+            "p3": {
+              "explanation": "以動詞的連用形構成請託表達。"
+            },
+            "p4": {
+              "explanation": "使說話語氣禮貌的助動詞。"
+            }
+          }
+        },
+        "catalog:X01.s1:t1": {
+          "contextMeaning": "初次見面，你好",
+          "usage": "第一次見面時，在介紹姓名前向對方打招呼。"
+        },
+        "catalog:X01.s2:t1": {
+          "contextMeaning": "Nao（人名）",
+          "usage": "說出自己的名字，向對方自我介紹。"
+        },
+        "catalog:X01.s2:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在人名後，禮貌地介紹自己的名字。"
+        },
+        "catalog:X01.s3:t1": {
+          "contextMeaning": "友善地、好好地",
+          "usage": "與請託表達搭配，傳達希望彼此友好相處的心意。"
+        },
+        "catalog:X01.s3:t2": {
+          "contextMeaning": "拜託、請",
+          "usage": "這裡用禮貌的請託語氣，表達希望往後相處融洽。",
+          "parts": {
+            "p1": {
+              "explanation": "構成敬語表達的接頭詞。"
+            },
+            "p2": {
+              "explanation": "以動詞的連用形表達請託。"
+            },
+            "p3": {
+              "explanation": "以動詞的連用形構成請託表達。"
+            },
+            "p4": {
+              "explanation": "使說話語氣禮貌的助動詞。"
+            }
+          }
+        },
+        "catalog:T03.s1:t1": {
+          "contextMeaning": "學生",
+          "usage": "這裡用來說明自己的身分。"
+        },
+        "catalog:T03.s1:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在職業或身分名詞後，禮貌地介紹自己。"
+        },
+        "catalog:T03.s2:t1": {
+          "contextMeaning": "Ren（人名）",
+          "usage": "這裡稱呼正在詢問的對象。"
+        },
+        "catalog:T03.s2:t2": {
+          "contextMeaning": "姓名後的敬稱",
+          "usage": "加在人名後，禮貌地稱呼 Ren。"
+        },
+        "catalog:T03.s2:t3": {
+          "contextMeaning": "至於……",
+          "usage": "把 Ren 提為話題，接著省略已知的內容，向對方回問。"
+        },
+        "catalog:T04.s1:t1": {
+          "contextMeaning": "公司職員",
+          "usage": "這裡用來介紹自己的職業。"
+        },
+        "catalog:T04.s1:t2": {
+          "contextMeaning": "禮貌陳述的結尾",
+          "usage": "接在職業或身分名詞後，禮貌地介紹自己。"
+        }
+      },
+      "expressions": {
+        "lesson:T01.s1:e1": {
+          "meaning": "初次見面，你好",
+          "usage": "第一次見面時的問候。"
+        },
+        "lesson:T02.s1:e1": {
+          "meaning": "初次見面，你好",
+          "usage": "第一次見面時的問候。"
+        },
+        "lesson:T05.s1:e1": {
+          "meaning": "請多關照",
+          "usage": "初次見面時，表達希望往後相處融洽。"
+        },
+        "lesson:T06.s1:e1": {
+          "meaning": "彼此彼此",
+          "usage": "回應對方的問候，表示自己也有同樣的心意。"
+        },
+        "lesson:T06.s1:e2": {
+          "meaning": "請多關照",
+          "usage": "初次見面時，表達希望往後相處融洽。"
+        },
+        "lesson:I01.s1:e1": {
+          "meaning": "初次見面，你好",
+          "usage": "第一次見面時的問候。"
+        },
+        "lesson:I01.s4:e1": {
+          "meaning": "請多關照",
+          "usage": "初次見面時，表達希望往後相處融洽。"
+        },
+        "catalog:X01.s1:e1": {
+          "meaning": "初次見面，你好",
+          "usage": "第一次見面時的問候。"
+        },
+        "catalog:X01.s3:e1": {
+          "meaning": "請多關照",
+          "usage": "初次見面時，表達希望往後相處融洽。"
+        },
+        "catalog:T03.s2:e1": {
+          "meaning": "Ren，你呢？",
+          "usage": "接續正在談的工作或身分，回問 Ren 的情況。"
+        }
+      },
+      "labels": {
+        "pos": {
+          "noun": "名詞",
+          "proper_noun": "專有名詞",
+          "particle": "助詞",
+          "adverb": "副詞",
+          "auxiliary": "助動詞",
+          "suffix": "接尾詞",
+          "prefix": "接頭詞",
+          "verb": "動詞",
+          "phrase": "詞組",
+          "complex": "複合表達",
+          "interjection": "感嘆詞"
+        },
+        "features": {
+          "politeness": {
+            "polite": "禮貌體",
+            "plain": "普通體"
+          },
+          "polarity": {
+            "affirmative": "肯定",
+            "negative": "否定"
+          },
+          "directionRole": {
+            "destination_or_direction": "方向或到達處"
+          },
+          "topicRole": {
+            "topic": "話題"
+          },
+          "register": {
+            "respectful_address": "禮貌稱呼"
+          }
+        }
+      }
+    },
+    "en": {
+      "annotations": {
+        "lesson:W01.s1:t1": {
+          "contextMeaning": "reading group",
+          "usage": "The group the listener is being welcomed to."
+        },
+        "lesson:W01.s1:t2": {
+          "contextMeaning": "to; toward",
+          "usage": "Marks the group as the destination of the welcome."
+        },
+        "lesson:W01.s1:t3": {
+          "contextMeaning": "welcome",
+          "usage": "Warmly welcomes someone to the reading group."
+        },
+        "lesson:T01.s1:t1": {
+          "contextMeaning": "nice to meet you",
+          "usage": "Opens a first meeting before the speaker gives their name."
+        },
+        "lesson:T01.s2:t1": {
+          "contextMeaning": "Mina",
+          "usage": "The speaker gives their name."
+        },
+        "lesson:T01.s2:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After the name, it forms a polite self-introduction."
+        },
+        "lesson:T02.s1:t1": {
+          "contextMeaning": "nice to meet you",
+          "usage": "Opens a first meeting before the speaker gives their name."
+        },
+        "lesson:T02.s2:t1": {
+          "contextMeaning": "Ren",
+          "usage": "The speaker gives their name."
+        },
+        "lesson:T02.s2:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After the name, it forms a polite self-introduction."
+        },
+        "lesson:T05.s1:t1": {
+          "contextMeaning": "favorably; kindly",
+          "usage": "Adds a wish for goodwill to the request, forming a greeting together."
+        },
+        "lesson:T05.s1:t2": {
+          "contextMeaning": "I ask; please",
+          "usage": "In this greeting, the polite request conveys a wish for a good relationship.",
+          "parts": {
+            "p1": {
+              "explanation": "A prefix used in this respectful construction."
+            },
+            "p2": {
+              "explanation": "A verb in its continuative form, carrying the request meaning."
+            },
+            "p3": {
+              "explanation": "A verb in its continuative form, forming the request construction."
+            },
+            "p4": {
+              "explanation": "An auxiliary that makes the utterance polite."
+            }
+          }
+        },
+        "lesson:T06.s1:t1": {
+          "contextMeaning": "likewise; the feeling is mutual",
+          "usage": "Returns the other person’s goodwill and emphasizes the speaker’s own feelings."
+        },
+        "lesson:T06.s1:t3": {
+          "contextMeaning": "favorably; kindly",
+          "usage": "Adds a wish for goodwill to the request, forming a greeting together."
+        },
+        "lesson:T06.s1:t4": {
+          "contextMeaning": "I ask; please",
+          "usage": "In this greeting, the polite request conveys a wish for a good relationship.",
+          "parts": {
+            "p1": {
+              "explanation": "A prefix used in this respectful construction."
+            },
+            "p2": {
+              "explanation": "A verb in its continuative form, carrying the request meaning."
+            },
+            "p3": {
+              "explanation": "A verb in its continuative form, forming the request construction."
+            },
+            "p4": {
+              "explanation": "An auxiliary that makes the utterance polite."
+            }
+          }
+        },
+        "lesson:I01.s1:t1": {
+          "contextMeaning": "nice to meet you",
+          "usage": "Opens a first meeting before the speaker gives their name."
+        },
+        "lesson:I01.s2:t1": {
+          "contextMeaning": "Ren",
+          "usage": "The speaker gives their name."
+        },
+        "lesson:I01.s2:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After the name, it forms a polite self-introduction."
+        },
+        "lesson:I01.s3:t1": {
+          "contextMeaning": "company employee",
+          "usage": "States the speaker’s occupation."
+        },
+        "lesson:I01.s3:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After an occupation or status noun, it forms a polite self-introduction."
+        },
+        "lesson:I01.s4:t1": {
+          "contextMeaning": "favorably; kindly",
+          "usage": "Adds a wish for goodwill to the request, forming a greeting together."
+        },
+        "lesson:I01.s4:t2": {
+          "contextMeaning": "I ask; please",
+          "usage": "In this greeting, the polite request conveys a wish for a good relationship.",
+          "parts": {
+            "p1": {
+              "explanation": "A prefix used in this respectful construction."
+            },
+            "p2": {
+              "explanation": "A verb in its continuative form, carrying the request meaning."
+            },
+            "p3": {
+              "explanation": "A verb in its continuative form, forming the request construction."
+            },
+            "p4": {
+              "explanation": "An auxiliary that makes the utterance polite."
+            }
+          }
+        },
+        "catalog:X01.s1:t1": {
+          "contextMeaning": "nice to meet you",
+          "usage": "Opens a first meeting before the speaker gives their name."
+        },
+        "catalog:X01.s2:t1": {
+          "contextMeaning": "Nao",
+          "usage": "The speaker gives their name."
+        },
+        "catalog:X01.s2:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After the name, it forms a polite self-introduction."
+        },
+        "catalog:X01.s3:t1": {
+          "contextMeaning": "favorably; kindly",
+          "usage": "Adds a wish for goodwill to the request, forming a greeting together."
+        },
+        "catalog:X01.s3:t2": {
+          "contextMeaning": "I ask; please",
+          "usage": "In this greeting, the polite request conveys a wish for a good relationship.",
+          "parts": {
+            "p1": {
+              "explanation": "A prefix used in this respectful construction."
+            },
+            "p2": {
+              "explanation": "A verb in its continuative form, carrying the request meaning."
+            },
+            "p3": {
+              "explanation": "A verb in its continuative form, forming the request construction."
+            },
+            "p4": {
+              "explanation": "An auxiliary that makes the utterance polite."
+            }
+          }
+        },
+        "catalog:T03.s1:t1": {
+          "contextMeaning": "student",
+          "usage": "Identifies the speaker as a student."
+        },
+        "catalog:T03.s1:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After an occupation or status noun, it forms a polite self-introduction."
+        },
+        "catalog:T03.s2:t1": {
+          "contextMeaning": "Ren",
+          "usage": "Names the person being asked the follow-up question."
+        },
+        "catalog:T03.s2:t2": {
+          "contextMeaning": "a respectful suffix after a name",
+          "usage": "Shows respect when addressing Ren."
+        },
+        "catalog:T03.s2:t3": {
+          "contextMeaning": "as for …",
+          "usage": "Makes Ren the topic of a short follow-up question."
+        },
+        "catalog:T04.s1:t1": {
+          "contextMeaning": "company employee",
+          "usage": "States the speaker’s occupation."
+        },
+        "catalog:T04.s1:t2": {
+          "contextMeaning": "a polite statement ending",
+          "usage": "After an occupation or status noun, it forms a polite self-introduction."
+        }
+      },
+      "expressions": {
+        "lesson:T01.s1:e1": {
+          "meaning": "Nice to meet you.",
+          "usage": "A greeting for a first meeting."
+        },
+        "lesson:T02.s1:e1": {
+          "meaning": "Nice to meet you.",
+          "usage": "A greeting for a first meeting."
+        },
+        "lesson:T05.s1:e1": {
+          "meaning": "I look forward to getting to know you.",
+          "usage": "A first-meeting greeting expressing goodwill."
+        },
+        "lesson:T06.s1:e1": {
+          "meaning": "Likewise.",
+          "usage": "Returns the other person’s greeting."
+        },
+        "lesson:T06.s1:e2": {
+          "meaning": "I look forward to getting to know you.",
+          "usage": "A first-meeting greeting expressing goodwill."
+        },
+        "lesson:I01.s1:e1": {
+          "meaning": "Nice to meet you.",
+          "usage": "A greeting for a first meeting."
+        },
+        "lesson:I01.s4:e1": {
+          "meaning": "I look forward to getting to know you.",
+          "usage": "A first-meeting greeting expressing goodwill."
+        },
+        "catalog:X01.s1:e1": {
+          "meaning": "Nice to meet you.",
+          "usage": "A greeting for a first meeting."
+        },
+        "catalog:X01.s3:e1": {
+          "meaning": "I look forward to getting to know you.",
+          "usage": "A first-meeting greeting expressing goodwill."
+        },
+        "catalog:T03.s2:e1": {
+          "meaning": "What about you, Ren?",
+          "usage": "Asks Ren the same question about occupation or status."
+        }
+      },
+      "labels": {
+        "pos": {
+          "noun": "Noun",
+          "proper_noun": "Proper noun",
+          "particle": "Particle",
+          "adverb": "Adverb",
+          "auxiliary": "Auxiliary",
+          "suffix": "Suffix",
+          "prefix": "Prefix",
+          "verb": "Verb",
+          "phrase": "Phrase",
+          "complex": "Complex expression",
+          "interjection": "Interjection"
+        },
+        "features": {
+          "politeness": {
+            "polite": "Polite",
+            "plain": "Plain"
+          },
+          "polarity": {
+            "affirmative": "Affirmative",
+            "negative": "Negative"
+          },
+          "directionRole": {
+            "destination_or_direction": "Destination or direction"
+          },
+          "topicRole": {
+            "topic": "Topic"
+          },
+          "register": {
+            "respectful_address": "Respectful address"
+          }
+        }
+      }
+    }
+  },
+  "profile": {
+    "profileId": "ja-learner-occurrence",
+    "version": 1,
+    "status": "implementation-contract-v1",
+    "contractVersion": "lingourmet.occurrence-analysis/1",
+    "categoryKeys": [
+      "lemma",
+      "pos",
+      "features",
+      "parts",
+      "usage"
+    ],
+    "decisionStates": [
+      "known",
+      "not_applicable",
+      "unknown"
+    ],
+    "posScheme": "ja-occurrence-lexical-category-1",
+    "posCodes": [
+      "noun",
+      "proper_noun",
+      "particle",
+      "adverb",
+      "auxiliary",
+      "suffix",
+      "prefix",
+      "verb",
+      "phrase",
+      "complex",
+      "interjection"
+    ],
+    "featureValues": {
+      "politeness": [
+        "polite",
+        "plain"
+      ],
+      "polarity": [
+        "affirmative",
+        "negative"
+      ],
+      "directionRole": [
+        "destination_or_direction"
+      ],
+      "topicRole": [
+        "topic"
+      ],
+      "register": [
+        "respectful_address"
+      ]
+    },
+    "localeCodes": [
+      "ja",
+      "zh-Hant",
+      "en"
+    ],
+    "usageCodes": [
+      "adds_goodwill_to_request",
+      "marks_followup_topic",
+      "marks_welcomed_destination",
+      "names_addressee",
+      "names_reading_group",
+      "names_speaker",
+      "opens_first_meeting",
+      "polite_occupation_statement",
+      "polite_self_identification",
+      "politely_makes_request_in_greeting",
+      "reciprocates_goodwill",
+      "respectfully_addresses_person",
+      "states_occupation",
+      "states_student_status",
+      "welcomes_participant"
+    ],
+    "notApplicableFeaturePolicy": {
+      "grammaticalGender": "Not a Japanese grammatical agreement category in this lesson. Never infer it from names or translation.",
+      "nominalCaseInflection": "No inflectional case on these Japanese noun surfaces. Particle functions remain explicit."
+    },
+    "notes": [
+      "POS codes express lexical categories. Phrase and complex explicitly mark non-single-lexeme units; communicative functions belong only to usage. This is not a claim of UniDic compliance.",
+      "Same-form lemma is known data even if a view suppresses redundant display.",
+      "Whole fused request has no single lexical lemma in the selected construction analysis; known parts preserve component lemmas.",
+      "Feature applicability is occurrence-specific. Unknown never satisfies a required category."
+    ]
+  }
+}

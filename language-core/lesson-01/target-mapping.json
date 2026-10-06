@@ -551,16 +551,6 @@
             "from": "t1",
             "to": "t1"
           }
-        },
-        {
-          "start": 42,
-          "end": 44,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
         }
       ]
     },
@@ -763,16 +753,6 @@
         {
           "start": 3,
           "end": 5,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 43,
-          "end": 45,
           "text": "レン",
           "targetRef": {
             "unit": "T02.s2",
@@ -2155,7 +2135,7 @@
     "Nonlisted portions of Japanese explanations are explanatory prose, not automatically target language exercises."
   ],
   "sourceSHA256": {
-    "lesson": "71e2e0eb3de7eb6ac7a9db6001d7b02f16930d3707ab078778b87ae54407c43f",
+    "lesson": "a3c5bba34d8759c60a083c97757ccda764346ba2829feb6e3a00656baa8eb0b4",
     "catalog": "278c0efa24ac9f67bf91c377c745a2fcae2f91ba6f866e02a9a421c64a8bb4f8"
   },
   "unitTargets": [

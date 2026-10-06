@@ -1,3 +1,4 @@
+import {assemblySpec,validAssemblyOrder,changeAssembly,assemblyResult,renderAssembly} from './sentence-assembly.mjs';
 /** One-question recall session. No grading, SRS, recording, or network access. */
 export const STORAGE_NAMESPACE = 'lingourmet:pilot:practice-session:v1';
 export const PRACTICE_LABELS = {
@@ -20,7 +21,7 @@ export function answerSignature(item){
 export function createPracticeState({lessonId,practiceVersion,items,locale='zh-Hant',uiLocale=locale,sessionId='session-1'}){
  practiceStorageKey(lessonId,practiceVersion);
  if(new Set(items.map(i=>i.id)).size!==items.length||items.some(i=>!i.id))throw new Error('Unique stable item IDs are required');
- return {schemaVersion:1,lessonId,practiceVersion,itemIds:items.map(i=>i.id),signatures:Object.fromEntries(items.map(i=>[i.id,answerSignature(i)])),locale,uiLocale,sessionId,round:1,index:0,visit:0,phase:'ready',revealed:false,drafts:{},history:[],error:null,pending:null};
+ return {schemaVersion:1,lessonId,practiceVersion,itemIds:items.map(i=>i.id),signatures:Object.fromEntries(items.map(i=>[i.id,answerSignature(i)])),assemblySpecs:Object.fromEntries(items.map(i=>[i.id,assemblySpec(i)]).filter(([,spec])=>spec)),orderingHistory:[],locale,uiLocale,sessionId,round:1,index:0,visit:0,phase:'ready',revealed:false,drafts:{},history:[],error:null,pending:null};
 }
 export function currentItemId(state){return state.itemIds[state.index]??null;}
 export function getPracticeAudioAccess(state){return {revealedPracticeIds:state.phase==='revealed'&&state.revealed?[currentItemId(state)]:[]};}
@@ -39,10 +40,25 @@ export function reducePractice(state,event){
  if(!['recall','revealed'].includes(state.phase))return state;
  if(event.token&&event.token!==visitToken(state))return state;
  if(state.pending&&!['retry-save'].includes(event.type))return state;
- const id=currentItemId(state);
+ const id=currentItemId(state),spec=state.assemblySpecs?.[id];
+ if(event.type.startsWith('assembly-')){
+  if(!spec||state.phase!=='recall'||state.revealed)return state;
+  const draft=state.drafts[id]??{};
+  if(event.type==='assembly-check'){
+   const result=assemblyResult(spec,draft.order??[]);if(result==='incomplete')return state;
+   const attemptId=`${visitToken(state)}:order:${draft.assemblyRevision??0}`;
+   if((state.orderingHistory??[]).some(e=>e.attemptId===attemptId))return state;
+   const entry={attemptId,itemId:id,kind:'ordering',result,order:[...draft.order],at:event.at??null};
+   return {...state,drafts:{...state.drafts,[id]:{...draft,assemblyResult:result}},orderingHistory:[...(state.orderingHistory??[]),entry]};
+  }
+  const next=changeAssembly(spec,draft,event.type,event.pieceId);return next===draft?state:{...state,drafts:{...state.drafts,[id]:next}};
+ }
  if(event.type==='draft')return {...state,drafts:{...state.drafts,[id]:{...state.drafts[id],text:String(event.text)}}};
  if(event.type==='select')return {...state,drafts:{...state.drafts,[id]:{...state.drafts[id],optionId:event.optionId}}};
- if(event.type==='reveal')return {...state,revealed:true,phase:'revealed'};
+ if(event.type==='reveal'){
+  const entry={attemptId:`${visitToken(state)}:order:reveal`,itemId:id,kind:'ordering',result:'revealed',order:[...(state.drafts[id]?.order??[])],at:event.at??null};
+  return {...state,revealed:true,phase:'revealed',...(spec&&!state.revealed&&!state.orderingHistory?.some(e=>e.attemptId===entry.attemptId)?{orderingHistory:[...(state.orderingHistory??[]),entry]}:{})};
+ }
  if(event.type==='material')return {...state,returnPhase:state.phase,phase:'material'};
  if(event.type==='previous'&&state.index>0)return {...state,index:state.index-1,visit:state.visit+1,revealed:false,phase:'recall'};
  if(event.type==='assess'&&(!state.revealed||!['remembered','retry'].includes(event.rating)))return state;
@@ -61,7 +77,9 @@ export function createPracticeController({lesson,lessonId,practiceVersion,storag
   const raw=storage?.getItem(key);
   if(raw){const saved=JSON.parse(raw);
    if(saved.schemaVersion!==1||saved.lessonId!==lessonId||saved.practiceVersion!==practiceVersion||!Array.isArray(saved.history)||!Array.isArray(saved.itemIds)||!Number.isInteger(saved.index)||saved.index<0||saved.index>items.length||!['ready','recall','revealed','material','complete'].includes(saved.phase)||JSON.stringify(saved.itemIds)!==JSON.stringify(state.itemIds)||JSON.stringify(saved.signatures)!==JSON.stringify(state.signatures))throw new Error('Incompatible saved session');
-   state={...saved,locale,uiLocale,error:null};
+   for(const [itemId,spec] of Object.entries(state.assemblySpecs)){const order=saved.drafts?.[itemId]?.order;if(order!==undefined&&!validAssemblyOrder(spec,order))throw new Error('Invalid saved assembly');}
+   if(saved.orderingHistory!==undefined&&!Array.isArray(saved.orderingHistory))throw new Error('Invalid ordering history');
+   state={...state,...saved,assemblySpecs:state.assemblySpecs,orderingHistory:saved.orderingHistory??[],locale,uiLocale,error:null};
    // Material is rendered by the host; refresh always returns to the same question.
    if(state.phase==='material')state={...state,phase:state.returnPhase??'recall',returnPhase:undefined};
   }
@@ -84,7 +102,7 @@ export function createPracticeController({lesson,lessonId,practiceVersion,storag
   const input=event.retrying?{...state,pending:null,error:null}:state;
   const next=reducePractice(input,eventWithTime);
   if(next===input)return state;
-  const committing=event.type==='assess'||event.type==='skip';
+  const committing=event.type==='assess'||event.type==='skip'||event.type==='assembly-check'||(event.type==='reveal'&&!!state.assemblySpecs?.[currentItemId(state)]);
   if(event.type==='locale'){state=next;notify(event);return state;}
   try{save(next);state=next;}
   catch{
@@ -106,14 +124,15 @@ export function renderPracticeSession(state,lesson,{answerTargets=[],renderField
  const disabled=!!state.pending,draft=state.drafts[item.id]??{},token=visitToken(state);
  const itemIndex=items.findIndex(i=>i.id===item.id),base=['practice','items',itemIndex],gate={practiceId:item.id,phase:'answer'};
  const field=(value,path,answerOnly=false)=>renderField(localized(value,state.locale),[...base,...path,...(typeof value==='string'?[]:[state.locale])],{gate:answerOnly?gate:undefined})??'';
- const choices=(item.options??[]).map((option,optionIndex)=>{
+ const spec=assemblySpec(item);
+ const choices=(spec?[]:item.options??[]).map((option,optionIndex)=>{
   const text=localized(option.text,state.locale),choice=item.responseType==='choice'||item.stage==='comprehension'||item.stage==='context-choice'||item.id==='Q04';
   return choice?`<label><input type="radio" name="practice-choice" data-practice-option="${escape(option.id)}" value="${escape(option.id)}"${draft.optionId===option.id?' checked':''}${disabled?' disabled':''}> ${field(option.text,['options',optionIndex,'text'])}</label>`:`<span class="practice-hint">${field(option.text,['options',optionIndex,'text'])}</span>`;
  }).join(' ');
  const answerOptionIndex=item.responseType==='choice'?(item.options??[]).findIndex(o=>o.id===item.answer):-1;
  const answerHTML=state.revealed?(answerOptionIndex>=0?field(item.options[answerOptionIndex].text,['options',answerOptionIndex,'text'],true):field(item.answer,['answer'],true)):'';
  const answer=state.revealed?`<section class="practice-answer"><h3>${escape(u.answer)}</h3><p class="practice-answer-text">${answerHTML}</p>${answerTargets.map(target=>button('play-answer',`${u.play} · ${target.text}`,disabled,`data-practice-audio-id="${escape(target.id)}"`)).join(' ')}<p>${field(item.explanation,['explanation'],true)}</p>${item.checklist?`<ul>${item.checklist.map((c,index)=>`<li>${field(c,['checklist',index],true)}</li>`).join('')}</ul>`:''}<div class="practice-self-check">${button('remembered',u.remembered,disabled)}${button('retry',u.retry,disabled)}</div></section>`:button('reveal',u.reveal,disabled);
- return `<section class="practice-session" data-practice-phase="${state.phase}" data-practice-token="${escape(token)}"><p aria-live="polite">${escape(u.progress)} ${state.index+1} / ${items.length}</p><h2 tabindex="-1" data-practice-focus>${field(item.title,['title'])}</h2><p>${field(item.prompt,['prompt'])}</p>${choices?`<div class="practice-options">${choices}</div>`:''}<label for="practice-response">${escape(u.draft)}</label><textarea id="practice-response" data-practice-draft${disabled?' disabled':''}>${escape(draft.text??'')}</textarea>${answer}${error}<nav aria-label="${escape(u.start)}">${button('previous',u.previous,disabled||state.index===0)}${button('skip',u.skip,disabled)}${button('material',u.material,disabled||!item.sourceRefs?.length)}</nav></section>`;
+ return `<section class="practice-session" data-practice-phase="${state.phase}" data-practice-token="${escape(token)}"><p aria-live="polite">${escape(u.progress)} ${state.index+1} / ${items.length}</p><h2 tabindex="-1" data-practice-focus>${field(item.title,['title'])}</h2><p>${field(item.prompt,['prompt'])}</p>${spec?renderAssembly(item,draft,{uiLocale:state.uiLocale,disabled,revealed:state.revealed,field,escape}):''}${choices?`<div class="practice-options">${choices}</div>`:''}${spec?'':`<label for="practice-response">${escape(u.draft)}</label><textarea id="practice-response" data-practice-draft${disabled?' disabled':''}>${escape(draft.text??'')}</textarea>`}${answer}${error}<nav aria-label="${escape(u.start)}">${button('previous',u.previous,disabled||state.index===0)}${button('skip',u.skip,disabled)}${button('material',u.material,disabled||!item.sourceRefs?.length)}</nav></section>`;
 }
 /** Delegate events once on a persistent host. Parent replaces HTML on changes.
  * onViewMaterial receives ONLY sourceRefs plus a return callback, not answers.
@@ -136,6 +155,7 @@ export function bindPracticeSession(root,controller,{lesson,onChange=()=>{},onVi
    if(controller.state.phase==='material'&&item)onViewMaterial({itemId:item.id,sourceRefs:clone(item.sourceRefs??[]),returnToPractice:()=>controller.dispatch({type:'return'})});
    return;
   }
+  if(action.startsWith('assembly-')){controller.dispatch({type:action,pieceId:el.dataset.pieceId,token});return;}
   controller.dispatch(action==='remembered'||action==='retry'?{type:'assess',rating:action,token}:{type:action,token});
  };
  root.addEventListener('input',input);root.addEventListener('change',change);root.addEventListener('click',click);

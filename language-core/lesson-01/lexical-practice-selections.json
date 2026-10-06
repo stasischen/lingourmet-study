@@ -1,0 +1,268 @@
+{
+  "format": "lingourmet.lexical-practice-selections",
+  "version": 1,
+  "sourceFiles": {
+    "lesson": "8c0578753e71aa8d58f3c9be985626a1f189529d977447822c711efe59db0bea",
+    "catalog": "eae74889518e97c40c78e75b8d53051623f13b879767b1d14b741c31b9cbe80c"
+  },
+  "lexicalProjectionSHA256": "8034beb2bb9d23cb16354b912d1ab9b4f19c68bad1c038146d2ff27fdf363f67",
+  "items": [
+    {
+      "practiceKey": "lesson01.lexical.reading-group",
+      "practiceVersion": 1,
+      "kind": "token",
+      "target": {
+        "document": "lesson",
+        "unitId": "W01.s1",
+        "tokenId": "t1"
+      },
+      "annotationId": "lesson:W01.s1:t1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "W01.s1",
+          "tokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "reading-group",
+        "reason": "Select the first source occurrence of this activity noun."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.company-employee",
+      "practiceVersion": 1,
+      "kind": "token",
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s3",
+        "tokenId": "t1"
+      },
+      "annotationId": "lesson:I01.s3:t1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "I01.s3",
+          "tokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "company-employee",
+        "reason": "Keep one occupation noun; catalog:T04.s1:t1 repeats the same learning target."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.first-meeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "expressionId": "lesson:T01.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T01.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "first-meeting",
+        "reason": "Keep one complete fixed greeting; other first-meeting occurrences repeat the same learning target."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.goodwill-greeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T05.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t2"
+      },
+      "expressionId": "lesson:T05.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T05.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t2"
+        }
+      },
+      "deduplication": {
+        "key": "goodwill-greeting",
+        "reason": "Keep the complete two-token greeting once; component meanings are not phrase answers."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.reciprocal-greeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "expressionId": "lesson:T06.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T06.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "reciprocal-greeting",
+        "reason": "Keep the bounded reciprocal response without widening to the following greeting."
+      }
+    }
+  ],
+  "scope": {
+    "selectedTargets": 5,
+    "excluded": [
+      "proper names",
+      "duplicate occurrences",
+      "です already addressed in grammar practice"
+    ],
+    "notClaimed": [
+      "dictionary admission",
+      "new cloze item",
+      "new target-language text",
+      "FSRS scheduling",
+      "Anki export"
+    ]
+  }
+}

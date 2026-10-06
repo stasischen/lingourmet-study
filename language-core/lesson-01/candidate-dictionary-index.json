@@ -1,0 +1,58 @@
+{
+  "format": "lingourmet.dictionary-preview.v1",
+  "availability": "candidate",
+  "snapshot": "lesson01-dictionary-preview-1",
+  "entries": [
+    {
+      "key": "lp-79379c21c9173117",
+      "language": "ja",
+      "lemma": "です",
+      "pos": "auxiliary",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "です",
+        "speech": "です",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "用於姓名或身分等名詞之後，以禮貌的方式作陳述。中文可視句子譯為「是」，也可能不另譯出。",
+        "en": "A polite ending used after a name or a noun giving someone’s role or identity. Its English wording depends on the whole sentence.",
+        "ja": "名前や身分などを表す名詞につけて、丁寧に述べる形。"
+      }
+    },
+    {
+      "key": "lp-2b91d15da05b284a",
+      "language": "ja",
+      "lemma": "は",
+      "pos": "particle",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "は",
+        "speech": "わ",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "標示談話主題的助詞。承接前文時，也可以省略後面已知的內容，轉問對方。",
+        "en": "A particle that marks the topic. After a preceding statement, it can also introduce a question with the understood ending left out.",
+        "ja": "話題を示す助詞。前の話を受けて、後ろの内容を省略して相手にたずねることもある。"
+      }
+    },
+    {
+      "key": "lp-3ec490f4b30f46ad",
+      "language": "ja",
+      "lemma": "はじめまして",
+      "pos": "interjection",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "はじめまして",
+        "speech": "はじめまして",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "第一次與對方見面時使用的問候語，常用來開始自我介紹。",
+        "en": "A greeting used when meeting someone for the first time, often before introducing yourself.",
+        "ja": "初めて会う相手へのあいさつ。自己紹介の初めによく使う。"
+      }
+    }
+  ]
+}
