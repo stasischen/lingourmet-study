@@ -69,8 +69,9 @@ try {
       }
     }
     await page.selectOption('#locale', 'fr');
-    assert.equal(await page.locator('#items article').count(), 0);
-    assert.equal(await page.locator('#items .missing').textContent(), labels.missing);
+    assert.equal(await page.locator('#items article').count(), 2);
+    assert.deepEqual(await page.locator('#items .missing').allTextContents(), [labels.missing, labels.missing]);
+    assert.equal(await page.locator('#items .practice, #items .sections').count(), 0);
   }
   assert.equal(await countEvents(), 0);
   pass('2 items, 9 independent language combinations, missing French without fallback');
@@ -82,7 +83,7 @@ try {
   for (let i = 0; i < 2; i++) {
     const article = page.locator('#items article').nth(i);
     const answer = article.locator('.answer');
-    const button = name => article.getByRole('button', { name, exact: true });
+    const button = name => article.getByRole('button', { name, exact: true, includeHidden: true });
     await button(L.startPractice).click();
     assert.equal(await article.locator('.sections').isVisible(), false);
     assert.equal(await answer.isVisible(), false);
