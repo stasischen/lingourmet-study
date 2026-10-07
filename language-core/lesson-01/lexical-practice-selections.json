@@ -2,10 +2,10 @@
   "format": "lingourmet.lexical-practice-selections",
   "version": 1,
   "sourceFiles": {
-    "lesson": "179330ca03df3870d4e992b1cde6da61fbad8a6056f48c94dda013f53586f634",
-    "catalog": "908c4e1f083e51b0da7d75da9873e6e0f98969cfc56665f6abfb66ed13381a7d"
+    "lesson": "2cb2d24a42649ff8cb3ff478aebc39f4b1f5cb51ec268637cf8d89ec3553a28a",
+    "catalog": "516a471bc490be244890bc43ccded46626fcf41297ccfb07541181af4ec4a793"
   },
-  "lexicalProjectionSHA256": "f89895e9a4e4813d87e1e7a01dc216e9edf8cc8d0e7950afa96102d01eac8683",
+  "lexicalProjectionSHA256": "4e4ca5bad80285d6482535fc4373283fd2d1bf7c398d73a4b8e0b052eb7a191a",
   "items": [
     {
       "practiceKey": "lesson01.lexical.reading-group",

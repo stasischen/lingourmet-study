@@ -408,14 +408,14 @@
       ],
       "roleLabels": {
         "P1": {
-          "zh-Hant": "先自介、接著提問的成人",
-          "en": "adult who states their role and asks",
-          "ja": "自分の立場を言ってから質問する大人"
+          "zh-Hant": "ミナ",
+          "en": "ミナ",
+          "ja": "ミナ"
         },
         "P2": {
-          "zh-Hant": "回答身分的成人レン",
-          "en": "Ren, the adult who answers about their role",
-          "ja": "自分の立場を答える大人のレン"
+          "zh-Hant": "レン",
+          "en": "レン",
+          "ja": "レン"
         }
       }
     },

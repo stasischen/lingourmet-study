@@ -1582,8 +1582,8 @@
       ],
       "segments": [
         {
-          "start": 28,
-          "end": 30,
+          "start": 24,
+          "end": 26,
           "text": "アキ",
           "targetRef": {
             "practiceId": "Q05",
@@ -1591,8 +1591,8 @@
           }
         },
         {
-          "start": 31,
-          "end": 33,
+          "start": 27,
+          "end": 29,
           "text": "ユキ",
           "targetRef": {
             "practiceId": "Q05",
@@ -1612,8 +1612,8 @@
       ],
       "segments": [
         {
-          "start": 39,
-          "end": 41,
+          "start": 33,
+          "end": 35,
           "text": "アキ",
           "targetRef": {
             "practiceId": "Q05",
@@ -1621,8 +1621,8 @@
           }
         },
         {
-          "start": 42,
-          "end": 44,
+          "start": 36,
+          "end": 38,
           "text": "ユキ",
           "targetRef": {
             "practiceId": "Q05",
@@ -3069,8 +3069,8 @@
     "Nonlisted portions of Japanese explanations are explanatory prose, not automatically target language exercises."
   ],
   "sourceSHA256": {
-    "lesson": "48ab987596a5588e3dd7c3ede5efe2349a291946e75ba0e68842f258ad9a8d82",
-    "catalog": "a9ff48a55fa62f79dc774d46a0d71a504631e9150cca355e72a494824f00d2de"
+    "lesson": "0110ba72d6155df292d502005287f0ac9e1efc21ebdfb8426279801d04f23f07",
+    "catalog": "f06b91f36c09d97c80bffca83c8b24bb3b9bc713868067288e7817e5486603bc"
   },
   "unitTargets": [
     {

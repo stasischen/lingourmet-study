@@ -1571,9 +1571,9 @@
           }
         ],
         "prompt": {
-          "zh-Hant": "想像你是初次參加讀書會的成人，正與另一位成員初次見面。用アキ、ユキ或自創、以假名（かな）書寫的虛構姓名，說或寫一段自介，包含初見開場、姓名和結語。不必提供真實個資或職業。",
-          "en": "Imagine you are an adult at your first reading group, meeting another member for the first time. Use Aki, Yuki, or an invented name in kana. Say or write an introduction with an opening greeting, your name, and a closing. No real personal details or occupation are needed.",
-          "ja": "初めて読書会に来た大人になったつもりで、初対面のメンバーに自己紹介しましょう。アキ、ユキ、または自分で考えたかなの名前を使い、あいさつ、名前、結びを言うか書いてください。本当の個人情報や職業は必要ありません。"
+          "zh-Hant": "想像你初次參加讀書會，正與另一位成員初次見面。用アキ、ユキ或自創、以假名（かな）書寫的虛構姓名，說或寫一段自介，包含初見開場、姓名和結語。不必提供真實個資或職業。",
+          "en": "Imagine you are at your first reading group, meeting another member for the first time. Use Aki, Yuki, or an invented name in kana. Say or write an introduction with an opening greeting, your name, and a closing. No real personal details or occupation are needed.",
+          "ja": "初めて読書会に来たつもりで、初対面のメンバーに自己紹介しましょう。アキ、ユキ、または自分で考えたかなの名前を使い、あいさつ、名前、結びを言うか書いてください。本当の個人情報や職業は必要ありません。"
         },
         "options": [
           {
