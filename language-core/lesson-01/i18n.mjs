@@ -43,3 +43,5 @@ Object.assign(UI.ja,{catalogTitle:'文法・表現',catalogSearch:'ノートを�
 Object.assign(UI['zh-Hant'],{detailStructure:'句型結構',detailPronunciation:'發音',detailRegister:'場合與語氣',detailResponse:'回應',detailLimits:'適用範圍',detailUnavailable:'完整說明目前無法載入。'});
 Object.assign(UI.en,{detailStructure:'Sentence structure',detailPronunciation:'Pronunciation',detailRegister:'Situation and tone',detailResponse:'Responding',detailLimits:'Usage limits',detailUnavailable:'The full explanation is unavailable right now.'});
 Object.assign(UI.ja,{detailStructure:'文の組み立て',detailPronunciation:'発音',detailRegister:'場面と言い方',detailResponse:'応答',detailLimits:'使える範囲',detailUnavailable:'詳しい説明は現在読み込めません。'});
+
+Object.assign(UI['zh-Hant'],{lessonPractice:'問答',lessonAssembly:'組句'});Object.assign(UI.en,{lessonPractice:'Questions',lessonAssembly:'Sentence building'});Object.assign(UI.ja,{lessonPractice:'問答',lessonAssembly:'文の並べ替え'});

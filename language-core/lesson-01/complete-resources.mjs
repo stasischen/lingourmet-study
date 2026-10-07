@@ -34,7 +34,7 @@ export async function loadCompleteResources({sourceFiles,fetcher=globalThis.fetc
   assert(record(resource.units)&&record(resource.localizations)&&Array.isArray(resource.sectionOrder)&&resource.sectionOrder.length&&new Set(resource.sectionOrder).size===resource.sectionOrder.length,'Invalid resource structure');
   for(const [locale,copy]of Object.entries(resource.localizations)){assert(locales.includes(locale)&&typeof copy.title==='string'&&record(copy.sections),'Invalid resource locale');for(const sectionId of resource.sectionOrder){const section=own(copy.sections,sectionId);assert(section&&Array.isArray(section.runs),'Missing resource section');for(const run of section.runs)assert(record(run)&&((typeof run.text==='string')!==Object.hasOwn(run,'ref')),'Invalid resource run');}}
  }
- for(const link of Object.values(pack.entryLinks)){const resource=own(pack.resources,link.resourceId);assert(resource&&link.opensFullResource===true&&Array.isArray(link.sectionIds)&&link.sectionIds.every(id=>resource.sectionOrder.includes(id)),'Invalid detail link');}
+ for(const link of Object.values(pack.entryLinks)){const resource=own(pack.resources,link.resourceId);assert(resource&&link.opensFullResource===true&&Array.isArray(link.sectionIds)&&link.sectionIds.length>0&&new Set(link.sectionIds).size===link.sectionIds.length&&link.sectionIds.every(id=>resource.sectionOrder.includes(id)),'Invalid detail link');}
  for(const binding of pack.lessonBindings)assert(typeof binding.teachingRefId==='string'&&own(pack.entryLinks,binding.entryId)&&JSON.stringify(binding.detailLink)===JSON.stringify(pack.entryLinks[binding.entryId]),'Invalid lesson detail binding');
  inspect(pack);freeze(pack);freeze(sources);
  return Object.freeze({

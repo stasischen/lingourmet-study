@@ -1,3 +1,4 @@
+import {entryDestination} from './resource-navigation.mjs';
 import {FLASHCARD_LABELS} from './flashcard-session.mjs';
 import {lexicalInspectorHTML} from './lexical-inspector.mjs';
 import {lexicalSelectionChoices,resolveLexicalSelection} from './model.mjs';
@@ -116,3 +117,10 @@ export function renderCatalogResults(result,catalog,locale,uiLocale,query='',ctx
 }
 
 export function renderEntryContext(catalog,id,locale,uiLocale,ctx={}){const entry=Object.hasOwn(catalog.entries??{},id)?catalog.entries[id]:null;if(!entry||!LOCALES.includes(locale))return '';const u=UI[uiLocale];return `<details class="resource-lesson-examples" id="resource-lesson-examples"><summary>${h(u.back)} · ${h(u.examples)}</summary>${renderExamples(entry.exampleRefs,catalog,locale,uiLocale,ctx)}</details><aside id="selection-panel" class="selection-panel" role="region" aria-label="${h(u.selection)}" aria-live="polite" hidden></aside>`;}
+
+export function renderRelatedEntries(catalog,id,locale,uiLocale,adapter,query=''){
+ const entry=Object.hasOwn(catalog.entries??{},id)?catalog.entries[id]:null;
+ const refs=[...new Set(entry?.relatedRefs??[])].filter(ref=>ref!==id&&Object.hasOwn(catalog.entries??{},ref)&&typeof catalog.entries[ref].localizations?.[locale]?.title==='string'&&entryDestination(adapter,ref,locale));
+ if(!refs.length)return '';
+ return `<nav class="resource-related" aria-label="${h(UI[uiLocale].related)}"><h2>${h(UI[uiLocale].related)}</h2><ul>${refs.map(ref=>`<li><a data-related-entry="${h(ref)}" href="${entryURL(ref,locale,uiLocale)}&q=${encodeURIComponent(query)}#${entryDestination(adapter,ref,locale)}" lang="${h(locale)}">${h(catalog.entries[ref].localizations[locale].title)}</a></li>`).join('')}</ul></nav>`;
+}
