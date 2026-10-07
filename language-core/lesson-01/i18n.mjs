@@ -45,3 +45,5 @@ Object.assign(UI.en,{detailStructure:'Sentence structure',detailPronunciation:'P
 Object.assign(UI.ja,{detailStructure:'文の組み立て',detailPronunciation:'発音',detailRegister:'場面と言い方',detailResponse:'応答',detailLimits:'使える範囲',detailUnavailable:'詳しい説明は現在読み込めません。'});
 
 Object.assign(UI['zh-Hant'],{lessonPractice:'問答',lessonAssembly:'組句'});Object.assign(UI.en,{lessonPractice:'Questions',lessonAssembly:'Sentence building'});Object.assign(UI.ja,{lessonPractice:'問答',lessonAssembly:'文の並べ替え'});
+
+UI['zh-Hant'].selectedAssemblyEmpty='你選的內容目前沒有適合排序的句子。仍可用翻卡複習。';UI.en.selectedAssemblyEmpty='Your selection has no sentences suitable for ordering. You can still review with flashcards.';UI.ja.selectedAssemblyEmpty='選んだ内容には、並べ替えに適した文がありません。フラッシュカードで復習できます。';

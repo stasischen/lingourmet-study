@@ -79,7 +79,7 @@ export function selectedSessionIdentity(items, lessonId) {
 export function buildSelectedSentenceItem(resolved) {
   if (resolved?.status !== 'available' || resolved.ref.kind !== 'sentence') return unavailable('assembly_unavailable', resolved?.ref, {mode: 'assembly'});
   const {ref, tokens, text, sourceRef} = resolved;
-  if (!tokens.length || tokens.some(t => !t.text || /^\s+$/u.test(t.text)) || !tokens.some(t => !/^\p{P}+$/u.test(t.text))) return unavailable('assembly_unavailable', ref, {mode: 'assembly'});
+  if (!tokens.length || tokens.some(t => !t.text || /^\s+$/u.test(t.text)) || tokens.filter(t => !/^\p{P}+$/u.test(t.text)).length < 2) return unavailable('assembly_unavailable', ref, {mode: 'assembly'});
   const selectedId = selectedItemId(ref), id = `assembly:selected:${selectedId}`;
   const item = {
     id, stage: 'controlled', responseType: 'ordering',

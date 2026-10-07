@@ -28,14 +28,17 @@ export function flashcardVisitToken(state){return `${state.sessionId}:${state.ro
 export function getFlashcardAudioAccess(state){return {revealedPracticeIds:state.phase==='revealed'?[currentFlashcardId(state)]:[]};}
 export function createFlashcardState({cards,lessonId,version,locale='zh-Hant',uiLocale=locale,sessionId='session-1'}){
  flashcardKey(lessonId,version);if(new Set(cards.map(x=>x.id)).size!==cards.length)throw new Error('Duplicate card identity');
- return {schemaVersion:1,lessonId,version,deckSignatures:Object.fromEntries(cards.map(c=>[c.id,c.signature])),templates:Object.fromEntries(cards.map(c=>[c.id,c.template])),locale,uiLocale,sessionId,round:0,visit:0,phase:'ready',template:null,queue:[],roundIds:[],remembered:[],history:[],error:null,pending:null};
+ return {schemaVersion:1,lessonId,version,deckSignatures:Object.fromEntries(cards.map(c=>[c.id,c.signature])),templates:Object.fromEntries(cards.map(c=>[c.id,c.template])),locale,uiLocale,sessionId,round:0,visit:0,phase:'ready',audioAvailable:false,heardToken:null,template:null,queue:[],roundIds:[],remembered:[],history:[],error:null,pending:null};
 }
 export function reduceFlashcard(state,event){
  if(event.type==='locale')return {...state,locale:event.locale??state.locale,uiLocale:event.uiLocale??state.uiLocale};
+ // Playback qualification is per visit and is cleared on restore; availability updates never write storage.
+ if(event.type==='audio-availability'){const available=event.available===true;if(state.audioAvailable===available)return state;return {...state,audioAvailable:available,...(!available&&!state.pending?{heardToken:null}:{}),...(state.template==='listening'&&!available&&!state.pending&&state.phase==='revealed'?{phase:'recall'}:{}),...(state.template==='listening'&&!available&&!state.pending&&state.phase==='material'?{returnPhase:'recall'}:{})};}
+ if(event.type==='audio-heard'){if(!state.audioAvailable||state.template!=='listening'||state.phase!=='recall'||event.token!==flashcardVisitToken(state))return state;return {...state,heardToken:event.token};}
  if(state.pending)return state;
  if(event.token&&event.token!==flashcardVisitToken(state))return state;
  if(event.type==='start'&&['ready','complete','ended'].includes(state.phase)){
-  const template=event.template??state.template,ids=Object.keys(state.templates).filter(id=>state.templates[id]===template);if(!ids.length)return state;
+  const template=event.template??state.template;if(template==='listening'&&!state.audioAvailable)return state;const ids=Object.keys(state.templates).filter(id=>state.templates[id]===template);if(!ids.length)return state;
   return {...state,template,round:state.round+1,visit:state.visit+1,queue:ids,roundIds:ids,remembered:[],phase:'recall',error:null};
  }
  if(event.type==='choose'&&['complete','ended'].includes(state.phase))return {...state,phase:'ready'};
@@ -43,6 +46,7 @@ export function reduceFlashcard(state,event){
  if(!['recall','revealed'].includes(state.phase))return state;
  if(event.type==='end')return {...state,phase:'ended'};
  if(event.type==='material')return {...state,returnPhase:state.phase,phase:'material'};
+ if(state.template==='listening'&&['reveal','rate'].includes(event.type)&&((!state.audioAvailable&&!event.retrying)||state.heardToken!==flashcardVisitToken(state)))return state;
  if(event.type==='reveal'&&state.phase==='recall')return {...state,phase:'revealed'};
  if(event.type!=='rate'||state.phase!=='revealed'||!['again','remembered'].includes(event.rating))return state;
  const id=currentFlashcardId(state),attemptId=flashcardVisitToken(state);if(state.history.some(x=>x.attemptId===attemptId))return state;
@@ -62,15 +66,15 @@ function validateSaved(saved,fresh){
 }
 export function createFlashcardController({cards,lessonId,version,storage,locale='zh-Hant',uiLocale=locale,sessionId,now=()=>new Date().toISOString()}){
  const key=flashcardKey(lessonId,version);let state=createFlashcardState({cards,lessonId,version,locale,uiLocale,sessionId:sessionId??globalThis.crypto?.randomUUID?.()??`session-${Date.now()}-${Math.random().toString(36).slice(2)}`}),blocked=false;
- try{const raw=storage?.getItem(key);if(raw){const saved=JSON.parse(raw);validateSaved(saved,state);state={...saved,templates:state.templates,locale,uiLocale,error:null,pending:null};if(state.phase==='material')state={...state,phase:state.returnPhase??'recall',returnPhase:undefined};}}catch{blocked=true;state={...state,error:'read'};}
+ try{const raw=storage?.getItem(key);if(raw){const saved=JSON.parse(raw);validateSaved(saved,state);state={...saved,templates:state.templates,locale,uiLocale,audioAvailable:false,heardToken:null,error:null,pending:null};if(state.phase==='material')state={...state,phase:state.returnPhase??'recall',returnPhase:undefined};if(state.template==='listening'&&state.phase==='revealed')state={...state,phase:'recall'};}}catch{blocked=true;state={...state,error:'read'};}
  const listeners=new Set();const notify=event=>{for(const fn of [...listeners])fn(state,event);};
  function save(candidate){if(blocked||!storage?.setItem)throw new Error('Storage unavailable');storage.setItem(key,JSON.stringify({...candidate,error:null,pending:null}));}
  function dispatch(event){
-  if(blocked&&event.type!=='locale')return state;
+  if(blocked&&!['locale','audio-availability'].includes(event.type))return state;
   if(event.type==='retry-save'){if(!state.pending)return state;event={...state.pending,retrying:true};}
   const input=event.retrying?{...state,pending:null,error:null}:state,nextEvent={...event,at:event.at??now()},next=reduceFlashcard(input,nextEvent);if(next===input)return state;
-  if(event.type==='locale'){state=next;notify(event);return state;}
-  try{save(next);state=next;}catch{state={...state,error:'save',pending:{...nextEvent,retrying:undefined}};}
+  if(['locale','audio-availability','audio-heard'].includes(event.type)){state=next;notify(event);return state;}
+  try{save(next);state=next;if(state.template==='listening'&&!state.audioAvailable)state={...state,heardToken:null,...(state.phase==='revealed'?{phase:'recall'}:{})};}catch{state={...state,error:'save',pending:{...nextEvent,retrying:undefined}};}
   notify(event);return state;
  }
  return {get state(){return state;},key,dispatch,subscribe(fn){listeners.add(fn);return()=>listeners.delete(fn);},get canPersist(){return !blocked&&!!storage?.setItem;}};
@@ -88,10 +92,10 @@ export function flashcardAudioTarget(card,lesson,side){
 }
 export function renderFlashcardSession(state,cards,lesson,{audioAvailable=false,renderTarget=(text)=>escape(text),renderMeaning=(text)=>escape(text)}={}){
  const u=FLASHCARD_LABELS[state.uiLocale]??FLASHCARD_LABELS.en,card=cards.find(c=>c.id===currentFlashcardId(state)),disabled=!!state.pending||state.error==='read';
- const button=(action,label,{off=false,template}={})=>`<button type="button" data-flash-action="${action}"${template?` data-flash-template="${template}"`:''}${disabled||off?' disabled':''}>${escape(label)}</button>`;
+ const button=(action,label,{off=false,template}={})=>`<button type="button" data-flash-action="${action}"${template?` data-flash-template="${template}"`:''}${disabled||off||(action==='start'&&template==='listening'&&!audioAvailable)||(state.template==='listening'&&['reveal','again','remembered'].includes(action)&&(!audioAvailable||state.heardToken!==flashcardVisitToken(state)))?' disabled':''}>${escape(label)}</button>`;
  const error=state.error?`<p role="alert">${escape(state.error==='read'?u.readError:u.saveError)}</p>${state.error==='save'?`<button type="button" data-flash-action="retry-save">${escape(u.retrySave)}</button>`:''}`:'';
- if(state.phase==='ready'){const templates=[...new Set(cards.map(c=>c.template))];return `<section class="flashcard-session" data-flash-phase="ready"><h2>${escape(u.title)}</h2>${error}${templates.map(template=>button('start',u[template],{template})).join(' ')}${!cards.length?`<p>${escape(u.empty)}</p>`:''}</section>`;}
- if(['complete','ended'].includes(state.phase))return `<section class="flashcard-session" data-flash-phase="${state.phase}"><h2 data-flash-focus tabindex="-1">${escape(state.phase==='complete'?u.done:u.end)}</h2><p>${escape(u.progress)}: ${state.remembered.length} / ${state.roundIds.length}</p><p>${escape(u.remaining)}: ${state.queue.length}</p>${error}${button('start',u.restart,{template:state.template})} ${button('choose',u.choose)}</section>`;
+ if(state.phase==='ready'){const templates=[...new Set(cards.map(c=>c.template))];return `<section class="flashcard-session" data-flash-phase="ready"><h2>${escape(u.title)}</h2>${error}${templates.map(template=>button('start',u[template],{template})).join(' ')}${!cards.length?`<p>${escape(u.empty)}</p>`:''}<p data-flash-audio-unavailable${audioAvailable?' hidden':''}>${escape(u.audioUnavailable)}</p></section>`;}
+ if(['complete','ended'].includes(state.phase))return `<section class="flashcard-session" data-flash-phase="${state.phase}"><h2 data-flash-focus tabindex="-1">${escape(state.phase==='complete'?u.done:u.end)}</h2><p>${escape(u.progress)}: ${state.remembered.length} / ${state.roundIds.length}</p><p>${escape(u.remaining)}: ${state.queue.length}</p>${error}${button('start',u.restart,{template:state.template})} ${button('choose',u.choose)}<p data-flash-audio-unavailable${audioAvailable?' hidden':''}>${escape(u.audioUnavailable)}</p></section>`;
  if(state.phase==='material')return `<section class="flashcard-session" data-flash-phase="material">${error}${button('return',u.back)}</section>`;
  if(!card)return '';const view=flashcardView(card,lesson,state.locale);
  if(!view.available)return `<section class="flashcard-session" data-flash-phase="${state.phase}"><p role="status">${escape(u.missing)}</p>${error}</section>`;
@@ -107,7 +111,7 @@ export function bindFlashcardSession(root,controller,{cards,lesson,onChange=()=>
   if(event.detail>1)return;const el=event.target.closest?.('[data-flash-action]');if(!el||!root.contains(el)||el.disabled)return;
   const action=el.dataset.flashAction,state=controller.state,token=el.closest?.('[data-flash-token]')?.dataset.flashToken??flashcardVisitToken(state),card=cards.find(c=>c.id===currentFlashcardId(state));
   if(token!==flashcardVisitToken(state))return;
-  if(action.startsWith('play-')){if(event.isTrusted!==true||!card||!['recall','revealed'].includes(state.phase)||state.pending)return;const side=action.slice(5);if(side==='back'&&state.phase!=='revealed')return;const target=flashcardAudioTarget(card,lesson,side);if(target)onPlay(target);return;}
+  if(action.startsWith('play-')){if(event.isTrusted!==true||!card||!['recall','revealed'].includes(state.phase)||state.pending)return;const side=action.slice(5);if(side==='back'&&state.phase!=='revealed')return;const target=flashcardAudioTarget(card,lesson,side);if(target)onPlay(target,{onComplete:()=>{if(side==='front')controller.dispatch({type:'audio-heard',token});}});return;}
   if(action==='material'){controller.dispatch({type:'material',token});if(controller.state.phase==='material'&&card)onViewMaterial({cardId:card.id,sourceRefs:clone(card.sourceRefs),returnToCards:()=>controller.dispatch({type:'return'})});return;}
   controller.dispatch(['again','remembered'].includes(action)?{type:'rate',rating:action,token}:{type:action,template:el.dataset.flashTemplate,token});
  };

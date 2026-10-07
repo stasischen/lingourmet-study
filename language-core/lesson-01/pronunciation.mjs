@@ -61,9 +61,9 @@ export function createPronunciationController({synthesis=globalThis.speechSynthe
  const chooseVoice=()=>voices().find(v=>/^ja(?:[-_]JP)?$/i.test(v.lang)&&v.localService===true);
  const availability=()=>!synthesis||typeof synthesis.speak!=='function'||typeof synthesis.cancel!=='function'||typeof Utterance!=='function'?{available:false,code:'unsupported'}:chooseVoice()?{available:true,code:'ready'}:{available:false,code:'no-local-japanese-voice'};
  const refresh=()=>{const status=availability();return publish({...status,state:status.available?'ready':'unavailable'});};
- const voiceListener=()=>refresh();synthesis?.addEventListener?.('voiceschanged',voiceListener);
+ const voiceListener=()=>{if(!availability().available){if(active)cancel();else generation++;}refresh();};synthesis?.addEventListener?.('voiceschanged',voiceListener);
  function cancel(){generation++;active=null;try{synthesis?.cancel?.();return publish({...availability(),state:'idle',code:'cancelled'});}catch(error){return publish({...availability(),state:'error',code:'cancel-failed',message:error.message});}}
- function speak(target,{userInitiated=false}={}){
+ function speak(target,{userInitiated=false,onComplete=()=>{}}={}){
   if(disposed) return publish({available:false,state:'error',code:'disposed'});
   if(!userInitiated)return publish({...availability(),state:'error',code:'user-gesture-required'});
   if(!canSpeakTarget(target,getAccess()))return publish({...availability(),state:'error',code:'target-hidden-or-invalid'});
@@ -72,11 +72,13 @@ export function createPronunciationController({synthesis=globalThis.speechSynthe
   const voice=chooseVoice();const cancelled=cancel();if(cancelled.code==='cancel-failed')return cancelled;const serial=generation;
   try{
    const utterance=new Utterance(target.speech);utterance.lang='ja-JP';utterance.voice=voice;
-   utterance.onstart=()=>{if(serial===generation)publish({available:true,state:'speaking',code:'started'});};
-   utterance.onend=()=>{if(serial===generation){active=null;publish({...availability(),state:'idle',code:'ended'});}};
-   utterance.onerror=event=>{if(serial===generation){active=null;publish({...availability(),state:'error',code:event.error||'speech-error'});}};
-   active=utterance;synthesis.speak(utterance);return publish({available:true,state:'pending',code:'queued'});
-  }catch(error){active=null;return publish({...availability(),state:'error',code:'speech-error',message:error.message});}
+   // Consume each attempt once; callbacks cannot regain authority after failure or cancellation.
+   const consume=()=>{if(serial!==generation||active!==utterance)return null;active=null;return ++generation;};
+   utterance.onstart=()=>{if(serial===generation&&active===utterance)publish({available:true,state:'speaking',code:'started'});};
+   utterance.onend=()=>{const completed=consume();if(completed===null)return;publish({...availability(),state:'idle',code:'ended'});if(completed===generation&&!disposed&&availability().available)onComplete();};
+   utterance.onerror=event=>{if(consume()!==null)publish({...availability(),state:'error',code:event.error||'speech-error'});};
+   active=utterance;synthesis.speak(utterance);return serial===generation?publish({available:true,state:'pending',code:'queued'}):lastStatus;
+  }catch(error){if(serial===generation){generation++;active=null;}return publish({...availability(),state:'error',code:'speech-error',message:error.message});}
  }
  refresh();
  return {speak,cancel,refresh,availability,getStatus:()=>lastStatus,subscribe(callback){listeners.add(callback);callback(lastStatus);return()=>listeners.delete(callback);},dispose(){cancel();disposed=true;synthesis?.removeEventListener?.('voiceschanged',voiceListener);listeners.clear();}};

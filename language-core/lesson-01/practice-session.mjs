@@ -138,12 +138,12 @@ export function createPracticeController({lesson,lessonId,practiceVersion,storag
  }
  return {get state(){return state;},key,legacyKey:legacyKeys[0]??null,legacyKeys:[...legacyKeys],dispatch,subscribe(listener){listeners.add(listener);return()=>listeners.delete(listener);},get canPersist(){return !blocked&&!!storage?.setItem;}};
 }
-export function renderPracticeSession(state,lesson,{answerTargets=[],showLegacyNotice=true,renderField=(value,_path,options)=>options?.audioOnly?'':escape(value)}={}){
+export function renderPracticeSession(state,lesson,{answerTargets=[],emptyLabel,showLegacyNotice=true,renderField=(value,_path,options)=>options?.audioOnly?'':escape(value)}={}){
  const u=PRACTICE_LABELS[state.uiLocale]??PRACTICE_LABELS.en,items=lesson.practice?.items??[],item=items.find(i=>i.id===currentItemId(state));
  const button=(action,label,disabled=false,extra='')=>`<button type="button" data-practice-action="${action}"${disabled?' disabled':''} ${extra}>${escape(label)}</button>`;
  const legacy=showLegacyNotice&&state.legacyPreserved?`<p class="practice-legacy-notice" role="note">${escape(u.legacy)}</p>`:'';
  const error=state.error?`<p role="alert">${escape(state.error==='read'?u.unavailable:u.saveError)}</p>${state.error==='save'?button('retry-save',u.saveAgain):''}`:'';
- if(state.phase==='ready')return `<section class="practice-session" data-practice-phase="ready">${legacy}${error}${button('start',u.start,!items.length)}${!items.length?`<p>${escape(u.empty)}</p>`:''}</section>`;
+ if(state.phase==='ready')return `<section class="practice-session" data-practice-phase="ready">${legacy}${error}${button('start',u.start,!items.length)}${!items.length?`<p>${escape(emptyLabel??u.empty)}</p>`:''}</section>`;
  if(state.phase==='complete'){const s=practiceSummary(state);return `<section class="practice-session" data-practice-phase="complete"><h2 tabindex="-1" data-practice-focus>${escape(u.done)}</h2><p>${escape(u.coverage)}: ${s.reviewed} / ${s.total} · ${escape(u.skippedItems)}: ${s.skipped}</p>${error}${button('restart',u.again)}</section>`;}
  if(state.phase==='material')return `<section class="practice-session" data-practice-phase="material">${button('return',u.back)}</section>`;
  if(!item)return '';
