@@ -10,6 +10,22 @@ export function assemblySpec(item){
  const bank=[...selectable];if(JSON.stringify(bank)===JSON.stringify(wordOrder)&&bank.length>1)bank.push(bank.shift());
  return {ids:selectable,originalIds:ids,bank,answerOrder:wordOrder,fullAnswerOrder:answerOrder,fixed,byId};
 }
+/** Presentation state only: token IDs, never answer text or progress identity. */
+export function validAssemblyBank(spec,bank){return Array.isArray(bank)&&bank.length===spec.ids.length&&new Set(bank).size===spec.ids.length&&bank.every(id=>spec.ids.includes(id));}
+export function shuffleAssemblyBank(spec,{rng=Math.random,previous}={}){
+ const canonical=spec.answerOrder,same=(a,b)=>Array.isArray(b)&&a.every((id,i)=>id===b[i]);
+ if(canonical.length<2)return [...canonical];
+ const acceptable=bank=>!same(bank,canonical)&&(canonical.length===2||!same(bank,previous));
+ // Rejection sampling preserves Fisher–Yates uniformity over permitted orders.
+ // Bound retries for injected/pathological RNGs, rather than hanging the UI.
+ for(let attempt=0;attempt<32;attempt++){
+  const bank=[...canonical];
+  for(let i=bank.length-1;i>0;i--){const value=rng();if(!Number.isFinite(value)||value<0||value>=1)throw new RangeError('RNG must return a number in [0, 1)');const j=Math.floor(value*(i+1));[bank[i],bank[j]]=[bank[j],bank[i]];}
+  if(acceptable(bank))return bank;
+ }
+ for(let i=0;i<canonical.length-1;i++){const bank=[...canonical];[bank[i],bank[i+1]]=[bank[i+1],bank[i]];if(acceptable(bank))return bank;}
+ throw new Error('No assembly bank permutation');
+}
 export function validAssemblyOrder(spec,order){return Array.isArray(order)&&order.every(id=>typeof id==='string'&&(spec.originalIds??spec.ids).includes(id))&&new Set(order).size===order.length;}
 export function assemblyResult(spec,order){if(!validAssemblyOrder(spec,order))return 'incomplete';const words=order.filter(id=>spec.ids.includes(id));if(words.length!==spec.ids.length)return 'incomplete';return words.every((id,i)=>id===spec.answerOrder[i])?'match':'mismatch';}
 export function changeAssembly(spec,draft={},action,id){
@@ -26,9 +42,9 @@ export const ASSEMBLY_LABELS={
  en:{bank:'Words',assembled:'Your sentence',add:'Add',remove:'Return',reset:'Reset order',check:'Check order',match:'The order matches the source sentence.',mismatch:'The order differs from the source sentence. Try rearranging it.',empty:'Choose words to build the sentence.',scope:'This checks fragment order, not free-form language quality.'},
  ja:{bank:'ことば',assembled:'組み立てた文',add:'追加',remove:'戻す',reset:'並べ直す',check:'並び順を確認',match:'元の文と同じ順番です。',mismatch:'元の文と順番が違います。もう一度並べてみましょう。',empty:'ことばを選んで文を作りましょう。',scope:'部分の並び順を確認します。自由な回答の評価ではありません。'}
 };
-export function renderAssembly(item,draft,{uiLocale='en',disabled=false,revealed=false,field,escape}){
+export function renderAssembly(item,draft,{uiLocale='en',disabled=false,revealed=false,bank,field,escape}){
  const spec=assemblySpec(item);if(!spec)return '';const u=ASSEMBLY_LABELS[uiLocale]??ASSEMBLY_LABELS.en,order=(draft.order??[]).filter(id=>spec.ids.includes(id));
  const button=(action,label,id,off=false)=>`<button type="button" data-practice-action="${action}"${id?` data-piece-id="${escape(id)}" aria-label="${escape(label)} · ${escape(spec.byId[id])}"`:''}${disabled||revealed||off?' disabled':''}>${escape(label)}</button>`;
  const piece=(id,chosen)=>{const index=item.options.findIndex(x=>x.id===id),action=chosen?'assembly-remove':'assembly-add',label=chosen?u.remove:u.add;return `<div class="assembly-piece" data-assembly-piece="${escape(id)}"><button type="button" data-practice-action="${action}" data-piece-id="${escape(id)}" aria-label="${escape(label)} · ${escape(spec.byId[id])}"${disabled||revealed?' disabled':''}>${escape(spec.byId[id])}</button>${field(item.options[index].text,['options',index,'text'],false,{audioOnly:true})}</div>`;};
- return `<section class="sentence-assembly" aria-label="${escape(u.assembled)}"><h3>${escape(u.assembled)}</h3><div class="sentence-answer" data-assembly-answer>${order.length?(spec.fixed??[]).filter(p=>p.after===0).map(p=>`<span class="assembly-punctuation">${escape(p.text)}</span>`).join('')+order.map((id,index)=>piece(id,true)+(spec.fixed??[]).filter(p=>p.after===index+1).map(p=>`<span class="assembly-punctuation">${escape(p.text)}</span>`).join('')).join(''):`<p>${escape(u.empty)}</p>`}</div><h3>${escape(u.bank)}</h3><div class="word-bank">${spec.bank.filter(id=>!order.includes(id)).map(id=>piece(id,false)).join('')}</div><p role="status" data-assembly-feedback>${draft.assemblyResult?escape(u[draft.assemblyResult]??''):''}</p>${button('assembly-reset',u.reset,null,!order.length)} ${button('assembly-check',u.check,null,order.length!==spec.ids.length)}</section>`;
+ return `<section class="sentence-assembly" aria-label="${escape(u.assembled)}"><h3>${escape(u.assembled)}</h3><div class="sentence-answer" data-assembly-answer>${order.length?(spec.fixed??[]).filter(p=>p.after===0).map(p=>`<span class="assembly-punctuation">${escape(p.text)}</span>`).join('')+order.map((id,index)=>piece(id,true)+(spec.fixed??[]).filter(p=>p.after===index+1).map(p=>`<span class="assembly-punctuation">${escape(p.text)}</span>`).join('')).join(''):`<p>${escape(u.empty)}</p>`}</div><h3>${escape(u.bank)}</h3><div class="word-bank">${(validAssemblyBank(spec,bank)?bank:spec.bank).filter(id=>!order.includes(id)).map(id=>piece(id,false)).join('')}</div><p role="status" data-assembly-feedback>${draft.assemblyResult?escape(u[draft.assemblyResult]??''):''}</p>${button('assembly-reset',u.reset,null,!order.length)} ${button('assembly-check',u.check,null,order.length!==spec.ids.length)}</section>`;
 }

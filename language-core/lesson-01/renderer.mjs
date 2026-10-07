@@ -1,3 +1,4 @@
+import {renderLessonContrast} from './lesson-presentation.mjs';
 import {entryDestination} from './resource-navigation.mjs';
 import {FLASHCARD_LABELS} from './flashcard-session.mjs';
 import {lexicalInspectorHTML} from './lexical-inspector.mjs';
@@ -60,6 +61,7 @@ function renderTeaching(data,catalog,locale,uiLocale,ctx){
  return refs.map((item,index)=>{
   if(consumed.has(item.id))return '';const group=groups.find(g=>g.teachingRefIds?.includes(item.id));
   if(group){
+   if(ctx?.lessonPresentation?.groupId===group.id){for(const id of group.teachingRefIds)consumed.add(id);return renderLessonContrast(ctx.lessonPresentation,group,data,locale,uiLocale,ctx);}
    const members=group.teachingRefIds.map(id=>refs.find(r=>r.id===id));if(members.some(x=>!x))throw new Error('Unknown teaching presentation member');
    const copy=Object.hasOwn(group.localizations??{},locale)?group.localizations[locale]:null;if(!copy)return `<p class="missing">${h(u.missing)}</p>`;
    const focusMeta={},examples=[];
@@ -123,4 +125,15 @@ export function renderRelatedEntries(catalog,id,locale,uiLocale,adapter,query=''
  const refs=[...new Set(entry?.relatedRefs??[])].filter(ref=>ref!==id&&Object.hasOwn(catalog.entries??{},ref)&&typeof catalog.entries[ref].localizations?.[locale]?.title==='string'&&entryDestination(adapter,ref,locale));
  if(!refs.length)return '';
  return `<nav class="resource-related" aria-label="${h(UI[uiLocale].related)}"><h2>${h(UI[uiLocale].related)}</h2><ul>${refs.map(ref=>`<li><a data-related-entry="${h(ref)}" href="${entryURL(ref,locale,uiLocale)}&q=${encodeURIComponent(query)}#${entryDestination(adapter,ref,locale)}" lang="${h(locale)}">${h(catalog.entries[ref].localizations[locale].title)}</a></li>`).join('')}</ul></nav>`;
+}
+
+/** Each physical document renders only its own lesson section. */
+export function renderLessonPage(raw,catalog,locale,uiLocale,ctx={}){
+ const data=withCatalog(raw,catalog),u=UI[uiLocale],loc=data.localizations[locale];
+ if(!loc)return `<p role="status">${h(u.missing)}</p>`;
+ const head=`<h1 lang="${h(locale)}">${h(loc.title)}</h1>`;
+ const tools=`<nav class="lesson-tools"><button type="button" data-open-selected>${h(u.selectedTitle)}</button><a data-catalog-link href="./knowledge.html?lang=${encodeURIComponent(locale)}&ui=${encodeURIComponent(uiLocale)}">${h(u.catalogTitle)}</a></nav>`;
+ const page=ctx.page;
+ const section=page==='content'?`<section class="stage" id="content"><h2>${h(u.content)}</h2><p class="context">${field(loc.intro??'','lesson',['localizations',locale,'intro'],ctx)}</p>${data.goalOrder?.length?`<h3>${h(u.goals)}</h3>${list(data.goalOrder.map(id=>loc.goals?.[id]??u.missing),locale)}`:''}${translationToggle(uiLocale,ctx.translationsVisible)}${data.sourceOrder.map(id=>renderSource(id,data,locale,uiLocale,ctx)).join('')}${loc.readingNotes?`<details><summary>${h(u.readingNotes)}</summary><p>${h(loc.readingNotes)}</p></details>`:''}</section>`:page==='teaching'?`<section class="stage" id="teaching"><h2>${h(u.teaching)}</h2>${renderTeaching(data,catalog,locale,uiLocale,ctx)}</section>`:`<section class="stage" id="practice"><h2>${h(u.practice)}</h2><div id="practice-root">${ctx.practiceHTML??''}</div></section>`;
+ return head+tools+section+`<aside id="selection-panel" class="selection-panel" role="region" aria-label="${h(u.selection)}" aria-live="polite" hidden></aside><p id="audio-status" role="status"></p><footer>${h(u.footer)}</footer>`;
 }

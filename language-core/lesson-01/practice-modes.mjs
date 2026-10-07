@@ -6,7 +6,8 @@ export function modeNavigation(mode,uiLocale){return `<nav class="practice-mode-
 export function activePracticeAccess(mode,practiceState,flashState){return mode==='cards'?getFlashcardAudioAccess(flashState):getPracticeAudioAccess(practiceState);}
 export function activePracticeView({mode,practiceState,flashState,lesson,cards,showLesson=false}){
  const state=mode==='cards'?flashState:practiceState;
- const materialRefs=mode==='cards'?cards.find(c=>c.id===currentFlashcardId(state))?.sourceRefs:lesson.practice.items.find(q=>q.id===currentItemId(state))?.sourceRefs;
+ const card=mode==='cards'?cards.find(c=>c.id===currentFlashcardId(state)):null;
+ const materialRefs=mode==='cards'?(card?.primarySourceRef?[card.primarySourceRef]:card?.sourceRefs):lesson.practice.items.find(q=>q.id===currentItemId(state))?.sourceRefs;
  let phase=state.phase;
  if(showLesson)phase='ready';
  else if(phase==='ready')phase='mode-ready';

@@ -24,3 +24,12 @@ ruby{ruby-position:over}rt{font-size:.6em;color:var(--muted);font-weight:400}.so
 .resource-contents{display:flex;flex-wrap:wrap;gap:.5rem 1rem;margin:1rem 0 2rem}.resource-section{margin:1.6rem 0;scroll-margin-top:1rem}.resource-section p{line-height:2;white-space:pre-line}.resource-section h2{font-size:1.15rem}.resource-entry-focus{border-inline-start:3px solid #245d4d;padding-inline-start:1rem}.resource-target{display:inline;white-space:normal}.resource-target ruby{white-space:nowrap}
 
 .assembly-piece [data-piece-id]{font:inherit;font-size:1.1rem;min-height:2.75rem;min-width:2.75rem;padding:.45rem .7rem}.assembly-piece [data-piece-id]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* Three short, real page links remain reachable on narrow screens. */
+.lesson-page-nav{position:sticky;top:0;z-index:9;display:flex;gap:.35rem;background:#f7f6f0;border-bottom:1px solid var(--line);padding:.55rem max(1rem,calc((100vw - 812px)/2));}
+.lesson-page-nav a{flex:1;min-width:0;text-align:center;white-space:nowrap;padding:.5rem .35rem;border:1px solid var(--line);border-radius:.4rem;text-decoration:none;background:white;font-weight:650;}
+.lesson-page-nav a[aria-current="page"]{background:var(--accent);color:white;}
+.lesson-tools{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin:1rem 0;}
+html{scroll-padding-top:6rem}.stage,.unit,.sentence-pair,[id],button,a,input,textarea{scroll-margin-top:6rem}
+@media(max-width:480px){.lesson-page-nav{padding:.5rem .8rem;font-size:.9rem}}
+@media print{.lesson-page-nav,.lesson-tools{display:none}}

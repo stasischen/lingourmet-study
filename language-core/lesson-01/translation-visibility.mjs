@@ -1,6 +1,6 @@
 /** Reading-only view state. No persistence, source mutation, answer reveal, or speech. */
-export function createTranslationVisibility(){
- let visible=false;
+export function createTranslationVisibility(initial=false){
+ let visible=initial===true;
  return {get visible(){return visible;},toggle(){visible=!visible;return visible;}};
 }
 export function applyTranslationVisibility(root,visible,labels){

@@ -1,3 +1,4 @@
+import {loadLessonPresentation} from './lesson-presentation.mjs';
 import {createDictionaryResolver} from './dictionary-resolver.mjs';
 const unavailableDictionary={format:'lingourmet.dictionary-lookup.v1',availability:'unavailable',snapshot:'runtime-index-unavailable',clusters:[]};
 const files=['lesson.json','knowledge-catalog.json','target-mapping.json','lexical-analysis.json','lexical-practice-selections.json','cloze-practice-selections.json'];
@@ -11,7 +12,8 @@ export async function loadLearningPackage(fetcher=globalThis.fetch,digest=rawSHA
  if(lexicalPracticeSelections.lexicalProjectionSHA256!==await digest(texts[3]))throw new Error('Stale lexical practice analysis pin');
  for(const name of ['lesson','catalog'])if(lexicalPracticeSelections.sourceFiles?.[name]!==lexicalAnalysis.sourceFiles[name])throw new Error('Stale lexical practice source pin');
  for(const name of ['lesson','catalog'])if(clozePracticeSelections.sourceFiles?.[name]!==lexicalAnalysis.sourceFiles[name])throw new Error('Stale cloze source pin');
- return {lesson,catalog,lexicalPracticeSelections,clozePracticeSelections,mapping:{...mapping,fields:[...mapping.fields,...lexicalAnalysis.fieldTargets??[]]},lexicalAnalysis,dictionaryIndex};
+ const lessonPresentation=await loadLessonPresentation(fetcher,digest,{lesson,catalog,analysis:lexicalAnalysis,texts:{'lesson.json':texts[0],'knowledge-catalog.json':texts[1],'lexical-analysis.json':texts[3]}});
+ return {lessonPresentation,lesson,catalog,lexicalPracticeSelections,clozePracticeSelections,mapping:{...mapping,fields:[...mapping.fields,...lexicalAnalysis.fieldTargets??[]]},lexicalAnalysis,dictionaryIndex};
 }
 
 /** Knowledge pages resolve their own catalog source; they do not fetch or depend on a lesson. */
