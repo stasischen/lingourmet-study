@@ -36,3 +36,7 @@ Object.assign(UI.ja,{selectedTitle:'選択リスト',addSelected:'リストに�
 UI['zh-Hant'].lessonPractice='課程練習';UI.en.lessonPractice='Lesson practice';UI.ja.lessonPractice='レッスンの練習';
 
 UI['zh-Hant'].selectedAssemblyUnavailable='這個句子目前無法組句練習。';UI.en.selectedAssemblyUnavailable='Sentence building is unavailable for this selection.';UI.ja.selectedAssemblyUnavailable='この文は現在、並べ替え練習に使えません。';
+
+Object.assign(UI['zh-Hant'],{catalogTitle:'文法與表達',catalogSearch:'搜尋筆記',catalogNoResults:'找不到符合的筆記。',catalogLoadError:'筆記無法載入，請稍後重新整理。',catalogUnavailable:'筆記資料不完整，目前無法搜尋。',catalogBack:'回到筆記目錄'});
+Object.assign(UI.en,{catalogTitle:'Grammar and expressions',catalogSearch:'Search notes',catalogNoResults:'No matching notes.',catalogLoadError:'The notes could not be loaded. Please refresh later.',catalogUnavailable:'The notes are incomplete and cannot be searched right now.',catalogBack:'Back to notes'});
+Object.assign(UI.ja,{catalogTitle:'文法・表現',catalogSearch:'ノートを検索',catalogNoResults:'一致するノートがありません。',catalogLoadError:'ノートを読み込めませんでした。後でもう一度お試しください。',catalogUnavailable:'ノートのデータが不足しているため、現在検索できません。',catalogBack:'ノート一覧に戻る'});
