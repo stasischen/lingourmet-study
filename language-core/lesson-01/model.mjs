@@ -51,7 +51,7 @@ export function validateLesson(data,catalog){
 }
 
 export function withCatalog(lesson,catalog){
- const result={...lesson,unitOwners:{...Object.fromEntries(Object.keys(catalog.units??{}).map(id=>[id,'catalog'])),...Object.fromEntries(Object.keys(lesson.units??{}).map(id=>[id,'lesson']))},units:{...catalog.units,...lesson.units},examples:{...catalog.examples,...lesson.examples},localizations:{}};
+ const result={...lesson,entries:{...catalog.entries,...lesson.entries},unitOwners:{...Object.fromEntries(Object.keys(catalog.units??{}).map(id=>[id,'catalog'])),...Object.fromEntries(Object.keys(lesson.units??{}).map(id=>[id,'lesson']))},units:{...catalog.units,...lesson.units},examples:{...catalog.examples,...lesson.examples},localizations:{}};
  for(const locale of new Set([...Object.keys(catalog.localizations??{}),...Object.keys(lesson.localizations??{})]))result.localizations[locale]={...catalog.localizations?.[locale],...lesson.localizations?.[locale],units:{...catalog.localizations?.[locale]?.units,...lesson.localizations?.[locale]?.units}};
  return result;
 }

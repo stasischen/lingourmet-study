@@ -117,7 +117,7 @@ export function renderPracticeSession(state,lesson,{answerTargets=[],renderField
  const u=PRACTICE_LABELS[state.uiLocale]??PRACTICE_LABELS.en,items=lesson.practice?.items??[],item=items.find(i=>i.id===currentItemId(state));
  const button=(action,label,disabled=false,extra='')=>`<button type="button" data-practice-action="${action}"${disabled?' disabled':''} ${extra}>${escape(label)}</button>`;
  const error=state.error?`<p role="alert">${escape(state.error==='read'?u.unavailable:u.saveError)}</p>${state.error==='save'?button('retry-save',u.saveAgain):''}`:'';
- if(state.phase==='ready')return `<section class="practice-session" data-practice-phase="ready"><h2>${escape(u.start)}</h2>${error}${button('start',u.start,!items.length)}${!items.length?`<p>${escape(u.empty)}</p>`:''}</section>`;
+ if(state.phase==='ready')return `<section class="practice-session" data-practice-phase="ready">${error}${button('start',u.start,!items.length)}${!items.length?`<p>${escape(u.empty)}</p>`:''}</section>`;
  if(state.phase==='complete'){const s=practiceSummary(state);return `<section class="practice-session" data-practice-phase="complete"><h2 tabindex="-1" data-practice-focus>${escape(u.done)}</h2><p>${escape(u.summary)}: ${s.remembered} / ${s.retry} / ${s.skipped}</p><p>${escape(u.history)}: ${state.history.filter(e=>e.rating!=='skipped').length}</p>${error}${button('restart',u.again)}</section>`;}
  if(state.phase==='material')return `<section class="practice-session" data-practice-phase="material">${button('return',u.back)}</section>`;
  if(!item)return '';

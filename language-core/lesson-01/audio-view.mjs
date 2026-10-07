@@ -13,6 +13,7 @@ export function createAudioView({root,documents,mapping,getAccess=()=>({}),getUI
   return field?fieldTargetHTML(documents,gate?{...field,gate}:field,{register,ariaLabel:labels().play}).replace(/\n/g,'<br>'):h(value===''?labels().missing:value).replace(/\n/g,'<br>');
  };
  return {controller,renderField,
+  resourceTarget:(target,labelHTML)=>`<button type="button" class="pronunciation-button resource-target" lang="ja" data-pronunciation-target="${h(register({text:target.text,speech:target.speech,lang:target.lang}))}" aria-label="${h(labels().play)}">${labelHTML}</button>`,
   lexicalAudio:target=>{const resolved=resolveLexicalAudioTarget(documents,target);return resolved?pronunciationButtonHTML(register(resolved),{ariaLabel:labels().play}):'';},
   audio:(data,selection,{gate}={})=>pronunciationButtonHTML(register(resolveUnitTarget(data,selection,{gate})),{ariaLabel:labels().play}),
   begin(){binding?.dispose();binding=null;registry.clear();controller.cancel();},

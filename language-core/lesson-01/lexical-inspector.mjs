@@ -3,8 +3,9 @@ import {resolveLexicalSelection} from './model.mjs';
 const present=value=>typeof value==='string'&&value.length>0;
 /** This renderer only displays authored fields; IDs, reason codes and evidence stay private. */
 export function lexicalInspectorHTML(data,analysis,locale,selection,uiLocale,ctx={}){
- const view=resolveLexicalSelection(data,analysis,locale,selection,{dictionaryResolver:ctx.dictionaryResolver});
+ let view=resolveLexicalSelection(data,analysis,locale,selection,{dictionaryResolver:ctx.dictionaryResolver});
  if(!view)return analysis&&selection.kind==='token'?`<div class="lexical-inspector"><p class="lexical-meaning" lang="${h(locale)}">${h(UI[uiLocale].missing)}</p></div>`:null;
+ if(view.kind==='expression'&&view.target.fromTokenId===view.target.toTokenId){const token=resolveLexicalSelection(data,analysis,locale,{kind:'token',unit:selection.unit,id:view.target.fromTokenId},{dictionaryResolver:ctx.dictionaryResolver});if(token)view={...view,lemma:token.lemma,pos:token.pos,features:token.features,parts:token.parts,localizedParts:token.localizedParts,partLabels:token.partLabels,dictionary:token.dictionary,audioTargets:{...token.audioTargets,...view.audioTargets}};}
  const u=UI[uiLocale],renderCopy=(value,field)=>ctx.renderField?ctx.renderField(value,'lexical',['localizations',locale,selection.kind==='expression'?'expressions':'annotations',view.id,field]):h(value),renderTarget=(text,target)=>`${h(text)}${target?ctx.lexicalAudio?.(target)??'':''}`;
  const meaning=`<p class="lexical-meaning" lang="${h(locale)}">${view.meaning?renderCopy(view.meaning,selection.kind==='expression'?'meaning':'contextMeaning'):h(u.missing)}</p>`;
  const rows=[];

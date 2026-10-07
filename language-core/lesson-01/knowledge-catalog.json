@@ -189,6 +189,182 @@
         }
       ],
       "spans": []
+    },
+    "T05.s2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "お"
+        },
+        {
+          "id": "t2",
+          "text": "会い",
+          "reading": "あい",
+          "ruby": [
+            {
+              "text": "会い",
+              "reading": "あい"
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "text": "できて"
+        },
+        {
+          "id": "t4",
+          "text": "うれしい"
+        },
+        {
+          "id": "t5",
+          "text": "です"
+        },
+        {
+          "id": "t6",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t5"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t5"
+        }
+      ]
+    },
+    "I01.s5": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レン・リー"
+        },
+        {
+          "id": "t2",
+          "text": "と"
+        },
+        {
+          "id": "t3",
+          "text": "いいます"
+        },
+        {
+          "id": "t4",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    "I01.s6": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レン"
+        },
+        {
+          "id": "t2",
+          "text": "と"
+        },
+        {
+          "id": "t3",
+          "text": "呼んで",
+          "reading": "よんで",
+          "ruby": [
+            {
+              "text": "呼んで",
+              "reading": "よんで"
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "text": "ください"
+        },
+        {
+          "id": "t5",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t4"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t4"
+        }
+      ]
+    },
+    "I01.s7": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "台湾",
+          "reading": "たいわん",
+          "ruby": [
+            {
+              "text": "台湾",
+              "reading": "たいわん"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "text": "から"
+        },
+        {
+          "id": "t3",
+          "text": "来ました",
+          "reading": "きました",
+          "ruby": [
+            {
+              "text": "来ました",
+              "reading": "きました"
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
     }
   },
   "examples": {
@@ -242,6 +418,26 @@
           "ja": "自分の立場を答える大人のレン"
         }
       }
+    },
+    "X05": {
+      "unitRefs": [
+        "I01.s5"
+      ]
+    },
+    "X06": {
+      "unitRefs": [
+        "I01.s6"
+      ]
+    },
+    "X07": {
+      "unitRefs": [
+        "I01.s7"
+      ]
+    },
+    "X08": {
+      "unitRefs": [
+        "T05.s2"
+      ]
     }
   },
   "localizations": {
@@ -375,6 +571,111 @@
             }
           },
           "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "会えたことをうれしく思っています。",
+          "tokens": {
+            "t1": {
+              "gloss": "相手を立てる表現の接頭辞"
+            },
+            "t2": {
+              "gloss": "人に会うこと"
+            },
+            "t3": {
+              "gloss": "会えたことを、うれしい気持ちにつなげる"
+            },
+            "t4": {
+              "gloss": "喜びを感じている"
+            },
+            "t5": {
+              "gloss": "文を丁寧に結ぶ"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "会えたことをうれしく思っています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "会えたことをうれしく思っています。"
+            }
+          }
+        },
+        "I01.s5": {
+          "meaning": "自分の名前はレン・リーだと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "レンのフルネーム"
+            },
+            "t2": {
+              "gloss": "名乗る名前を示す"
+            },
+            "t3": {
+              "gloss": "自分の名前を伝える"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "自分の名前はレン・リーだと伝えています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "自分の名前はレン・リーだと伝えています。"
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "レンという名前で呼んでほしいと頼んでいます。",
+          "tokens": {
+            "t1": {
+              "gloss": "呼んでもらいたい名前"
+            },
+            "t2": {
+              "gloss": "呼び方を示す"
+            },
+            "t3": {
+              "gloss": "その名前で呼ぶ"
+            },
+            "t4": {
+              "gloss": "相手にしてほしいことを頼む"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "レンという名前で呼んでほしいと頼んでいます。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "レンという名前で呼んでほしいと頼んでいます。"
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "台湾から来たと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "地名"
+            },
+            "t2": {
+              "gloss": "来た場所を示す"
+            },
+            "t3": {
+              "gloss": "こちらへ来たことを伝える"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "台湾から来たと伝えています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "台湾から来たと伝えています。"
+            }
+          }
         }
       }
     },
@@ -508,6 +809,111 @@
             }
           },
           "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "很高興能見到你。",
+          "tokens": {
+            "t1": {
+              "gloss": "謙讓表達的接頭辭"
+            },
+            "t2": {
+              "gloss": "見面"
+            },
+            "t3": {
+              "gloss": "能夠見面，接續後面的喜悅"
+            },
+            "t4": {
+              "gloss": "高興"
+            },
+            "t5": {
+              "gloss": "禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "很高興能見到你。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "很高興能見到你。"
+            }
+          }
+        },
+        "I01.s5": {
+          "meaning": "我叫レン・リー。",
+          "tokens": {
+            "t1": {
+              "gloss": "レン的全名"
+            },
+            "t2": {
+              "gloss": "標示所說的姓名"
+            },
+            "t3": {
+              "gloss": "介紹自己的姓名"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我叫レン・リー。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "我叫レン・リー。"
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "請叫我レン。",
+          "tokens": {
+            "t1": {
+              "gloss": "希望別人使用的稱呼"
+            },
+            "t2": {
+              "gloss": "標示希望使用的稱呼"
+            },
+            "t3": {
+              "gloss": "以這個名字稱呼"
+            },
+            "t4": {
+              "gloss": "請對方這樣做"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "請叫我レン。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "請叫我レン。"
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "我來自台灣。",
+          "tokens": {
+            "t1": {
+              "gloss": "台灣"
+            },
+            "t2": {
+              "gloss": "標示來處"
+            },
+            "t3": {
+              "gloss": "來了；此處用來介紹來處"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我來自台灣。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "我來自台灣。"
+            }
+          }
         }
       }
     },
@@ -641,6 +1047,111 @@
             }
           },
           "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "I’m pleased to meet you.",
+          "tokens": {
+            "t1": {
+              "gloss": "prefix in a humble expression"
+            },
+            "t2": {
+              "gloss": "meet"
+            },
+            "t3": {
+              "gloss": "being able to meet, leading into the feeling of pleasure"
+            },
+            "t4": {
+              "gloss": "pleased; happy"
+            },
+            "t5": {
+              "gloss": "polite statement ending"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I’m pleased to meet you."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "I’m pleased to meet you."
+            }
+          }
+        },
+        "I01.s5": {
+          "meaning": "My name is Ren Lee.",
+          "tokens": {
+            "t1": {
+              "gloss": "Ren’s full name"
+            },
+            "t2": {
+              "gloss": "marks the name being stated"
+            },
+            "t3": {
+              "gloss": "give one’s name"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "My name is Ren Lee."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "My name is Ren Lee."
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "Please call me Ren.",
+          "tokens": {
+            "t1": {
+              "gloss": "preferred name"
+            },
+            "t2": {
+              "gloss": "marks the requested name"
+            },
+            "t3": {
+              "gloss": "call someone by that name"
+            },
+            "t4": {
+              "gloss": "please do so"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "Please call me Ren."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "Please call me Ren."
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "I’m from Taiwan.",
+          "tokens": {
+            "t1": {
+              "gloss": "Taiwan"
+            },
+            "t2": {
+              "gloss": "from"
+            },
+            "t3": {
+              "gloss": "came; used here to introduce where one is from"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I’m from Taiwan."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "I’m from Taiwan."
+            }
+          }
         }
       }
     }
@@ -668,7 +1179,12 @@
       ],
       "exampleRefs": [
         "X01"
-      ]
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "X01.s1"
+        ]
+      }
     },
     "draft:ja:cooperative-closing": {
       "localizations": {
@@ -692,7 +1208,12 @@
       ],
       "exampleRefs": [
         "X01"
-      ]
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "X01.s3"
+        ]
+      }
     },
     "draft:ja:polite-noun-predicate": {
       "localizations": {
@@ -742,6 +1263,115 @@
       "exampleRefs": [
         "X04"
       ]
+    },
+    "draft:ja:self-naming": {
+      "localizations": {
+        "ja": {
+          "title": "名前を伝える「〜といいます」",
+          "explanation": "「名前＋といいます」で自分の名前を伝えます。「と」は名前を示します。"
+        },
+        "zh-Hant": {
+          "title": "用「〜といいます」介紹姓名",
+          "explanation": "「姓名＋といいます」用來介紹自己的姓名；と標示所說的名字。"
+        },
+        "en": {
+          "title": "Giving a name with といいます",
+          "explanation": "Use a name followed by といいます to give your name. と marks the name."
+        }
+      },
+      "relatedRefs": [
+        "draft:ja:polite-noun-predicate"
+      ],
+      "exampleRefs": [
+        "X05"
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "I01.s5"
+        ]
+      }
+    },
+    "draft:ja:preferred-name-request": {
+      "localizations": {
+        "ja": {
+          "title": "呼び方を伝える「〜と呼んでください」",
+          "explanation": "「名前＋と呼んでください」で、その名前で呼んでほしいと頼みます。ここではフルネームの代わりに「レン」を使ってもらいます。"
+        },
+        "zh-Hant": {
+          "title": "用「〜と呼んでください」告訴對方怎麼稱呼你",
+          "explanation": "「稱呼＋と呼んでください」用來請對方使用這個稱呼。此處レン希望大家用簡稱，不必叫全名。"
+        },
+        "en": {
+          "title": "Asking to be called a name",
+          "explanation": "Use a name followed by と呼んでください to ask people to call you that. Here Ren asks for the shorter name rather than the full name."
+        }
+      },
+      "relatedRefs": [
+        "draft:ja:polite-noun-predicate"
+      ],
+      "exampleRefs": [
+        "X06"
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "I01.s6"
+        ]
+      }
+    },
+    "draft:ja:place-of-origin": {
+      "localizations": {
+        "ja": {
+          "title": "来た場所を伝える「〜から来ました」",
+          "explanation": "「場所＋から来ました」で、どこから来たかを伝えます。"
+        },
+        "zh-Hant": {
+          "title": "用「〜から来ました」介紹來處",
+          "explanation": "「地點＋から来ました」用來說明從哪裡來。"
+        },
+        "en": {
+          "title": "Saying where you are from",
+          "explanation": "Use a place followed by から来ました to say where you came from."
+        }
+      },
+      "relatedRefs": [
+        "draft:ja:polite-noun-predicate"
+      ],
+      "exampleRefs": [
+        "X07"
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "I01.s7"
+        ]
+      }
+    },
+    "draft:ja:pleasure-at-meeting": {
+      "localizations": {
+        "ja": {
+          "title": "会えた喜びを伝える",
+          "explanation": "「お会いできてうれしいです」で、会えたことをうれしく思う気持ちを丁寧に伝えます。初対面のあいさつに添えることができます。"
+        },
+        "zh-Hant": {
+          "title": "表達見面的喜悅",
+          "explanation": "「お会いできてうれしいです」禮貌地表達能見到對方的喜悅，也可以用在初見問候中。"
+        },
+        "en": {
+          "title": "Expressing pleasure at meeting",
+          "explanation": "お会いできてうれしいです politely expresses pleasure at meeting someone. It can accompany a first-meeting greeting."
+        }
+      },
+      "relatedRefs": [
+        "draft:ja:first-meeting-opening",
+        "draft:ja:cooperative-closing"
+      ],
+      "exampleRefs": [
+        "X08"
+      ],
+      "presentation": {
+        "focusUnitRefs": [
+          "T05.s2"
+        ]
+      }
     }
   }
 }

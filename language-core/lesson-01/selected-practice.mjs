@@ -1,3 +1,4 @@
+import {acceptsPriorSelectedRevision} from './selected-source-compatibility.mjs';
 import {normalizeSelectedRef, selectedItemId} from './selected-items.mjs';
 const clone = value => JSON.parse(JSON.stringify(value));
 const nonempty = value => typeof value === 'string' && value.trim().length > 0;
@@ -29,10 +30,14 @@ export function resolveSelectedRef(data, input, {analysis, sourceRevisions = ana
   try { ref = normalizeSelectedRef(input); } catch { return unavailable('invalid_ref', null); }
   if (lessonId && ref.lessonId !== lessonId) return unavailable('lesson_mismatch', ref);
   if (!sourceRevisions?.[ref.document]) return unavailable('missing_source_revision', ref);
-  if (sourceRevisions[ref.document] !== ref.sourceRevision) return unavailable('stale_source_revision', ref);
+  const compatiblePrior=sourceRevisions[ref.document]!==ref.sourceRevision&&acceptsPriorSelectedRevision(data,analysis,ref,sourceRevisions);
+  if (sourceRevisions[ref.document] !== ref.sourceRevision&&!compatiblePrior) return unavailable('stale_source_revision', ref);
   const unit = data.units?.[ref.unit];
   if (!unit || !Array.isArray(unit.tokens) || !unit.tokens.length) return unavailable('missing_unit', ref);
   if (data.unitOwners?.[ref.unit] !== ref.document) return unavailable('source_owner_mismatch', ref);
+  const activeSource=(data.sourceOrder??[]).some(id=>(data.sources?.[id]?.turns??data.sources?.[id]?.paragraphs??[]).some(group=>group.unitRefs?.includes(ref.unit)));
+  const activeExample=Object.values(data.entries??{}).some(entry=>(entry.exampleRefs??[]).some(id=>data.examples?.[id]?.unitRefs?.includes(ref.unit)));
+  if(!activeSource&&!activeExample)return unavailable('retired_source_reference',ref);
   if (unit.tokens.some(t => !nonempty(t.id) || typeof t.text !== 'string') || new Set(unit.tokens.map(t => t.id)).size !== unit.tokens.length) return unavailable('invalid_source_tokens', ref);
   let tokens = unit.tokens, entry = null, lexicalId = null;
   if (ref.kind === 'token') {
@@ -49,7 +54,7 @@ export function resolveSelectedRef(data, input, {analysis, sourceRevisions = ana
     tokens = range(unit, ref.from, ref.to);
     if (!tokens) return unavailable('stale_expression_range', ref);
   }
-  if (entry && analysis.sourceFiles?.[ref.document] !== ref.sourceRevision) return unavailable('stale_lexical_revision', ref);
+  if (entry && analysis.sourceFiles?.[ref.document] !== ref.sourceRevision&&!compatiblePrior) return unavailable('stale_lexical_revision', ref);
   const text = textOf(tokens);
   if (entry && entry.surface !== text) return unavailable('stale_lexical_surface', ref);
   const meanings = Object.create(null);
@@ -98,11 +103,11 @@ export function buildSelectedPractice(data, items = [], {analysis, sourceRevisio
   if (!Array.isArray(items)) throw new TypeError('An explicit selected-item array is required');
   if (!nonempty(lessonId)) throw new TypeError('An explicit lessonId is required');
   if (!Array.isArray(templates) || templates.some(t => !['recognition', 'production', 'listening'].includes(t)) || new Set(templates).size !== templates.length) throw new TypeError('Unsupported selected card template');
-  const cards = [], wordBank = [], issues = [], seen = new Set(), units = {}, localizations = Object.fromEntries(Object.entries(clone(data.localizations ?? {})).filter(([language]) => localeKey(language)));
+  const cards = [], wordBank = [], issues = [], rejectedIds = [], seen = new Set(), units = {}, localizations = Object.fromEntries(Object.entries(clone(data.localizations ?? {})).filter(([language]) => localeKey(language)));
   const orderedItems = [...items].sort((a, b) => { const key = item => { try { return selectedItemId(item?.ref ?? item); } catch { return ''; } }; const left = key(a), right = key(b); return left < right ? -1 : left > right ? 1 : 0; });
   for (const item of orderedItems) {
     const result = resolveSelectedRef(data, item?.ref ?? item, {analysis, sourceRevisions, lessonId});
-    if (result.status !== 'available') { issues.push(result); continue; }
+    if (result.status !== 'available') { issues.push(result);try{rejectedIds.push(selectedItemId(item?.ref??item));}catch{rejectedIds.push(`invalid-ref:${JSON.stringify(item)}`);}continue; }
     const {ref, tokens, meanings, sourceRef} = result, id = selectedItemId(ref);
     if (item.id && item.ref && item.id !== id) { issues.push(unavailable('invalid_selection_identity', ref)); continue; }
     if (seen.has(id)) continue;
@@ -126,5 +131,6 @@ export function buildSelectedPractice(data, items = [], {analysis, sourceRevisio
   }
   // Include unresolved selections in the scope too: fixing data must not silently reuse another set.
   const sessionIdentity = selectedSessionIdentity(items, lessonId);
+  if(rejectedIds.length)sessionIdentity.version+=`:unavailable:${JSON.stringify([...new Set(rejectedIds)].sort())}`;
   return {status: !items.length ? 'empty' : !cards.length && !wordBank.length ? 'unavailable' : issues.length ? 'partial' : 'available', cards, wordBank, unavailable: issues, sessionIdentity, data: {...data, units: {...data.units, ...units}, localizations}};
 }

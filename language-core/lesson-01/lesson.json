@@ -58,6 +58,7 @@
           "id": "T05",
           "speakerId": "P1",
           "unitRefs": [
+            "T05.s2",
             "T05.s1"
           ]
         },
@@ -77,7 +78,9 @@
           "id": "I01",
           "unitRefs": [
             "I01.s1",
-            "I01.s2",
+            "I01.s5",
+            "I01.s6",
+            "I01.s7",
             "I01.s3",
             "I01.s4"
           ]
@@ -1211,12 +1214,7 @@
         {
           "unit": "I01.s1"
         }
-      ],
-      "context": {
-        "zh-Hant": "兩人的初見對話與レン給新成員的自介稿，都用這句開場。",
-        "en": "The first conversation and Ren’s introduction for new members both open with this greeting.",
-        "ja": "二人の初対面の会話と、新しいメンバーへのレンの自己紹介は、このあいさつで始まります。"
-      }
+      ]
     },
     {
       "id": "E02",
@@ -1231,12 +1229,7 @@
         {
           "unit": "I01.s4"
         }
-      ],
-      "context": {
-        "zh-Hant": "兩人在對話結尾交換這句問候；レン的自介稿也用它收尾。",
-        "en": "The speakers exchange this closing in the dialogue, and Ren uses it to end the introduction.",
-        "ja": "二人は会話の最後にこのあいさつを交わします。レンの自己紹介も、このことばで終わります。"
-      }
+      ]
     },
     {
       "id": "G01",
@@ -1255,17 +1248,9 @@
           "unit": "T04.s1"
         },
         {
-          "unit": "I01.s2"
-        },
-        {
           "unit": "I01.s3"
         }
-      ],
-      "context": {
-        "zh-Hant": "對話與自介稿都用這個句型介紹姓名或身分。",
-        "en": "Both the dialogue and the introduction use this pattern for names and roles.",
-        "ja": "会話でも自己紹介文でも、この形で名前や立場を伝えています。"
-      }
+      ]
     },
     {
       "id": "S01",
@@ -1280,16 +1265,55 @@
         {
           "unit": "T04.s1"
         }
-      ],
-      "context": {
-        "zh-Hant": "ミナ說完自己是學生，接著問レン的身分。",
-        "en": "After saying they are a student, Mina asks about Ren’s role.",
-        "ja": "ミナは自分が学生だと伝えてから、レンにも立場を聞きます。"
-      }
+      ]
+    },
+    {
+      "id": "G02",
+      "entryId": "draft:ja:self-naming",
+      "sourceRefs": [
+        {
+          "unit": "I01.s5",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "entryId": "draft:ja:preferred-name-request",
+      "sourceRefs": [
+        {
+          "unit": "I01.s6",
+          "from": "t1",
+          "to": "t4"
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "entryId": "draft:ja:place-of-origin",
+      "sourceRefs": [
+        {
+          "unit": "I01.s7",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "entryId": "draft:ja:pleasure-at-meeting",
+      "sourceRefs": [
+        {
+          "unit": "T05.s2",
+          "from": "t1",
+          "to": "t5"
+        }
+      ]
     }
   ],
   "practice": {
-    "representationVersion": "2.1",
+    "representationVersion": "2.2-first-meeting-r1",
     "items": [
       {
         "id": "Q01",
@@ -1304,13 +1328,16 @@
             "unit": "T04.s1"
           },
           {
-            "unit": "I01.s2"
+            "unit": "I01.s5"
           },
           {
             "unit": "I01.s3"
           },
           {
             "unit": "T03.s1"
+          },
+          {
+            "unit": "I01.s6"
           }
         ],
         "prompt": {
@@ -1338,9 +1365,9 @@
         ],
         "answer": "B",
         "explanation": {
-          "zh-Hant": "レン。レン在對話和短自介中都說「会社員です」（我是公司職員）。ミナ則說自己是學生。",
-          "en": "Ren. In both the dialogue and short introduction, Ren says 会社員です: “I’m a company employee.” Mina says they are a student.",
-          "ja": "レンです。会話でも短い自己紹介でも「会社員です」と言っています。ミナは学生です。"
+          "zh-Hant": "レン在對話和短自介中都說「会社員です」（我是公司職員）。ミナ則說自己是學生。",
+          "en": "In both the dialogue and short introduction, Ren says 会社員です: “I’m a company employee.” Mina says they are a student.",
+          "ja": "会話でも短い自己紹介でも「会社員です」と言っています。ミナは学生です。"
         },
         "responseType": "choice",
         "entryRefs": [
@@ -1397,9 +1424,9 @@
         ],
         "answer": "A",
         "explanation": {
-          "zh-Hant": "在讀書會初次見面。歡迎訊息中的「読書会」點明活動；「会社員」是レン的身分。",
-          "en": "A first meeting at a reading group. 読書会 in the welcome message identifies the activity; 会社員 describes Ren’s role.",
-          "ja": "読書会で初めて会う場面です。歓迎メッセージの「読書会」が活動を示しています。「会社員」はレンの立場です。"
+          "zh-Hant": "歡迎訊息中的「読書会」點明活動；「会社員」是レン的身分。",
+          "en": "読書会 in the welcome message identifies the activity; 会社員 describes Ren’s role.",
+          "ja": "歓迎メッセージの「読書会」が活動を示しています。「会社員」はレンの立場です。"
         },
         "responseType": "choice",
         "entryRefs": [
@@ -1423,9 +1450,6 @@
           },
           {
             "unit": "T02.s2"
-          },
-          {
-            "unit": "I01.s2"
           }
         ],
         "prompt": {
@@ -1449,9 +1473,9 @@
         ],
         "answer": "ナオです。",
         "explanation": {
-          "zh-Hant": "「ナオです。」意思是「我是ナオ」。先放姓名，再接禮貌句尾です。",
-          "en": "ナオです。 means “I’m Nao.” Put the name first, then the polite ending です.",
-          "ja": "「ナオです。」で、自分の名前を伝えます。名前の後に「です」を置きます。"
+          "zh-Hant": "先放姓名，再接禮貌句尾です。",
+          "en": "Put the name first, then the polite ending です.",
+          "ja": "名前の後に「です」を置きます。"
         },
         "entryRefs": [
           "draft:ja:polite-noun-predicate"
@@ -1506,9 +1530,9 @@
         ],
         "answer": "B",
         "explanation": {
-          "zh-Hant": "不適合。「はじめまして」用在初次見面；下週再見到同一個人，已經不是第一次見面了。",
-          "en": "No. はじめまして is for a first meeting. Seeing the same person again next week is no longer a first meeting.",
-          "ja": "「いいえ」です。「はじめまして」は初めて会う時のあいさつです。来週、同じ人に会う時は、もう初対面ではありません。"
+          "zh-Hant": "「はじめまして」用於初次見面，不適合再次見到同一個人。",
+          "en": "はじめまして is for a first meeting, not meeting the same person again.",
+          "ja": "「はじめまして」は初めて会う時のあいさつで、同じ人との再会には使いません。"
         },
         "responseType": "choice",
         "entryRefs": [
@@ -1540,7 +1564,7 @@
             "unit": "I01.s1"
           },
           {
-            "unit": "I01.s2"
+            "unit": "I01.s5"
           },
           {
             "unit": "I01.s4"
@@ -1563,9 +1587,9 @@
         ],
         "answer": "はじめまして。アキです。よろしくお願いします。\nはじめまして。ユキです。よろしくお願いします。",
         "explanation": {
-          "zh-Hant": "示範是「初次見面。我是アキ。請多關照」。也可以換成ユキ或自選的虛構姓名。對照下方清單，自行檢查。",
-          "en": "The examples greet a new person, give a fictional name, and close with a wish to get along well. You can use your own invented name. Check your introduction with the list below.",
-          "ja": "例では、初対面のあいさつ、架空の名前、これから仲よくしたい気持ちを伝えています。自分で選んだ名前でもかまいません。下のリストで確認しましょう。"
+          "zh-Hant": "可以用自選的虛構姓名，再對照下方清單自行檢查。",
+          "en": "You can use your own invented name. Check your introduction with the list below.",
+          "ja": "自分で選んだ架空の名前でもかまいません。下のリストで確認しましょう。"
         },
         "checklist": [
           {
@@ -1574,9 +1598,9 @@
             "ja": "初対面のあいさつを使った。"
           },
           {
-            "zh-Hant": "姓名後接です，自己的姓名不加さん。",
-            "en": "I put です after my name and left off さん.",
-            "ja": "名前の後に「です」を付け、自分の名前に「さん」を付けなかった。"
+            "ja": "名前の後に「です」か「といいます」を使い、自分の名前に「さん」を付けなかった。",
+            "zh-Hant": "姓名後接です或といいます，自己的姓名不加さん。",
+            "en": "I used です or といいます after my name and left off さん."
           },
           {
             "zh-Hant": "用了本課的結語。",
@@ -1596,12 +1620,272 @@
         "entryRefs": [
           "draft:ja:first-meeting-opening",
           "draft:ja:cooperative-closing",
-          "draft:ja:polite-noun-predicate"
+          "draft:ja:polite-noun-predicate",
+          "draft:ja:self-naming"
         ],
         "goalRefs": [
           "L2"
         ]
+      },
+      {
+        "id": "Q06",
+        "title": {
+          "ja": "内容の理解",
+          "zh-Hant": "內容理解",
+          "en": "Comprehension"
+        },
+        "stage": "comprehension",
+        "sourceRefs": [
+          {
+            "unit": "I01.s5"
+          },
+          {
+            "unit": "I01.s6"
+          }
+        ],
+        "prompt": {
+          "ja": "レンは、メンバーに何と呼んでほしいですか。",
+          "zh-Hant": "レン希望成員怎麼稱呼自己？",
+          "en": "What does Ren ask the members to call them?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": {
+              "ja": "レン",
+              "zh-Hant": "レン",
+              "en": "Ren"
+            }
+          },
+          {
+            "id": "B",
+            "text": {
+              "ja": "レン・リー",
+              "zh-Hant": "レン・リー",
+              "en": "Ren Lee"
+            }
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "ja": "フルネームを伝えた後、「レンと呼んでください」と頼んでいます。",
+          "zh-Hant": "介紹全名後，レン說「レンと呼んでください」，請大家使用簡稱。",
+          "en": "After giving the full name, Ren asks to be called Ren."
+        },
+        "responseType": "choice",
+        "entryRefs": [
+          "draft:ja:self-naming",
+          "draft:ja:preferred-name-request"
+        ],
+        "goalRefs": [
+          "L1"
+        ]
+      },
+      {
+        "id": "Q07",
+        "title": {
+          "ja": "文を作る",
+          "zh-Hant": "受控組句",
+          "en": "Controlled sentence building"
+        },
+        "stage": "controlled",
+        "sourceRefs": [
+          {
+            "unit": "I01.s7"
+          }
+        ],
+        "prompt": {
+          "ja": "レンが来た場所を伝える文を作りましょう。下の言葉を一回ずつ使ってください。",
+          "zh-Hant": "用下列詞語各一次，組出レン介紹自己來處的句子。",
+          "en": "Use each item once to form Ren’s sentence about where they are from."
+        },
+        "options": [
+          {
+            "id": "S1",
+            "text": "来ました"
+          },
+          {
+            "id": "S2",
+            "text": "台湾"
+          },
+          {
+            "id": "S3",
+            "text": "。"
+          },
+          {
+            "id": "S4",
+            "text": "から"
+          }
+        ],
+        "answer": "台湾から来ました。",
+        "explanation": {
+          "ja": "「台湾」の後に「から」を置き、「来ました」で結びます。",
+          "zh-Hant": "地點台湾後接から，再接来ました。",
+          "en": "Put から after the place, followed by 来ました."
+        },
+        "entryRefs": [
+          "draft:ja:place-of-origin"
+        ],
+        "goalRefs": [
+          "L2"
+        ],
+        "machineAnswerTokenOrder": [
+          "S2",
+          "S4",
+          "S1",
+          "S3"
+        ]
+      },
+      {
+        "id": "Q08",
+        "title": {
+          "ja": "気持ちを読み取る",
+          "zh-Hant": "理解說話者的心情",
+          "en": "Understanding the speaker’s feeling"
+        },
+        "stage": "comprehension",
+        "sourceRefs": [
+          {
+            "unit": "T05.s2"
+          }
+        ],
+        "prompt": {
+          "ja": "ミナは「お会いできてうれしいです」で、どんな気持ちを伝えていますか。",
+          "zh-Hant": "ミナ說「お会いできてうれしいです」時，表達什麼心情？",
+          "en": "What feeling does Mina express with お会いできてうれしいです?"
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": {
+              "ja": "レンに会えてうれしい",
+              "zh-Hant": "很高興見到レン",
+              "en": "Pleasure at meeting Ren"
+            }
+          },
+          {
+            "id": "B",
+            "text": {
+              "ja": "読書会が終わって残念だ",
+              "zh-Hant": "對讀書會結束感到遺憾",
+              "en": "Regret that the reading group has ended"
+            }
+          }
+        ],
+        "answer": "A",
+        "explanation": {
+          "ja": "「うれしい」は喜びを表します。ミナは会えたことを喜んでいます。",
+          "zh-Hant": "うれしい表示高興；ミナ是在表達見面的喜悅。",
+          "en": "うれしい expresses happiness. Mina is pleased that they have met."
+        },
+        "responseType": "choice",
+        "entryRefs": [
+          "draft:ja:pleasure-at-meeting"
+        ],
+        "goalRefs": [
+          "L1"
+        ]
       }
-    ]
-  }
+    ],
+    "sentenceDeckVersion": "source-sentences-v3-first-meeting-r1"
+  },
+  "teachingGroups": [
+    {
+      "id": "first-meeting-routines",
+      "teachingRefIds": [
+        "E01",
+        "E02"
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "初次見面的慣用語",
+          "members": {
+            "E01": {
+              "title": "開場"
+            },
+            "E02": {
+              "title": "結語",
+              "explanation": "表達希望往後好好相處的心意。"
+            }
+          }
+        },
+        "ja": {
+          "title": "初対面の決まり文句",
+          "members": {
+            "E01": {
+              "title": "始めのあいさつ"
+            },
+            "E02": {
+              "title": "結びのあいさつ",
+              "explanation": "これからのよい関係を願います。"
+            }
+          }
+        },
+        "en": {
+          "title": "First-meeting expressions",
+          "members": {
+            "E01": {
+              "title": "Opening"
+            },
+            "E02": {
+              "title": "Closing",
+              "explanation": "Expresses a wish for a good relationship."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "self-introduction-patterns",
+      "teachingRefIds": [
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "localizations": {
+        "ja": {
+          "title": "自己紹介の文型",
+          "members": {
+            "G02": {
+              "title": "名前"
+            },
+            "G03": {
+              "title": "呼び方"
+            },
+            "G04": {
+              "title": "来た場所"
+            }
+          }
+        },
+        "zh-Hant": {
+          "title": "自我介紹句型",
+          "members": {
+            "G02": {
+              "title": "姓名"
+            },
+            "G03": {
+              "title": "稱呼"
+            },
+            "G04": {
+              "title": "來處"
+            }
+          }
+        },
+        "en": {
+          "title": "Self-introduction patterns",
+          "members": {
+            "G02": {
+              "title": "Name"
+            },
+            "G03": {
+              "title": "Preferred name"
+            },
+            "G04": {
+              "title": "Place of origin"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

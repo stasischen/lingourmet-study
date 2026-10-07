@@ -1,6 +1,7 @@
 import {createSelectedItemsStore} from './selected-items.mjs';
-import {createSelectedRef,resolveSelectedRef,buildSelectedPractice,selectedSessionIdentity} from './selected-practice.mjs';
+import {createSelectedRef,resolveSelectedRef,buildSelectedPractice} from './selected-practice.mjs';
 import {selectedToggleHTML,selectedOverviewHTML} from './selected-view.mjs';
+import {sentenceToggleHTML,syncSentenceToggles,matchingSelectedItem} from './selected-view.mjs';
 import {buildSourceRecallClozeCards,renderSourceAwareFlashcards} from './cloze-flashcards.mjs';
 import {buildLexicalFlashcardProjection} from './lexical-flashcards.mjs';
 import {renderDictionary} from './dictionary-view.mjs';
@@ -23,13 +24,18 @@ const main=document.querySelector('#main'),select=document.querySelector('#teach
 const initial=initialLanguages(new URL(location.href).searchParams);let locale=initial.teachingLocale,uiLocale=initial.uiLocale;
 const translationVisibility=createTranslationVisibility();
 const flashControllers=new Map(),selectedQuestionControllers=new Map();
+let sentenceFocusUnit=null;
+function toggleSelectedReference(ref){const existing=matchingSelectedItem(selectedStore,ref,{data,analysis:lexicalAnalysis});existing?selectedStore.remove(existing.id):selectedStore.add(ref);}
+function sentenceAction(unit){return sentenceToggleHTML(selectedStore,selectionReference({kind:'sentence',unit}),uiLocale,{data,analysis:lexicalAnalysis});}
+function refreshSentences(){syncSentenceToggles(main,selectedStore,selectionReference,uiLocale,{data,analysis:lexicalAnalysis});}
+function focusSentence(unit){const target=[...main.querySelectorAll('[data-sentence]')].find(el=>el.dataset.sentence===unit);target?.setAttribute('tabindex','-1');target?.focus();target?.scrollIntoView();}
 const LESSON_ID='multisource-first-lesson-pilot';
 let selectedStore,selectedCleanup,selectedProjection,selectedCardsProjection,selectedQuestionProjection,lessonSession,questionLesson,questionScope='lesson';
 let showSelected=new URL(location.href).searchParams.get('view')==='selected';
 let storage,lesson,catalog,data,flashData,clozePracticeSelections,lexicalPracticeSelections,lexicalProjection,mapping,lexicalAnalysis,dictionaryResolver,dictionaryIndex,session,flashSession,cards,audioView,practiceCleanup,flashCleanup,voiceCleanup,selection=null,showLesson=true;
 let cardScope=['lexical','selected'].includes(new URL(location.href).searchParams.get('deck'))?new URL(location.href).searchParams.get('deck'):'sentences';
 let practiceMode=initialPracticeMode(new URL(location.href).searchParams);
-function inspectorContext(){return {...audioView,lexicalAnalysis,dictionaryResolver,selectionAction:(_data,value)=>selectedToggleHTML(selectedStore,selectionReference(value),uiLocale),renderDictionary:(result,locale,ui)=>renderDictionary(result,locale,ui,lexicalAnalysis.localizations?.[locale]?.labels?.pos,target=>audioView.lexicalAudio({targetLanguage:'ja',text:target.text,reading:target.speech}))};}
+function inspectorContext(){return {...audioView,lexicalAnalysis,dictionaryResolver,selectionAction:(_data,value)=>selectedToggleHTML(selectedStore,selectionReference(value),uiLocale,{data,analysis:lexicalAnalysis}),renderDictionary:(result,locale,ui)=>renderDictionary(result,locale,ui,lexicalAnalysis.localizations?.[locale]?.labels?.pos,target=>audioView.lexicalAudio({targetLanguage:'ja',text:target.text,reading:target.speech}))};}
 function render(){
  audioView.begin();practiceCleanup?.();practiceCleanup=null;flashCleanup?.();flashCleanup=null;
  document.documentElement.lang=uiLocale;document.querySelector('.skip').textContent=UI[uiLocale].skip;syncTeachingSelector(select,locale,uiLocale);uiSelect.value=uiLocale;main.dataset.teachingLocale=locale;
@@ -45,7 +51,8 @@ function render(){
  });
  else practiceHTML+=`<nav class="question-scope-nav"><button type="button" data-question-scope="lesson" aria-pressed="${questionScope==='lesson'}">${h(UI[uiLocale].lessonPractice)}</button><button type="button" data-question-scope="selected" aria-pressed="${questionScope==='selected'}">${h(UI[uiLocale].practiceSelectedSentences)}</button></nav>`+renderPracticeSession(session.state,questionLesson,{renderField:(value,path,options)=>questionScope==='selected'?selectedQuestionField(value,path,options):audioView.renderField(value,'lesson',path,options)});
  if(view.canReturnToContent&&view.phase!=='ready')practiceHTML+=`<button class="go-next" type="button" data-back-content>${UI[uiLocale].backContent}</button>`;
- main.innerHTML=renderLesson(lesson,catalog,locale,uiLocale,{...audioView,translationsVisible:translationVisibility.visible,practiceHTML,phase:view.phase,materialRefs:view.materialRefs});
+ main.innerHTML=renderLesson(lesson,catalog,locale,uiLocale,{...audioView,sentenceAction,translationsVisible:translationVisibility.visible,practiceHTML,phase:view.phase,materialRefs:view.materialRefs});
+ main.insertAdjacentHTML('beforeend','<div id="sentence-selection-status"></div>');refreshSentences();
  const practiceRoot=main.querySelector('#practice-root');
  if(practiceRoot&&practiceMode==='questions'){
   practiceCleanup=bindPracticeSession(practiceRoot,session,{lesson:questionLesson,onChange:(_state,event)=>{
@@ -84,7 +91,7 @@ function changePracticeMode(event){
  const button=event.target.closest('[data-practice-mode]');if(!button||!main.contains(button)||button.disabled)return;
  const mode=button.dataset.practiceMode;if(!['questions','cards'].includes(mode))return;const targetSession=mode==='cards'?flashSession:session;if(mode===practiceMode&&!showLesson&&!showSelected&&targetSession.state.phase!=='material')return;
  practiceCleanup?.();flashCleanup?.();
- const currentSelectionVersion=selectedSessionIdentity(selectedStore.list(),LESSON_ID).version;
+ const currentSelectionVersion=buildSelectedPractice(data,selectedStore.list(),{lessonId:LESSON_ID,analysis:lexicalAnalysis,locale}).sessionIdentity.version;
  if(mode==='cards'&&cardScope==='selected'&&selectedCardsProjection?.sessionIdentity.version!==currentSelectionVersion)selectCardScope('selected',true);
  if(mode==='questions'&&questionScope==='selected'&&selectedQuestionProjection?.sessionIdentity.version!==currentSelectionVersion)selectQuestionScope('selected',true);
  const destination=mode==='cards'?flashSession:session;if(destination.state.phase==='material')destination.dispatch({type:'return'});
@@ -125,7 +132,7 @@ main.addEventListener('click',event=>{
  }
  if(event.target.closest('[data-close-selection]')){audioView.cancel();selection=null;document.querySelector('#selection-panel').hidden=true;clearHighlight();return;}
  const ref=event.target.closest('[data-source-unit]');if(ref){const {sourceUnit:unit,sourceFrom:from,sourceTo:to}=ref.dataset;
-  if(from===undefined)showSelection({unit,kind:'sentence'});
+  if(from===undefined){selection=null;showSelected=false;showLesson=true;render();focusSentence(unit);}
   else if(from===to)showSelection({unit,kind:'token',id:from});
   else {const source=data.units[unit];let kind='span',range=source.spans?.find(r=>r.from===from&&r.to===to);if(!range){kind='chunk';range=source.chunks?.find(r=>r.from===from&&r.to===to);}if(range)showSelection({unit,kind,id:range.id});else {selection=null;document.querySelector('#selection-panel').hidden=true;highlight(unit,from,to);}}
  }
@@ -141,7 +148,7 @@ try{({lesson,catalog,mapping,lexicalAnalysis,lexicalPracticeSelections,clozePrac
  if(new URL(location.href).searchParams.get('questionDeck')==='selected')selectQuestionScope('selected',true);
  lexicalProjection=buildLexicalFlashcardProjection(data,lexicalAnalysis,lexicalPracticeSelections);
  selectCardScope(cardScope);
- audioView=createAudioView({root:main,documents:{lesson,catalog,lexical:lexicalAnalysis},mapping,getAccess:()=>activePracticeAccess(practiceMode,session.state,flashSession.state),getUILocale:()=>uiLocale});voiceCleanup=audioView.controller.subscribe(syncFlashAudio);selectedCleanup=selectedStore.subscribe(()=>{if(showSelected||selection)render();});render();
+ audioView=createAudioView({root:main,documents:{lesson,catalog,lexical:lexicalAnalysis},mapping,getAccess:()=>activePracticeAccess(practiceMode,session.state,flashSession.state),getUILocale:()=>uiLocale});voiceCleanup=audioView.controller.subscribe(syncFlashAudio);selectedCleanup=selectedStore.subscribe(()=>{if(showSelected||selection)render();else refreshSentences();});render();
  window.addEventListener('pagehide',event=>{if(event.persisted){audioView.cancel();return;}practiceCleanup?.();flashCleanup?.();voiceCleanup?.();selectedCleanup?.();audioView.dispose();});
  window.addEventListener('pageshow',event=>{if(event.persisted&&!selectedStore.state.pending)selectedStore.restore();});
 }catch(error){main.textContent=UI[uiLocale].error;main.setAttribute('role','alert');console.error(error);}
@@ -149,7 +156,7 @@ try{({lesson,catalog,mapping,lexicalAnalysis,lexicalPracticeSelections,clozePrac
 function selectCardScope(scope,refresh=false){
  cardScope=scope;let key=scope,identity;
  if(scope==='selected'){if(refresh||!selectedCardsProjection)selectedCardsProjection=buildSelectedPractice(data,selectedStore.list(),{lessonId:LESSON_ID,analysis:lexicalAnalysis,locale});flashData=selectedCardsProjection.data;cards=selectedCardsProjection.cards;identity=selectedCardsProjection.sessionIdentity;key='selected:'+identity.version;}
- else{flashData=scope==='lexical'?lexicalProjection.data:data;cards=scope==='lexical'?lexicalProjection.cards:[...buildFlashcardDeck(data),...buildSourceRecallClozeCards(data,clozePracticeSelections)];identity={lessonId:LESSON_ID,version:scope==='lexical'?'source-lexical-v1':'source-sentences-v2'};}
+ else{flashData=scope==='lexical'?lexicalProjection.data:data;cards=scope==='lexical'?lexicalProjection.cards:[...buildFlashcardDeck(data),...buildSourceRecallClozeCards(data,clozePracticeSelections)];identity={lessonId:LESSON_ID,version:scope==='lexical'?'source-lexical-v1':lesson.practice.sentenceDeckVersion??'source-sentences-v2'};}
  if(!flashControllers.has(key))flashControllers.set(key,createFlashcardController({cards,...identity,storage,locale,uiLocale}));flashSession=flashControllers.get(key);flashSession.dispatch({type:'locale',locale,uiLocale});
 }
 main.addEventListener('click',event=>{const button=event.target.closest('[data-card-scope]');if(!button||!main.contains(button)||button.disabled||button.dataset.cardScope===cardScope)return;const scope=button.dataset.cardScope;if(!['lexical','sentences','selected'].includes(scope))return;flashCleanup?.();selectCardScope(scope,scope==='selected');selection=null;showSelected=false;showLesson=false;render();main.querySelector('[data-card-scope="'+scope+'"]')?.focus();const url=new URL(location.href);url.searchParams.set('deck',scope);url.searchParams.delete('view');history.replaceState(null,'',url);});
@@ -160,11 +167,15 @@ function selectedQuestionField(value,path,options){const item=questionLesson.pra
 function selectQuestionScope(scope,refresh=false){questionScope=scope;if(scope==='lesson'){session=lessonSession;questionLesson=lesson;}else{if(refresh||!selectedQuestionProjection)selectedQuestionProjection=buildSelectedPractice(data,selectedStore.list(),{lessonId:LESSON_ID,analysis:lexicalAnalysis,locale});const p=selectedQuestionProjection;questionLesson={...data,practice:{items:p.wordBank.map(x=>x.item)}};const key=p.sessionIdentity.version;if(!selectedQuestionControllers.has(key))selectedQuestionControllers.set(key,createPracticeController({lesson:questionLesson,lessonId:p.sessionIdentity.lessonId,practiceVersion:key,storage,locale,uiLocale}));session=selectedQuestionControllers.get(key);}session.dispatch({type:'locale',locale,uiLocale});}
 main.addEventListener('click',event=>{
  if(event.target.closest('[data-open-selected]')){showSelected=true;selection=null;render();main.querySelector('[data-selected-focus]')?.focus();const url=new URL(location.href);url.searchParams.set('view','selected');history.replaceState(null,'',url);return;}
- if(event.target.closest('[data-toggle-selected]')){const ref=selectionReference(selection);if(ref){selectedStore.has(ref)?selectedStore.remove(ref):selectedStore.add(ref);(main.querySelector('[data-selected-retry]')??main.querySelector('[data-toggle-selected]'))?.focus();}return;}
- if(event.target.closest('[data-selected-retry]')){selectedStore.state.error==='read'?selectedStore.restore():selectedStore.retrySave();(main.querySelector('[data-selected-retry]')??main.querySelector('[data-selected-focus]')??main.querySelector('[data-toggle-selected]'))?.focus();return;}
+ if(event.target.closest('[data-toggle-selected]')){const ref=selectionReference(selection);if(ref){toggleSelectedReference(ref);(main.querySelector('[data-selected-retry]')??main.querySelector('[data-toggle-selected]'))?.focus();}return;}
+ if(event.target.closest('[data-selected-retry]')){const sentenceRetry=!!event.target.closest('#sentence-selection-status');selectedStore.state.error==='read'?selectedStore.restore():selectedStore.retrySave();(main.querySelector('[data-selected-retry]')??(sentenceRetry?[...main.querySelectorAll('[data-toggle-sentence]')].find(el=>el.dataset.toggleSentence===sentenceFocusUnit):null)??main.querySelector('[data-selected-focus]')??main.querySelector('[data-toggle-selected]'))?.focus();return;}
  const remove=event.target.closest('[data-selected-remove]');if(remove&&main.contains(remove)){selectedStore.remove(remove.dataset.selectedRemove);(main.querySelector('[data-selected-retry]')??main.querySelector('[data-selected-focus]'))?.focus();return;}
- const open=event.target.closest('[data-selected-open]');if(open&&main.contains(open)){const item=selectedStore.list().find(x=>x.id===open.dataset.selectedOpen);if(!item)return;showSelected=false;showLesson=true;clearSelectedURL();selection={kind:item.ref.kind,unit:item.ref.unit,id:item.ref.id};render();main.querySelector('#selection-panel')?.scrollIntoView();main.querySelector('[data-toggle-selected]')?.focus();return;}
+ const open=event.target.closest('[data-selected-open]');if(open&&main.contains(open)){const item=selectedStore.list().find(x=>x.id===open.dataset.selectedOpen);if(!item)return;showSelected=false;showLesson=true;clearSelectedURL();selection=item.ref.kind==='sentence'?null:{kind:item.ref.kind,unit:item.ref.unit,id:item.ref.id};render();if(item.ref.kind==='sentence')focusSentence(item.ref.unit);else{main.querySelector('#selection-panel')?.scrollIntoView();main.querySelector('[data-toggle-selected]')?.focus();}return;}
  const scope=event.target.closest('[data-question-scope]');if(scope&&main.contains(scope)&&['lesson','selected'].includes(scope.dataset.questionScope)){practiceCleanup?.();selectQuestionScope(scope.dataset.questionScope,scope.dataset.questionScope==='selected');showSelected=false;showLesson=false;selection=null;render();main.querySelector('[data-question-scope="'+questionScope+'"]')?.focus();const url=new URL(location.href);url.searchParams.set('questionDeck',questionScope);history.replaceState(null,'',url);return;}
  const start=event.target.closest('[data-selected-start]');if(start&&main.contains(start)&&!start.disabled){practiceCleanup?.();flashCleanup?.();showSelected=false;showLesson=false;selection=null;practiceMode=start.dataset.selectedStart;if(practiceMode==='cards')selectCardScope('selected',true);else selectQuestionScope('selected',true);render();const url=new URL(location.href);url.searchParams.delete('view');url.searchParams.set('mode',practiceMode);url.searchParams.set(practiceMode==='cards'?'deck':'questionDeck','selected');history.replaceState(null,'',url);main.querySelector('[data-flash-action="start"],[data-practice-action="start"]')?.focus();}
 });
 window.addEventListener('storage',event=>{if(selectedStore&&event.key===selectedStore.key&&!selectedStore.state.pending)selectedStore.restore();});
+
+main.addEventListener('click',event=>{const button=event.target.closest('[data-toggle-sentence]');if(!button||!main.contains(button))return;sentenceFocusUnit=button.dataset.toggleSentence;const ref=selectionReference({kind:'sentence',unit:sentenceFocusUnit});if(!ref)return;toggleSelectedReference(ref);refreshSentences();(main.querySelector('#sentence-selection-status [data-selected-retry]')??[...main.querySelectorAll('[data-toggle-sentence]')].find(el=>el.dataset.toggleSentence===sentenceFocusUnit))?.focus();});
+
+

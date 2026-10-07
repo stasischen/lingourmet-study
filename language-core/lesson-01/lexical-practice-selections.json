@@ -2,10 +2,10 @@
   "format": "lingourmet.lexical-practice-selections",
   "version": 1,
   "sourceFiles": {
-    "lesson": "f8418197720fbf57ab74d18ec84eaa4d210ff0a13eccec6a7e97ce9f3be0f743",
-    "catalog": "eae74889518e97c40c78e75b8d53051623f13b879767b1d14b741c31b9cbe80c"
+    "lesson": "179330ca03df3870d4e992b1cde6da61fbad8a6056f48c94dda013f53586f634",
+    "catalog": "908c4e1f083e51b0da7d75da9873e6e0f98969cfc56665f6abfb66ed13381a7d"
   },
-  "lexicalProjectionSHA256": "8fa89af5d8e8344a2b6feafb1b6ef620680be8a3b1c95132e5dd8b356a2dfed9",
+  "lexicalProjectionSHA256": "f89895e9a4e4813d87e1e7a01dc216e9edf8cc8d0e7950afa96102d01eac8683",
   "items": [
     {
       "practiceKey": "lesson01.lexical.reading-group",
@@ -248,21 +248,222 @@
         "key": "reciprocal-greeting",
         "reason": "Keep the bounded reciprocal response without widening to the following greeting."
       }
+    },
+    {
+      "practiceKey": "lesson01.lexical.self-naming",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s5",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t3"
+      },
+      "expressionId": "catalog:I01.s5:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s5",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t3"
+        }
+      },
+      "deduplication": {
+        "key": "self-naming",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.preferred-name",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s6",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t4"
+      },
+      "expressionId": "catalog:I01.s6:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s6",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t4"
+        }
+      },
+      "deduplication": {
+        "key": "preferred-name",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.place-of-origin",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s7",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t3"
+      },
+      "expressionId": "catalog:I01.s7:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s7",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t3"
+        }
+      },
+      "deduplication": {
+        "key": "place-of-origin",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.pleasure-at-meeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "T05.s2",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t5"
+      },
+      "expressionId": "catalog:T05.s2:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "T05.s2",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t5"
+        }
+      },
+      "deduplication": {
+        "key": "pleasure-at-meeting",
+        "reason": "Select the complete new source expression once."
+      }
     }
   ],
   "scope": {
-    "selectedTargets": 5,
+    "selectedTargets": 9,
     "excluded": [
-      "proper names",
+      "standalone proper-name token cards",
       "duplicate occurrences",
       "です already addressed in grammar practice"
     ],
     "notClaimed": [
       "dictionary admission",
       "new cloze item",
-      "new target-language text",
+      "unsourced target-language text",
       "FSRS scheduling",
       "Anki export"
-    ]
+    ],
+    "sourceRevision": "first-meeting-expansion-r1"
   }
 }

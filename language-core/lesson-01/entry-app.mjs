@@ -1,6 +1,8 @@
+import {loadCompleteResources} from './complete-resources.mjs';
+import {renderCompleteResource} from './complete-resource-view.mjs';
 import {createSelectedItemsStore} from './selected-items.mjs';
 import {createSelectedRef} from './selected-practice.mjs';
-import {selectedToggleHTML} from './selected-view.mjs';
+import {selectedToggleHTML,sentenceToggleHTML,syncSentenceToggles,matchingSelectedItem} from './selected-view.mjs';
 import {loadEntryPackage} from './package-loader.mjs';
 import {createDictionaryResolver} from './dictionary-resolver.mjs';
 import {renderDictionary} from './dictionary-view.mjs';
@@ -10,18 +12,24 @@ import {createAudioView} from './audio-view.mjs';
 import {UI,h} from './i18n.mjs';
 import {searchCatalog} from './catalog-search.mjs';
 import {initialLanguages,nextLanguages,syncTeachingSelector} from './language-state.mjs';
-import {renderEntry,selectionHTML,renderCatalogResults} from './renderer.mjs';
+import {renderEntry,selectionHTML,renderCatalogResults,renderEntryContext} from './renderer.mjs';
 const main=document.querySelector('#main'),select=document.querySelector('#teaching-language'),uiSelect=document.querySelector('#ui-language'),url=new URL(location.href);
 const initial=initialLanguages(url.searchParams);let locale=initial.teachingLocale,uiLocale=initial.uiLocale;
 const id=url.searchParams.get('entry');let query=url.searchParams.get('q')??'',composing=false;let catalog,mapping,audioView,data,lexicalAnalysis,dictionaryIndex,dictionaryResolver,selectedStore,selectedCleanup,currentSelection=null;
+let resourceAdapter=null;
 let loadState='loading';
+let sentenceFocusUnit=null;
+function toggleSelectedReference(ref){const existing=matchingSelectedItem(selectedStore,ref,{data,analysis:lexicalAnalysis});existing?selectedStore.remove(existing.id):selectedStore.add(ref);}
+function sentenceAction(unit){return sentenceToggleHTML(selectedStore,selectionReference({kind:'sentence',unit}),uiLocale,{data,analysis:lexicalAnalysis});}
+function refreshSentences(){syncSentenceToggles(main,selectedStore,selectionReference,uiLocale,{data,analysis:lexicalAnalysis});}
+function focusSentence(unit){const target=[...main.querySelectorAll('[data-sentence]')].find(el=>el.dataset.sentence===unit);target?.setAttribute('tabindex','-1');target?.focus();target?.scrollIntoView();}
 const LESSON_ID='multisource-first-lesson-pilot';
 function selectionReference(value){if(!['sentence','token','expression'].includes(value?.kind))return null;try{return createSelectedRef(data,value,{lessonId:LESSON_ID,analysis:lexicalAnalysis});}catch{return null;}}
-function inspectorContext(){return {...audioView,lexicalAnalysis,dictionaryResolver,selectionAction:(_data,value)=>selectedToggleHTML(selectedStore,selectionReference(value),uiLocale),renderDictionary:(result,locale,ui)=>renderDictionary(result,locale,ui,lexicalAnalysis.localizations?.[locale]?.labels?.pos,target=>audioView.lexicalAudio({targetLanguage:'ja',text:target.text,reading:target.speech}))};}
-function refreshSelection(){const panel=main.querySelector('#selection-panel');if(currentSelection&&panel&&!panel.hidden){audioView.cancel();panel.innerHTML=selectionHTML(data,locale,currentSelection,uiLocale,inspectorContext());audioView.sync();}}
+function inspectorContext(){return {...audioView,lexicalAnalysis,dictionaryResolver,selectionAction:(_data,value)=>selectedToggleHTML(selectedStore,selectionReference(value),uiLocale,{data,analysis:lexicalAnalysis}),renderDictionary:(result,locale,ui)=>renderDictionary(result,locale,ui,lexicalAnalysis.localizations?.[locale]?.labels?.pos,target=>audioView.lexicalAudio({targetLanguage:'ja',text:target.text,reading:target.speech}))};}
+function refreshSelection(){refreshSentences();const panel=main.querySelector('#selection-panel');if(currentSelection&&panel&&!panel.hidden){audioView.cancel();panel.innerHTML=selectionHTML(data,locale,currentSelection,uiLocale,inspectorContext());audioView.sync();}}
 function render(){currentSelection=null;audioView?.begin();document.documentElement.lang=uiLocale;document.querySelector('.skip').textContent=UI[uiLocale].skip;syncTeachingSelector(select,locale,uiLocale);uiSelect.value=uiLocale;main.dataset.teachingLocale=locale;document.querySelector('#language-label').textContent=UI[uiLocale].language;document.querySelector('#ui-language-label').textContent=UI[uiLocale].interfaceLanguage;const u=UI[uiLocale];if(loadState!=='ready'){main.textContent=loadState==='failed'?u.catalogLoadError:u.loading;document.title=`${u.catalogTitle} · Lingourmet`;return;}const back=`./knowledge.html?lang=${encodeURIComponent(locale)}&ui=${encodeURIComponent(uiLocale)}&q=${encodeURIComponent(query)}`;
- main.innerHTML=id?`<a data-catalog-back href="${back}">${h(u.catalogBack)}</a>`+renderEntry(catalog,id,locale,uiLocale,audioView):`<a href="./?lang=${encodeURIComponent(locale)}&ui=${encodeURIComponent(uiLocale)}">${h(u.back)}</a><h1>${h(u.catalogTitle)}</h1><form data-catalog-form role="search"><label for="catalog-query">${h(u.catalogSearch)}</label><input id="catalog-query" type="search" value="${h(query)}" autocomplete="off" enterkeyhint="search"></form><section id="catalog-results" aria-live="polite"></section><p id="audio-status" role="status"></p>`;
- if(!id)updateResults();else audioView.bind();document.title=`${u.catalogTitle} · Lingourmet`;}
+ main.innerHTML=id?`<a data-catalog-back href="${back}">${h(u.catalogBack)}</a>`+(Object.hasOwn(catalog.entries??{},id)?renderCompleteResource(resourceAdapter,id,locale,uiLocale,audioView)+renderEntryContext(catalog,id,locale,uiLocale,{...audioView,sentenceAction}):renderEntry(catalog,id,locale,uiLocale,{...audioView,sentenceAction}))+'<div id="sentence-selection-status"></div>':`<a href="./?lang=${encodeURIComponent(locale)}&ui=${encodeURIComponent(uiLocale)}">${h(u.back)}</a><h1>${h(u.catalogTitle)}</h1><form data-catalog-form role="search"><label for="catalog-query">${h(u.catalogSearch)}</label><input id="catalog-query" type="search" value="${h(query)}" autocomplete="off" enterkeyhint="search"></form><section id="catalog-results" aria-live="polite"></section><p id="audio-status" role="status"></p>`;
+ if(!id)updateResults();else{refreshSentences();audioView.bind();}document.title=`${u.catalogTitle} · Lingourmet`;}
 function updateResults(){audioView.begin();const target=main.querySelector('#catalog-results');if(target)target.innerHTML=renderCatalogResults(searchCatalog(catalog,{query,teachingLocale:locale}),catalog,locale,uiLocale,query,audioView);audioView.bind();}
 function saveQuery(){const next=new URL(location.href);next.searchParams.set('q',query);history.replaceState(null,'',next);}
 main.addEventListener('compositionstart',event=>{if(event.target.id==='catalog-query')composing=true;});
@@ -31,7 +39,7 @@ main.addEventListener('submit',event=>{if(event.target.matches('[data-catalog-fo
 function changeLanguage(event){const nextState=nextLanguages({teachingLocale:locale,uiLocale},event.target===uiSelect?'ui':'teaching',event.target.value);locale=nextState.teachingLocale;uiLocale=nextState.uiLocale;render();const next=new URL(location.href);next.searchParams.set('lang',locale);next.searchParams.set('ui',uiLocale);history.replaceState(null,'',next);}
 select.addEventListener('change',changeLanguage);uiSelect.addEventListener('change',changeLanguage);
 document.querySelector('.skip').textContent=UI[uiLocale].skip;main.textContent=UI[uiLocale].loading;
-try{({catalog,mapping,lexicalAnalysis,dictionaryIndex}=await loadEntryPackage());data=withCatalog({units:{},localizations:{}},catalog);dictionaryResolver=createDictionaryResolver({index:dictionaryIndex,allowCandidate:true});let storage;try{storage=window.localStorage;}catch{storage=null;}selectedStore=createSelectedItemsStore({storage,lessonId:LESSON_ID});selectedCleanup=selectedStore.subscribe(refreshSelection);audioView=createAudioView({root:main,documents:{catalog,lexical:lexicalAnalysis},mapping,getUILocale:()=>uiLocale});loadState='ready';render();window.addEventListener('pagehide',event=>{if(event.persisted){audioView.cancel();return;}selectedCleanup?.();audioView.dispose();});window.addEventListener('pageshow',event=>{if(event.persisted&&!selectedStore.state.pending)selectedStore.restore();});}catch(error){loadState='failed';render();main.setAttribute('role','alert');console.error(error);}
+try{({catalog,mapping,lexicalAnalysis,dictionaryIndex}=await loadEntryPackage());if(id&&Object.hasOwn(catalog.entries??{},id)){try{resourceAdapter=await loadCompleteResources({sourceFiles:lexicalAnalysis.sourceFiles});}catch(error){console.error(error);}}data=withCatalog({units:{},localizations:{}},catalog);dictionaryResolver=createDictionaryResolver({index:dictionaryIndex,allowCandidate:true});let storage;try{storage=window.localStorage;}catch{storage=null;}selectedStore=createSelectedItemsStore({storage,lessonId:LESSON_ID});selectedCleanup=selectedStore.subscribe(refreshSelection);audioView=createAudioView({root:main,documents:{catalog,lexical:lexicalAnalysis},mapping,getUILocale:()=>uiLocale});loadState='ready';render();window.addEventListener('pagehide',event=>{if(event.persisted){audioView.cancel();return;}selectedCleanup?.();audioView.dispose();});window.addEventListener('pageshow',event=>{if(event.persisted&&!selectedStore.state.pending)selectedStore.restore();});}catch(error){loadState='failed';render();main.setAttribute('role','alert');console.error(error);}
 function closeSelection(){currentSelection=null;audioView.cancel();const panel=main.querySelector('#selection-panel');if(panel)panel.hidden=true;main.querySelectorAll('.token.selected').forEach(el=>{el.classList.remove('selected');el.removeAttribute('aria-pressed');});}
 main.addEventListener('click',event=>{
  if(event.target.closest('[data-pronunciation-target]'))return;
@@ -48,5 +56,15 @@ main.addEventListener('click',event=>{
 });
 main.addEventListener('keydown',event=>{if(event.key==='Escape')closeSelection();});
 
-main.addEventListener('click',event=>{if(event.target.closest('[data-toggle-selected]')){const ref=selectionReference(currentSelection);if(ref){selectedStore.has(ref)?selectedStore.remove(ref):selectedStore.add(ref);(main.querySelector('[data-selected-retry]')??main.querySelector('[data-toggle-selected]'))?.focus();}}else if(event.target.closest('[data-selected-retry]')){selectedStore.state.error==='read'?selectedStore.restore():selectedStore.retrySave();(main.querySelector('[data-selected-retry]')??main.querySelector('[data-toggle-selected]'))?.focus();}});
+main.addEventListener('click',event=>{if(event.target.closest('[data-toggle-selected]')){const ref=selectionReference(currentSelection);if(ref){toggleSelectedReference(ref);(main.querySelector('[data-selected-retry]')??main.querySelector('[data-toggle-selected]'))?.focus();}}else if(event.target.closest('[data-selected-retry]')){const sentenceRetry=!!event.target.closest('#sentence-selection-status');selectedStore.state.error==='read'?selectedStore.restore():selectedStore.retrySave();(main.querySelector('[data-selected-retry]')??(sentenceRetry?[...main.querySelectorAll('[data-toggle-sentence]')].find(el=>el.dataset.toggleSentence===sentenceFocusUnit):null)??main.querySelector('[data-toggle-selected]'))?.focus();}});
 window.addEventListener('storage',event=>{if(selectedStore&&event.key===selectedStore.key&&!selectedStore.state.pending)selectedStore.restore();});
+
+main.addEventListener('click',event=>{const button=event.target.closest('[data-toggle-sentence]');if(!button||!main.contains(button))return;sentenceFocusUnit=button.dataset.toggleSentence;const ref=selectionReference({kind:'sentence',unit:sentenceFocusUnit});if(!ref)return;toggleSelectedReference(ref);refreshSentences();(main.querySelector('#sentence-selection-status [data-selected-retry]')??[...main.querySelectorAll('[data-toggle-sentence]')].find(el=>el.dataset.toggleSentence===sentenceFocusUnit))?.focus();});
+
+
+
+main.addEventListener('click',event=>{const link=event.target.closest('[data-resource-section-link]');if(!link||!main.contains(link))return;const section=[...main.querySelectorAll('[data-resource-section]')].find(el=>el.dataset.resourceSection===link.dataset.resourceSectionLink);if(section){event.preventDefault();history.replaceState(null,'',link.href);section.focus();section.scrollIntoView();}});
+function focusResourceHash(){const section=[...main.querySelectorAll('[data-resource-section]')].find(el=>'#'+el.id===location.hash);section?.focus();section?.scrollIntoView();}
+window.addEventListener('hashchange',focusResourceHash);focusResourceHash();
+
+main.addEventListener('click',event=>{const link=event.target.closest('[data-open-resource-examples]');if(!link)return;const details=main.querySelector('#resource-lesson-examples');if(details){event.preventDefault();details.open=true;history.replaceState(null,'',link.href);details.querySelector('summary')?.focus();details.scrollIntoView();}});

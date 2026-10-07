@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "explicit reviewed targets; validate fingerprints before use",
+  "status": "explicit authored targets; expanded revision pending independent review",
   "offsetUnit": "UTF-16 code units",
   "fields": [
     {
@@ -921,75 +921,242 @@
     {
       "document": "lesson",
       "path": [
-        "teachingRefs",
+        "practice",
+        "items",
         0,
-        "context",
+        "explanation",
         "zh-Hant"
       ],
       "segments": [
         {
-          "start": 8,
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 54,
+          "end": 59,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 13,
+          "end": 18,
+          "text": "会社員です",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2"
+          },
+          "reading": "かいしゃいんです"
+        },
+        {
+          "start": 27,
+          "end": 29,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ],
+      "gate": {
+        "practiceId": "Q01",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        0,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        0,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "ミナ",
+          "targetRef": {
+            "unit": "T01.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        1,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        0,
+        "options",
+        1,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "targetRef": {
+            "unit": "T02.s2",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        1,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 7,
           "end": 10,
-          "text": "レン",
+          "text": "読書会",
           "targetRef": {
-            "unit": "T02.s2",
+            "unit": "W01.s1",
             "from": "t1",
             "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "teachingRefs",
-        0,
-        "context",
-        "ja"
-      ],
-      "segments": [
+          },
+          "reading": "どくしょかい"
+        },
         {
-          "start": 20,
-          "end": 22,
-          "text": "レン",
+          "start": 17,
+          "end": 20,
+          "text": "会社員",
           "targetRef": {
-            "unit": "T02.s2",
+            "unit": "T04.s1",
             "from": "t1",
             "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "teachingRefs",
-        1,
-        "context",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 14,
-          "end": 16,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "teachingRefs",
-        1,
-        "context",
-        "ja"
-      ],
-      "segments": [
+          },
+          "reading": "かいしゃいん"
+        },
         {
           "start": 22,
           "end": 24,
@@ -1000,339 +1167,6 @@
             "to": "t1"
           }
         }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "teachingRefs",
-        3,
-        "context",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 13,
-          "end": 15,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "teachingRefs",
-        3,
-        "context",
-        "ja"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 16,
-          "end": 18,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "explanation",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 3,
-          "end": 5,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 16,
-          "end": 21,
-          "text": "会社員です",
-          "targetRef": {
-            "unit": "T04.s1",
-            "from": "t1",
-            "to": "t2"
-          },
-          "reading": "かいしゃいんです"
-        },
-        {
-          "start": 31,
-          "end": 33,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q01",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "explanation",
-        "en"
-      ],
-      "segments": [
-        {
-          "start": 59,
-          "end": 64,
-          "text": "会社員です",
-          "targetRef": {
-            "unit": "T04.s1",
-            "from": "t1",
-            "to": "t2"
-          },
-          "reading": "かいしゃいんです"
-        }
-      ],
-      "gate": {
-        "practiceId": "Q01",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "explanation",
-        "ja"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 18,
-          "end": 23,
-          "text": "会社員です",
-          "targetRef": {
-            "unit": "T04.s1",
-            "from": "t1",
-            "to": "t2"
-          },
-          "reading": "かいしゃいんです"
-        },
-        {
-          "start": 32,
-          "end": 34,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q01",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "options",
-        0,
-        "text",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "options",
-        0,
-        "text",
-        "ja"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "ミナ",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "options",
-        1,
-        "text",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        0,
-        "options",
-        1,
-        "text",
-        "ja"
-      ],
-      "segments": [
-        {
-          "start": 0,
-          "end": 2,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
-      ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        1,
-        "explanation",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 16,
-          "end": 19,
-          "text": "読書会",
-          "targetRef": {
-            "unit": "W01.s1",
-            "from": "t1",
-            "to": "t1"
-          },
-          "reading": "どくしょかい"
-        },
-        {
-          "start": 26,
-          "end": 29,
-          "text": "会社員",
-          "targetRef": {
-            "unit": "T04.s1",
-            "from": "t1",
-            "to": "t1"
-          },
-          "reading": "かいしゃいん"
-        },
-        {
-          "start": 31,
-          "end": 33,
-          "text": "レン",
-          "targetRef": {
-            "unit": "T02.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        }
       ],
       "gate": {
         "practiceId": "Q02",
@@ -1347,44 +1181,6 @@
         1,
         "explanation",
         "en"
-      ],
-      "segments": [
-        {
-          "start": 36,
-          "end": 39,
-          "text": "読書会",
-          "targetRef": {
-            "unit": "W01.s1",
-            "from": "t1",
-            "to": "t1"
-          },
-          "reading": "どくしょかい"
-        },
-        {
-          "start": 88,
-          "end": 91,
-          "text": "会社員",
-          "targetRef": {
-            "unit": "T04.s1",
-            "from": "t1",
-            "to": "t1"
-          },
-          "reading": "かいしゃいん"
-        }
-      ],
-      "gate": {
-        "practiceId": "Q02",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        1,
-        "explanation",
-        "ja"
       ],
       "segments": [
         {
@@ -1399,8 +1195,35 @@
           "reading": "どくしょかい"
         },
         {
-          "start": 23,
-          "end": 26,
+          "start": 52,
+          "end": 55,
+          "text": "会社員",
+          "targetRef": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t1"
+          },
+          "reading": "かいしゃいん"
+        }
+      ],
+      "gate": {
+        "practiceId": "Q02",
+        "phase": "answer"
+      }
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        1,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 9,
+          "end": 12,
           "text": "読書会",
           "targetRef": {
             "unit": "W01.s1",
@@ -1410,8 +1233,8 @@
           "reading": "どくしょかい"
         },
         {
-          "start": 39,
-          "end": 42,
+          "start": 25,
+          "end": 28,
           "text": "会社員",
           "targetRef": {
             "unit": "T04.s1",
@@ -1421,8 +1244,8 @@
           "reading": "かいしゃいん"
         },
         {
-          "start": 44,
-          "end": 46,
+          "start": 30,
+          "end": 32,
           "text": "レン",
           "targetRef": {
             "unit": "T02.s2",
@@ -1469,28 +1292,8 @@
       ],
       "segments": [
         {
-          "start": 1,
-          "end": 5,
-          "text": "ナオです",
-          "targetRef": {
-            "unit": "X01.s2",
-            "from": "t1",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 13,
-          "end": 15,
-          "text": "ナオ",
-          "targetRef": {
-            "unit": "X01.s2",
-            "from": "t1",
-            "to": "t1"
-          }
-        },
-        {
-          "start": 28,
-          "end": 30,
+          "start": 11,
+          "end": 13,
           "text": "です",
           "targetRef": {
             "unit": "T01.s2",
@@ -1515,18 +1318,8 @@
       ],
       "segments": [
         {
-          "start": 0,
-          "end": 4,
-          "text": "ナオです",
-          "targetRef": {
-            "unit": "X01.s2",
-            "from": "t1",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 66,
-          "end": 68,
+          "start": 43,
+          "end": 45,
           "text": "です",
           "targetRef": {
             "unit": "T01.s2",
@@ -1573,18 +1366,8 @@
       ],
       "segments": [
         {
-          "start": 1,
-          "end": 5,
-          "text": "ナオです",
-          "targetRef": {
-            "unit": "X01.s2",
-            "from": "t1",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 26,
-          "end": 28,
+          "start": 6,
+          "end": 8,
           "text": "です",
           "targetRef": {
             "unit": "T01.s2",
@@ -1677,8 +1460,8 @@
       ],
       "segments": [
         {
-          "start": 5,
-          "end": 11,
+          "start": 1,
+          "end": 7,
           "text": "はじめまして",
           "targetRef": {
             "unit": "T01.s1",
@@ -1725,8 +1508,8 @@
       ],
       "segments": [
         {
-          "start": 4,
-          "end": 10,
+          "start": 0,
+          "end": 6,
           "text": "はじめまして",
           "targetRef": {
             "unit": "T01.s1",
@@ -1773,8 +1556,8 @@
       ],
       "segments": [
         {
-          "start": 9,
-          "end": 15,
+          "start": 1,
+          "end": 7,
           "text": "はじめまして",
           "targetRef": {
             "unit": "T01.s1",
@@ -1817,40 +1600,6 @@
           }
         }
       ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        4,
-        "explanation",
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 11,
-          "end": 13,
-          "text": "アキ",
-          "targetRef": {
-            "practiceId": "Q05",
-            "optionId": "N1"
-          }
-        },
-        {
-          "start": 25,
-          "end": 27,
-          "text": "ユキ",
-          "targetRef": {
-            "practiceId": "Q05",
-            "optionId": "N2"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q05",
-        "phase": "answer"
-      }
     },
     {
       "document": "lesson",
@@ -1925,117 +1674,6 @@
           }
         }
       ]
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        4,
-        "checklist",
-        1,
-        "zh-Hant"
-      ],
-      "segments": [
-        {
-          "start": 4,
-          "end": 6,
-          "text": "です",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 14,
-          "end": 16,
-          "text": "さん",
-          "targetRef": {
-            "unit": "T03.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q05",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        4,
-        "checklist",
-        1,
-        "en"
-      ],
-      "segments": [
-        {
-          "start": 6,
-          "end": 8,
-          "text": "です",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 36,
-          "end": 38,
-          "text": "さん",
-          "targetRef": {
-            "unit": "T03.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q05",
-        "phase": "answer"
-      }
-    },
-    {
-      "document": "lesson",
-      "path": [
-        "practice",
-        "items",
-        4,
-        "checklist",
-        1,
-        "ja"
-      ],
-      "segments": [
-        {
-          "start": 6,
-          "end": 8,
-          "text": "です",
-          "targetRef": {
-            "unit": "T01.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        },
-        {
-          "start": 20,
-          "end": 22,
-          "text": "さん",
-          "targetRef": {
-            "unit": "T03.s2",
-            "from": "t2",
-            "to": "t2"
-          }
-        }
-      ],
-      "gate": {
-        "practiceId": "Q05",
-        "phase": "answer"
-      }
     },
     {
       "document": "lesson",
@@ -2127,6 +1765,1302 @@
         "practiceId": "Q05",
         "phase": "answer"
       }
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "ja",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 8,
+          "end": 13,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 9,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "text": "と",
+          "reading": "と",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "zh-Hant",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 3,
+          "end": 8,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 9,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "text": "と",
+          "reading": "と",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "en",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 19,
+          "end": 24,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:self-naming",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 23,
+          "end": 28,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "text": "と",
+          "reading": "と",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:preferred-name-request",
+        "localizations",
+        "ja",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 9,
+          "end": 17,
+          "text": "と呼んでください",
+          "reading": "とよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t2",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:preferred-name-request",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 12,
+          "text": "と呼んでください",
+          "reading": "とよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t2",
+            "to": "t4"
+          }
+        },
+        {
+          "start": 47,
+          "end": 49,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:preferred-name-request",
+        "localizations",
+        "zh-Hant",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 3,
+          "end": 11,
+          "text": "と呼んでください",
+          "reading": "とよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t2",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:preferred-name-request",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 12,
+          "text": "と呼んでください",
+          "reading": "とよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t2",
+            "to": "t4"
+          }
+        },
+        {
+          "start": 27,
+          "end": 29,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:preferred-name-request",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 23,
+          "end": 31,
+          "text": "と呼んでください",
+          "reading": "とよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t2",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:place-of-origin",
+        "localizations",
+        "ja",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 10,
+          "end": 16,
+          "text": "から来ました",
+          "reading": "からきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:place-of-origin",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 10,
+          "text": "から来ました",
+          "reading": "からきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:place-of-origin",
+        "localizations",
+        "zh-Hant",
+        "title"
+      ],
+      "segments": [
+        {
+          "start": 3,
+          "end": 9,
+          "text": "から来ました",
+          "reading": "からきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:place-of-origin",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 10,
+          "text": "から来ました",
+          "reading": "からきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:place-of-origin",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 24,
+          "end": 30,
+          "text": "から来ました",
+          "reading": "からきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:pleasure-at-meeting",
+        "localizations",
+        "ja",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 13,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:pleasure-at-meeting",
+        "localizations",
+        "zh-Hant",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 13,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "catalog",
+      "path": [
+        "entries",
+        "draft:ja:pleasure-at-meeting",
+        "localizations",
+        "en",
+        "explanation"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 12,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 11,
+          "end": 16,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 6,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 7,
+          "end": 12,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 20,
+          "end": 22,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        4,
+        "checklist",
+        1,
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 7,
+          "end": 9,
+          "text": "です",
+          "reading": "です",
+          "provenanceTargetRef": {
+            "unit": "T01.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 13,
+          "end": 18,
+          "text": "といいます",
+          "reading": "といいます",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t2",
+            "to": "t3"
+          }
+        },
+        {
+          "start": 46,
+          "end": 48,
+          "text": "さん",
+          "reading": "さん",
+          "provenanceTargetRef": {
+            "unit": "T03.s2",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "options",
+        0,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "options",
+        0,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "options",
+        1,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "レン・リー",
+          "reading": "レン・リー",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "options",
+        1,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "レン・リー",
+          "reading": "レン・リー",
+          "provenanceTargetRef": {
+            "unit": "I01.s5",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 12,
+          "end": 22,
+          "text": "レンと呼んでください",
+          "reading": "レンとよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        5,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 6,
+          "end": 8,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 10,
+          "end": 20,
+          "text": "レンと呼んでください",
+          "reading": "レンとよんでください",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 11,
+          "end": 13,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "options",
+        0,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "来ました",
+          "reading": "きました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t3",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "options",
+        1,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "台湾",
+          "reading": "たいわん",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "options",
+        3,
+        "text"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "から",
+          "reading": "から",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t2"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 3,
+          "text": "台湾",
+          "reading": "たいわん",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 8,
+          "end": 10,
+          "text": "から",
+          "reading": "から",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "text": "来ました",
+          "reading": "きました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t3",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 2,
+          "end": 4,
+          "text": "台湾",
+          "reading": "たいわん",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 6,
+          "end": 8,
+          "text": "から",
+          "reading": "から",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 11,
+          "end": 15,
+          "text": "来ました",
+          "reading": "きました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t3",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 6,
+          "text": "から",
+          "reading": "から",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t2",
+            "to": "t2"
+          }
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "text": "来ました",
+          "reading": "きました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t3",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        6,
+        "answer"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "台湾から来ました",
+          "reading": "たいわんからきました",
+          "provenanceTargetRef": {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t3"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "prompt",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 16,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "prompt",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 4,
+          "end": 16,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "prompt",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 36,
+          "end": 48,
+          "text": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "options",
+        0,
+        "text",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 2,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        },
+        {
+          "start": 6,
+          "end": 10,
+          "text": "うれしい",
+          "reading": "うれしい",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t4",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "options",
+        0,
+        "text",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 5,
+          "end": 7,
+          "text": "レン",
+          "reading": "レン",
+          "provenanceTargetRef": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t1"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "explanation",
+        "ja"
+      ],
+      "segments": [
+        {
+          "start": 1,
+          "end": 5,
+          "text": "うれしい",
+          "reading": "うれしい",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t4",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "explanation",
+        "zh-Hant"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "うれしい",
+          "reading": "うれしい",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t4",
+            "to": "t4"
+          }
+        }
+      ]
+    },
+    {
+      "document": "lesson",
+      "path": [
+        "practice",
+        "items",
+        7,
+        "explanation",
+        "en"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 4,
+          "text": "うれしい",
+          "reading": "うれしい",
+          "provenanceTargetRef": {
+            "unit": "T05.s2",
+            "from": "t4",
+            "to": "t4"
+          }
+        }
+      ]
     }
   ],
   "notes": [
@@ -2135,8 +3069,8 @@
     "Nonlisted portions of Japanese explanations are explanatory prose, not automatically target language exercises."
   ],
   "sourceSHA256": {
-    "lesson": "6307f34c4fdff89cc641ecb70b111acf6a5c60e052b776bce1a4e993cb2975d5",
-    "catalog": "278c0efa24ac9f67bf91c377c745a2fcae2f91ba6f866e02a9a421c64a8bb4f8"
+    "lesson": "48ab987596a5588e3dd7c3ede5efe2349a291946e75ba0e68842f258ad9a8d82",
+    "catalog": "a9ff48a55fa62f79dc774d46a0d71a504631e9150cca355e72a494824f00d2de"
   },
   "unitTargets": [
     {
@@ -2362,6 +3296,69 @@
         "c1"
       ],
       "spans": []
+    },
+    {
+      "unit": "T05.s2",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "I01.s5",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "I01.s6",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
+    },
+    {
+      "unit": "I01.s7",
+      "sentence": true,
+      "tokens": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "chunks": [
+        "c1"
+      ],
+      "spans": [
+        "e1"
+      ]
     }
   ]
 }
