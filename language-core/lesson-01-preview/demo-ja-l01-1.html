@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lingourmet 示範課</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1f2a24;--muted:#66706a;--line:#e3e0d8;--brand:#22594a;--brand-soft:#e3efe9;--ok:#1f7a4a;--ok-soft:#e2f4e9;--bad:#b3392f;--bad-soft:#fbe7e4;--mark:#fff1c2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151a17;--card:#1f2621;--ink:#e8ede9;--muted:#9aa59e;--line:#313a34;--brand:#7cc4a8;--brand-soft:#23362e;--ok:#6fd19b;--ok-soft:#1d3527;--bad:#f08b80;--bad-soft:#3d2421;--mark:#4a4220;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,"Noto Sans TC","Noto Sans JP",sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:760px;margin:auto;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:700;color:var(--brand);margin-right:auto}
+select,button,textarea{font:inherit;color:inherit}
+select{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 8px}
+nav{max-width:760px;margin:auto;padding:0 16px 10px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+nav button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 4px;cursor:pointer}
+nav button[aria-current=page]{background:var(--brand);color:var(--bg);border-color:var(--brand);font-weight:700}
+main{max-width:760px;margin:auto;padding:16px 16px 80px}
+h1{font-size:1.6rem;margin:.2em 0}
+h2{font-size:1.15rem;margin:1.6em 0 .5em}
+.muted{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+.cando li{margin:2px 0}
+.line{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.line:first-child{border-top:0}
+.who{min-width:3.2em;color:var(--muted);font-size:.85rem;padding-top:.35em}
+.sent{margin:2px 0}
+.ja{font-size:1.25rem;line-height:2.1}
+.tok{cursor:pointer;border-radius:4px;padding:0 1px}
+.tok:hover,.tok.sel{background:var(--mark)}
+.span-kp{border-bottom:2px solid var(--brand)}
+.tr{color:var(--muted);font-size:.95rem}
+.icon{border:1px solid var(--line);background:var(--card);border-radius:999px;width:2em;height:2em;cursor:pointer;line-height:1;vertical-align:middle}
+.icon.on{background:var(--brand-soft)}
+.tools{display:inline-flex;gap:4px;margin-left:6px;vertical-align:middle}
+.toggle{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:4px 10px;cursor:pointer}
+.pattern{font-size:1.15rem;background:var(--brand-soft);border-radius:10px;padding:8px 12px;margin:8px 0}
+.kp h3{margin:.1em 0;font-size:1.1rem}
+.kp ul{margin:.3em 0;padding-left:1.2em}
+.pit{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin:4px 0}
+.x{color:var(--bad)}.o{color:var(--ok)}
+.ex{border-left:3px solid var(--line);padding-left:10px;margin:6px 0}
+.tag{display:inline-block;font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:0 8px;color:var(--muted)}
+.link{background:none;border:0;color:var(--brand);cursor:pointer;padding:0;text-decoration:underline}
+#pop{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);width:min(420px,calc(100% - 32px));z-index:9}
+#pop .card{box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.pop-head{display:flex;align-items:baseline;gap:10px}
+.pop-head .ja{font-size:1.5rem}
+.opt{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;margin:6px 0;cursor:pointer}
+.opt.ok{background:var(--ok-soft);border-color:var(--ok)}
+.opt.bad{background:var(--bad-soft);border-color:var(--bad)}
+.fb{border-radius:10px;padding:8px 12px;margin:8px 0}
+.fb.ok{background:var(--ok-soft)}.fb.bad{background:var(--bad-soft)}
+.tiles{display:flex;flex-wrap:wrap;gap:6px;min-height:2.8em;padding:6px;border:1px dashed var(--line);border-radius:10px;margin:6px 0}
+.tile{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:1.1rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.primary{background:var(--brand);color:var(--bg);border:0;border-radius:10px;padding:8px 16px;cursor:pointer}
+.ghost{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer}
+textarea{width:100%;min-height:7em;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--card)}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress>i{display:block;height:100%;background:var(--brand)}
+.flash{text-align:center;padding:28px 16px}
+.note{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);margin-top:28px;padding-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <span class="brand">Lingourmet</span>
+    <label class="muted" for="loc" id="loc-label"></label>
+    <select id="loc"><option value="zh-Hant">繁體中文</option><option value="en">English</option></select>
+  </div>
+  <nav id="tabs"></nav>
+</header>
+<main id="main" tabindex="-1"></main>
+<div id="pop" hidden></div>
+<script id="package" type="application/json">{"packageId": "ja:l01-1", "targetLanguage": "ja", "teachingLocales": ["zh-Hant", "en"], "preview": {"channel": "ja-u01", "vocabularySenseRefs": ["ja:name#1", "ja:はじめまして#1", "ja:です#1", "ja:よろしく#1", "ja:お願いします#1", "ja:こちらこそ#1", "ja:さん#1"], "revision": "53cfb40e682f08dcdc20fb23e605d740ae3ed6d1e546200eef3a63e7f8c0cf0e", "migration": {"fromRevision": "ca10fba436cfc3adfd361dd5d2874b4629161bc161342e01c187dfa363b06768", "compatiblePracticeIds": ["p01", "p03", "p05", "p06", "p07", "p08"]}}, "lesson": {"title": {"zh-Hant": "打招呼和名字", "en": "Greetings and Names"}, "scene": {"zh-Hant": "讀書會第一天，ミナ和レン在門口第一次見面，互相打招呼並說出名字。", "en": "On the first day of the book club, Mina and Ren meet at the entrance for the first time and exchange greetings and names."}, "canDo": {"zh-Hant": ["能用「はじめまして」向初次見面的人打招呼", "能用「〔名字〕です」說出自己的名字", "能用「よろしくお願いします」和「こちらこそ、よろしくお願いします」作為自我介紹的禮貌結尾"], "en": ["Greet someone for the first time using はじめまして", "State your name using 〔name〕です", "Close an introduction politely with よろしくお願いします and こちらこそ、よろしくお願いします"]}, "speakers": {"mina": {"name": "ミナ"}, "ren": {"name": "レン"}}, "sources": [{"id": "dialogue", "title": {"zh-Hant": "門口的對話", "en": "At the entrance"}, "lines": [{"speaker": "ren", "sentences": ["ja:l01-1:s01"]}, {"speaker": "mina", "sentences": ["ja:l01-1:s01"]}, {"speaker": "ren", "sentences": ["ja:l01-1:s02"]}, {"speaker": "mina", "sentences": ["ja:l01-1:s03"]}, {"speaker": "ren", "sentences": ["ja:l01-1:s04"]}, {"speaker": "mina", "sentences": ["ja:l01-1:s05"]}]}], "teaching": [{"group": {"zh-Hant": "初次見面與結尾", "en": "Opening and closing"}, "kps": ["ja:kp:hajimemashite", "ja:kp:yoroshiku"]}, {"group": {"zh-Hant": "說出自己的名字", "en": "Stating your name"}, "kps": ["ja:kp:noun-desu"]}], "practice": [{"id": "p01", "type": "listen-choose", "kp": "ja:kp:noun-desu", "audioRefs": ["ja:l01-1:s02"], "prompt": {"zh-Hant": "聽句子，說話者介紹自己的名字是？", "en": "Listen. What name does the speaker introduce themselves with?"}, "options": [{"id": "a", "ja": "レン", "correct": true}, {"id": "b", "ja": "ミナ", "fb": {"zh-Hant": "ミナ 是另一位說話者的名字。", "en": "ミナ is the other speaker’s name."}}, {"id": "c", "ja": "リン", "fb": {"zh-Hant": "發音不同，句中說的是 レン。", "en": "The pronunciation is different; the speaker says レン."}}]}, {"id": "p02", "type": "respond", "kp": "ja:kp:noun-desu", "prompt": {"zh-Hant": "對方說：「はじめまして。リンです。よろしくお願いします。」你的名字是ミナ。請選出同時介紹自己、並回應對方心意的完整說法。", "en": "They say: “はじめまして。リンです。よろしくお願いします。” Your name is Mina. Choose the complete response that introduces you and returns their greeting."}, "options": [{"id": "a", "ja": "はじめまして。ミナです。こちらこそ、よろしくお願いします。", "correct": true, "fb": {"zh-Hant": "這句用「ミナです」介紹自己，再用「こちらこそ、よろしくお願いします」回應對方的心意。自然對話中也可以只回「こちらこそ」；本題還要求介紹自己的名字。", "en": "This introduces you with ミナです and returns the greeting with こちらこそ、よろしくお願いします. In conversation, こちらこそ can also stand on its own; this task additionally asks you to give your name."}}, {"id": "b", "ja": "こちらこそ。", "fb": {"zh-Hant": "「こちらこそ」可以單獨承接對方的心意，不是文法錯誤。不過，本題還要求介紹自己叫ミナ，這個回覆沒有說出自己的名字。", "en": "こちらこそ can stand on its own to return the sentiment; it is not a grammatical error. This task also asks you to introduce yourself as Mina, but this reply does not give your name."}}, {"id": "c", "ja": "はじめまして。ミナさんです。こちらこそ、よろしくお願いします。", "fb": {"zh-Hant": "這句有回應對方的心意，但介紹自己的名字時不加 さん。把「ミナさんです」改成「ミナです」，其餘回應可以保留。", "en": "This returns the other person’s greeting, but do not add さん to your own name. Change ミナさんです to ミナです; the rest of the response can stay."}}]}, {"id": "p03", "type": "choose", "kp": "ja:kp:hajimemashite", "prompt": {"zh-Hant": "在讀書會門口第一次見到新夥伴。剛開口的第一句問候應該說什麼？", "en": "Meeting a new study group partner at the entrance for the first time. What should you say first as an opening greeting?"}, "options": [{"id": "a", "ja": "はじめまして。", "correct": true}, {"id": "b", "ja": "よろしくお願いします。", "fb": {"zh-Hant": "よろしくお願いします 放在自我介紹的結尾，不是剛開口時的第一句問候。", "en": "よろしくお願いします comes at the end of an introduction, not as the opening greeting."}}, {"id": "c", "ja": "こちらこそ、よろしくお願いします。", "fb": {"zh-Hant": "こちらこそ、よろしくお願いします 是在對方先說了請多指教之後的回應。", "en": "こちらこそ、よろしくお願いします is a reply after the other person says よろしくお願いします first."}}]}, {"id": "p04", "type": "find-error", "kp": "ja:kp:noun-desu", "prompt": {"zh-Hant": "初次見面時，想禮貌地介紹自己叫リン，說「はじめまして。リンさんです。」哪裡要修改？", "en": "At a first meeting, you want to introduce yourself politely as Lin. What needs fixing in “はじめまして。リンさんです。”?"}, "options": [{"id": "a", "ja": "リンさん → リン", "correct": true}, {"id": "b", "ja": "はじめまして → よろしくお願いします", "fb": {"zh-Hant": "初次見面開口用 はじめまして 是正確的，よろしくお願いします 放在結尾。", "en": "はじめまして is correct for opening a first meeting; よろしくお願いします comes at the end."}}, {"id": "c", "ja": "リンさんです → リンさん", "fb": {"zh-Hant": "只刪掉 です，仍保留了自稱時不加的 さん。本題要禮貌地介紹自己，保留 です，改成「リンです」。", "en": "Removing です leaves さん attached to your own name. For the polite self-introduction requested here, keep です and say リンです."}}]}, {"id": "p05", "type": "assemble", "kp": "ja:kp:noun-desu", "tiles": ["レン", "です", "さん", "こちらこそ"], "answers": [["レン", "です"]], "prompt": {"zh-Hant": "用日語說：「我是レン。」", "en": "Say in Japanese: “I’m Ren.”"}, "tileFeedback": {"さん": {"zh-Hant": "さん 接在別人的名字後，稱呼自己時不能加。", "en": "さん goes after others’ names; do not add it to your own name."}, "こちらこそ": {"zh-Hant": "こちらこそ 是「我才是」，說自己的名字不需要。", "en": "こちらこそ means “likewise”; not needed when stating your name."}}}, {"id": "p06", "type": "respond", "kp": "ja:kp:yoroshiku", "prompt": {"zh-Hant": "自我介紹時，對方先對你說了「よろしくお願いします。」請選出本題練習的完整回應，表達「我也一樣，請多指教」。", "en": "During introductions, the other person says “よろしくお願いします。” first. Choose the full response practised in this exercise that returns the same sentiment."}, "options": [{"id": "a", "ja": "こちらこそ、よろしくお願いします。", "correct": true, "fb": {"zh-Hant": "「こちらこそ」承接對方的心意，再用「よろしくお願いします」表達「我也一樣，請多指教」。自然對話中，也可以只回「こちらこそ」；這題練習完整說法。", "en": "こちらこそ returns the other person’s sentiment, followed here by よろしくお願いします. In conversation, こちらこそ can also stand on its own; this exercise practises the full response."}}, {"id": "b", "ja": "はじめまして。", "fb": {"zh-Hant": "「はじめまして」是初次見面的問候。本題是在對方說「よろしくお願いします」後，練習承接這份心意的完整回應，所以選「こちらこそ、よろしくお願いします」。", "en": "はじめまして is a greeting for a first meeting. Here the task is to return the sentiment of よろしくお願いします with the full response, so choose こちらこそ、よろしくお願いします."}}, {"id": "c", "ja": "ミナです。", "fb": {"zh-Hant": "「ミナです」是在介紹自己的名字。本題要承接對方「請多指教」的心意，請選出表達這份心意的完整回應。", "en": "ミナです introduces your name as Mina. This task asks for the full response that returns the sentiment of よろしくお願いします."}}]}, {"id": "p07", "type": "assemble", "kp": "ja:kp:yoroshiku", "tiles": ["よろしく", "お願いします", "はじめまして", "です"], "answers": [["よろしく", "お願いします"]], "prompt": {"zh-Hant": "用日語說：「請多指教。」", "en": "Say in Japanese: “I look forward to getting to know you.”"}, "tileFeedback": {"はじめまして": {"zh-Hant": "はじめまして 是「初次見面」，不是「請多指教」。", "en": "はじめまして means “nice to meet you,” not “I look forward to getting to know you.”"}, "です": {"zh-Hant": "お願いします 本身已經是禮貌句尾，後面不加 です。", "en": "お願いします already ends the sentence politely; do not add です."}}}, {"id": "p08", "type": "order-lines", "kp": "ja:kp:yoroshiku", "lines": ["よろしくお願いします。", "はじめまして。", "レンです。"], "rules": {"first": "はじめまして。", "last": "よろしくお願いします。", "before": [["はじめまして。", "レンです。"], ["レンです。", "よろしくお願いします。"]]}, "prompt": {"zh-Hant": "把初次見面的自我介紹排成自然的順序。", "en": "Put the first-meeting self-introduction in a natural order."}, "fb": {"zh-Hant": "自我介紹以「はじめまして」開頭、說出自己的名字，最後以「よろしくお願いします」結尾。", "en": "Start with はじめまして, state your name, and close with よろしくお願いします."}}, {"id": "p09", "type": "listen-choose", "kp": "ja:kp:yoroshiku", "audioRefs": ["ja:l01-1:s05"], "prompt": {"zh-Hant": "聽句子，說話者的意思是？", "en": "Listen to the sentence. What does the speaker mean?"}, "options": [{"id": "a", "correct": true, "text": {"zh-Hant": "我才要請你多指教。", "en": "Likewise, I look forward to it."}}, {"id": "b", "text": {"zh-Hant": "初次見面，請多指教。", "en": "Nice to meet you; please treat me well."}, "fb": {"zh-Hant": "句中有 こちらこそ（我才是），是對別人請託的回應。", "en": "The sentence has こちらこそ (likewise), which replies to someone else."}}, {"id": "c", "text": {"zh-Hant": "你好，我是ミナ。", "en": "Hello, I am Mina."}, "fb": {"zh-Hant": "句中沒有名字，也沒有 です。", "en": "The sentence does not contain a name or です."}}]}, {"id": "p10", "type": "produce", "kp": "ja:kp:noun-desu", "models": ["ja:x:l01-1-04", "ja:x:l01-1-05"], "prompt": {"zh-Hant": "用自己的名字（或想用的暱稱）完成一段初次見面的自我介紹（3 句）。", "en": "Complete a 3-sentence first-meeting self-introduction with your own name or a nickname."}, "frame": {"zh-Hant": "はじめまして。〔名字〕です。よろしくお願いします。", "en": "はじめまして。〔name〕です。よろしくお願いします。"}, "checks": [{"id": "open", "type": "startsWith", "value": "はじめまして", "label": {"zh-Hant": "用 はじめまして 開頭", "en": "Starts with はじめまして"}}, {"id": "desu", "type": "contains", "value": "です", "label": {"zh-Hant": "用 です 說出名字", "en": "Uses です for your name"}}, {"id": "close", "type": "endsWithAny", "value": ["よろしくお願いします。", "よろしくお願いします", "よろしくおねがいします。", "よろしくおねがいします"], "label": {"zh-Hant": "用 よろしくお願いします 結尾", "en": "Ends with よろしくお願いします"}}, {"id": "nosan", "type": "notMatches", "value": "^はじめまして。?[^。]*さんです", "label": {"zh-Hant": "自己的名字沒有加 さん", "en": "No さん after your own name"}}]}]}, "lexicon": {"ja:name": {"lemma": "（人名）", "pos": "name", "senses": {"1": {"gloss": {"zh-Hant": "人名", "en": "personal name"}}}, "tier": "core"}, "ja:お願いします": {"lemma": "お願いする", "reading": "おねがいする", "pos": "verb", "senses": {"1": {"kp": "ja:kp:yoroshiku", "gloss": {"zh-Hant": "拜託、麻煩您", "en": "please (polite request)"}}}, "tier": "core"}, "ja:こちらこそ": {"lemma": "こちらこそ", "pos": "expression", "senses": {"1": {"kp": "ja:kp:yoroshiku", "gloss": {"zh-Hant": "我才是、彼此彼此", "en": "likewise; the pleasure is mine"}}}, "tier": "core"}, "ja:さん": {"lemma": "さん", "pos": "suffix", "senses": {"1": {"gloss": {"zh-Hant": "先生／小姐（接在別人名字後）", "en": "Mr./Ms. (after someone else's name)"}, "note": {"zh-Hant": "不能接在自己的名字後。", "en": "Never used after your own name."}}}, "tier": "core"}, "ja:です": {"lemma": "です", "pos": "auxiliary", "senses": {"1": {"kp": "ja:kp:noun-desu", "gloss": {"zh-Hant": "是（禮貌句尾）", "en": "am / is (polite)"}}}, "tier": "core"}, "ja:はじめまして": {"lemma": "はじめまして", "pos": "expression", "senses": {"1": {"kp": "ja:kp:hajimemashite", "gloss": {"zh-Hant": "初次見面", "en": "nice to meet you (first meeting)"}}}, "tier": "core"}, "ja:よろしく": {"lemma": "よろしく", "pos": "adverb", "senses": {"1": {"kp": "ja:kp:yoroshiku", "gloss": {"zh-Hant": "多多指教（固定說法的一部分）", "en": "kindly (part of a set phrase)"}}}, "tier": "core"}}, "knowledge": {"ja:kp:hajimemashite": {"kind": "expression", "exampleRefs": ["ja:l01-1:s01", "ja:x:l01-1-01", "ja:x:l01-1-04"], "title": {"zh-Hant": "初次見面：はじめまして", "en": "First meeting: はじめまして"}, "pattern": {"zh-Hant": "はじめまして。〔名字〕です。", "en": "はじめまして。〔name〕です。"}, "meaning": {"zh-Hant": "第一次見到某人時的開場白。", "en": "What you say when you meet someone for the first time."}, "points": {"zh-Hant": ["只用在第一次見面。之後再遇到同一個人就不再使用。", "說完通常馬上接著說出自己的名字。"], "en": ["Only used for the very first meeting. It is not used when you see the same person again.", "You usually follow it immediately with your name."]}}, "ja:kp:noun-desu": {"kind": "grammar", "exampleRefs": ["ja:l01-1:s02", "ja:l01-1:s03", "ja:x:l01-1-02", "ja:x:l01-1-03"], "title": {"zh-Hant": "我是…：〔名字〕です", "en": "I am …: 〔name〕です"}, "pattern": {"zh-Hant": "〔名字〕です。", "en": "〔name〕です。"}, "meaning": {"zh-Hant": "向對方說出自己的名字。", "en": "Tells someone your name."}, "points": {"zh-Hant": ["日語自我介紹時通常不說「我」，直接「名字＋です」就可以。", "說自己的名字不能加 さん；さん 只能接在別人的名字後面。", "です 唸起來接近 des，結尾的 u 幾乎聽不到。"], "en": ["Japanese usually leaves out “I”; just say your name + です.", "Never add さん to your own name; さん is only used after other people’s names.", "です sounds close to “des”; the final u is barely heard."]}, "pitfalls": [{"wrong": "リンさんです。", "right": "リンです。", "why": {"zh-Hant": "自我介紹報自己名字時不能加 さん；さん 是尊稱，只接在別人名字後。", "en": "When introducing yourself, never add さん to your own name; さん is an honorific used only after other people’s names."}, "context": {"zh-Hant": "自我介紹，說出自己的名字時。", "en": "When introducing yourself by your own name."}}], "later": [{"form": "学生です。", "text": {"zh-Hant": "用「〔身分〕です」說自己的身分或職業，下一節會學。", "en": "Using 〔role / occupation〕です to state your role or occupation comes in the next section."}}]}, "ja:kp:yoroshiku": {"kind": "expression", "exampleRefs": ["ja:l01-1:s04", "ja:l01-1:s05", "ja:x:l01-1-04", "ja:x:l01-1-06"], "title": {"zh-Hant": "結尾：よろしくお願いします", "en": "Closing: よろしくお願いします"}, "pattern": {"zh-Hant": "よろしくお願いします。 → こちらこそ、よろしくお願いします。", "en": "よろしくお願いします。 → こちらこそ、よろしくお願いします。"}, "meaning": {"zh-Hant": "自我介紹的固定結尾，意思接近「請多指教」。", "en": "The set closing of a self-introduction, roughly “I look forward to working with you.”"}, "points": {"zh-Hant": ["對方先說了，你就回「こちらこそ、よろしくお願いします」（我才要請你多指教）。", "不只用在初次見面：請人幫忙、開始一起做事時也常說。"], "en": ["If the other person says it first, reply こちらこそ、よろしくお願いします (likewise).", "Not only for first meetings: also used when asking for help or starting to work together."]}, "pitfalls": [{"wrong": "こちらこそ。", "right": "よろしくお願いします。", "why": {"zh-Hant": "自己先開口結尾要說「よろしくお願いします」；「こちらこそ」是回應對方的請託，只有在對方先說之後才能使用（如「こちらこそ、よろしくお願いします」）。", "en": "When speaking first, close with よろしくお願いします; こちらこそ is a reply used only after the other person speaks first (e.g., こちらこそ、よろしくお願いします)."}, "context": {"zh-Hant": "初次見面，自己先說自我介紹的結語，對方還沒說「よろしくお願いします」時。", "en": "When closing your introduction at a first meeting, before the other person has said よろしくお願いします."}}]}}, "sentences": {"ja:l01-1:s01": {"tokens": [{"t": "はじめまして", "s": "ja:はじめまして#1"}, {"t": "。"}], "tr": {"zh-Hant": "初次見面。", "en": "Nice to meet you."}}, "ja:l01-1:s02": {"tokens": [{"t": "レン", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}], "tr": {"zh-Hant": "我是レン。", "en": "I’m Ren."}}, "ja:l01-1:s03": {"tokens": [{"t": "ミナ", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}], "tr": {"zh-Hant": "我是ミナ。", "en": "I’m Mina."}}, "ja:l01-1:s04": {"tokens": [{"t": "よろしく", "s": "ja:よろしく#1"}, {"t": "お願いします", "r": "おねがいします", "s": "ja:お願いします#1"}, {"t": "。"}], "tr": {"zh-Hant": "請多指教。", "en": "I look forward to getting to know you."}, "spans": [{"from": 0, "to": 1, "kp": "ja:kp:yoroshiku"}]}, "ja:l01-1:s05": {"tokens": [{"t": "こちらこそ", "s": "ja:こちらこそ#1"}, {"t": "、"}, {"t": "よろしく", "s": "ja:よろしく#1"}, {"t": "お願いします", "r": "おねがいします", "s": "ja:お願いします#1"}, {"t": "。"}], "tr": {"zh-Hant": "我才要請你多指教。", "en": "Likewise, I look forward to it."}, "spans": [{"from": 0, "to": 3, "kp": "ja:kp:yoroshiku"}]}, "ja:x:l01-1-01": {"tokens": [{"t": "はじめまして", "s": "ja:はじめまして#1"}, {"t": "。"}, {"t": "リン", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}], "tr": {"zh-Hant": "初次見面，我是リン。", "en": "Nice to meet you. I’m Lin."}}, "ja:x:l01-1-02": {"tokens": [{"t": "リン", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}], "tr": {"zh-Hant": "我是リン。", "en": "I’m Lin."}}, "ja:x:l01-1-03": {"tokens": [{"t": "メイ", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}], "tr": {"zh-Hant": "我是メイ。", "en": "I’m Mei."}}, "ja:x:l01-1-04": {"tokens": [{"t": "はじめまして", "s": "ja:はじめまして#1"}, {"t": "。"}, {"t": "リン", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}, {"t": "よろしく", "s": "ja:よろしく#1"}, {"t": "お願いします", "r": "おねがいします", "s": "ja:お願いします#1"}, {"t": "。"}], "tr": {"zh-Hant": "初次見面，我是リン。請多指教。", "en": "Nice to meet you. I’m Lin. I look forward to getting to know you."}, "spans": [{"from": 5, "to": 6, "kp": "ja:kp:yoroshiku"}]}, "ja:x:l01-1-05": {"tokens": [{"t": "はじめまして", "s": "ja:はじめまして#1"}, {"t": "。"}, {"t": "メイ", "s": "ja:name#1"}, {"t": "です", "s": "ja:です#1"}, {"t": "。"}, {"t": "よろしく", "s": "ja:よろしく#1"}, {"t": "お願いします", "r": "おねがいします", "s": "ja:お願いします#1"}, {"t": "。"}], "tr": {"zh-Hant": "初次見面，我是メイ。請多指教。", "en": "Nice to meet you. I’m Mei. I look forward to getting to know you."}, "spans": [{"from": 5, "to": 6, "kp": "ja:kp:yoroshiku"}]}, "ja:x:l01-1-06": {"tokens": [{"t": "田中", "r": "たなか", "s": "ja:name#1"}, {"t": "さん", "s": "ja:さん#1"}, {"t": "、"}, {"t": "よろしく", "s": "ja:よろしく#1"}, {"t": "お願いします", "r": "おねがいします", "s": "ja:お願いします#1"}, {"t": "。"}], "tr": {"zh-Hant": "田中小姐，請多指教。", "en": "Ms. Tanaka, I look forward to getting to know you."}, "spans": [{"from": 3, "to": 4, "kp": "ja:kp:yoroshiku"}]}}}</script>
+<script>
+"use strict";
+const PKG = JSON.parse(document.getElementById('package').textContent);
+const UI = {
+  'zh-Hant': {loc:'教學語言',coreWord:'核心詞',extendedWord:'延伸詞',savedData:'已儲存的資料',clearSaved:'清除此節的儲存資料',freshMemory:'在本頁開始新一輪（不儲存）',skipMemory:'在本頁跳過這題（不儲存）',recovery:'儲存的作答無法使用。原資料仍保留；你可以在本頁重新練習或跳過，不覆寫它。',reviewPoint:'複習這個語言點',missingParts:'還有字塊或句子沒有加入，請先補齊。',wordOrder:'再對照句型框檢查順序。',answerUnavailable:'暫時無法顯示參考答案。',vocabulary:'本節詞彙',lemma:'詞典形',missingMeaning:'這個語言還沒有說明',content:'內容',teaching:'教學',practice:'練習',review:'複習',cando:'學完可以',showTr:'顯示全部翻譯',hideTr:'隱藏全部翻譯',play:'播放',save:'加入複習',saved:'已加入',seeKp:'看文法說明',inLesson:'在課文中',examples:'例句',pitfalls:'易錯',limits:'使用範圍',contrast:'比較',later:'之後會學',reading:'讀音',pos:'詞性',start:'開始練習',check:'核對',next:'下一題',retry:'再試一次',reset:'重排',correct:'答對了',wrong:'還不對',answer:'正解',done:'這輪完成',score:'答對',again:'錯題再練一次',restart:'全部重新開始',frame:'句型框',model:'範例',yourTurn:'說出來或寫下來（不打字也可以）',showModel:'看範例',selfOk:'我說得出來',selfAgain:'還要再練',hints:'格式提示（不是評分）',empty:'還沒有加入任何項目。在內容或教學頁點詞、點句子旁的 ☆ 就會加入。',due:'今天要複習',flip:'翻面',againBtn:'忘了',good:'記得',easy:'很熟',nextDue:'下次',min:'分鐘後',day:'天後',noneDue:'今天的複習都完成了。',demoNote:'聲音使用瀏覽器朗讀，部分裝置可能沒有日文聲音。這份教材仍在試用。',back:'回到練習',orderHint:'點選句子排成順序',tapTile:'點字塊組句',close:'關閉',
+    pos_map:{noun:'名詞',proper_noun:'專有名詞',particle:'助詞',interjection:'感嘆詞',expression:'慣用語',auxiliary:'助動詞',suffix:'接尾詞',prefix:'接頭詞',verb:'動詞',adjective:'形容詞',adverb:'副詞',name:'人名'}},
+  en: {loc:'Teaching language',coreWord:'Core vocabulary',extendedWord:'Extra vocabulary',savedData:'Saved data',clearSaved:'Clear this section’s saved data',freshMemory:'Start a fresh round in this tab (not saved)',skipMemory:'Skip this item in this tab (not saved)',recovery:'This saved answer cannot be used. The original data is kept; restart or skip in this tab without overwriting it.',reviewPoint:'Review this point',missingParts:'Some tiles or lines are still missing. Add the remaining parts first.',wordOrder:'Check the order against the frame.',answerUnavailable:'A model answer is not available yet.',vocabulary:'This section’s vocabulary',lemma:'Dictionary form',missingMeaning:'Explanation not available in this language',content:'Content',teaching:'Teaching',practice:'Practice',review:'Review',cando:'You will be able to',showTr:'Show all translations',hideTr:'Hide all translations',play:'Play',save:'Add to review',saved:'Added',seeKp:'See explanation',inLesson:'In the lesson',examples:'Examples',pitfalls:'Common mistakes',limits:'Limits',contrast:'Compare',later:'Coming later',reading:'Reading',pos:'Part of speech',start:'Start practice',check:'Check',next:'Next',retry:'Try again',reset:'Reset',correct:'Correct',wrong:'Not quite',answer:'Answer',done:'Round complete',score:'Correct',again:'Redo the ones you missed',restart:'Start over',frame:'Frame',model:'Model answer',yourTurn:'Say it or write it (typing is optional)',showModel:'Show model answers',selfOk:'I can say it',selfAgain:'Needs more practice',hints:'Form hints (not a score)',empty:'Nothing saved yet. Tap a word or the ☆ next to a sentence to add it.',due:'Due today',flip:'Flip',againBtn:'Forgot',good:'Got it',easy:'Easy',nextDue:'Next',min:'min',day:'d',noneDue:'All reviews done for today.',demoNote:'Audio uses browser speech; some devices may have no Japanese voice. This lesson is still a preview.',back:'Back to practice',orderHint:'Tap the lines in order',tapTile:'Tap tiles to build the sentence',close:'Close',
+    pos_map:{noun:'noun',proper_noun:'proper noun',particle:'particle',interjection:'interjection',expression:'set phrase',auxiliary:'auxiliary',suffix:'suffix',prefix:'prefix',verb:'verb',adjective:'adjective',adverb:'adverb',name:'name'}}
+};
+// Isolate this preview generation from older same-origin pages. Read legacy state
+// once, without rewriting its key; old previews cannot overwrite this history.
+const LEGACY_KEY = 'lingourmet-demo:' + PKG.packageId;
+const KEY = PKG.preview ? 'lingourmet-course-preview:' + PKG.preview.channel + ':' + PKG.packageId + ':practice-revisions-v1' : LEGACY_KEY + ':practice-revisions-v1';
+let lastSavedRaw = null, storageConflict = false, storageFailure = false;
+const CLEAR_KEY = KEY + ':clear-epoch';
+let clearEpochAtLoad = null, memoryOnly = false, storageClearedExternally = false, clearCompleted = false, clearError = false, clearGuardFailed = false, clearReadError = false;
+const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
+const strings = v => Array.isArray(v) && v.every(x => typeof x === 'string');
+function validSavedState(v){
+  if (!object(v) || Object.hasOwn(v, '__proto__')) return false;
+  if (v.loc !== undefined && !['zh-Hant','en'].includes(v.loc)) return false;
+  if (v.showAll !== undefined && typeof v.showAll !== 'boolean') return false;
+  for (const key of ['previewRevision','openKp']) if (v[key] !== undefined && typeof v[key] !== 'string') return false;
+  if (v.flip !== undefined && v.flip !== null && typeof v.flip !== 'string') return false;
+  if (v.tab !== undefined && !['content','teaching','practice','review'].includes(v.tab)) return false;
+  for (const key of ['shown','deck','practiceRevisions']) if (v[key] !== undefined && !object(v[key])) return false;
+  if (v.shown && Object.values(v.shown).some(x => typeof x !== 'boolean')) return false;
+  if (v.deck && Object.entries(v.deck).some(([key,x]) => !object(x) || (x.k !== undefined && x.k !== key) || ['due','ease','ivl'].some(k => x[k] !== undefined && (typeof x[k] !== 'number' || !Number.isFinite(x[k]))))) return false;
+  if (v.practiceRevisions && Object.values(v.practiceRevisions).some(x => typeof x !== 'string')) return false;
+  if (v.practiceHistory !== undefined && (!Array.isArray(v.practiceHistory) || v.practiceHistory.some(x => !object(x) || typeof x.id !== 'string' || !object(x.result)))) return false;
+  if (v.prac !== undefined) {
+    const p = v.prac;
+    if (!object(p) || !Number.isInteger(p.i) || p.i < -1 || !object(p.res) || !(p.queue === null || strings(p.queue))) return false;
+    for (const r of Object.values(p.res)) {
+      if (!object(r)) return false;
+      if (r.tries !== undefined && (!Number.isInteger(r.tries) || r.tries < 0)) return false;
+      for (const k of ['picked','text','feedback']) if (r[k] !== undefined && typeof r[k] !== 'string') return false;
+      for (const k of ['done','ok','lastOk','shown','showAnswer']) if (r[k] !== undefined && typeof r[k] !== 'boolean') return false;
+      if (r.feedbackReason !== undefined && (!object(r.feedbackReason) || !['tile','missing','order','lines'].includes(r.feedbackReason.kind) || (r.feedbackReason.kind === 'tile' && typeof r.feedbackReason.tile !== 'string'))) return false;
+      if (r.shown === true && !object(r.checks)) return false;
+      for (const k of ['built','shuffle']) if (r[k] !== undefined && (!Array.isArray(r[k]) || !r[k].every(x => Number.isInteger(x) && x >= 0))) return false;
+      if (r.optionOrder !== undefined && !strings(r.optionOrder)) return false;
+      if (r.checks !== undefined && !object(r.checks)) return false;
+    }
+  }
+  return true;
+}
+const store = (() => { try {
+  clearEpochAtLoad = localStorage.getItem(CLEAR_KEY);
+  lastSavedRaw = localStorage.getItem(KEY);
+  const raw = lastSavedRaw ?? (PKG.preview ? null : localStorage.getItem(LEGACY_KEY));
+  if (raw === null) return {};
+  const parsed = JSON.parse(raw);
+  if (!validSavedState(parsed)) throw new Error('Invalid saved-state shape');
+  return parsed;
+} catch { storageFailure = true; return {}; } })();
+// Keep every distinct raw snapshot; returning to an earlier revision must not
+// overwrite its older snapshot or skip a later session of that same revision.
+function archiveRaw(prefix, raw){
+  if (raw === null) return;
+  for (let n = 0; ; n++) {
+    const key = prefix + (n ? ':' + n : '');
+    const prior = localStorage.getItem(key);
+    if (prior === raw) return;
+    if (prior === null) { localStorage.setItem(key, raw); return; }
+  }
+}
+if (PKG.preview && store.previewRevision && store.previewRevision !== PKG.preview.revision) {
+  try {
+    if (localStorage.getItem(CLEAR_KEY) !== clearEpochAtLoad) { memoryOnly = true; storageClearedExternally = true; }
+    else archiveRaw(KEY + ':history:' + store.previewRevision, lastSavedRaw);
+  }
+  catch { storageFailure = true; }
+}
+const S = Object.assign({loc:'zh-Hant', tab:'content', showAll:false, shown:{}, deck:{}, prac:{i:-1, res:{}, queue:null}}, store);
+// Remove obsolete queued IDs without deleting their stored results/history.
+if (S.prac.queue) {
+  const valid = new Set(PKG.lesson.practice.map(x => x.id)), old = S.prac.queue;
+  const next = old.slice(Math.max(0, S.prac.i)).find(id => valid.has(id));
+  S.prac.queue = [...new Set(old.filter(id => valid.has(id)))];
+  if (S.prac.i >= 0) S.prac.i = next ? S.prac.queue.indexOf(next) : S.prac.queue.length;
+} else S.prac.i = Math.min(S.prac.i, PKG.lesson.practice.length);
+// Full canonical item text is a collision-free revision token, not schema version.
+// Prompts and feedback are included: the meaning of p02 changed without a new key.
+function practiceRevision(value){
+  if (Array.isArray(value)) return '[' + value.map(practiceRevision).join(',') + ']';
+  if (value && typeof value === 'object') return '{' + Object.keys(value).sort().map(k => JSON.stringify(k) + ':' + practiceRevision(value[k])).join(',') + '}';
+  return JSON.stringify(value);
+}
+// Revision closure follows references exposed while answering this item, not
+// the whole package: unrelated lessons or lexemes cannot reset its result.
+function practiceDependencies(item){
+  const sentences = {}, knowledge = {}, lexicon = {}, speakers = {};
+  const sentenceIds = new Set([...(item.audioRefs || []), ...(item.models || [])]);
+  const kpIds = new Set(item.kp ? [item.kp] : []), senses = new Set();
+  while ([...sentenceIds].some(id => !(id in sentences)) || [...kpIds].some(id => !(id in knowledge)) || [...senses].some(ref => !(ref in lexicon))) {
+    for (const id of sentenceIds) if (!(id in sentences)) {
+      const value = PKG.sentences[id]; sentences[id] = value || null;
+      for (const tok of value?.tokens || []) if (tok.s) senses.add(tok.s);
+      for (const span of value?.spans || []) kpIds.add(span.kp);
+    }
+    for (const id of kpIds) if (!(id in knowledge)) {
+      const value = PKG.knowledge[id]; knowledge[id] = value ? {title:value.title} : null;
+    }
+    for (const ref of senses) if (!(ref in lexicon)) {
+      const [id, key] = ref.split('#'), entry = PKG.lexicon[id], sn = entry?.senses[key];
+      lexicon[ref] = entry && sn ? {lemma:entry.lemma, reading:entry.reading || '', pos:entry.pos, sense:sn} : null;
+      if (sn?.kp) kpIds.add(sn.kp);
+    }
+  }
+  for (const context of item.context || []) if (context.speaker) speakers[context.speaker] = PKG.lesson.speakers[context.speaker] || null;
+  return {sentences, knowledge, lexicon, speakers};
+}
+function practiceItemRevision(item){ return practiceRevision({item, dependencies:practiceDependencies(item)}); }
+function reconcilePracticeHistory(){
+  // Bounded first migration from the unversioned U01 baseline; unchanged legacy
+  // results are retained. All subsequent edits use the item revision comparison.
+  const changedLegacy = {'ja:l01-1':['p02','p06'], 'ja:l01-3':['p12']}[PKG.packageId] || [];
+  const previous = S.practiceRevisions || {}, current = {}, changed = [];
+  S.practiceHistory ||= [];
+  for (const item of PKG.lesson.practice){
+    const revision = current[item.id] = practiceItemRevision(item);
+    const legacySameItem = previous[item.id] === practiceRevision(item);
+    const migration = PKG.preview?.migration;
+    const knownCompatible = legacySameItem && PKG.preview && (
+      store.previewRevision === PKG.preview.revision ||
+      (store.previewRevision === migration?.fromRevision && migration.compatiblePracticeIds.includes(item.id)));
+    const stale = previous[item.id] ? previous[item.id] !== revision && !knownCompatible : changedLegacy.includes(item.id);
+    if (stale && S.prac.res[item.id]){
+      S.practiceHistory.push({id:item.id, revision:previous[item.id] || 'legacy-before-ci01', result:S.prac.res[item.id]});
+      delete S.prac.res[item.id];
+      changed.push(item.id);
+    }
+  }
+  if (changed.length && S.prac.i >= 0){
+    if (S.prac.queue) for (const id of changed) if (!S.prac.queue.includes(id)) S.prac.queue.push(id);
+    const order = S.prac.queue || PKG.lesson.practice.map(x => x.id);
+    S.prac.i = Math.min(S.prac.i, ...changed.map(id => order.indexOf(id)));
+  }
+  S.practiceRevisions = current;
+}
+reconcilePracticeHistory();
+if (PKG.preview) S.previewRevision = PKG.preview.revision;
+const save = () => {
+  clearReadError = false;
+  try {
+    if (localStorage.getItem(CLEAR_KEY) !== clearEpochAtLoad) {
+      memoryOnly = true; storageClearedExternally = true; return;
+    }
+    if (memoryOnly || storageFailure || storageConflict) return;
+    const raw = JSON.stringify(S);
+    if (localStorage.getItem(KEY) !== lastSavedRaw) {
+      // New conflicting tabs never create persistent backups. Earlier history
+      // and conflict keys are left untouched until the user's explicit clear.
+      storageConflict = true; memoryOnly = true; return;
+    }
+    localStorage.setItem(KEY, raw); lastSavedRaw = raw;
+  } catch { storageFailure = true; }
+};
+const t = k => UI[S.loc][k];
+const wordL = o => o?.[S.loc] ?? t('missingMeaning');
+const L = o => (o && (o[S.loc] ?? o['zh-Hant'])) ?? '';
+const $ = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstElementChild; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// No language inference from Han characters: Chinese teaching prose stays in
+// the teaching locale. Japanese islands require kana or exact kana-bearing
+// source surfaces. Localized template slots/parenthetical explanations remain
+// in the surrounding locale. This adds markup, not new authoring fields.
+function mixedText(value){
+  const text = String(value), candidates = new Set();
+  const add = v => {
+    if (typeof v !== 'string') return;
+    const bare = v.replace(/[。、！？]+$/u,'');
+    for(const form of [v,bare]) if (/[ぁ-ゖァ-ヺー]/.test(form) || (S.loc === 'en' && /^[一-鿿]+$/.test(form))) candidates.add(form);
+  };
+  for (const sentence of Object.values(PKG.sentences)) {
+    add(sentence.tokens.map(x=>x.t).join('')); for (const token of sentence.tokens) {add(token.t);add(token.r);}
+  }
+  for (const kp of Object.values(PKG.knowledge)) {
+    for(const pitfall of kp.pitfalls || []) {add(pitfall.wrong);add(pitfall.right);}
+    for(const later of kp.later || []) add(later.form);
+  }
+  for (const entry of Object.values(PKG.lexicon)) {add(entry.lemma);add(entry.reading);}
+  for (const item of PKG.lesson.practice) {
+    for (const option of item.options || []) add(option.ja);
+    for (const tile of item.tiles || item.lines || []) add(tile);
+  }
+  const ordered=[...candidates].sort((a,b)=>b.length-a.length);
+  let html='', i=0;
+  while(i<text.length){
+    if(text.startsWith('〔',i)) {const end=text.indexOf('〕',i+1);if(end>=0){html+=esc(text.slice(i,end+1));i=end+1;continue;}}
+    const exact=ordered.find(x=>text.startsWith(x,i) && (!/^[一-鿿]+$/.test(x) || (!/[一-鿿]/.test(text[i-1] || '') && !/[一-鿿]/.test(text[i+x.length] || ''))));
+    const kana=exact || text.slice(i).match(/^[ぁ-ゖァ-ヺー]+/)?.[0];
+    if(kana){html+=`<span lang="ja">${esc(kana)}</span>`;i+=kana.length;}
+    else {html+=esc(text[i]);i++;}
+  }
+  return html.replace(/<\/span>([。、！？・〜]*)<span lang="ja">/g,'$1').replace(/<\/span>([。、！？]+)/g,'$1</span>');
+}
+const sense = ref => { if (typeof ref !== 'string') return null; const [lid, key] = ref.split('#'); const e = Object.hasOwn(PKG.lexicon,lid) ? PKG.lexicon[lid] : null; return e && Object.hasOwn(e.senses,key) ? {entry:e, sense:e.senses[key], lid, key} : null; };
+// A lemma may differ from its taught surface (お願いする / お願いします).
+// Prefer an existing token and its own reading; never attach a conjugated
+// reading to a different dictionary form. No new language facts are inferred.
+function wordForm(ref){
+  const hit = sense(ref); if (!hit?.sense) return null;
+  if (hit.entry.pos === 'name') return {surface:hit.entry.lemma, reading:'', lemma:hit.entry.lemma};
+  const sourceIds = PKG.lesson.sources.flatMap(s => s.lines.flatMap(l => l.sentences));
+  const ids = [...new Set([...sourceIds, ...Object.keys(PKG.sentences)])];
+  let token;
+  for (const id of ids) { token = PKG.sentences[id]?.tokens.find(t => t.s === ref); if (token) break; }
+  const surface = token?.t || hit.entry.lemma;
+  const reading = token?.r || (surface === hit.entry.lemma ? hit.entry.reading : '') || surface;
+  return {surface, reading, lemma:hit.entry.lemma};
+}
+const textOf = sid => PKG.sentences[sid].tokens.map(x => x.t).join('');
+// what the speech engine reads: the reading `r` where present (は→わ, 四時→よじ), so pronunciation follows the data, not the engine's guess
+const sayOf = sid => PKG.sentences[sid].tokens.map(x => x.r || x.t).join('');
+
+// ---------- audio ----------
+function speak(text){
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text); u.lang = 'ja-JP'; u.rate = .9;
+  const v = speechSynthesis.getVoices().find(v => /^ja/i.test(v.lang)); if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+
+// ---------- sentence rendering ----------
+function tokenHtml(tok, i){
+  if (!tok.s) return esc(tok.t);
+  const inner = tok.r && tok.r !== tok.t && /[一-鿿]/.test(tok.t) ? `<ruby>${esc(tok.t)}<rt>${esc(tok.r)}</rt></ruby>` : esc(tok.t);
+  return `<span class="tok" role="button" tabindex="0" data-s="${esc(tok.s)}" data-t="${esc(tok.t)}" data-r="${esc(tok.r||'')}">${inner}</span>`;
+}
+function sentenceHtml(sid, {translate='toggle'} = {}){
+  const s = PKG.sentences[sid];
+  const spans = s.spans || [];
+  let html = '';
+  s.tokens.forEach((tok, i) => {
+    const open = spans.find(sp => sp.from === i), close = spans.find(sp => sp.to === i);
+    if (open) html += `<span class="span-kp" title="${esc(L(PKG.knowledge[open.kp].title))}">`;
+    html += tokenHtml(tok, i);
+    if (close) html += '</span>';
+  });
+  const shown = translate === 'always' || S.showAll || S.shown[sid];
+  const saved = S.deck['s:' + sid];
+  return `<div class="sent" data-sid="${sid}"><span class="ja" lang="ja">${html}</span><span class="tools">
+    <button class="icon" data-play="${sid}" aria-label="${t('play')}">▶</button>
+    ${translate === 'toggle' ? `<button class="icon ${shown ? 'on' : ''}" data-tr="${sid}" aria-label="${shown ? t('hideTr') : t('showTr')}">譯</button>` : ''}
+    <button class="icon ${saved ? 'on' : ''}" data-save="s:${sid}" aria-label="${saved ? t('saved') : t('save')}">${saved ? '★' : '☆'}</button></span>
+    ${shown ? `<div class="tr">${mixedText(L(s.tr))}</div>` : ''}</div>`;
+}
+
+// ---------- popup ----------
+let popReturnFocus = null;
+function openPop(el){
+  popReturnFocus = el;
+  document.querySelectorAll('.tok.sel').forEach(x => x.classList.remove('sel'));
+  el.classList.add('sel');
+  const ref = el.dataset.s, hit = sense(ref); if (!hit) return;
+  const {entry, sense: sn} = hit, surface = el.dataset.t, reading = el.dataset.r;
+  const kp = sn.kp && PKG.knowledge[sn.kp];
+  const placeholderName = entry.pos === 'name' && surface === entry.lemma;
+  const showReading = !placeholderName && reading && reading !== surface;
+  const lemmaLine = entry.lemma !== surface && entry.pos !== 'name' ? `<div class="muted">${t('lemma')}：<span lang="ja">${esc(entry.lemma)}</span></div>` : '';
+  const saved = S.deck['w:' + ref];
+  const pop = document.getElementById('pop');
+  pop.innerHTML = `<div class="card" role="dialog" aria-label="${esc(surface)}">
+    <div class="pop-head"><span class="ja" lang="ja">${esc(surface)}</span>${showReading ? `<span class="muted">${t('reading')}：<span lang="ja">${esc(reading)}</span></span>` : ''}
+      ${placeholderName ? '' : `<button class="icon" data-say="${esc(reading || surface)}" aria-label="${t('play')}">▶</button>`}
+      <button class="icon" style="margin-left:auto" data-close aria-label="${t('close')}">✕</button></div>
+    ${lemmaLine}
+    <div style="font-size:1.1rem;margin:4px 0">${mixedText(wordL(sn.gloss))}</div>
+    <div class="muted">${t('pos')}：${esc(UI[S.loc].pos_map[entry.pos] || entry.pos)}</div>
+    ${sn.note ? `<div style="margin-top:4px">${mixedText(wordL(sn.note))}</div>` : ''}
+    <div class="row">${kp ? `<button class="ghost" data-kp="${sn.kp}">${t('seeKp')}：${mixedText(L(kp.title).split('：')[0])}</button>` : ''}
+      ${entry.pos !== 'name' ? `<button class="ghost" data-save="w:${esc(ref)}">${saved ? '★ ' + t('saved') : '☆ ' + t('save')}</button>` : ''}</div></div>`;
+  pop.hidden = false;
+  pop.querySelector?.('[data-close]')?.focus();
+}
+const closePop = (restoreFocus = false) => { document.getElementById('pop').hidden = true; document.querySelectorAll('.tok.sel').forEach(x => x.classList.remove('sel')); if (restoreFocus) popReturnFocus?.focus?.(); popReturnFocus = null; };
+
+// ---------- pages ----------
+function vocabularyEntry(){
+  return PKG.preview?.vocabularySenseRefs?.some(ref => sense(ref)?.entry.pos !== 'name') ? `<p><a href="#section-vocabulary">${t('vocabulary')}</a></p>` : '';
+}
+function renderVocabulary(){
+  const refs = (PKG.preview?.vocabularySenseRefs || []).filter(ref => sense(ref)?.entry.pos !== 'name');
+  if (!refs.length) return '';
+  return `<section id="section-vocabulary"><h2>${t('vocabulary')}</h2>` + refs.map((ref, index) => {
+    const hit = sense(ref); if (!hit?.sense) return '';
+    const {entry, sense:sn} = hit, form = wordForm(ref), {surface, reading} = form;
+    const saved = S.deck['w:' + ref];
+    return `<div class="card"><button class="link tok ja" lang="ja" id="vocabulary-${index}" data-s="${esc(ref)}" data-t="${esc(surface)}" data-r="${esc(reading)}">${esc(surface)}</button>
+      ${surface !== entry.lemma && entry.pos !== 'name' ? `<div class="muted">${t('lemma')}：<span lang="ja">${esc(entry.lemma)}</span></div>` : ''}
+      ${entry.pos !== 'name' ? `<div>${t('reading')}：<span lang="ja">${esc(reading)}</span></div>` : ''}<div>${mixedText(wordL(sn.gloss))}</div><span class="tag">${t(entry.tier === 'extended' ? 'extendedWord' : 'coreWord')}</span>
+      ${sn.note ? `<p class="muted">${mixedText(wordL(sn.note))}</p>` : ''}
+      <div class="row">${entry.pos !== 'name' ? `<button class="icon" data-say="${esc(reading)}" aria-label="${t('play')} ${esc(surface)}">▶</button>` : ''}
+      ${entry.pos !== 'name' ? `<button class="ghost" data-save="w:${esc(ref)}">${saved ? '★ ' + t('saved') : '☆ ' + t('save')}</button>` : ''}</div></div>`;
+  }).join('') + '</section>';
+}
+function renderContent(){
+  const les = PKG.lesson;
+  let h = `<h1>${mixedText(L(les.title))}</h1><p class="muted">${mixedText(L(les.scene))}</p>
+    <div class="card cando"><b>${t('cando')}</b><ul>${L(les.canDo).map(x => `<li>${mixedText(x)}</li>`).join('')}</ul></div>
+    <div class="row"><button class="toggle" data-all>${S.showAll ? t('hideTr') : t('showTr')}</button></div>`;
+  for (const src of les.sources){
+    h += `<h2>${mixedText(L(src.title))}</h2><div class="card">`;
+    src.lines.forEach((ln, li) => {
+      const who = ln.speaker ? les.speakers[ln.speaker].name : '';
+      h += `<div class="line" id="${src.id}-${li}">${who ? `<div class="who" lang="ja">${esc(who)}</div>` : ''}<div>${ln.sentences.map(sid => sentenceHtml(sid)).join('')}</div></div>`;
+    });
+    h += '</div>';
+  }
+  return vocabularyEntry() + h + renderVocabulary();
+}
+function kpHtml(id){
+  const kp = PKG.knowledge[id];
+  const lessonIds = new Set(PKG.lesson.sources.flatMap(s => s.lines.flatMap(l => l.sentences)));
+  const pits = (kp.pitfalls || []).map(p => `${p.context ? `<p class="muted">${mixedText(L(p.context))}</p>` : ''}<div class="pit"><span class="x">✗</span><span class="ja" lang="ja" style="font-size:1rem">${esc(p.wrong)}</span><span class="o">✓</span><span class="ja" lang="ja" style="font-size:1rem">${esc(p.right)}</span><span></span><span>${mixedText(L(p.why))}</span></div>`).join('');
+  return `<div class="card kp" id="kp-${id}" tabindex="-1"><span class="tag">${esc(kp.kind)}</span><h3>${mixedText(L(kp.title))}</h3>
+    <div class="pattern" lang="${S.loc}" aria-label="${t('frame')}">${mixedText(L(kp.pattern))}</div>
+    <p>${mixedText(L(kp.meaning))}</p><ul>${L(kp.points).map(x => `<li>${mixedText(x.text ?? x)}</li>`).join('')}</ul>
+    ${kp.limits ? `<b>${t('limits')}</b><ul>${L(kp.limits).map(x => `<li>${mixedText(x.text ?? x)}</li>`).join('')}</ul>` : ''}
+    ${pits ? `<b>${t('pitfalls')}</b>${pits}` : ''}
+    ${kp.contrast ? `<p><b>${t('contrast')}</b>：${mixedText(L(kp.contrast.text))}</p>` : ''}
+    ${(kp.later || []).map(x => `<p class="muted">${t('later')}：<span class="ja" lang="ja" style="font-size:1rem">${esc(x.form)}</span> ${mixedText(L(x.text))}</p>`).join('')}
+    <b>${t('examples')}</b>${kp.exampleRefs.map(r => `<div class="ex">${PKG.sentences[r].speaker ? `<span class="muted">${esc(PKG.sentences[r].speaker)}：</span>` : ''}${lessonIds.has(r) ? `<span class="tag">${t('inLesson')}</span>` : ''}${sentenceHtml(r, {translate:'always'})}</div>`).join('')}</div>`;
+}
+function renderTeaching(){
+  const own = new Set(PKG.lesson.teaching.flatMap(g => g.kps));
+  const extra = S.openKp && !own.has(S.openKp) && Object.hasOwn(PKG.knowledge,S.openKp) ? `<h2>${t('reviewPoint')}</h2>` + kpHtml(S.openKp) : '';
+  return `<h1>${mixedText(L(PKG.lesson.title))}</h1>` + PKG.lesson.teaching.map(g => `<h2>${mixedText(L(g.group))}</h2>` + g.kps.map(kpHtml).join('')).join('') + extra;
+}
+
+// ---------- practice ----------
+const items = PKG.lesson.practice;
+function itemById(id){ return items.find(x => x.id === id); }
+function renderPractice(){
+  const P = S.prac;
+  if (P.i < 0) return `<h1>${t('practice')}</h1><p class="muted">${items.length} · ${[...new Set(items.map(x => x.type))].join(' / ')}</p><button class="primary" data-pstart>${t('start')}</button>`;
+  const order = P.queue || items.map(x => x.id);
+  if (P.i >= order.length){
+    const ok = order.filter(id => P.res[id]?.ok).length, missed = order.filter(id => !P.res[id]?.ok);
+    return `<h1>${t('done')}</h1><p>${t('score')} ${ok} / ${order.length}</p><div class="row">
+      ${missed.length ? `<button class="primary" data-pagain>${t('again')}（${missed.length}）</button>` : ''}<button class="ghost" data-prestart>${t('restart')}</button></div>`;
+  }
+  const it = itemById(order[P.i]), r = P.res[it.id] ||= {};
+  const poolForState = it.tiles || it.lines;
+  if ((r.lastOk === false && r.feedbackReason && ((r.feedbackReason.kind === 'tile' && (it.type !== 'assemble' || !Object.hasOwn(it.tileFeedback || {},r.feedbackReason.tile))) || (r.feedbackReason.kind === 'order' && it.type !== 'assemble') || (r.feedbackReason.kind === 'lines' && it.type !== 'order-lines'))) ||
+      (r.picked !== undefined && !it.options?.some(o => o.id === r.picked)) ||
+      (r.built && (!poolForState || new Set(r.built).size !== r.built.length || r.built.some(i => i >= poolForState.length))) ||
+      (r.shuffle && (!poolForState || r.shuffle.length !== poolForState.length || new Set(r.shuffle).size !== poolForState.length || r.shuffle.some(i => i >= poolForState.length)))) {
+    storageFailure = true;
+    return `<h1>${t('practice')}</h1><p>${t('recovery')}</p><button class="ghost" data-memory-skip>${t('skipMemory')}</button>`;
+  }
+  let body = '';
+  const audio = (it.audioRefs || []).length ? `<button class="ghost" data-paudio>▶ ${t('play')}</button>` : '';
+  if (['choose','respond','find-error','cloze','listen-choose'].includes(it.type)){
+    const ctx = (it.context || []).map(c => `<div class="ja" lang="ja">${esc(PKG.lesson.speakers[c.speaker]?.name || '')}：${esc(c.ja).replace('＿','<u>　　</u>')}</div>`).join('');
+    body = `${ctx}${audio}` + choiceOrder(it, r).map(id => {
+      const o = it.options.find(option => option.id === id);
+      const cls = r.picked ? (r.done && o.correct ? 'ok' : (!o.correct && r.picked === o.id ? 'bad' : '')) : '';
+      return `<button class="opt ${cls}" data-pick="${o.id}" ${r.done ? 'disabled' : ''}>${o.ja ? `<span class="ja" lang="ja" style="font-size:1.1rem">${esc(o.ja)}</span>` : mixedText(L(o.text))}</button>`;
+    }).join('');
+    if (r.picked){
+      const o = it.options.find(x => x.id === r.picked);
+      body += o.correct ? `<div class="fb ok" role="status" tabindex="-1">✓ ${t('correct')}${o.fb ? '：' + mixedText(L(o.fb)) : ''}</div>` : `<div class="fb bad" role="status" tabindex="-1">✗ ${t('wrong')}：${mixedText(L(o.fb))}</div>${r.done ? '' : `<button class="ghost" data-pretry>${t('retry')}</button>`}`;
+    }
+  } else if (it.type === 'assemble' || it.type === 'order-lines'){
+    const pool = it.type === 'assemble' ? it.tiles : it.lines, built = r.built || [];
+    const shuffled = r.shuffle || (r.shuffle = shuffle(pool.map((_, i) => i)));
+    body = `<p class="muted">${it.type === 'assemble' ? t('tapTile') : t('orderHint')}</p>
+      <div class="tiles" aria-live="polite">${built.map((i, k) => `<button class="tile ja" lang="ja" data-unbuild="${k}">${esc(pool[i])}</button>`).join('')}</div>
+      <div class="tiles">${shuffled.filter(i => !built.includes(i)).map(i => `<button class="tile ja" lang="ja" data-build="${i}">${esc(pool[i])}</button>`).join('')}</div>
+      <div class="row"><button class="primary" data-pcheck ${built.length ? '' : 'disabled'}>${t('check')}</button><button class="ghost" data-preset>${t('reset')}</button></div>`;
+    if (r.lastOk !== undefined) body += `<div class="fb ${r.lastOk ? 'ok' : 'bad'}" role="status" tabindex="-1">${r.lastOk ? '✓ ' + t('correct') : '✗ ' + t('wrong') + '：' + mixedText(builtFeedback(it, r))}</div>`;
+    if (!r.lastOk && r.showAnswer) body += `<p>${t('answer')}：<span class="ja" lang="ja">${esc(answerText(it))}</span></p>`;
+  } else if (it.type === 'produce'){
+    // self-check (standard §4, decision Q4): no automatic correctness; checks are optional form hints
+    body = `<div class="pattern" lang="${S.loc}">${mixedText(L(it.frame))}</div><label id="prod-label" for="prod" lang="${S.loc}">${t('yourTurn')}</label><p id="prod-retention" lang="${S.loc}"><span id="prod-retention-copy">${produceRetentionText()}</span> ${PKG.preview ? `<a href="#saved-data">${t('savedData')}</a>` : ''}</p><textarea id="prod" lang="${PKG.targetLanguage}" aria-labelledby="prod-label" aria-describedby="prod-retention">${esc(r.text || '')}</textarea>
+      <div class="row"><button class="primary" data-pshow>${t('showModel')}</button></div>`;
+    if (r.shown) {
+      body += `<b>${t('model')}</b>${it.models.map(m => `<div class="ex">${sentenceHtml(m, {translate:'always'})}</div>`).join('')}`;
+      if ((it.checks || []).length && (r.text || '').trim()) body += `<div class="card"><p class="muted">${t('hints')}</p>${it.checks.map(c => `<div>${runChecks(it,r.text || '')[c.id] ? '<span class="o">✓</span>' : '·'} ${mixedText(L(c.label))}</div>`).join('')}</div>`;
+      body += `<div class="row"><button class="primary" data-pself="1">${t('selfOk')}</button><button class="ghost" data-pself="0">${t('selfAgain')}</button></div>`;
+    }
+  }
+  const pct = Math.round(P.i / order.length * 100);
+  return `<div class="progress" aria-hidden="true"><i style="width:${pct}%"></i></div><p class="muted">${P.i + 1} / ${order.length} · <button class="link" data-kp="${it.kp}">${mixedText(L(PKG.knowledge[it.kp].title).split('：')[0])}</button></p>
+    <div class="card"><p><b>${mixedText(L(it.prompt))}</b></p>${body}</div>
+    <div class="row"><button class="primary" data-pnext ${r.done ? '' : 'disabled'}>${t('next')} →</button></div>`;
+}
+// Shuffle once per attempt, persist IDs, and never reorder on feedback,
+// locale changes, retry or reload. A new round explicitly starts a new attempt.
+function choiceOrder(it, result){
+  const ids = it.options.map(o => o.id), saved = result.optionOrder;
+  if (!Array.isArray(saved) || saved.length !== ids.length || new Set(saved).size !== ids.length || saved.some(id => !ids.includes(id))) {
+    result.optionOrder = shuffle([...ids]);
+  }
+  return result.optionOrder;
+}
+function orderedAnswer(it){
+  const lines = [...it.lines], edges = new Map(lines.map(x => [x, new Set()]));
+  const edge = (a,b) => { if (a !== b && edges.has(a) && edges.has(b)) edges.get(a).add(b); };
+  for (const line of lines) { edge(it.rules.first,line); edge(line,it.rules.last); }
+  for (const [a,b] of it.rules.before || []) edge(a,b);
+  const answer = [];
+  while (answer.length < lines.length) {
+    const next = lines.find(x => !answer.includes(x) && !lines.some(y => !answer.includes(y) && edges.get(y).has(x)));
+    if (next === undefined) return null;
+    answer.push(next);
+  }
+  return answer;
+}
+function answerText(it){ return it.type === 'assemble' ? it.answers[0].join('') : orderedAnswer(it)?.join('') || t('answerUnavailable'); }
+function shuffle(a){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function gradeBuilt(it, r){
+  const indices = r.built || [];
+  if (it.type === 'assemble') {
+    const words = indices.map(i => it.tiles[i]);
+    if (it.answers.some(a => a.length === words.length && a.every((w,k) => w === words[k]))) return {ok:true};
+    const bad = words.find(w => !it.answers.some(a => a.includes(w)));
+    if (bad !== undefined) return {ok:false, reason:{kind:'tile',tile:bad}};
+    return {ok:false, reason:{kind:it.answers.some(a => words.length < a.length) ? 'missing' : 'order'}};
+  }
+  const lines = indices.map(i => it.lines[i]), R = it.rules;
+  const ok = lines.length === it.lines.length && lines[0] === R.first && lines.at(-1) === R.last && (R.before || []).every(([a,b]) => lines.indexOf(a) < lines.indexOf(b));
+  return ok ? {ok:true} : {ok:false, reason:{kind:lines.length < it.lines.length ? 'missing' : 'lines'}};
+}
+function builtFeedback(it, result){
+  // Old saved strings are ignored; reconstruct their reason in the current locale.
+  const reason = result.feedbackReason || gradeBuilt(it,result).reason;
+  if (reason?.kind === 'tile') return L(it.tileFeedback[reason.tile]);
+  if (reason?.kind === 'missing') return t('missingParts');
+  if (reason?.kind === 'lines') return L(it.fb);
+  return t('wordOrder');
+}
+function runChecks(it, text){
+  const v = text.trim(), out = {};
+  for (const c of it.checks || []){
+    out[c.id] = c.type === 'startsWith' ? v.startsWith(c.value) : c.type === 'contains' ? v.includes(c.value)
+      : c.type === 'containsAny' ? c.value.some(x => v.includes(x))
+      : c.type === 'endsWithAny' ? c.value.some(x => v.endsWith(x)) : c.type === 'notMatches' ? !new RegExp(c.value).test(v) : false;
+  }
+  return out;
+}
+
+// ---------- review (simple SM-2 style intervals) ----------
+function reviewCards(){
+  return Object.entries(S.deck).filter(([k]) => {
+    if (k.startsWith('s:')) return Object.hasOwn(PKG.sentences,k.slice(2));
+    if (k.startsWith('w:')) { const hit = sense(k.slice(2)); return !!hit?.sense; }
+    return false;
+  }).map(([k, v]) => ({...v, k}));
+}
+function renderReview(){
+  const now = Date.now(), cards = reviewCards(), due = cards.filter(c => (c.due || 0) <= now);
+  if (!cards.length) return `<h1>${t('review')}</h1><p class="muted">${t('empty')}</p>`;
+  if (!due.length) return `<h1>${t('review')}</h1><p>${t('noneDue')}</p><p class="muted">${cards.length}</p>`;
+  const c = due[0], flipped = S.flip === c.k;
+  let front = '', back = '';
+  if (c.k.startsWith('s:')){ const sid = c.k.slice(2); front = `<div class="ja" lang="ja">${esc(textOf(sid))}</div>`; back = `<div>${esc(L(PKG.sentences[sid].tr))}</div>`; }
+  else { const ref = c.k.slice(2), hit = sense(ref), form = wordForm(ref); front = `<div class="ja" lang="ja" style="font-size:2rem">${esc(form.surface)}</div>`; back = `${form.reading ? `<div lang="ja">${esc(form.reading)}</div>` : ''}${form.surface !== form.lemma ? `<div class="muted">${t('lemma')}：<span lang="ja">${esc(form.lemma)}</span></div>` : ''}<div style="font-size:1.2rem">${esc(wordL(hit.sense.gloss))}</div>`; }
+  const speechText = c.k.startsWith('s:') ? sayOf(c.k.slice(2)) : wordForm(c.k.slice(2)).reading;
+  const reviewAudio = speechText ? `<button class="icon" data-say="${esc(speechText)}" aria-label="${t('play')}">▶</button>` : '';
+  return `<h1>${t('review')}</h1><p class="muted">${t('due')}：${due.length}</p><div class="card flash">${front}${flipped ? '<hr>' + back : ''}
+    <div class="row" style="justify-content:center">${flipped
+      ? `<button class="ghost" data-grade="0">${t('againBtn')}</button><button class="primary" data-grade="1">${t('good')}</button><button class="ghost" data-grade="2">${t('easy')}</button>`
+      : `<button class="primary" data-flip="${c.k}">${t('flip')}</button>${reviewAudio}`}</div></div>`;
+}
+function gradeCard(g){
+  const c = S.deck[S.flip]; if (!c) return;
+  c.ease = Math.max(1.3, (c.ease || 2.5) + [-.2, 0, .15][g]);
+  c.ivl = g === 0 ? 0 : Math.max(1, Math.round((c.ivl || 0) === 0 ? (g === 2 ? 3 : 1) : c.ivl * c.ease));
+  c.due = Date.now() + (g === 0 ? 10 * 60e3 : c.ivl * 864e5);
+  S.flip = null;
+}
+
+function produceRetentionText(){
+  if(memoryOnly || storageFailure || storageConflict) return S.loc === 'en' ? 'This tab is not saving typed text. Earlier saved copies may remain.' : '本頁目前不會儲存輸入文字；先前儲存的副本可能仍在。';
+  if(!PKG.preview) return S.loc === 'en' ? 'Typed text is saved in this browser. This lesson has no in-page clearing control. Manage saved data in your browser settings.' : '輸入的文字會儲存在此瀏覽器。此課頁沒有清除資料按鈕，請使用瀏覽器設定管理已儲存的資料。';
+  return S.loc === 'en' ? 'Typed text is saved in this browser and may remain in history copies. Avoid personal details you do not want to keep.' : '輸入的文字會儲存在此瀏覽器，也可能保留在歷史副本中。請避免輸入不想保留的個人資料。';
+}
+function storageActions(){
+  return storageFailure || storageConflict || memoryOnly ? `<button class="ghost" data-memory-round>${t('freshMemory')}</button>` : '';
+}
+function privacyControls(){
+  if (!PKG.preview) return '';
+  const explanation = S.loc === 'en'
+    ? 'This browser saves progress, typed answers (which may contain personal information), and earlier history copies. Start over only resets the current practice round; it does not erase archived copies. You can explicitly clear this section’s preview data below. Other lessons and the existing app are not affected. Before clearing, close other pages for this lesson, especially older versions. A non-personal marker helps stop tabs running this version from restoring cleared data, but simultaneous writes cannot be fully prevented; already-open older versions do not recognize it.'
+    : '此瀏覽器會儲存進度、你輸入的文字（可能包含個人資料），以及歷史副本。「全部重新開始」只重設本輪，不會刪掉歷史副本。你可以在下方明確清除此節試用版資料；不影響其他課或既有網站資料。清除前請先關閉此課的其他頁面，尤其是舊版本。清除後的不含個人內容標記有助阻止使用此版本的其他分頁寫回，但無法完全防止同時寫入；已開啟的舊版本不認得此標記。';
+  return `<details class="note" id="saved-data"><summary>${t('savedData')}</summary><p>${explanation}</p><button class="ghost" data-clear-progress>${t('clearSaved')}</button></details>`;
+}
+function clearThisSection(){
+  if (!PKG.preview) return;
+  clearReadError = false;
+  let keys = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k === KEY || k?.startsWith(KEY + ':history:') || k?.startsWith(KEY + ':conflict:')) keys.push(k);
+    }
+  } catch {
+    // Enumeration failure does not imply the already-read current record or
+    // normal get/set path is unsafe. No confirmation or write has occurred.
+    clearReadError = true; updateStorageNotice();
+    document.getElementById('storage-status').focus?.(); return;
+  }
+  const question = S.loc === 'en'
+    ? 'Clear this section’s saved progress, typed answers and archived copies in this browser? This cannot be undone. First close other pages for this lesson, especially older versions. Other lessons and the existing app are not affected.'
+    : '確定清除此瀏覽器中這一節的進度、輸入文字及歷史副本？此操作無法復原。請先關閉此課的其他頁面，尤其是舊版本。不影響其他課或既有網站資料。';
+  if (typeof window.confirm !== 'function' || !window.confirm(question)) { updateStorageNotice(); return; }
+  try {
+    // Best-effort tombstone for this version; check/write is not atomic.
+    // After explicit confirmation, free scoped storage before marker creation.
+    const priorEpoch = Number(localStorage.getItem(CLEAR_KEY));
+    const epoch = Number.isSafeInteger(priorEpoch) && priorEpoch >= 0 && priorEpoch < Number.MAX_SAFE_INTEGER ? String(priorEpoch + 1) : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+    // Re-enumerate after confirmation so copies written while the dialog
+    // was open are within the same explicitly approved section scope.
+    keys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k === KEY || k?.startsWith(KEY + ':history:') || k?.startsWith(KEY + ':conflict:')) keys.push(k);
+    }
+    for (const k of keys) localStorage.removeItem(k);
+    clearGuardFailed = false;
+    try { localStorage.setItem(CLEAR_KEY, epoch); clearEpochAtLoad = epoch; }
+    catch { clearGuardFailed = true; }
+    lastSavedRaw = null;
+    const loc = S.loc; closePop();
+    for (const k of Object.keys(store)) delete store[k];
+    for (const k of Object.keys(S)) delete S[k];
+    Object.assign(S,{loc,tab:'practice',showAll:false,shown:{},deck:{},prac:{i:-1,res:{},queue:null},practiceHistory:[],practiceRevisions:{}});
+    storageFailure = false; storageConflict = false; storageClearedExternally = false;
+    clearCompleted = true; clearError = false; memoryOnly = true;
+  } catch { clearError = true; memoryOnly = true; }
+  return render('#storage-status');
+}
+const controlSelector = (name,value) => '[' + name + '=' + JSON.stringify(String(value)) + ']';
+function restoreControl(selector,index = 0){
+  const controls = document.querySelectorAll(selector), target = controls[index >= 0 ? index : 0];
+  (target || document.getElementById('main')).focus?.();
+}
+function renderForControl(button,selector){
+  const index = [...document.querySelectorAll(selector)].indexOf(button);
+  render(); restoreControl(selector,index);
+}
+
+// ---------- shell ----------
+const TABS = ['content', 'teaching', 'practice', 'review'];
+function render(focusSelector){
+  document.documentElement.lang = S.loc === 'en' ? 'en' : 'zh-Hant';
+  document.getElementById('loc').value = S.loc;
+  document.getElementById('loc-label').textContent = t('loc');
+  document.getElementById('tabs').innerHTML = TABS.map(k => `<button data-tab="${k}" ${S.tab === k ? 'aria-current="page"' : ''}>${t(k)}${k === 'review' && Object.keys(S.deck).length ? ' · ' + Object.keys(S.deck).length : ''}</button>`).join('');
+  const missingCards = Object.keys(S.deck).length - reviewCards().length;
+  const page = {content:renderContent, teaching:renderTeaching, practice:renderPractice, review:renderReview}[S.tab]();
+  const notice = PKG.preview ? `<div class="card" role="note">${S.loc === 'en' ? 'Lesson preview. Content is still being checked and is not final.' : '教材草稿試用版，內容仍在確認中，尚未定稿。'}</div>` : '';
+  document.getElementById('main').innerHTML = notice + `<p id="storage-status" role="status" tabindex="-1"></p><div id="storage-actions">${storageActions()}</div>` + (S.tab === 'review' && missingCards ? `<p role="note">${S.loc === 'en' ? 'Some saved cards are unavailable in this draft. Their records are kept.' : '部分已儲存卡片不在此草稿中，原紀錄仍保留。'}</p>` : '') + page + `<p class="note">${t('demoNote')}</p>` + privacyControls();
+  save();
+  updateStorageNotice();
+  if (focusSelector) { const target = document.getElementById('main').querySelector?.(focusSelector) || document.querySelector?.(focusSelector); (target || document.getElementById('main')).focus?.(); }
+}
+function updateStorageNotice(){
+  let message = '';
+  if (clearReadError) message = S.loc === 'en' ? 'Saved data could not be listed. Nothing was cleared and no confirmation was requested. This clear request did not change your saving mode.' : '無法列出已儲存的資料。尚未要求確認，也沒有清除任何資料。這次清除請求沒有改變儲存模式。';
+  else if (clearError) message = S.loc === 'en' ? 'Clearing did not finish; some saved copies may remain. No new cross-tab marker was established, so other tabs may save old data again. Close other lesson pages now. This tab will not save new changes.' : '清除尚未完成，部分副本可能仍在瀏覽器中。未建立新的跨分頁標記，其他分頁可能再次儲存舊資料。請現在關閉其他課頁；本頁不會儲存新變更。';
+  else if (clearCompleted && clearGuardFailed) message = S.loc === 'en' ? 'This section’s saved copies were removed, but the cross-tab marker could not be written. Other tabs are not protected and may save old data again. Close other lesson pages now. This tab will not save new changes.' : '此節已儲存的副本已移除，但無法寫入跨分頁標記。其他分頁沒有此保護，可能再次儲存舊資料。請現在關閉其他課頁；本頁不會儲存新變更。';
+  else if (storageClearedExternally) message = S.loc === 'en' ? 'A clear operation was requested in another tab. This tab will not restore older data or save new changes. Copy any text you still need before closing.' : '另一分頁已要求清除儲存資料。本頁不會把它寫回，也不會儲存新變更；關閉前請先自行複製仍需要的文字。';
+  else if (clearCompleted) message = S.loc === 'en' ? 'This section’s progress, typed answers and archived copies were cleared. A non-personal marker helps stop tabs running this version from restoring them, but simultaneous writes cannot be fully prevented. Close any older lesson pages that are still open now; they do not recognize the marker and may save old data again. Continue without saving, or reload to save new progress.' : '此節進度、輸入文字及歷史副本已清除，只留下有助阻止使用此版本的其他分頁寫回的不含個人內容標記，但無法完全防止同時寫入。請現在關閉仍開著的舊版本課頁；它們不認得此標記，可能再次儲存舊資料。可繼續不儲存的練習，或重新整理後儲存新進度。';
+  else if (storageConflict) message = S.loc === 'en' ? 'Another tab saved newer progress. Your work in this tab stays in memory only; no new backup is written. Copy any text you need before closing or reloading. Earlier saved copies are kept until you explicitly clear them.' : '另一分頁已儲存較新的進度。本頁作答只留在記憶體，不會新增備份；關閉或重新整理前請自行複製需要的文字。既有副本會保留，直到你明確清除。';
+  else if (memoryOnly) message = S.loc === 'en' ? 'Practice in this tab is not saved. The original stored data is unchanged; copy any text you need before closing.' : '本頁練習不會儲存，原有資料沒有改動；關閉前請自行複製需要的文字。';
+  else if (storageFailure) message = S.loc === 'en' ? 'Saved progress cannot be used safely. The original data is kept. Start a fresh round in this tab without saving, or explicitly clear this section’s saved data.' : '儲存的進度無法安全使用，原資料仍保留。可在本頁開始不儲存的新一輪，或明確清除此節的儲存資料。';
+  document.getElementById('storage-status').textContent = message;
+  const retention = document.getElementById('prod-retention-copy');
+  if(retention) retention.textContent = produceRetentionText();
+  document.getElementById('storage-actions').innerHTML = storageActions();
+}
+
+function go(tab, anchor){
+  S.tab = tab; closePop(); render(anchor ? undefined : controlSelector('data-tab',tab));
+  if (anchor){ const el = document.getElementById(anchor); if (el){ el.scrollIntoView({block:'center'}); el.focus?.(); el.style.outline = '2px solid var(--brand)'; setTimeout(() => el.style.outline = '', 1600); } }
+  else window.scrollTo(0, 0);
+}
+document.getElementById('loc').addEventListener('change', e => { S.loc = e.target.value; closePop(); render(); });
+document.addEventListener('click', e => {
+  const b = e.target.closest('button,.tok'); if (!b) { if (!e.target.closest('#pop')) closePop(); return; }
+  const d = b.dataset, P = S.prac, order = P.queue || items.map(x => x.id), it = P.i >= 0 && itemById(order[P.i]), r = it ? (P.res[it.id] ||= {}) : null;
+  if (b.classList.contains('tok')) return openPop(b);
+  if (d.tab) return go(d.tab);
+  if ('clearProgress' in d) return clearThisSection();
+  if ('memoryRound' in d) { memoryOnly = true; storageFailure = false; S.tab = 'practice'; S.prac = {i:0,res:{},queue:null}; return render('.opt, [data-build], #prod'); }
+  if ('memorySkip' in d) { memoryOnly = true; storageFailure = false; if (it) S.prac.res[it.id] = {skipped:true}; P.i = Math.min(P.i + 1, order.length); return render('.opt, [data-build], #prod, [data-prestart]'); }
+  if ('close' in d) return closePop(true);
+  if (d.play) return speak(sayOf(d.play));
+  if (d.say) return speak(d.say);
+  if (d.tr) { S.shown[d.tr] = !S.shown[d.tr]; return renderForControl(b,controlSelector('data-tr',d.tr)); }
+  if ('all' in d) { S.showAll = !S.showAll; S.shown = {}; return render('[data-all]'); }
+  if (d.save) {
+    if (S.deck[d.save]) delete S.deck[d.save]; else S.deck[d.save] = {due:0};
+    const opener = !document.getElementById('pop').hidden && document.querySelector('.tok.sel');
+    // A sense may occur repeatedly in a sentence or dialogue. Saving changes
+    // only the deck; preserve the exact token occurrence through this rerender.
+    const occurrence = opener ? [...document.querySelectorAll('.tok')].indexOf(opener) : -1;
+    const saveSelector = controlSelector('data-save',d.save), saveIndex = [...document.querySelectorAll(saveSelector)].indexOf(b);
+    render();
+    if (opener) {
+      const again = opener.id ? document.getElementById(opener.id) : document.querySelectorAll('.tok')[occurrence];
+      if (again && ['s','t','r'].every(k => again.dataset[k] === opener.dataset[k])) openPop(again);
+      else closePop();
+    } else restoreControl(saveSelector,saveIndex);
+    return;
+  }
+  if (d.kp) { S.openKp = d.kp; return go('teaching', 'kp-' + d.kp); }
+  if ('pstart' in d || 'prestart' in d) { S.prac = {i:0, res:{}, queue:null}; return render('.opt, [data-build], #prod'); }
+  if ('pagain' in d) { const missed = order.filter(id => !P.res[id]?.ok); missed.forEach(id => delete P.res[id]); S.prac = {i:0, res:P.res, queue:missed}; return render('.opt, [data-build], #prod'); }
+  if ('paudio' in d) return speak(it.audioRefs.map(sayOf).join(' '));
+  if (d.pick && !r.done) { const o = it.options.find(x => x.id === d.pick); r.picked = o.id; if (o.correct) { r.done = true; r.ok = r.ok ?? true; } else { r.ok = false; } return render('.fb'); }
+  if ('pretry' in d) { delete r.picked; return render('.opt'); }
+  if (d.build) { (r.built ||= []).push(+d.build); delete r.lastOk; return render('[data-build], [data-pcheck]'); }
+  if (d.unbuild) { const removed = r.built.splice(+d.unbuild, 1)[0]; delete r.lastOk; return render(`[data-build="${removed}"]`); }
+  if ('preset' in d) { r.built = []; delete r.lastOk; return render('[data-build]'); }
+  if ('pcheck' in d) {
+    const g = gradeBuilt(it, r); r.lastOk = g.ok; r.feedbackReason = g.reason; delete r.feedback; if (g.ok) { r.done = true; r.ok = r.ok ?? true; } else { r.tries = (r.tries || 0) + 1; r.ok = false; if (r.tries >= 2) { r.showAnswer = true; r.done = true; } } return render('.fb');
+  }
+  if ('pshow' in d) { r.text = document.getElementById('prod').value; r.checks = runChecks(it, r.text); r.shown = true; return render('[data-pself]'); }
+  if ('pself' in d) { r.ok = r.ok ?? d.pself === '1'; r.done = true; return render('[data-pnext]'); }
+  if ('pnext' in d) { P.i++; window.scrollTo(0, 0); return render('.opt, [data-build], #prod, [data-prestart]'); }
+  if (d.flip) { S.flip = d.flip; return render('[data-grade]'); }
+  if (d.grade) { gradeCard(+d.grade); return render('[data-flip]'); }
+});
+document.addEventListener('input', e => { if (e.target.id === 'prod') { const P = S.prac, order = P.queue || items.map(x => x.id); (P.res[order[P.i]] ||= {}).text = e.target.value; save(); updateStorageNotice(); } });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') return closePop(true);
+  const token = e.target?.closest?.('.tok');
+  // Native vocabulary buttons already synthesize click on Enter/Space.
+  if (token && token.tagName !== 'BUTTON' && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault(); openPop(token);
+  }
+});
+window.addEventListener?.('hashchange', () => closePop());
+render();
+</script>
+</body>
+</html>
+
