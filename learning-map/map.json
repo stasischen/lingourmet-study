@@ -1,0 +1,518 @@
+{
+  "format": "lingourmet.learning-map.preview.v1",
+  "status": "proposal",
+  "scope": {
+    "languages": [
+      "ja",
+      "ko",
+      "th",
+      "en"
+    ],
+    "level": "A1",
+    "theme": "Theme01"
+  },
+  "goal": {
+    "id": "outline:c:theme01:02",
+    "title": "介紹自己的名字",
+    "canDo": "介紹自己的名字",
+    "scenario": "成人同輩初見、語言交流或共同活動；各語依goal、當節支援及位置保留自己的前話輪。",
+    "languagePlans": [
+      {
+        "id": "outline:c:theme01:02:ja",
+        "language": "ja",
+        "goal": "用姓名＋です介紹自己。",
+        "prerequisites": [],
+        "inLessonSupport": [
+          "姓名槽與です"
+        ],
+        "placementRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ja_建議位置；本綱要首次安排U01-1",
+            "purpose": "初見",
+            "status": "proposal"
+          },
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ja_建議位置；U01-5整合回收",
+            "purpose": "回收",
+            "status": "proposal"
+          }
+        ],
+        "grammarRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; ja_表達及ja_先修",
+            "mappingStatus": "unmapped",
+            "note": "定位本語有界框架；尚未映射獨立文法item／sense，不借近似標籤取代語義。"
+          }
+        ],
+        "vocabularyRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; ja_表達：姓名槽與角色人稱",
+            "mappingStatus": "unmapped",
+            "note": "這是必要詞材所在用句，尚未拆成本語詞義項；不把既有親屬或時間小樣硬接本題。"
+          }
+        ],
+        "levels": {
+          "proposedLevel": {
+            "band": "A1",
+            "rationale": "先用姓名槽完成單句自介，不展開全部述語或人稱系統。",
+            "evidenceRefs": [
+              {
+                "sourceId": "baseline",
+                "locator": "row #2; ja_表達、ja_先修、ja_建議位置"
+              },
+              {
+                "sourceId": "baseline-notes",
+                "locator": "§2分語小節與§3先修"
+              }
+            ]
+          },
+          "sourceLevels": []
+        },
+        "evidenceRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ja_表達、ja_先修、ja_建議位置"
+          },
+          {
+            "sourceId": "evidence",
+            "locator": "語言／教學來源代號：JA1、KO1–2、TH1–2、EN1；各語姓名形式"
+          }
+        ],
+        "notes": "表達範圍：ミナです。 來源狀態：既有。sourceLevels留空：尚無本格逐項官方分級證據。",
+        "outlineReview": "accepted-outline"
+      },
+      {
+        "id": "outline:c:theme01:02:ko",
+        "language": "ko",
+        "goal": "用저는與姓名＋이에요／예요介紹自己。",
+        "prerequisites": [],
+        "inLessonSupport": [
+          "姓名槽與이에요／예요"
+        ],
+        "placementRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ko_建議位置；本綱要首次安排U01-1",
+            "purpose": "初見",
+            "status": "proposal"
+          },
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ko_建議位置；U01-4整合回收",
+            "purpose": "回收",
+            "status": "proposal"
+          }
+        ],
+        "grammarRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; ko_表達及ko_先修",
+            "mappingStatus": "unmapped",
+            "note": "定位本語有界框架；尚未映射獨立文法item／sense，不借近似標籤取代語義。"
+          }
+        ],
+        "vocabularyRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; ko_表達：姓名槽與角色人稱",
+            "mappingStatus": "unmapped",
+            "note": "這是必要詞材所在用句，尚未拆成本語詞義項；不把既有親屬或時間小樣硬接本題。"
+          }
+        ],
+        "levels": {
+          "proposedLevel": {
+            "band": "A1",
+            "rationale": "先用姓名槽完成單句自介，不展開全部述語或人稱系統。",
+            "evidenceRefs": [
+              {
+                "sourceId": "baseline",
+                "locator": "row #2; ko_表達、ko_先修、ko_建議位置"
+              },
+              {
+                "sourceId": "baseline-notes",
+                "locator": "§2分語小節與§3先修"
+              }
+            ]
+          },
+          "sourceLevels": []
+        },
+        "evidenceRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; ko_表達、ko_先修、ko_建議位置"
+          },
+          {
+            "sourceId": "evidence",
+            "locator": "語言／教學來源代號：JA1、KO1–2、TH1–2、EN1；各語姓名形式"
+          }
+        ],
+        "notes": "表達範圍：저는 유나예요. 來源狀態：既有。sourceLevels留空：尚無本格逐項官方分級證據。",
+        "outlineReview": "accepted-outline"
+      },
+      {
+        "id": "outline:c:theme01:02:th",
+        "language": "th",
+        "goal": "Ploy用เรา、Nok用ผม／ครับ，在ชื่อ姓名框架報姓名。",
+        "prerequisites": [],
+        "inLessonSupport": [
+          "ชื่อ姓名槽；Ploy自稱เรา，Nok用ผม／ครับ"
+        ],
+        "placementRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; th_建議位置；本綱要首次安排U01-1",
+            "purpose": "初見",
+            "status": "proposal"
+          },
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; th_建議位置；U01-5整合回收",
+            "purpose": "回收",
+            "status": "proposal"
+          }
+        ],
+        "grammarRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; th_表達及th_先修",
+            "mappingStatus": "unmapped",
+            "note": "定位本語有界框架；尚未映射獨立文法item／sense，不借近似標籤取代語義。"
+          }
+        ],
+        "vocabularyRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; th_表達：姓名槽與角色人稱",
+            "mappingStatus": "unmapped",
+            "note": "這是必要詞材所在用句，尚未拆成本語詞義項；不把既有親屬或時間小樣硬接本題。"
+          }
+        ],
+        "levels": {
+          "proposedLevel": {
+            "band": "A1",
+            "rationale": "先用姓名槽完成單句自介，不展開全部述語或人稱系統。",
+            "evidenceRefs": [
+              {
+                "sourceId": "baseline",
+                "locator": "row #2; th_表達、th_先修、th_建議位置"
+              },
+              {
+                "sourceId": "baseline-notes",
+                "locator": "§2分語小節與§3先修"
+              }
+            ]
+          },
+          "sourceLevels": []
+        },
+        "evidenceRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; th_表達、th_先修、th_建議位置"
+          },
+          {
+            "sourceId": "evidence",
+            "locator": "語言／教學來源代號：JA1、KO1–2、TH1–2、EN1；各語姓名形式"
+          }
+        ],
+        "notes": "表達範圍：เราชื่อพลอย / ผมชื่อนกครับ 來源狀態：新提案。sourceLevels留空：尚無本格逐項官方分級證據。",
+        "outlineReview": "accepted-outline"
+      },
+      {
+        "id": "outline:c:theme01:02:en",
+        "language": "en",
+        "goal": "用I’m＋姓名介紹自己。",
+        "prerequisites": [],
+        "inLessonSupport": [
+          "I am／I’m與姓名槽"
+        ],
+        "placementRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; en_建議位置；本綱要首次安排U01-1",
+            "purpose": "初見",
+            "status": "proposal"
+          },
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; en_建議位置；U01-4整合回收",
+            "purpose": "回收",
+            "status": "proposal"
+          }
+        ],
+        "grammarRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; en_表達及en_先修",
+            "mappingStatus": "unmapped",
+            "note": "定位本語有界框架；尚未映射獨立文法item／sense，不借近似標籤取代語義。"
+          }
+        ],
+        "vocabularyRefs": [
+          {
+            "kind": "external",
+            "sourceId": "baseline",
+            "locator": "row #2; en_表達：姓名槽與角色人稱",
+            "mappingStatus": "unmapped",
+            "note": "這是必要詞材所在用句，尚未拆成本語詞義項；不把既有親屬或時間小樣硬接本題。"
+          }
+        ],
+        "levels": {
+          "proposedLevel": {
+            "band": "A1",
+            "rationale": "先用姓名槽完成單句自介，不展開全部述語或人稱系統。",
+            "evidenceRefs": [
+              {
+                "sourceId": "baseline",
+                "locator": "row #2; en_表達、en_先修、en_建議位置"
+              },
+              {
+                "sourceId": "baseline-notes",
+                "locator": "§2分語小節與§3先修"
+              }
+            ]
+          },
+          "sourceLevels": []
+        },
+        "evidenceRefs": [
+          {
+            "sourceId": "baseline",
+            "locator": "row #2; en_表達、en_先修、en_建議位置"
+          },
+          {
+            "sourceId": "evidence",
+            "locator": "語言／教學來源代號：JA1、KO1–2、TH1–2、EN1；各語姓名形式"
+          }
+        ],
+        "notes": "表達範圍：Hi, I'm Alex. 來源狀態：既有。sourceLevels留空：尚無本格逐項官方分級證據。",
+        "outlineReview": "accepted-outline"
+      }
+    ],
+    "legacyRefs": [
+      {
+        "sourceId": "baseline",
+        "locator": "row #2; can_do及各語欄"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "spec",
+      "title": "三矩陣綱要規格",
+      "url": "https://github.com/stasischen/release-aggregator/blob/92dceeb4c9bb9851843a958458617ac1b3fcabc6/docs/planning/matrix-outline-spec-20261009/MATRIX_OUTLINE_SPEC.md",
+      "locator": "§§1、3–9；SHA256 316846c46f1d264e0470c6496d85831e76cc898be086d8bd101b570c59c5cf07",
+      "version": "92dceeb4c9bb9851843a958458617ac1b3fcabc6",
+      "accessedOn": "2026-10-09",
+      "supports": "本輪資料形狀、課綱先行次序、Theme01範圍與驗收界線。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "baseline",
+      "title": "Theme01第二版簡表",
+      "url": "https://github.com/stasischen/release-aggregator/blob/194d654957177256150fda9e8ed757256c78a77a/docs/planning/lingo-content-improvement-20261008/theme01-curriculum-20261009/THEME01_MATRIX_V2.tsv",
+      "locator": "列#1–13，各語表達／先修／建議位置",
+      "version": "194d654957177256150fda9e8ed757256c78a77a",
+      "accessedOn": "2026-10-09",
+      "supports": "既有13個成果及52格用句、前課再用與當節支援；不證明官方逐項分級或學員掌握。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "baseline-notes",
+      "title": "Theme01分段與語義邊界",
+      "url": "https://github.com/stasischen/release-aggregator/blob/194d654957177256150fda9e8ed757256c78a77a/docs/planning/lingo-content-improvement-20261008/theme01-curriculum-20261009/THEME01_V2_NOTES.md",
+      "locator": "§§2–6",
+      "version": "194d654957177256150fda9e8ed757256c78a77a",
+      "accessedOn": "2026-10-09",
+      "supports": "各語小節負荷提議、語義差異、角色設定與來源狀態。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "evidence",
+      "title": "Theme01語言來源核對",
+      "url": "https://github.com/stasischen/release-aggregator/blob/194d654957177256150fda9e8ed757256c78a77a/docs/planning/lingo-content-improvement-20261008/theme01-curriculum-20261009/REVIEW_NOTES.md",
+      "locator": "語言／教學來源代號；新增列的一手證據；新提案的形式／語用來源入口；TH新提案來源",
+      "version": "194d654957177256150fda9e8ed757256c78a77a",
+      "accessedOn": "2026-10-09",
+      "supports": "保存已核讀一手教學／辭典入口及原改寫／核讀限制；非新一輪母語或官方分級認證。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "grammar",
+      "title": "既有文法比較矩陣",
+      "url": "https://github.com/stasischen/release-aggregator/blob/218197ad68a2fc28920e06cc5b9112c05b0869e4/docs/planning/grammar-matrix-review-20261009/MATRIX_CANDIDATE.tsv",
+      "locator": "archetype_id、language_code及canonical_pattern欄",
+      "version": "218197ad68a2fc28920e06cc5b9112c05b0869e4",
+      "accessedOn": "2026-10-09",
+      "supports": "有界構式比較；不是已建立的outline item／sense，也不移植其整體cefr_band。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "vocabulary",
+      "title": "既有基礎字彙計畫",
+      "url": "https://github.com/stasischen/release-aggregator/blob/c074c8de474cf0a2ca098b4954c4eee1f20fe242/docs/planning/basic-vocabulary-matrix-20261009/PLAN.md",
+      "locator": "§6 詞庫如何被文法與課程使用；現有親屬、數量與時間等小樣範圍",
+      "version": "c074c8de474cf0a2ca098b4954c4eee1f20fe242",
+      "accessedOn": "2026-10-09",
+      "supports": "定位目前字彙工作範圍；不支持把親屬／時間項當Theme01必學詞。",
+      "rightsNote": "使用者私人專案資料；本輪僅有界摘要、必要短句與精確引用，不宣告原外部來源可批次重製。"
+    },
+    {
+      "id": "en-first-meeting",
+      "title": "British Council A1 Meeting new people",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people",
+      "locator": "Transcript初次見面Nice to meet you／You too及Welcome to the team",
+      "version": "2026-10-09原頁核讀",
+      "accessedOn": "2026-10-09",
+      "supports": "初見致意、回應與入組歡迎可以分情境安排；不採整段辦公室對話。",
+      "rightsNote": "僅必要短式與定位；不重製完整教材。"
+    }
+  ],
+  "pins": {
+    "curriculum.json": {
+      "commit": "f965cae2fe8716f8c7b7371d8e7737667afef262",
+      "path": "docs/planning/theme01-outline-trial-20261009/full/curriculum/outline-source.json",
+      "sha256": "e8bdbca3087cb8f44cb281b41ae2ad6e55cac67fe95bdac47e13d3b1eb5df110"
+    },
+    "review.json": {
+      "commit": "f965cae2fe8716f8c7b7371d8e7737667afef262",
+      "path": "docs/planning/theme01-outline-trial-20261009/full/REVIEW.json",
+      "sha256": "5f5534afbc35b7bf9ea6e3efe4d2b9593deecf39b2fe1cdac3e6f99693267ded"
+    },
+    "baseline.tsv": {
+      "commit": "194d654957177256150fda9e8ed757256c78a77a",
+      "path": "docs/planning/lingo-content-improvement-20261008/theme01-curriculum-20261009/THEME01_MATRIX_V2.tsv",
+      "sha256": "e7c93715f3b4f0dfe709ef7e02b470aafca65b3ca30de0fb48b8db065c0fe589"
+    },
+    "l1-diff.json": {
+      "commit": "f965cae2fe8716f8c7b7371d8e7737667afef262",
+      "path": "docs/planning/theme01-outline-trial-20261009/full/L1_DIFF.json",
+      "sha256": "44951f2ca9885bc4e12a1b54642bb020a2daf9520a6281d52778c2e7c6028882"
+    }
+  },
+  "externalRecords": [
+    {
+      "sourceId": "baseline",
+      "version": "194d654957177256150fda9e8ed757256c78a77a",
+      "sha256": "e7c93715f3b4f0dfe709ef7e02b470aafca65b3ca30de0fb48b8db065c0fe589",
+      "row": "2",
+      "columns": {
+        "列號": "2",
+        "can_do": "介紹自己的名字",
+        "ja_表達": "ミナです。",
+        "ja_先修": "前課：無；同節：姓名槽與です",
+        "ja_建議位置": "U01-1;U01-5整合回收",
+        "ja_來源狀態": "既有",
+        "ko_表達": "저는 유나예요.",
+        "ko_先修": "前課：無；同節：姓名槽與이에요／예요",
+        "ko_建議位置": "U01-1;U01-4整合回收",
+        "ko_來源狀態": "既有",
+        "th_表達": "เราชื่อพลอย / ผมชื่อนกครับ",
+        "th_先修": "前課：無；同節：ชื่อ姓名槽；Ploy自稱เรา，Nok用ผม／ครับ",
+        "th_建議位置": "U01-1;U01-5整合回收",
+        "th_來源狀態": "新提案",
+        "en_表達": "Hi, I'm Alex.",
+        "en_先修": "前課：無；同節：I am／I’m與姓名槽",
+        "en_建議位置": "U01-1;U01-4整合回收",
+        "en_來源狀態": "既有",
+        "產品L1涵蓋_日語": "有：姓名介紹"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "planId": "outline:c:theme01:02:ja",
+      "language": "ja",
+      "status": "private-candidate",
+      "path": "/lingourmet-study/learning-map/lesson/index.html",
+      "commit": "346e721d66139bc0d71047ea3417a559ba91df36",
+      "evidence": {
+        "targetRef": "outline:c:theme01:02:ja",
+        "language": "ja",
+        "status": "吻合",
+        "reason": "G01明講姓名＋です；T01.s2／T02.s2是主課文。Q03組句、Q09辨識，Q05自選姓名輸出。",
+        "advice": "已有姓名介紹；G02といいます是同一can-do的額外形式。",
+        "teachingRefs": [
+          "G01",
+          "G02"
+        ],
+        "practiceRefs": [
+          "Q03",
+          "Q09",
+          "Q05"
+        ]
+      },
+      "runtimeFiles": {
+        "app.mjs": "5ea24fda03e47e2d1f403cb25c0fd951eefa494bee1076475f88199b45d65b6a",
+        "assembly-progress-migration.mjs": "109c2d9c8347d1964cec7f5d58b916cb9647b964029214751ff550199ae01a70",
+        "audio-view.mjs": "b9e42938066d1db7683c35398b5d681f5ce538cb23be26834547163dc8b74596",
+        "candidate-dictionary-index.json": "376368b0b8a401e795ed33e99c7b5f6452e6c6744ea92ef9c80d058d017e5815",
+        "catalog-search.mjs": "1e93133aa38eaf0280fa372e5dd517e22e1e5307bcae5230ea174923e60c534f",
+        "choice-assessment.mjs": "6c7d074a6c02342a27a2284e47a490fc5b3432e9df34114e0165de056a316457",
+        "choice-assessments-lock.mjs": "ddecf11d2dc8f5917406896be7e22cccb551d94bfae0ce219f64d9573fb19d59",
+        "choice-assessments.json": "cf6fd9ada38975b9da0bba3f32a462a0b8d6b1483b983c6e455b67b8f0c4641b",
+        "cloze-flashcards.mjs": "702294eda7ad96bfecd563e2bbdf4fa60bac0361122d50251cb719a17cd9152d",
+        "cloze-practice-selections.json": "789041b81ef2d4323f22b975bf6db8d3aa4c2b54a894c2b4ff64ab4305766d96",
+        "complete-resource-view.mjs": "f51e9c4184219d2e672eba71e10fb2f9ac5e7ee9b08bbdc990c3cc171a8d7a36",
+        "complete-resources.mjs": "4d3b6b7d7c959e49705835047b0690df35c0682fd581c0344e02d145b349d2f0",
+        "dictionary-progress-predecessor.mjs": "004e7603ad029b3f46ec9588da4e538c0bb9ae4b3c6afb88056e2ca73496afad",
+        "dictionary-resolver.mjs": "3e329e6c725a36176353d8daff360e9c26505ec8b0a599a89e7b19b7df6b4afc",
+        "dictionary-view.mjs": "8b1ab532aea3370192a89ecbaff474677c4a7f80f8ed56408bb2e8afd0fa568b",
+        "entry-app.mjs": "9012ab72f347cd031b53322a65eb4120966b92ca011767df397ea62b2b29e538",
+        "flashcard-session.mjs": "305f9ccaa656254fd37ae4b2afb1f84d0e4056e9ee324034841b3b58e7e318ed",
+        "followup-question-predecessor.mjs": "6978b821d97a8c2131276644abcc83db236cd6cae67286eaa7daaa5902bd280c",
+        "i18n.mjs": "dfc085e8c88863647773e5113072627984c61fd1180eb9ab5acb20eaac908aed",
+        "index.html": "b3168c877e26e2d75794d741bb9a9ee049d562481b944b88c43535493ba35dec",
+        "knowledge-catalog.json": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5",
+        "knowledge-resources.json": "9e011508a17c1d2372d03c495e290bd76c84af612a508d578a7f7fce7bc95d3a",
+        "knowledge.html": "c887304694c3b092ee013b0ead7a7da2ea562fa0e8adaeffb10b9b8e6b5a2155",
+        "language-state.mjs": "5fc89d4bbb6f3a84edc4ae76bbe7cc4e06915ef93157f5240f6a9c3ddb901417",
+        "lesson-presentation-lock.mjs": "2af0eedfb1f53a7b00534e537e157d053dcd0b274e63ccb18afb4c090cd0c9d2",
+        "lesson-presentation.json": "ee3b6a550c9ef482e21582c79da11fd644714e325deae243963513b8ce9531b3",
+        "lesson-presentation.mjs": "238eacb0d9d0daf29f635a722506061d2d3b6057dd7a9bf8b00276dfee93f9d5",
+        "lesson.json": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e",
+        "lexical-analysis.json": "5be76baad61ce67bfcb3e0cece9c5c907decf11d95418627430c79c1408886eb",
+        "lexical-audio.mjs": "0d3b19cdf286f48765597cf14d7855995d7bb52b8d4cbb7c1d7e06e94dfda73e",
+        "lexical-flashcards.mjs": "e3f6634f930fc9346f8ed7c7afd58dab6b3a4328a87f906fe2d154ce39f228b7",
+        "lexical-inspector.mjs": "c5711229b27b4adc9de67c7a20955f2563fdb5cc25f3b01a204834eeebcb9a61",
+        "lexical-practice-selections.json": "1b274449d5d8d4fc5d78cd639ec068af48264f0226790c6d21de45100ab14d05",
+        "lexical-progress-predecessor.mjs": "d3d572b9f2f91741b4c9585eb8cf8ed6f190f55c1f2d1aebd82d5f3881d79cd8",
+        "listening-prompt.mjs": "f4a0557b7d6933c3545d2b2f78b2bed0ce90382b54bd0e274c18aebc09e2490e",
+        "model.mjs": "5f30f8ff73ebaeaffe38ba765326c35b6081e5c458aecb0178d64088e4dd59cf",
+        "ordinary-question-predecessor.mjs": "2b13ac37481d37bb704678c3ee7609c4da0b20685d840891fd827b8353e566e1",
+        "package-loader.mjs": "a97adbc7733b876173585a55a72eec83dcc8e64e413fafef0160ef9cd1e60779",
+        "page-routes.mjs": "fa984fb3bde76731a2130d479f072fb20effa28027f96dbefe340fa59f713d53",
+        "practice-modes.mjs": "067b45dc6f12ce5a51300aab1866833cfe6f129430b9efe3d6750989d3ba5548",
+        "practice-session.mjs": "b4ee05b588aed43f990c902516e3c0c66344727bee7f00af4d04bb57d8ed9d67",
+        "practice.html": "b3168c877e26e2d75794d741bb9a9ee049d562481b944b88c43535493ba35dec",
+        "pronunciation.mjs": "9cb8eaa3f2010cd000e4de74368090b38a45ea34587b9f3fb247e882e88bb5fa",
+        "published-dictionary-index.json": "4550fc2b9189b3630d908c296c85129e06c444f0c2d57fe2cfd91aff9c4b86fb",
+        "renderer.mjs": "ee28b5494f10de7ead43f9b92ef044b04371605f6a91b14c5a930098e1281cc5",
+        "resource-lock.mjs": "8db08b28b8798a99e4e4d916930ed9548aec47994d877deb1cf0d048e6715e0d",
+        "resource-navigation.mjs": "79be98fc4d4a59c47c2d42b7bfefe3fe6068012780afa3c572002a9f434163eb",
+        "resource-owner-C.json": "45ad60dcd57c259dd5409c81312998d1821ee0fa1bf34efa9560341262949708",
+        "resource-owner-L.json": "3ab675c3875c9c322c7fe857365f49d45015dcbd36d98b9c01adf7f366d41c65",
+        "selected-items.mjs": "acba317c525c46bb4f2fff27b7d9f4ebf5bf8ed89acb1ce4ea7ed843fa8080f1",
+        "selected-practice.mjs": "745fa76fa38ca9d101a2ea3d889b214553e0bf978080643483190a6ab70bc450",
+        "selected-source-compatibility.mjs": "34b5647d58218f69bf21e488aeb0b555d6406a6ed7a5656c62b85564666c45b4",
+        "selected-view.mjs": "a44d2282db2505c11fde713e83954af24442bf931dd1bcc853ea2ef6d927fa6f",
+        "sentence-assembly.mjs": "117012e0767e974959a26eae697b4b5e08eb6fd5e919e4fc51ae6f96979522ec",
+        "sentence-presentation.mjs": "391fe231ec748b77e1243d669214ecab270c10b7c6e7356f453a01acc924afc8",
+        "style.css": "a4e8f7efbd4f3318e104610f82a9d8e5c683cd75ea2a0016c13902588a30282a",
+        "target-mapping.json": "7e05fd7fb531e19e920d0d3e6f013cd8d3ad044ac5a4d4989d39a0a603f80165",
+        "teaching.html": "b3168c877e26e2d75794d741bb9a9ee049d562481b944b88c43535493ba35dec",
+        "translation-visibility.mjs": "27a440938524f52ecb57bbd06990f3a9f3d722555972569497c0b7c7ccab78b6"
+      },
+      "runtimeSetSHA256": "427ec9f196c0d07d6fcc76d83f2ad8cef4b04531ebc92aae6d6e3c451ea51c9b"
+    }
+  ]
+}

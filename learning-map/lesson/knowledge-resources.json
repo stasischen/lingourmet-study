@@ -1,0 +1,6630 @@
+{
+  "format": "lingourmet.complete-resource.v1",
+  "status": "draft",
+  "resources": {
+    "experimental:teaching:ja:self-introduction": {
+      "status": "restored-draft",
+      "units": {
+        "u-name": {
+          "id": "u-name",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "石川",
+              "kind": "word",
+              "reading": "いしかわ",
+              "ruby": [
+                {
+                  "text": "石川",
+                  "reading": "いしかわ"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t3",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            },
+            {
+              "id": "c2",
+              "from": "t2",
+              "to": "t2"
+            }
+          ]
+        },
+        "u-affiliation": {
+          "id": "u-affiliation",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "営業部",
+              "kind": "word",
+              "reading": "えいぎょうぶ",
+              "ruby": [
+                {
+                  "text": "営業部",
+                  "reading": "えいぎょうぶ"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "の",
+              "kind": "word",
+              "reading": "の"
+            },
+            {
+              "id": "t3",
+              "text": "石川",
+              "kind": "word",
+              "reading": "いしかわ",
+              "ruby": [
+                {
+                  "text": "石川",
+                  "reading": "いしかわ"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t5",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t4"
+            }
+          ]
+        },
+        "u-first": {
+          "id": "u-first",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "はじめまして",
+              "kind": "word",
+              "reading": "はじめまして"
+            },
+            {
+              "id": "t2",
+              "text": "。",
+              "kind": "word"
+            },
+            {
+              "id": "t3",
+              "text": "石川",
+              "kind": "word",
+              "reading": "いしかわ",
+              "ruby": [
+                {
+                  "text": "石川",
+                  "reading": "いしかわ"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t5",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t4"
+            }
+          ]
+        },
+        "u-named": {
+          "id": "u-named",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "石川",
+              "kind": "word",
+              "reading": "いしかわ",
+              "ruby": [
+                {
+                  "text": "石川",
+                  "reading": "いしかわ"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "と",
+              "kind": "word",
+              "reading": "と"
+            },
+            {
+              "id": "t3",
+              "text": "いいます",
+              "kind": "word",
+              "reading": "いいます"
+            },
+            {
+              "id": "t4",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t3"
+            }
+          ]
+        },
+        "u-closing": {
+          "id": "u-closing",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "よろしく",
+              "kind": "word",
+              "reading": "よろしく"
+            },
+            {
+              "id": "t2",
+              "text": "お願いします",
+              "kind": "word",
+              "reading": "おねがいします",
+              "ruby": [
+                {
+                  "text": "お"
+                },
+                {
+                  "text": "願",
+                  "reading": "ねが"
+                },
+                {
+                  "text": "い"
+                },
+                {
+                  "text": "します"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            }
+          ]
+        }
+      },
+      "unitLocalizations": {
+        "zh-Hant": {
+          "u-name": {
+            "translation": "我是石川。",
+            "tokens": {
+              "t1": {
+                "gloss": "石川（姓氏）"
+              },
+              "t2": {
+                "gloss": "禮貌地說明身分"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "石川（姓氏）"
+              },
+              "c2": {
+                "translation": "禮貌的身分陳述"
+              }
+            }
+          },
+          "u-first": {
+            "translation": "初次見面，我是石川。",
+            "tokens": {
+              "t1": {
+                "gloss": "初次見面時的招呼"
+              },
+              "t3": {
+                "gloss": "石川（姓氏）"
+              },
+              "t4": {
+                "gloss": "禮貌地說明身分"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "初次見面"
+              },
+              "c2": {
+                "translation": "我是石川"
+              }
+            }
+          },
+          "u-named": {
+            "translation": "我叫石川。",
+            "tokens": {
+              "t1": {
+                "gloss": "石川（姓氏）"
+              },
+              "t2": {
+                "gloss": "標示所說的名字"
+              },
+              "t3": {
+                "gloss": "叫作；稱為（禮貌）"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "石川這個名字"
+              },
+              "c2": {
+                "translation": "叫作（禮貌）"
+              }
+            }
+          },
+          "u-closing": {
+            "translation": "請多指教。",
+            "tokens": {
+              "t1": {
+                "gloss": "請多指教"
+              },
+              "t2": {
+                "gloss": "禮貌地請求；此處與前詞合用表示請多指教"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "請多指教；期待往後相處愉快"
+              }
+            }
+          },
+          "u-affiliation": {
+            "translation": "我是業務部的石川。",
+            "tokens": {
+              "t1": {
+                "gloss": "業務部"
+              },
+              "t2": {
+                "gloss": "連接所屬單位與姓名"
+              },
+              "t3": {
+                "gloss": "石川（姓氏）"
+              },
+              "t4": {
+                "gloss": "禮貌的身分陳述"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "業務部的"
+              },
+              "c2": {
+                "translation": "是石川"
+              }
+            }
+          }
+        },
+        "en": {
+          "u-name": {
+            "translation": "I’m Ishikawa.",
+            "tokens": {
+              "t1": {
+                "gloss": "Ishikawa (family name)"
+              },
+              "t2": {
+                "gloss": "polite identity ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "Ishikawa"
+              },
+              "c2": {
+                "translation": "polite identity statement"
+              }
+            }
+          },
+          "u-first": {
+            "translation": "Nice to meet you. I’m Ishikawa.",
+            "tokens": {
+              "t1": {
+                "gloss": "greeting on first meeting"
+              },
+              "t3": {
+                "gloss": "Ishikawa (family name)"
+              },
+              "t4": {
+                "gloss": "polite identity ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "nice to meet you"
+              },
+              "c2": {
+                "translation": "I’m Ishikawa"
+              }
+            }
+          },
+          "u-named": {
+            "translation": "My name is Ishikawa.",
+            "tokens": {
+              "t1": {
+                "gloss": "Ishikawa (family name)"
+              },
+              "t2": {
+                "gloss": "marks the quoted name"
+              },
+              "t3": {
+                "gloss": "am called (polite)"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "the name Ishikawa"
+              },
+              "c2": {
+                "translation": "am called (polite)"
+              }
+            }
+          },
+          "u-closing": {
+            "translation": "I look forward to getting to know you.",
+            "tokens": {
+              "t1": {
+                "gloss": "expresses goodwill for the relationship"
+              },
+              "t2": {
+                "gloss": "a polite request; with the preceding word, expresses goodwill for the relationship"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "a polite closing expressing goodwill"
+              }
+            }
+          },
+          "u-affiliation": {
+            "translation": "I’m Ishikawa from the sales department.",
+            "tokens": {
+              "t1": {
+                "gloss": "sales department"
+              },
+              "t2": {
+                "gloss": "links affiliation to the name"
+              },
+              "t3": {
+                "gloss": "Ishikawa (family name)"
+              },
+              "t4": {
+                "gloss": "polite identity ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "from the sales department"
+              },
+              "c2": {
+                "translation": "am Ishikawa"
+              }
+            }
+          }
+        }
+      },
+      "sectionOrder": [
+        "b-meaning",
+        "b-structure",
+        "b-pronunciation",
+        "b-usage",
+        "b-register",
+        "b-alternatives",
+        "b-reciprocal"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-name",
+            "from": "t1",
+            "to": "t3"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "石川です。",
+            "reading": "いしかわです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-affiliation",
+            "from": "t1",
+            "to": "t5"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "営業部の石川です。",
+            "reading": "えいぎょうぶのいしかわです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-first",
+            "from": "t1",
+            "to": "t5"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "はじめまして。石川です。",
+            "reading": "はじめまして。いしかわです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-named",
+            "from": "t1",
+            "to": "t4"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "石川といいます。",
+            "reading": "いしかわといいます。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-closing",
+            "from": "t1",
+            "to": "t4"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "よろしくお願いします。",
+            "reading": "よろしくおねがいします。"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "以名字建立第一個介紹",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "text": "初次見面或報到時，可以用"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です。",
+                    "reading": "いしかわです。"
+                  }
+                },
+                {
+                  "text": "禮貌地說出名字。中文自然譯成「我是石川」或「我叫石川」。名字加上句尾，就形成簡潔的身分介紹。"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "基本順序是「名字＋禮貌句尾」："
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": "是名字，"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "是禮貌的身分陳述句尾。工作場合要交代所屬單位，可說"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の石川です。",
+                    "reading": "えいぎょうぶのいしかわです。"
+                  }
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の",
+                    "reading": "えいぎょうぶの"
+                  }
+                },
+                {
+                  "text": "放在名字前，意思是「業務部的」。"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "此例姓氏"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": "讀作上方標出的假名；遇到新名字時，以本人讀法為準。名字和"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "連成一句，句末通常收落。句尾最後的母音常很輕或無聲化，保留短而自然的收尾即可。"
+                }
+              ]
+            },
+            "b-usage": {
+              "runs": [
+                {
+                  "text": "第一次見同學、同事或活動參加者，可以先說"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして。石川です。",
+                    "reading": "はじめまして。いしかわです。"
+                  }
+                },
+                {
+                  "text": "第一句只用在初次見面，不適合每天重複當招呼。介紹結尾可加"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします。",
+                    "reading": "よろしくおねがいします。"
+                  }
+                },
+                {
+                  "text": "這句表達希望今後相處愉快；它的功能是建立關係，在這個自我介紹場景可譯成「請多指教」。"
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "這是日常初次見面與常見職場場合都能使用的禮貌介紹。姓氏、名字或全名的選擇，取決於場合和你希望對方如何稱呼你。介紹自己時，一般不在自己的姓名後加敬稱；向別人介紹他人時，則需考慮對方的身分與稱呼習慣。"
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川といいます。",
+                    "reading": "いしかわといいます。"
+                  }
+                },
+                {
+                  "text": "把「叫作」明說出來，同樣適合一般禮貌介紹；"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です。",
+                    "reading": "いしかわです。"
+                  }
+                },
+                {
+                  "text": "則更精簡。前者的"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": "標示名字，"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t3",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "いいます",
+                    "reading": "いいます"
+                  }
+                },
+                {
+                  "text": "表示「叫作」。介紹名字的表達與通用禮貌句尾，在相關項目中分開說明。"
+                },
+                {
+                  "text": "前者也適合初次見面時稍微正式地介紹姓名。後者雖然較短，也已經有禮貌。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-reciprocal": {
+              "runs": [
+                {
+                  "text": "對方先說 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " 時，可以回應 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ、よろしくお願いします",
+                    "reading": "こちらこそ、よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": "。前面的 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ",
+                    "reading": "こちらこそ"
+                  }
+                },
+                {
+                  "text": " 把同樣的心意回給對方，約相當於「我也是／彼此彼此」。它依賴對方前一句，是回應方式，不是每次自我介紹都要加的開場。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Introducing yourself by name",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "text": "At a first meeting or when checking in, "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です。",
+                    "reading": "いしかわです。"
+                  }
+                },
+                {
+                  "text": " politely gives your name. A natural translation is “I’m Ishikawa” or “My name is Ishikawa”. The name and ending together form a compact introduction."
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "The pattern is name plus polite ending: "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": " supplies the name and "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " makes the identity statement polite. To include your affiliation at work, say "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の石川です。",
+                    "reading": "えいぎょうぶのいしかわです。"
+                  }
+                },
+                {
+                  "text": " The phrase "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の",
+                    "reading": "えいぎょうぶの"
+                  }
+                },
+                {
+                  "text": " comes before the name and identifies the department."
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "The ruby on "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": " gives this surname’s reading; for a new name, use the person’s own pronunciation. Link the name with "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " in one phrase, normally with a falling ending. The final vowel is often weak or devoiced, giving the phrase a short, natural finish."
+                }
+              ]
+            },
+            "b-usage": {
+              "runs": [
+                {
+                  "text": "For a first meeting with classmates, colleagues or another participant, open with "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして。石川です。",
+                    "reading": "はじめまして。いしかわです。"
+                  }
+                },
+                {
+                  "text": " The first greeting belongs to a first meeting, so it is not an everyday greeting to someone you already know. You can close with "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします。",
+                    "reading": "よろしくおねがいします。"
+                  }
+                },
+                {
+                  "text": " This is a conventional wish for a good relationship; its natural translation depends on the occasion."
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "This polite introduction suits ordinary first meetings and many workplace encounters. Choose a family name, given name or full name according to the setting and how you want to be addressed. Generally leave respectful titles off your own name. When introducing someone else, choose their address form with their role and customary usage in mind."
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川といいます。",
+                    "reading": "いしかわといいます。"
+                  }
+                },
+                {
+                  "text": " explicitly says what you are called and is also a normal polite introduction; "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です。",
+                    "reading": "いしかわです。"
+                  }
+                },
+                {
+                  "text": " is more compact. In the longer version, "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t2",
+                    "to": "t2"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": " marks the quoted name and "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:self-introduction",
+                    "unit": "u-named",
+                    "from": "t3",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "いいます",
+                    "reading": "いいます"
+                  }
+                },
+                {
+                  "text": " means “am called”. The related grammar entry explains the ending beyond its use in names."
+                },
+                {
+                  "text": "The first form also suits a slightly more formal first introduction. The shorter second form is polite too.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-reciprocal": {
+              "runs": [
+                {
+                  "text": "After the other person says ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": ", you can reply ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ、よろしくお願いします",
+                    "reading": "こちらこそ、よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": ". The opening ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ",
+                    "reading": "こちらこそ"
+                  }
+                },
+                {
+                  "text": " returns the same goodwill, roughly “likewise.” It responds to what the other person has said; it is not a required opening for every introduction.",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "名前を伝える自己紹介",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "text": "初めて会うときや受付で名前を伝えるとき、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です",
+                    "reading": "いしかわです"
+                  }
+                },
+                {
+                  "text": " と丁寧に名乗れます。名前に丁寧な文末を加えた短い自己紹介です。訳すときは、話し手が自分の名前を伝えていることを自然に表します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "名前を先に置き、その後に丁寧な文末を続けます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": " が名前、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " が文末です。仕事で所属も伝えるなら、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t4",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の石川です",
+                    "reading": "えいぎょうぶのいしかわです"
+                  }
+                },
+                {
+                  "text": " と言えます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-affiliation",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "営業部の",
+                    "reading": "えいぎょうぶの"
+                  }
+                },
+                {
+                  "text": " は所属を表し、名前の前に置きます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "この例の姓 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川",
+                    "reading": "いしかわ"
+                  }
+                },
+                {
+                  "text": " は、表示された読みで発音します。実際の名前は本人の読み方に合わせます。名前と ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t2",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " を一続きにし、文末は通常下げます。最後の母音は弱くなったり無声化したりするため、短く自然に収めます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage": {
+              "runs": [
+                {
+                  "text": "初めて会う同級生や同僚、活動の参加者には、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t4",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして。石川です",
+                    "reading": "はじめまして。いしかわです"
+                  }
+                },
+                {
+                  "text": " と始められます。冒頭のあいさつは初対面のときに使い、毎日のあいさつには使いません。最後に ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " を添えると、今後よい関係を築きたい気持ちが伝わります。訳すときも、関係づくりの働きを場面に合わせて表します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "日常の初対面や一般的な仕事の場面で使える、丁寧な紹介です。姓・名・フルネームのどれを伝えるかは、場面と、相手にどう呼んでほしいかによって選びます。自分を紹介するときは、通常、自分の名前に敬称を付けません。他人を紹介するときは、その人の立場や呼び方に配慮します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "u-named",
+                    "from": "t1",
+                    "to": "t3",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川といいます",
+                    "reading": "いしかわといいます"
+                  }
+                },
+                {
+                  "text": " は名前を言う動詞を明示した表現で、一般的な丁寧な自己紹介に使えます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-name",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "石川です",
+                    "reading": "いしかわです"
+                  }
+                },
+                {
+                  "text": " はより短い言い方です。前者の ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-named",
+                    "from": "t2",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": " は名乗る名前を示し、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-named",
+                    "from": "t3",
+                    "to": "t3",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "いいます",
+                    "reading": "いいます"
+                  }
+                },
+                {
+                  "text": " は名前を述べる働きをします。名前の紹介と、広く使う丁寧な文末は関連項目として分けて学べます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "text": "前者は初対面で少し改まって名乗るときにも使えます。短い後者でも十分丁寧です。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-reciprocal": {
+              "runs": [
+                {
+                  "text": "相手が先に ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " と言ったら、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ、よろしくお願いします",
+                    "reading": "こちらこそ、よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " と返せます。最初の ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T06.s1",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "L"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "こちらこそ",
+                    "reading": "こちらこそ"
+                  }
+                },
+                {
+                  "text": " は、自分も同じ気持ちであることを相手に返します。相手の発言を受ける表現なので、自己紹介の冒頭に必ず加えるものではありません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "experimental:teaching:ja:polite-name-ending": {
+      "status": "restored-draft",
+      "units": {
+        "u-role": {
+          "id": "u-role",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "私",
+              "kind": "word",
+              "reading": "わたし",
+              "ruby": [
+                {
+                  "text": "私",
+                  "reading": "わたし"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "は",
+              "kind": "word",
+              "reading": "わ"
+            },
+            {
+              "id": "t3",
+              "text": "教師",
+              "kind": "word",
+              "reading": "きょうし",
+              "ruby": [
+                {
+                  "text": "教師",
+                  "reading": "きょうし"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t5",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t4"
+            }
+          ]
+        },
+        "u-quiet": {
+          "id": "u-quiet",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "この",
+              "kind": "word",
+              "reading": "この"
+            },
+            {
+              "id": "t2",
+              "text": "店",
+              "kind": "word",
+              "reading": "みせ",
+              "ruby": [
+                {
+                  "text": "店",
+                  "reading": "みせ"
+                }
+              ]
+            },
+            {
+              "id": "t3",
+              "text": "は",
+              "kind": "word",
+              "reading": "わ"
+            },
+            {
+              "id": "t4",
+              "text": "静か",
+              "kind": "word",
+              "reading": "しずか",
+              "ruby": [
+                {
+                  "text": "静",
+                  "reading": "しず"
+                },
+                {
+                  "text": "か"
+                }
+              ]
+            },
+            {
+              "id": "t5",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t6",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t3"
+            },
+            {
+              "id": "c2",
+              "from": "t4",
+              "to": "t5"
+            }
+          ]
+        },
+        "u-hot": {
+          "id": "u-hot",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "今日",
+              "kind": "word",
+              "reading": "きょう",
+              "ruby": [
+                {
+                  "text": "今日",
+                  "reading": "きょう"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "は",
+              "kind": "word",
+              "reading": "わ"
+            },
+            {
+              "id": "t3",
+              "text": "暑い",
+              "kind": "word",
+              "reading": "あつい",
+              "ruby": [
+                {
+                  "text": "暑",
+                  "reading": "あつ"
+                },
+                {
+                  "text": "い"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t5",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t4"
+            }
+          ]
+        },
+        "u-question": {
+          "id": "u-question",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "これ",
+              "kind": "word",
+              "reading": "これ"
+            },
+            {
+              "id": "t2",
+              "text": "は",
+              "kind": "word",
+              "reading": "わ"
+            },
+            {
+              "id": "t3",
+              "text": "地図",
+              "kind": "word",
+              "reading": "ちず",
+              "ruby": [
+                {
+                  "text": "地図",
+                  "reading": "ちず"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t5",
+              "text": "か",
+              "kind": "word",
+              "reading": "か"
+            },
+            {
+              "id": "t6",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t5"
+            }
+          ]
+        },
+        "u-negative": {
+          "id": "u-negative",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "学生",
+              "kind": "word",
+              "reading": "がくせい",
+              "ruby": [
+                {
+                  "text": "学生",
+                  "reading": "がくせい"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "じゃない",
+              "kind": "word",
+              "reading": "じゃない"
+            },
+            {
+              "id": "t3",
+              "text": "です",
+              "kind": "word",
+              "reading": "です"
+            },
+            {
+              "id": "t4",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            },
+            {
+              "id": "c2",
+              "from": "t2",
+              "to": "t3"
+            }
+          ]
+        },
+        "u-na": {
+          "id": "u-na",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "な",
+              "kind": "word",
+              "reading": "な"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            }
+          ]
+        },
+        "u-i": {
+          "id": "u-i",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "い",
+              "kind": "word",
+              "reading": "い"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            }
+          ]
+        },
+        "u-quiet-negative": {
+          "id": "u-quiet-negative",
+          "tokens": [
+            {
+              "id": "t1",
+              "kind": "word",
+              "text": "静か",
+              "reading": "しずか",
+              "ruby": [
+                {
+                  "text": "静",
+                  "reading": "しず"
+                },
+                {
+                  "text": "か"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "kind": "word",
+              "text": "じゃない",
+              "reading": "じゃない"
+            },
+            {
+              "id": "t3",
+              "kind": "word",
+              "text": "です",
+              "reading": "です"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t3"
+            }
+          ]
+        },
+        "u-hot-negative": {
+          "id": "u-hot-negative",
+          "tokens": [
+            {
+              "id": "t1",
+              "kind": "word",
+              "text": "暑く",
+              "reading": "あつく",
+              "ruby": [
+                {
+                  "text": "暑",
+                  "reading": "あつ"
+                },
+                {
+                  "text": "く"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "kind": "word",
+              "text": "ない",
+              "reading": "ない"
+            },
+            {
+              "id": "t3",
+              "kind": "word",
+              "text": "です",
+              "reading": "です"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t3"
+            }
+          ]
+        }
+      },
+      "unitLocalizations": {
+        "zh-Hant": {
+          "u-role": {
+            "translation": "我是教師。",
+            "tokens": {
+              "t1": {
+                "gloss": "我"
+              },
+              "t2": {
+                "gloss": "標示話題"
+              },
+              "t3": {
+                "gloss": "教師"
+              },
+              "t4": {
+                "gloss": "禮貌陳述句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "至於我"
+              },
+              "c2": {
+                "translation": "是教師"
+              }
+            }
+          },
+          "u-quiet": {
+            "translation": "這家店很安靜。",
+            "tokens": {
+              "t1": {
+                "gloss": "這個"
+              },
+              "t2": {
+                "gloss": "店"
+              },
+              "t3": {
+                "gloss": "標示話題"
+              },
+              "t4": {
+                "gloss": "安靜"
+              },
+              "t5": {
+                "gloss": "禮貌陳述句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "這家店"
+              },
+              "c2": {
+                "translation": "很安靜"
+              }
+            }
+          },
+          "u-hot": {
+            "translation": "今天天氣很熱。",
+            "tokens": {
+              "t1": {
+                "gloss": "今天"
+              },
+              "t2": {
+                "gloss": "標示話題"
+              },
+              "t3": {
+                "gloss": "天氣熱"
+              },
+              "t4": {
+                "gloss": "禮貌陳述句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "今天"
+              },
+              "c2": {
+                "translation": "天氣很熱"
+              }
+            }
+          },
+          "u-question": {
+            "translation": "這是地圖嗎？",
+            "tokens": {
+              "t1": {
+                "gloss": "這個"
+              },
+              "t2": {
+                "gloss": "標示話題"
+              },
+              "t3": {
+                "gloss": "地圖"
+              },
+              "t4": {
+                "gloss": "禮貌陳述句尾"
+              },
+              "t5": {
+                "gloss": "問句助詞"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "這個"
+              },
+              "c2": {
+                "translation": "是地圖嗎"
+              }
+            }
+          },
+          "u-negative": {
+            "translation": "我不是學生。",
+            "tokens": {
+              "t1": {
+                "gloss": "學生"
+              },
+              "t2": {
+                "gloss": "不是"
+              },
+              "t3": {
+                "gloss": "禮貌句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "學生"
+              },
+              "c2": {
+                "translation": "不是（禮貌口語）"
+              }
+            }
+          },
+          "u-na": {
+            "translation": "形容詞修飾名詞時的連接形式",
+            "tokens": {
+              "t1": {
+                "gloss": "形容詞修飾名詞時的連接形式"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "形容詞修飾名詞時的連接形式"
+              }
+            }
+          },
+          "u-i": {
+            "translation": "此類形容詞的詞尾",
+            "tokens": {
+              "t1": {
+                "gloss": "此類形容詞的詞尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "此類形容詞的詞尾"
+              }
+            }
+          },
+          "u-quiet-negative": {
+            "translation": "不安靜。",
+            "tokens": {
+              "t1": {
+                "gloss": "安靜"
+              },
+              "t2": {
+                "gloss": "不（否定）"
+              },
+              "t3": {
+                "gloss": "禮貌句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "不安靜。"
+              }
+            }
+          },
+          "u-hot-negative": {
+            "translation": "天氣不熱。",
+            "tokens": {
+              "t1": {
+                "gloss": "熱的連接形"
+              },
+              "t2": {
+                "gloss": "不"
+              },
+              "t3": {
+                "gloss": "禮貌句尾"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "天氣不熱。"
+              }
+            }
+          }
+        },
+        "en": {
+          "u-role": {
+            "translation": "I’m a teacher.",
+            "tokens": {
+              "t1": {
+                "gloss": "I"
+              },
+              "t2": {
+                "gloss": "topic marker"
+              },
+              "t3": {
+                "gloss": "teacher"
+              },
+              "t4": {
+                "gloss": "polite statement ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "as for me"
+              },
+              "c2": {
+                "translation": "am a teacher"
+              }
+            }
+          },
+          "u-quiet": {
+            "translation": "This shop is quiet.",
+            "tokens": {
+              "t1": {
+                "gloss": "this"
+              },
+              "t2": {
+                "gloss": "shop"
+              },
+              "t3": {
+                "gloss": "topic marker"
+              },
+              "t4": {
+                "gloss": "quiet"
+              },
+              "t5": {
+                "gloss": "polite statement ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "this shop (topic)"
+              },
+              "c2": {
+                "translation": "is quiet"
+              }
+            }
+          },
+          "u-hot": {
+            "translation": "It’s hot today.",
+            "tokens": {
+              "t1": {
+                "gloss": "today"
+              },
+              "t2": {
+                "gloss": "topic marker"
+              },
+              "t3": {
+                "gloss": "hot (weather)"
+              },
+              "t4": {
+                "gloss": "polite statement ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "today (topic)"
+              },
+              "c2": {
+                "translation": "is hot"
+              }
+            }
+          },
+          "u-question": {
+            "translation": "Is this a map?",
+            "tokens": {
+              "t1": {
+                "gloss": "this"
+              },
+              "t2": {
+                "gloss": "topic marker"
+              },
+              "t3": {
+                "gloss": "map"
+              },
+              "t4": {
+                "gloss": "polite predicate ending"
+              },
+              "t5": {
+                "gloss": "question particle"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "this (topic)"
+              },
+              "c2": {
+                "translation": "is it a map?"
+              }
+            }
+          },
+          "u-negative": {
+            "translation": "I’m not a student.",
+            "tokens": {
+              "t1": {
+                "gloss": "student"
+              },
+              "t2": {
+                "gloss": "is not"
+              },
+              "t3": {
+                "gloss": "polite ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "student"
+              },
+              "c2": {
+                "translation": "am not (conversational polite)"
+              }
+            }
+          },
+          "u-na": {
+            "translation": "linking form used by this adjective class before nouns",
+            "tokens": {
+              "t1": {
+                "gloss": "linking form used by this adjective class before nouns"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "linking form used by this adjective class before nouns"
+              }
+            }
+          },
+          "u-i": {
+            "translation": "ending of this adjective class",
+            "tokens": {
+              "t1": {
+                "gloss": "ending of this adjective class"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "ending of this adjective class"
+              }
+            }
+          },
+          "u-quiet-negative": {
+            "translation": "It is not quiet.",
+            "tokens": {
+              "t1": {
+                "gloss": "quiet"
+              },
+              "t2": {
+                "gloss": "not"
+              },
+              "t3": {
+                "gloss": "polite ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "It is not quiet."
+              }
+            }
+          },
+          "u-hot-negative": {
+            "translation": "It is not hot.",
+            "tokens": {
+              "t1": {
+                "gloss": "connecting form of hot"
+              },
+              "t2": {
+                "gloss": "not"
+              },
+              "t3": {
+                "gloss": "polite ending"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "It is not hot."
+              }
+            }
+          }
+        },
+        "ja": {
+          "u-quiet-negative": {
+            "translation": "静かではないという意味です。",
+            "tokens": {
+              "t1": {
+                "gloss": "静かな状態"
+              },
+              "t2": {
+                "gloss": "否定"
+              },
+              "t3": {
+                "gloss": "丁寧な文末"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "静かではないという意味です。"
+              }
+            }
+          },
+          "u-hot-negative": {
+            "translation": "暑くないという意味です。",
+            "tokens": {
+              "t1": {
+                "gloss": "暑いの連用形"
+              },
+              "t2": {
+                "gloss": "否定"
+              },
+              "t3": {
+                "gloss": "丁寧な文末"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "暑くないという意味です。"
+              }
+            }
+          }
+        }
+      },
+      "sectionOrder": [
+        "b-meaning",
+        "b-structure",
+        "b-pronunciation",
+        "b-register",
+        "b-alternatives"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-role",
+            "from": "t1",
+            "to": "t5"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "私は教師です。",
+            "reading": "わたしわきょうしです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-quiet",
+            "from": "t1",
+            "to": "t6"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "この店は静かです。",
+            "reading": "このみせわしずかです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-hot",
+            "from": "t1",
+            "to": "t5"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "今日は暑いです。",
+            "reading": "きょうわあついです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-question",
+            "from": "t1",
+            "to": "t6"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "これは地図ですか。",
+            "reading": "これわちずですか。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-negative",
+            "from": "t1",
+            "to": "t4"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "学生じゃないです。",
+            "reading": "がくせいじゃないです。"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-quiet-negative",
+            "from": "t1",
+            "to": "t3"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "静かじゃないです",
+            "reading": "しずかじゃないです"
+          }
+        },
+        {
+          "ref": {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-hot-negative",
+            "from": "t1",
+            "to": "t3"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "暑くないです",
+            "reading": "あつくないです"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "禮貌陳述：身分、事物與性質",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "私は教師です",
+                    "reading": "わたしわきょうしです"
+                  }
+                },
+                {
+                  "text": "用名詞說明身分，"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "この店は静かです",
+                    "reading": "このみせわしずかです"
+                  }
+                },
+                {
+                  "text": "與"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "今日は暑いです",
+                    "reading": "きょうわあついです"
+                  }
+                },
+                {
+                  "text": "則說明性質。這些句尾都讓陳述更禮貌；翻成中文時不一定都要譯出「是」，尤其描述形容詞時更自然的是「很安靜」「很熱」。"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "名詞後直接接",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "教師です",
+                    "reading": "きょうしです"
+                  }
+                },
+                {
+                  "text": "。\n",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "形容詞在這裡不加",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet",
+                    "from": "t4",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かです",
+                    "reading": "しずかです"
+                  }
+                },
+                {
+                  "text": "。\n",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "形容詞保留詞尾，再接",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑いです",
+                    "reading": "あついです"
+                  }
+                },
+                {
+                  "text": "。\n動詞如",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": "已經是禮貌形，不再接",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "的句尾母音常較輕。自然讀出，不要刻意拉長。陳述句通常在句尾收落；問句如",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t6"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか。",
+                    "reading": "これわちずですか。"
+                  }
+                },
+                {
+                  "text": "可依確認或詢問的語氣調整。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "這些句子是禮貌體，適合初次見面或較客氣的交談。自我介紹時，對方通常知道你在說自己，不必每句都說「我」。禮貌體主要照顧聽者；尊敬語與謙讓語還會因談論的人或動作而換用特定說法。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "text": "在句尾加問句助詞，可以問：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t6"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか。",
+                    "reading": "これわちずですか。"
+                  }
+                },
+                {
+                  "text": "名詞的口語禮貌否定，例如：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-negative",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生じゃないです。",
+                    "reading": "がくせいじゃないです。"
+                  }
+                },
+                {
+                  "text": "同樣的否定形式也可用於",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "形容詞：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かじゃないです",
+                    "reading": "しずかじゃないです"
+                  }
+                },
+                {
+                  "text": "。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "形容詞則把詞尾換成否定形式：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑くないです",
+                    "reading": "あつくないです"
+                  }
+                },
+                {
+                  "text": "。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Polite predicates: identities, things and qualities",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "私は教師です",
+                    "reading": "わたしわきょうしです"
+                  }
+                },
+                {
+                  "text": " identifies someone with a noun; "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "この店は静かです",
+                    "reading": "このみせわしずかです"
+                  }
+                },
+                {
+                  "text": " and "
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "今日は暑いです",
+                    "reading": "きょうわあついです"
+                  }
+                },
+                {
+                  "text": " describe qualities. The shared ending adds politeness. Its grammatical contribution is not identical in every construction: after an adjective it should not be treated as an extra English word to translate mechanically."
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "Noun + ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": ": ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "教師です",
+                    "reading": "きょうしです"
+                  }
+                },
+                {
+                  "text": ".\nA ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "-adjective leaves out ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": " before ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": ": ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet",
+                    "from": "t4",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かです",
+                    "reading": "しずかです"
+                  }
+                },
+                {
+                  "text": ".\nAn ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "-adjective keeps its ending before ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": ": ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑いです",
+                    "reading": "あついです"
+                  }
+                },
+                {
+                  "text": ".\nThe verb ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": " is already polite; do not add ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " after it.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "Keep ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " short; its final vowel can be very light. Do not stretch it to sound polite. Statements usually fall at the end. In a question such as ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t6"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか。",
+                    "reading": "これわちずですか。"
+                  }
+                },
+                {
+                  "text": " the intonation also depends on whether you are checking something or asking for new information.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "These polite forms suit first meetings and courteous conversation. When introducing yourself, it is usually clear who you are talking about, so you can leave out “I.” Polite style addresses the listener courteously; honorific and humble language also changes wording according to whose actions you describe.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "text": "Add the question particle to ask: ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t6"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか。",
+                    "reading": "これわちずですか。"
+                  }
+                },
+                {
+                  "text": " For a conversational polite negative with a noun, use ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-negative",
+                    "from": "t1",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生じゃないです。",
+                    "reading": "がくせいじゃないです。"
+                  }
+                },
+                {
+                  "text": " The same negative ending works with a ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "-adjective: ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かじゃないです",
+                    "reading": "しずかじゃないです"
+                  }
+                },
+                {
+                  "text": ". An ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "-adjective changes its ending: ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑くないです",
+                    "reading": "あつくないです"
+                  }
+                },
+                {
+                  "text": ".",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "身分や性質を丁寧に述べる文末",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "u-role",
+                    "from": "t1",
+                    "to": "t4",
+                    "resourceId": "experimental:teaching:ja:polite-name-ending"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "私は教師です",
+                    "reading": "わたしわきょうしです"
+                  }
+                },
+                {
+                  "text": " は名詞で身分を示し、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-quiet",
+                    "from": "t1",
+                    "to": "t5",
+                    "resourceId": "experimental:teaching:ja:polite-name-ending"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "この店は静かです",
+                    "reading": "このみせわしずかです"
+                  }
+                },
+                {
+                  "text": " と ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-hot",
+                    "from": "t1",
+                    "to": "t4",
+                    "resourceId": "experimental:teaching:ja:polite-name-ending"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "今日は暑いです",
+                    "reading": "きょうわあついです"
+                  }
+                },
+                {
+                  "text": " は性質を述べています。共通の文末は聞き手への丁寧さを加えますが、名詞と形容詞では文法上の働きが同じではありません。訳すときに、文末をいつも同じ一語に置き換える必要はありません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "名詞には",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "を続けます：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "教師です",
+                    "reading": "きょうしです"
+                  }
+                },
+                {
+                  "text": "。\n",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "形容詞では、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "を付けずに",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet",
+                    "from": "t4",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かです",
+                    "reading": "しずかです"
+                  }
+                },
+                {
+                  "text": "とします。\n",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "形容詞は語尾を残して",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot",
+                    "from": "t3",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑いです",
+                    "reading": "あついです"
+                  }
+                },
+                {
+                  "text": "とします。\n動詞の",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": "はすでに丁寧な形なので、その後に",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "は付けません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-role",
+                    "from": "t4",
+                    "to": "t4"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": "の最後の母音は弱く聞こえることがあります。丁寧に言おうとして長く伸ばす必要はありません。文を言い切るときは、普通、文末を下げます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか",
+                    "reading": "これわちずですか"
+                  }
+                },
+                {
+                  "text": "のような質問では、確認するか、新しい情報を尋ねるかによっても語調が変わります。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register": {
+              "runs": [
+                {
+                  "text": "丁寧体は、初対面や改まった会話に合います。自己紹介では誰のことを話しているかわかるため、毎回「私」を言う必要はありません。丁寧体は聞き手への配慮を表します。尊敬語や謙譲語では、誰の動作を話すかによって言い方も変わります。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-alternatives": {
+              "runs": [
+                {
+                  "text": "疑問の助詞を加えると、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-question",
+                    "from": "t1",
+                    "to": "t5"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "これは地図ですか",
+                    "reading": "これわちずですか"
+                  }
+                },
+                {
+                  "text": "のように尋ねられます。名詞の会話での丁寧な否定は、例えば「",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生じゃないです",
+                    "reading": "がくせいじゃないです"
+                  }
+                },
+                {
+                  "text": "」です。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-na",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "な",
+                    "reading": "な"
+                  }
+                },
+                {
+                  "text": "形容詞にも同じ否定の形を使えます：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-quiet-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "静かじゃないです",
+                    "reading": "しずかじゃないです"
+                  }
+                },
+                {
+                  "text": "。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-i",
+                    "from": "t1",
+                    "to": "t1"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "い",
+                    "reading": "い"
+                  }
+                },
+                {
+                  "text": "形容詞では語尾を変えます：",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "experimental:teaching:ja:polite-name-ending",
+                    "unit": "u-hot-negative",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "暑くないです",
+                    "reading": "あつくないです"
+                  }
+                },
+                {
+                  "text": "。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "draft:teaching:ja:topic-return-question": {
+      "status": "original-AI-draft",
+      "units": {},
+      "sectionOrder": [
+        "b-meaning-context",
+        "b-structure",
+        "b-usage-limit",
+        "b-address-pronunciation"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "unit": "T03.s1",
+            "from": "t1",
+            "to": "t2",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "学生です",
+            "reading": "がくせいです"
+          }
+        },
+        {
+          "ref": {
+            "unit": "T03.s2",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "レンさんは",
+            "reading": "レンさんわ"
+          }
+        },
+        {
+          "ref": {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "会社員です",
+            "reading": "かいしゃいんです"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "沿同一話題回問對方",
+          "sections": {
+            "b-meaning-context": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさんは",
+                    "reading": "レンさんわ"
+                  }
+                },
+                {
+                  "text": " 把剛才的話題轉向對方，約相當於「那你呢？」。例如先說 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生です",
+                    "reading": "がくせいです"
+                  }
+                },
+                {
+                  "text": "，再問對方，回答可用 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T04.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会社員です",
+                    "reading": "かいしゃいんです"
+                  }
+                },
+                {
+                  "text": "。問題跟著當時的話題走，不是這串聲音固定等於「你做什麼工作」。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさん",
+                    "reading": "レンさん"
+                  }
+                },
+                {
+                  "text": " 指出接下來談的人，",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " 標記話題。後面的述語由前文補足，所以可以省略。這個助詞不是疑問詞；問句的理解來自省略的內容、對話位置與語調。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-limit": {
+              "runs": [
+                {
+                  "text": "適合在雙方知道同一個問題時，簡短地回問或換下一個人回答。若突然換話題、前文有多個可能的問題，應把想問的內容說清楚。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-address-pronunciation": {
+              "runs": [
+                {
+                  "text": "用對方的姓名加 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "さん",
+                    "reading": "さん"
+                  }
+                },
+                {
+                  "text": " 是常見的禮貌稱呼；自我介紹時不把這個敬稱加在自己的姓名後。這裡的 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " 標示回問的對象；問句末尾稍微上揚，並留出讓對方回答的空間。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Asking the other person about the same topic",
+          "sections": {
+            "b-meaning-context": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさんは",
+                    "reading": "レンさんわ"
+                  }
+                },
+                {
+                  "text": " turns the current topic to the other person, roughly “How about you?” For example, after ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生です",
+                    "reading": "がくせいです"
+                  }
+                },
+                {
+                  "text": ", the other person can answer ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T04.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会社員です",
+                    "reading": "かいしゃいんです"
+                  }
+                },
+                {
+                  "text": ". The question follows the active topic; the words do not permanently mean “What is your job?”",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさん",
+                    "reading": "レンさん"
+                  }
+                },
+                {
+                  "text": " identifies the next person being discussed, and ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " marks the topic. The predicate is omitted because the preceding conversation supplies it. The particle is not a question word; context, turn position, and intonation make the question understandable.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-limit": {
+              "runs": [
+                {
+                  "text": "Use the short form when everyone knows which question is being continued, either to ask back or to invite the next person to answer. If you change topics or several questions are possible, make the intended question explicit.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-address-pronunciation": {
+              "runs": [
+                {
+                  "text": "A name followed by ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "さん",
+                    "reading": "さん"
+                  }
+                },
+                {
+                  "text": " is a common polite way to address someone. Do not add that honorific to your own name when introducing yourself. Here ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " marks the person being asked about; let the question rise slightly and leave room for an answer.",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "同じ話題を相手にも聞く",
+          "sections": {
+            "b-meaning-context": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさんは",
+                    "reading": "レンさんわ"
+                  }
+                },
+                {
+                  "text": " は、直前の話題を相手にも向ける言い方です。例えば ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "学生です",
+                    "reading": "がくせいです"
+                  }
+                },
+                {
+                  "text": " と述べた後なら、相手は ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T04.s1",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会社員です",
+                    "reading": "かいしゃいんです"
+                  }
+                },
+                {
+                  "text": " と答えられます。何を尋ねているかはそのときの話題によって決まり、この形がいつも職業の質問になるわけではありません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t1",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンさん",
+                    "reading": "レンさん"
+                  }
+                },
+                {
+                  "text": " は次に話題にする人を示し、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " が話題を標示します。続く述語は前の会話から補えるので省略されています。この助詞そのものが疑問詞なのではなく、文脈・発話の位置・語調から質問だとわかります。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-limit": {
+              "runs": [
+                {
+                  "text": "同じ質問を続けていることが共有されていれば、相手に聞き返したり、次の人に答えてもらったりできます。急に話題を変えるときや、何を聞くか曖昧なときは、内容を明示します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-address-pronunciation": {
+              "runs": [
+                {
+                  "text": "相手の名前に ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "さん",
+                    "reading": "さん"
+                  }
+                },
+                {
+                  "text": " を付けるのは、よく使う丁寧な呼び方です。自分を紹介するときに、自分の名前へこの敬称は付けません。ここでの ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T03.s2",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "は",
+                    "reading": "わ"
+                  }
+                },
+                {
+                  "text": " は、誰について聞き返すかを示します。文末を少し上げて、相手の答えを待ちます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "draft:teaching:ja:preferred-name-request": {
+      "status": "original-AI-draft",
+      "units": {
+        "u-call-lemma": {
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "呼ぶ",
+              "reading": "よぶ"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t1"
+            }
+          ],
+          "spans": []
+        }
+      },
+      "unitLocalizations": {
+        "zh-Hant": {
+          "u-call-lemma": {
+            "translation": "稱呼；叫作"
+          }
+        },
+        "en": {
+          "u-call-lemma": {
+            "translation": "call; address by a name"
+          }
+        },
+        "ja": {
+          "u-call-lemma": {
+            "meaning": "人をある名前で呼ぶ動作を表す辞書形"
+          }
+        }
+      },
+      "sectionOrder": [
+        "b-meaning",
+        "b-structure",
+        "b-usage-register",
+        "b-pronunciation"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t4",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "レンと呼んでください",
+            "reading": "レンとよんでください"
+          }
+        },
+        {
+          "ref": {
+            "unit": "I01.s5",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "レン・リーといいます",
+            "reading": "レン・リーといいます"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "請對方使用偏好的稱呼",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンと呼んでください",
+                    "reading": "レンとよんでください"
+                  }
+                },
+                {
+                  "text": " 用來請對方採用指定的稱呼。它告訴對方「之後請這樣叫我」，不只是報出名字。與 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s5",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン・リーといいます",
+                    "reading": "レン・リーといいます"
+                  }
+                },
+                {
+                  "text": " 相比，後者是在陳述姓名，前者則是在提出稱呼上的請求。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "先放希望對方使用的稱呼 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン",
+                    "reading": "レン"
+                  }
+                },
+                {
+                  "text": "，再接 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": "，標出稱呼的內容。動詞 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-call-lemma",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "draft:teaching:ja:preferred-name-request"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼ぶ",
+                    "reading": "よぶ"
+                  }
+                },
+                {
+                  "text": " 的連接形是 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": "，接上 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t4",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "ください",
+                    "reading": "ください"
+                  }
+                },
+                {
+                  "text": " 構成請求。這裡的引用標記不是表示「和某人一起」的用法。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-register": {
+              "runs": [
+                {
+                  "text": "全名較長、想使用簡稱，或想先說明自己偏好的稱呼時，都可使用這種說法。句尾是禮貌的請求，但也可以形成指示；是否合適仍要看事情的負擔與彼此關係，不能把它當成所有請求中最委婉的一種。自我介紹中說明稱呼通常是容易接受的小請求。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": " 依照片段所標的讀法發音；中間的鼻音占一拍，後接濁音，不要讀成原形直接接請求句尾。把 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んでください",
+                    "reading": "よんでください"
+                  }
+                },
+                {
+                  "text": " 連成一段，稱呼與後面的助詞也保持相連。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Requesting a preferred form of address",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンと呼んでください",
+                    "reading": "レンとよんでください"
+                  }
+                },
+                {
+                  "text": " asks the listener to use a particular name or form of address. It tells them how you would like to be called. In contrast, ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s5",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン・リーといいます",
+                    "reading": "レン・リーといいます"
+                  }
+                },
+                {
+                  "text": " states your name; giving a name and asking someone to use a preferred form are different actions.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "Put the preferred name ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン",
+                    "reading": "レン"
+                  }
+                },
+                {
+                  "text": " first. ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": " marks that name as the wording to use. The te-form of ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-call-lemma",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "draft:teaching:ja:preferred-name-request"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼ぶ",
+                    "reading": "よぶ"
+                  }
+                },
+                {
+                  "text": " is ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": "; it combines with ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t4",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "ください",
+                    "reading": "ください"
+                  }
+                },
+                {
+                  "text": " to make the request. Here the particle marks the name; it does not mean “together with.”",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-register": {
+              "runs": [
+                {
+                  "text": "Use this when your full name is long, you prefer a shorter name, or you want to clarify how to address you. The ending is a polite request form and can also give instructions. Its suitability depends on the relationship and the burden of the request; it is not automatically the most indirect option. Giving a preferred name in an introduction is usually a small request.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "In ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": ", the nasal takes one mora and is followed by a voiced consonant. Use this form rather than attaching the request ending directly to the dictionary form. Keep ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んでください",
+                    "reading": "よんでください"
+                  }
+                },
+                {
+                  "text": " together, and connect the preferred name smoothly to its particle.",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "希望する呼び方を伝える",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レンと呼んでください",
+                    "reading": "レンとよんでください"
+                  }
+                },
+                {
+                  "text": " は、相手に使ってほしい呼び方を伝える表現です。名前を知らせるだけでなく、今後その呼び方を使うよう頼みます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s5",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン・リーといいます",
+                    "reading": "レン・リーといいます"
+                  }
+                },
+                {
+                  "text": " は名前を述べる表現で、呼び方を頼むこととは働きが異なります。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "使ってほしい呼び方 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "レン",
+                    "reading": "レン"
+                  }
+                },
+                {
+                  "text": " を先に置き、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "と",
+                    "reading": "と"
+                  }
+                },
+                {
+                  "text": " で呼び方の内容を示します。動詞 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-call-lemma",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "draft:teaching:ja:preferred-name-request"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼ぶ",
+                    "reading": "よぶ"
+                  }
+                },
+                {
+                  "text": " のて形 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": " に ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t4",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "ください",
+                    "reading": "ください"
+                  }
+                },
+                {
+                  "text": " を続けると、相手への依頼になります。ここでの助詞は呼び方の内容を示し、誰かと一緒にするという意味ではありません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-usage-register": {
+              "runs": [
+                {
+                  "text": "フルネームが長いときや、短い名前で呼んでほしいとき、希望する呼び方を先に伝えたいときに使えます。文末は丁寧な依頼の形ですが、指示にも使われます。相手との関係や頼む内容の負担によって適切さは変わり、どんな依頼でも最も控えめになるわけではありません。自己紹介で呼び方を伝えるのは、通常、小さなお願いです。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んで",
+                    "reading": "よんで"
+                  }
+                },
+                {
+                  "text": " の鼻音は一拍で、その後は濁音です。辞書形に依頼の文末を直接付けず、この形を使います。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s6",
+                    "from": "t3",
+                    "to": "t4",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "呼んでください",
+                    "reading": "よんでください"
+                  }
+                },
+                {
+                  "text": " は一続きにし、呼び方とその後の助詞もつなげて発音します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "draft:teaching:ja:place-of-origin": {
+      "status": "original-AI-draft",
+      "units": {
+        "u-destination": {
+          "id": "u-destination",
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "台湾",
+              "kind": "word",
+              "reading": "たいわん",
+              "ruby": [
+                {
+                  "text": "台湾",
+                  "reading": "たいわん"
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "text": "に",
+              "kind": "word",
+              "reading": "に"
+            },
+            {
+              "id": "t3",
+              "text": "来ました",
+              "kind": "word",
+              "reading": "きました",
+              "ruby": [
+                {
+                  "text": "来ました",
+                  "reading": "きました"
+                }
+              ]
+            },
+            {
+              "id": "t4",
+              "text": "。",
+              "kind": "word"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t2"
+            },
+            {
+              "id": "c2",
+              "from": "t3",
+              "to": "t3"
+            }
+          ]
+        }
+      },
+      "unitLocalizations": {
+        "zh-Hant": {
+          "u-destination": {
+            "translation": "來到台灣了。",
+            "tokens": {
+              "t1": {
+                "gloss": "台灣"
+              },
+              "t2": {
+                "gloss": "標示移動的目的地"
+              },
+              "t3": {
+                "gloss": "來了（禮貌過去形）"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "到台灣"
+              },
+              "c2": {
+                "translation": "來了"
+              }
+            }
+          }
+        },
+        "en": {
+          "u-destination": {
+            "translation": "I came to Taiwan.",
+            "tokens": {
+              "t1": {
+                "gloss": "Taiwan"
+              },
+              "t2": {
+                "gloss": "marks the destination of movement"
+              },
+              "t3": {
+                "gloss": "came (polite past)"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "to Taiwan"
+              },
+              "c2": {
+                "translation": "came"
+              }
+            }
+          }
+        },
+        "ja": {
+          "u-destination": {
+            "translation": "台湾に到着したと伝えています。",
+            "tokens": {
+              "t1": {
+                "gloss": "台湾"
+              },
+              "t2": {
+                "gloss": "移動の到着点を示す"
+              },
+              "t3": {
+                "gloss": "来るの丁寧な過去形"
+              }
+            },
+            "chunks": {
+              "c1": {
+                "translation": "台湾へ"
+              },
+              "c2": {
+                "translation": "来た"
+              }
+            }
+          }
+        }
+      },
+      "sectionOrder": [
+        "b-meaning",
+        "b-structure",
+        "b-context-limit",
+        "b-direction"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "台湾から来ました",
+            "reading": "たいわんからきました"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "介紹自己從哪裡來",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": " 在自我介紹中用來說明自己從哪個地方來。自然可譯成「我來自臺灣」。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "地點 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾",
+                    "reading": "たいわん"
+                  }
+                },
+                {
+                  "text": " 後接 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "から",
+                    "reading": "から"
+                  }
+                },
+                {
+                  "text": "，表示移動的起點；",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": " 是「來」的禮貌過去形式。地點可以是國家、地區或城市。初學時可先將整個句型連起來使用，而不是把句尾當作名詞後的判斷句尾。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-context-limit": {
+              "runs": [
+                {
+                  "text": "同一句型在旅行或到達某處的談話中，也可能是在說剛才或這次行程從哪裡過來。要靠上下文判斷是在介紹自己的背景，還是在交代移動起點。這一句本身不能確定國籍、出生地、成長地或目前住址；需要這些資訊時，應另外說明。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-direction": {
+              "runs": [
+                {
+                  "text": "",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": "是「從台灣來」；",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "draft:teaching:ja:place-of-origin",
+                    "unit": "u-destination",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾に来ました",
+                    "reading": "たいわんにきました"
+                  }
+                },
+                {
+                  "text": "是「來到台灣」。兩句都成立，要按想表達的方向選助詞。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Saying where you are from",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "text": "In an introduction, ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": " tells people where you are from, naturally “I’m from Taiwan.”",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "The place ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾",
+                    "reading": "たいわん"
+                  }
+                },
+                {
+                  "text": " is followed by ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "から",
+                    "reading": "から"
+                  }
+                },
+                {
+                  "text": ", marking a starting point. ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": " is the polite past form of “come.” The place can be a country, region, or city. Learn the phrase as a whole at first; its ending is a verb, not the polite noun-predicate ending.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-context-limit": {
+              "runs": [
+                {
+                  "text": "In a conversation about travel or arrival, the same pattern may instead name the place you have just come from on this trip. Context distinguishes personal background from an immediate departure point. The sentence alone does not establish citizenship, birthplace, where you grew up, or your current address; give those details separately when needed.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-direction": {
+              "runs": [
+                {
+                  "text": "",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": " means “I came from Taiwan”; ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "draft:teaching:ja:place-of-origin",
+                    "unit": "u-destination",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾に来ました",
+                    "reading": "たいわんにきました"
+                  }
+                },
+                {
+                  "text": " means “I came to Taiwan.” Both are grammatical; choose the particle for the direction you mean.",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "どこから来たかを伝える",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "text": "自己紹介で ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": " と言うと、どこから来たかを伝えられます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "text": "場所 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t1",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾",
+                    "reading": "たいわん"
+                  }
+                },
+                {
+                  "text": " の後の ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "から",
+                    "reading": "から"
+                  }
+                },
+                {
+                  "text": " は、移動の出発点を示します。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "I01.s7",
+                    "from": "t3",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "来ました",
+                    "reading": "きました"
+                  }
+                },
+                {
+                  "text": " は、こちらへ来ることを表す動詞の丁寧な過去形です。国・地域・都市などを入れられます。初めは全体を一つの言い方として使いましょう。文末は動詞で、名詞文の文末とは異なります。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-context-limit": {
+              "runs": [
+                {
+                  "text": "旅行や到着について話しているときは、同じ形が、今回どこから移動してきたかを表すこともあります。自分の背景を紹介しているのか、直前の出発点を説明しているのかは文脈で判断します。この一文だけでは、国籍・生まれた場所・育った場所・現在の住所はわかりません。必要な情報は別に説明します。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-direction": {
+              "runs": [
+                {
+                  "text": "",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "sourceId": "C",
+                    "unit": "I01.s7",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾から来ました",
+                    "reading": "たいわんからきました"
+                  }
+                },
+                {
+                  "text": "は台湾が出発点、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "resourceId": "draft:teaching:ja:place-of-origin",
+                    "unit": "u-destination",
+                    "from": "t1",
+                    "to": "t3"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "台湾に来ました",
+                    "reading": "たいわんにきました"
+                  }
+                },
+                {
+                  "text": "は台湾が到着点です。どちらも正しい文で、伝えたい方向に合わせて助詞を選びます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "draft:teaching:ja:pleasure-at-meeting": {
+      "status": "original-AI-draft",
+      "units": {
+        "u-meet-plain-polite": {
+          "tokens": [
+            {
+              "id": "t1",
+              "text": "会えて",
+              "reading": "あえて"
+            },
+            {
+              "id": "t2",
+              "text": "うれしい",
+              "reading": "うれしい"
+            },
+            {
+              "id": "t3",
+              "text": "です",
+              "reading": "です"
+            },
+            {
+              "id": "t4",
+              "text": "。",
+              "reading": "。"
+            }
+          ],
+          "chunks": [
+            {
+              "id": "c1",
+              "from": "t1",
+              "to": "t3"
+            }
+          ],
+          "spans": []
+        }
+      },
+      "unitLocalizations": {
+        "zh-Hant": {
+          "u-meet-plain-polite": {
+            "translation": "很高興能見到你。"
+          }
+        },
+        "en": {
+          "u-meet-plain-polite": {
+            "translation": "I’m glad to meet you."
+          }
+        },
+        "ja": {
+          "u-meet-plain-polite": {
+            "meaning": "相手に会えたことを喜んでいます。"
+          }
+        }
+      },
+      "sectionOrder": [
+        "b-meaning",
+        "b-structure",
+        "b-register-alternative",
+        "b-pronunciation"
+      ],
+      "examples": [
+        {
+          "ref": {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5",
+            "sourceId": "C"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "お会いできてうれしいです",
+            "reading": "おあいできてうれしいです"
+          }
+        },
+        {
+          "ref": {
+            "unit": "u-meet-plain-polite",
+            "from": "t1",
+            "to": "t3",
+            "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+          },
+          "speech": {
+            "lang": "ja-JP",
+            "text": "会えてうれしいです",
+            "reading": "あえてうれしいです"
+          }
+        }
+      ],
+      "localizations": {
+        "zh-Hant": {
+          "title": "禮貌地表達見面的喜悅",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできてうれしいです",
+                    "reading": "おあいできてうれしいです"
+                  }
+                },
+                {
+                  "text": " 表達「能見到你，我很高興」。重點是當下見到對方的喜悅，可以加在初次見面的招呼中；它本身不限定只能用於第一次見面。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": " 是帶敬意的「能見到」的連接形式，接到 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": "，把見面這件事連成喜悅的理由。最後的 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t5",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " 讓形容詞述語保持禮貌。先掌握整句；不要將開頭拆成可任意套用到所有動詞的敬語公式。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register-alternative": {
+              "runs": [
+                {
+                  "text": "這句比一般初見招呼更明說自己的心情，也帶較鄭重的語氣。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-meet-plain-polite",
+                    "from": "t1",
+                    "to": "t3",
+                    "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会えてうれしいです",
+                    "reading": "あえてうれしいです"
+                  }
+                },
+                {
+                  "text": " 同樣表達見面的喜悅，保留禮貌句尾，但少了原句前半的敬語形式。與 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして",
+                    "reading": "はじめまして"
+                  }
+                },
+                {
+                  "text": " 的首次見面開場、",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " 的關係性結語相比，三者的交際重點不同，不必機械地每次全部連用。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": " 依照片段標示的讀法連起來。其中 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会い",
+                    "reading": "あい"
+                  }
+                },
+                {
+                  "text": " 的兩個母音都要保留，不把它們擠成一個長音；後面的 ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": " 再自然接上。重點是把前半的見面與後半的心情連成一句。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "en": {
+          "title": "Expressing pleasure at meeting politely",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできてうれしいです",
+                    "reading": "おあいできてうれしいです"
+                  }
+                },
+                {
+                  "text": " expresses pleasure at being able to meet the other person: “I’m glad to meet you.” It can accompany a first-meeting greeting, but the expression itself is not restricted to a first encounter.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": " is a respectful connecting form meaning “being able to meet.” It leads into ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": ", linking the meeting to the feeling of pleasure. Final ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t5",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " makes the adjective predicate polite. Learn the complete expression first rather than treating its opening as an honorific formula usable with every verb.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register-alternative": {
+              "runs": [
+                {
+                  "text": "This wording states your feeling more explicitly than a basic first-meeting greeting and sounds more formal. ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-meet-plain-polite",
+                    "from": "t1",
+                    "to": "t3",
+                    "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会えてうれしいです",
+                    "reading": "あえてうれしいです"
+                  }
+                },
+                {
+                  "text": " also expresses pleasure and keeps a polite ending, without the original opening’s honorific form. A first-meeting opening such as ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして",
+                    "reading": "はじめまして"
+                  }
+                },
+                {
+                  "text": " and a goodwill closing such as ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " serve different purposes; there is no need to stack all three every time.",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "text": "Follow the reading of ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": ". Keep both vowels in ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会い",
+                    "reading": "あい"
+                  }
+                },
+                {
+                  "text": " rather than collapsing them into one long vowel, then connect ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": " naturally. The meeting and the feeling belong to one sentence.",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        },
+        "ja": {
+          "title": "会えた喜びを丁寧に伝える",
+          "sections": {
+            "b-meaning": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできてうれしいです",
+                    "reading": "おあいできてうれしいです"
+                  }
+                },
+                {
+                  "text": " は、相手に会えたことを喜ぶ気持ちを伝えます。初対面のあいさつに添えられますが、この表現自体は初めて会うときだけに限りません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-structure": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": " は、相手への敬意を含む、会うことができたという意味の接続形です。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": " に続き、会えたことが喜びの理由になります。最後の ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t5",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "です",
+                    "reading": "です"
+                  }
+                },
+                {
+                  "text": " は形容詞の述語を丁寧にします。まず全体を覚え、前半をすべての動詞に使える敬語の公式として当てはめないようにします。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-register-alternative": {
+              "runs": [
+                {
+                  "text": "基本的な初対面のあいさつよりも気持ちを明示し、改まった響きがあります。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-meet-plain-polite",
+                    "from": "t1",
+                    "to": "t3",
+                    "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会えてうれしいです",
+                    "reading": "あえてうれしいです"
+                  }
+                },
+                {
+                  "text": " も会えた喜びを伝え、丁寧な文末を保ちますが、元の表現の前半にある敬語の形は使いません。初対面のあいさつである ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-first",
+                    "from": "t1",
+                    "to": "t1",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "はじめまして",
+                    "reading": "はじめまして"
+                  }
+                },
+                {
+                  "text": " や、関係づくりの結びの ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "u-closing",
+                    "from": "t1",
+                    "to": "t2",
+                    "resourceId": "experimental:teaching:ja:self-introduction"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "よろしくお願いします",
+                    "reading": "よろしくおねがいします"
+                  }
+                },
+                {
+                  "text": " とは働きが異なり、毎回三つすべてを続ける必要はありません。",
+                  "role": "teaching-prose"
+                }
+              ]
+            },
+            "b-pronunciation": {
+              "runs": [
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t1",
+                    "to": "t3",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "お会いできて",
+                    "reading": "おあいできて"
+                  }
+                },
+                {
+                  "text": " は表示された読みでつなげます。",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t2",
+                    "to": "t2",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "会い",
+                    "reading": "あい"
+                  }
+                },
+                {
+                  "text": " の二つの母音を、一つの長音にまとめずに発音し、その後に ",
+                  "role": "teaching-prose"
+                },
+                {
+                  "ref": {
+                    "unit": "T05.s2",
+                    "from": "t4",
+                    "to": "t5",
+                    "sourceId": "C"
+                  },
+                  "speech": {
+                    "lang": "ja-JP",
+                    "text": "うれしいです",
+                    "reading": "うれしいです"
+                  }
+                },
+                {
+                  "text": " を自然に続けます。前半の出来事と後半の気持ちを一文として伝えます。",
+                  "role": "teaching-prose"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "entryLinks": {
+    "draft:ja:first-meeting-opening": {
+      "resourceId": "experimental:teaching:ja:self-introduction",
+      "relationship": "specific-sense-in-broader-resource",
+      "sectionIds": [
+        "b-usage",
+        "b-register"
+      ],
+      "resourceExampleRefs": [
+        {
+          "resourceId": "experimental:teaching:ja:self-introduction",
+          "unit": "u-first",
+          "from": "t1",
+          "to": "t1"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:cooperative-closing": {
+      "resourceId": "experimental:teaching:ja:self-introduction",
+      "relationship": "specific-sense-in-broader-resource",
+      "sectionIds": [
+        "b-usage",
+        "b-register",
+        "b-reciprocal"
+      ],
+      "resourceExampleRefs": [
+        {
+          "resourceId": "experimental:teaching:ja:self-introduction",
+          "unit": "u-closing",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:polite-noun-predicate": {
+      "resourceId": "experimental:teaching:ja:polite-name-ending",
+      "relationship": "specific-sense-in-broader-resource",
+      "sectionIds": [
+        "b-meaning",
+        "b-structure",
+        "b-pronunciation",
+        "b-register",
+        "b-alternatives"
+      ],
+      "resourceExampleRefs": [
+        {
+          "resourceId": "experimental:teaching:ja:polite-name-ending",
+          "unit": "u-role",
+          "from": "t3",
+          "to": "t4"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:self-naming": {
+      "resourceId": "experimental:teaching:ja:self-introduction",
+      "relationship": "specific-sense-in-broader-resource",
+      "sectionIds": [
+        "b-alternatives",
+        "b-meaning",
+        "b-register"
+      ],
+      "resourceExampleRefs": [
+        {
+          "resourceId": "experimental:teaching:ja:self-introduction",
+          "unit": "u-named",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:topic-return-question": {
+      "resourceId": "draft:teaching:ja:topic-return-question",
+      "relationship": "lesson-sense-original-detail",
+      "sectionIds": [
+        "b-meaning-context",
+        "b-structure",
+        "b-usage-limit",
+        "b-address-pronunciation"
+      ],
+      "resourceExampleRefs": [
+        {
+          "unit": "T03.s1",
+          "from": "t1",
+          "to": "t2",
+          "sourceId": "C"
+        },
+        {
+          "unit": "T03.s2",
+          "from": "t1",
+          "to": "t3",
+          "sourceId": "C"
+        },
+        {
+          "unit": "T04.s1",
+          "from": "t1",
+          "to": "t2",
+          "sourceId": "C"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:preferred-name-request": {
+      "resourceId": "draft:teaching:ja:preferred-name-request",
+      "relationship": "lesson-sense-original-detail",
+      "sectionIds": [
+        "b-meaning",
+        "b-structure",
+        "b-usage-register",
+        "b-pronunciation"
+      ],
+      "resourceExampleRefs": [
+        {
+          "unit": "I01.s6",
+          "from": "t1",
+          "to": "t4",
+          "sourceId": "C"
+        },
+        {
+          "unit": "I01.s5",
+          "from": "t1",
+          "to": "t3",
+          "sourceId": "C"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:place-of-origin": {
+      "resourceId": "draft:teaching:ja:place-of-origin",
+      "relationship": "lesson-sense-original-detail",
+      "sectionIds": [
+        "b-meaning",
+        "b-structure",
+        "b-context-limit"
+      ],
+      "resourceExampleRefs": [
+        {
+          "unit": "I01.s7",
+          "from": "t1",
+          "to": "t3",
+          "sourceId": "C"
+        }
+      ],
+      "opensFullResource": true
+    },
+    "draft:ja:pleasure-at-meeting": {
+      "resourceId": "draft:teaching:ja:pleasure-at-meeting",
+      "relationship": "lesson-sense-original-detail",
+      "sectionIds": [
+        "b-meaning",
+        "b-structure",
+        "b-register-alternative",
+        "b-pronunciation"
+      ],
+      "resourceExampleRefs": [
+        {
+          "unit": "T05.s2",
+          "from": "t1",
+          "to": "t5",
+          "sourceId": "C"
+        },
+        {
+          "unit": "u-meet-plain-polite",
+          "from": "t1",
+          "to": "t3",
+          "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+        }
+      ],
+      "opensFullResource": true
+    }
+  },
+  "lessonBindings": [
+    {
+      "teachingRefId": "E01",
+      "entryId": "draft:ja:first-meeting-opening",
+      "lessonExactRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T01.s1",
+          "from": "t1",
+          "to": "t1"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T02.s1",
+          "from": "t1",
+          "to": "t1"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s1",
+          "from": "t1",
+          "to": "t1"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T01.s1",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T02.s1",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s1",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "experimental:teaching:ja:self-introduction",
+        "relationship": "specific-sense-in-broader-resource",
+        "sectionIds": [
+          "b-usage",
+          "b-register"
+        ],
+        "resourceExampleRefs": [
+          {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-first",
+            "from": "t1",
+            "to": "t1"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "E02",
+      "entryId": "draft:ja:cooperative-closing",
+      "lessonExactRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T05.s1",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T06.s1",
+          "from": "t1",
+          "to": "t4"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s4",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T05.s1",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T06.s1",
+          "from": "t1",
+          "to": "t5"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s4",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "experimental:teaching:ja:self-introduction",
+        "relationship": "specific-sense-in-broader-resource",
+        "sectionIds": [
+          "b-usage",
+          "b-register",
+          "b-reciprocal"
+        ],
+        "resourceExampleRefs": [
+          {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-closing",
+            "from": "t1",
+            "to": "t2"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "G01",
+      "entryId": "draft:ja:polite-noun-predicate",
+      "lessonExactRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T01.s2",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T02.s2",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T03.s1",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T04.s1",
+          "from": "t1",
+          "to": "t2"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s3",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "L",
+          "unit": "T01.s2",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "L",
+          "unit": "T02.s2",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T03.s1",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T04.s1",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "L",
+          "unit": "I01.s3",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "experimental:teaching:ja:polite-name-ending",
+        "relationship": "specific-sense-in-broader-resource",
+        "sectionIds": [
+          "b-meaning",
+          "b-structure",
+          "b-pronunciation",
+          "b-register",
+          "b-alternatives"
+        ],
+        "resourceExampleRefs": [
+          {
+            "resourceId": "experimental:teaching:ja:polite-name-ending",
+            "unit": "u-role",
+            "from": "t3",
+            "to": "t4"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "S01",
+      "entryId": "draft:ja:topic-return-question",
+      "lessonExactRefs": [
+        {
+          "sourceId": "C",
+          "unit": "T03.s2",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "C",
+          "unit": "T03.s1",
+          "from": "t1",
+          "to": "t3"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T03.s2",
+          "from": "t1",
+          "to": "t4"
+        },
+        {
+          "sourceId": "C",
+          "unit": "T04.s1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "draft:teaching:ja:topic-return-question",
+        "relationship": "lesson-sense-original-detail",
+        "sectionIds": [
+          "b-meaning-context",
+          "b-structure",
+          "b-usage-limit",
+          "b-address-pronunciation"
+        ],
+        "resourceExampleRefs": [
+          {
+            "unit": "T03.s1",
+            "from": "t1",
+            "to": "t2",
+            "sourceId": "C"
+          },
+          {
+            "unit": "T03.s2",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          },
+          {
+            "unit": "T04.s1",
+            "from": "t1",
+            "to": "t2",
+            "sourceId": "C"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "G02",
+      "entryId": "draft:ja:self-naming",
+      "lessonExactRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s5",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s5",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "experimental:teaching:ja:self-introduction",
+        "relationship": "specific-sense-in-broader-resource",
+        "sectionIds": [
+          "b-alternatives",
+          "b-meaning",
+          "b-register"
+        ],
+        "resourceExampleRefs": [
+          {
+            "resourceId": "experimental:teaching:ja:self-introduction",
+            "unit": "u-named",
+            "from": "t1",
+            "to": "t3"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "G03",
+      "entryId": "draft:ja:preferred-name-request",
+      "lessonExactRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s6",
+          "from": "t1",
+          "to": "t4"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s6",
+          "from": "t1",
+          "to": "t4"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "draft:teaching:ja:preferred-name-request",
+        "relationship": "lesson-sense-original-detail",
+        "sectionIds": [
+          "b-meaning",
+          "b-structure",
+          "b-usage-register",
+          "b-pronunciation"
+        ],
+        "resourceExampleRefs": [
+          {
+            "unit": "I01.s6",
+            "from": "t1",
+            "to": "t4",
+            "sourceId": "C"
+          },
+          {
+            "unit": "I01.s5",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "G04",
+      "entryId": "draft:ja:place-of-origin",
+      "lessonExactRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s7",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "C",
+          "unit": "I01.s7",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "draft:teaching:ja:place-of-origin",
+        "relationship": "lesson-sense-original-detail",
+        "sectionIds": [
+          "b-meaning",
+          "b-structure",
+          "b-context-limit"
+        ],
+        "resourceExampleRefs": [
+          {
+            "unit": "I01.s7",
+            "from": "t1",
+            "to": "t3",
+            "sourceId": "C"
+          }
+        ],
+        "opensFullResource": true
+      }
+    },
+    {
+      "teachingRefId": "E03",
+      "entryId": "draft:ja:pleasure-at-meeting",
+      "lessonExactRefs": [
+        {
+          "sourceId": "C",
+          "unit": "T05.s2",
+          "from": "t1",
+          "to": "t5"
+        }
+      ],
+      "contextRefs": [
+        {
+          "sourceId": "C",
+          "unit": "T05.s2",
+          "from": "t1",
+          "to": "t5"
+        }
+      ],
+      "detailLink": {
+        "resourceId": "draft:teaching:ja:pleasure-at-meeting",
+        "relationship": "lesson-sense-original-detail",
+        "sectionIds": [
+          "b-meaning",
+          "b-structure",
+          "b-register-alternative",
+          "b-pronunciation"
+        ],
+        "resourceExampleRefs": [
+          {
+            "unit": "T05.s2",
+            "from": "t1",
+            "to": "t5",
+            "sourceId": "C"
+          },
+          {
+            "unit": "u-meet-plain-polite",
+            "from": "t1",
+            "to": "t3",
+            "resourceId": "draft:teaching:ja:pleasure-at-meeting"
+          }
+        ],
+        "opensFullResource": true
+      }
+    }
+  ],
+  "sourceOwners": {
+    "C": {
+      "id": "C",
+      "sourceRevision": {
+        "kind": "sha256",
+        "value": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5"
+      },
+      "payloadSha256": "45ad60dcd57c259dd5409c81312998d1821ee0fa1bf34efa9560341262949708",
+      "url": "./resource-owner-C.json"
+    },
+    "L": {
+      "id": "L",
+      "sourceRevision": {
+        "kind": "sha256",
+        "value": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e"
+      },
+      "payloadSha256": "3ab675c3875c9c322c7fe857365f49d45015dcbd36d98b9c01adf7f366d41c65",
+      "url": "./resource-owner-L.json"
+    }
+  }
+}

@@ -1,0 +1,954 @@
+{
+  "format": "lingourmet.lexical-practice-selections",
+  "version": 1,
+  "sourceFiles": {
+    "lesson": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e",
+    "catalog": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5"
+  },
+  "lexicalProjectionSHA256": "5be76baad61ce67bfcb3e0cece9c5c907decf11d95418627430c79c1408886eb",
+  "items": [
+    {
+      "practiceKey": "lesson01.lexical.reading-group",
+      "practiceVersion": 1,
+      "kind": "token",
+      "target": {
+        "document": "lesson",
+        "unitId": "W01.s1",
+        "tokenId": "t1"
+      },
+      "annotationId": "lesson:W01.s1:t1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "annotations",
+          "lesson:W01.s1:t1",
+          "contextMeaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "W01.s1",
+          "tokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "reading-group",
+        "reason": "Select the first source occurrence of this activity noun."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.company-employee",
+      "practiceVersion": 1,
+      "kind": "token",
+      "target": {
+        "document": "lesson",
+        "unitId": "I01.s3",
+        "tokenId": "t1"
+      },
+      "annotationId": "lesson:I01.s3:t1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "annotations",
+          "lesson:I01.s3:t1",
+          "contextMeaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "I01.s3",
+          "tokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "company-employee",
+        "reason": "Keep one occupation noun; catalog:T04.s1:t1 repeats the same learning target."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.first-meeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T01.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "expressionId": "lesson:T01.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T01.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T01.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "first-meeting",
+        "reason": "Keep one complete fixed greeting; other first-meeting occurrences repeat the same learning target."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.goodwill-greeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T05.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t2"
+      },
+      "expressionId": "lesson:T05.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T05.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T05.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t2"
+        }
+      },
+      "deduplication": {
+        "key": "goodwill-greeting",
+        "reason": "Keep the complete two-token greeting once; component meanings are not phrase answers."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.reciprocal-greeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "lesson",
+        "unitId": "T06.s1",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t1"
+      },
+      "expressionId": "lesson:T06.s1:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "lesson:T06.s1:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "lesson",
+          "unitId": "T06.s1",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t1"
+        }
+      },
+      "deduplication": {
+        "key": "reciprocal-greeting",
+        "reason": "Keep the bounded reciprocal response without widening to the following greeting."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.self-naming",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s5",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t3"
+      },
+      "expressionId": "catalog:I01.s5:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s5:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s5",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t3"
+        }
+      },
+      "deduplication": {
+        "key": "self-naming",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.preferred-name",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s6",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t4"
+      },
+      "expressionId": "catalog:I01.s6:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s6:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s6",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t4"
+        }
+      },
+      "deduplication": {
+        "key": "preferred-name",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.place-of-origin",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "I01.s7",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t3"
+      },
+      "expressionId": "catalog:I01.s7:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:I01.s7:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "I01.s7",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t3"
+        }
+      },
+      "deduplication": {
+        "key": "place-of-origin",
+        "reason": "Select the complete new source expression once."
+      }
+    },
+    {
+      "practiceKey": "lesson01.lexical.pleasure-at-meeting",
+      "practiceVersion": 1,
+      "kind": "expression",
+      "target": {
+        "document": "catalog",
+        "unitId": "T05.s2",
+        "spanId": "e1",
+        "fromTokenId": "t1",
+        "toTokenId": "t5"
+      },
+      "expressionId": "catalog:T05.s2:e1",
+      "meaningRefs": {
+        "ja": [
+          "localizations",
+          "ja",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ],
+        "zh-Hant": [
+          "localizations",
+          "zh-Hant",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ],
+        "en": [
+          "localizations",
+          "en",
+          "expressions",
+          "catalog:T05.s2:e1",
+          "meaning"
+        ]
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "T05.s2",
+          "spanId": "e1",
+          "fromTokenId": "t1",
+          "toTokenId": "t5"
+        }
+      },
+      "deduplication": {
+        "key": "pleasure-at-meeting",
+        "reason": "Select the complete new source expression once."
+      }
+    }
+  ],
+  "scope": {
+    "selectedTargets": 9,
+    "excluded": [
+      "standalone proper-name token cards",
+      "duplicate occurrences",
+      "です already addressed in grammar practice"
+    ],
+    "notClaimed": [
+      "dictionary admission",
+      "new cloze item",
+      "unsourced target-language text",
+      "FSRS scheduling",
+      "Anki export"
+    ],
+    "sourceRevision": "first-meeting-expansion-r1"
+  },
+  "dictionarySelections": [
+    {
+      "practiceKey": "lesson01.dictionary.u01.engineer",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-2e67d891f58130b3",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-2e67d891f58130b3",
+        "language": "ja",
+        "lemma": "エンジニア",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "エンジニア",
+          "speech": "エンジニア",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "工程師",
+          "en": "engineer",
+          "ja": "技術の専門家"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.doctor",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-fcc1cd152952d8f0",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-fcc1cd152952d8f0",
+        "language": "ja",
+        "lemma": "医者",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "医者",
+          "speech": "いしゃ",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "醫師",
+          "en": "doctor",
+          "ja": "病気やけがを診察・治療する人"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.teacher",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-426f973fb46c8bb8",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-426f973fb46c8bb8",
+        "language": "ja",
+        "lemma": "教師",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "教師",
+          "speech": "きょうし",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "教師",
+          "en": "teacher",
+          "ja": "学校などで教える人"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.bank-employee",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-dfd2076ee9747d25",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-dfd2076ee9747d25",
+        "language": "ja",
+        "lemma": "銀行員",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "銀行員",
+          "speech": "ぎんこういん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "銀行行員",
+          "en": "bank employee",
+          "ja": "銀行で働く人"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.civil-servant",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-56c8d586bee79cda",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-56c8d586bee79cda",
+        "language": "ja",
+        "lemma": "公務員",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "公務員",
+          "speech": "こうむいん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "公務員",
+          "en": "civil servant",
+          "ja": "国や地方自治体の職員"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.shop-assistant",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-148e20820a3c69c7",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-148e20820a3c69c7",
+        "language": "ja",
+        "lemma": "店員",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "店員",
+          "speech": "てんいん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "店員",
+          "en": "shop assistant",
+          "ja": "店で接客や販売をする人"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.designer",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-6119e22c999e6478",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-6119e22c999e6478",
+        "language": "ja",
+        "lemma": "デザイナー",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "デザイナー",
+          "speech": "デザイナー",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "設計師",
+          "en": "designer",
+          "ja": "服や製品などのデザインをする人"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.nurse",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-11f97d177538c8a7",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-11f97d177538c8a7",
+        "language": "ja",
+        "lemma": "看護師",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "看護師",
+          "speech": "かんごし",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "護理師",
+          "en": "nurse",
+          "ja": "病気やけがをした人の看護をする専門職"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.homemaker",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-1964d3b07dd1a747",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-1964d3b07dd1a747",
+        "language": "ja",
+        "lemma": "主婦",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "主婦",
+          "speech": "しゅふ",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "家庭主婦",
+          "en": "a woman whose main role is looking after her home and family",
+          "ja": "家庭で主に家事や家族の世話をする女性"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.lawyer",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-22ea6cd0c945b5d8",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-22ea6cd0c945b5d8",
+        "language": "ja",
+        "lemma": "弁護士",
+        "pos": "noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "弁護士",
+          "speech": "べんごし",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "律師",
+          "en": "lawyer",
+          "ja": "法律相談や裁判で依頼者を助ける専門職"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.tokyo",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-5b062fdeb9b9afcc",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-5b062fdeb9b9afcc",
+        "language": "ja",
+        "lemma": "東京",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "東京",
+          "speech": "とうきょう",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "東京",
+          "en": "Tokyo",
+          "ja": "日本の首都"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.osaka",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-c266c75919d1009e",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-c266c75919d1009e",
+        "language": "ja",
+        "lemma": "大阪",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "大阪",
+          "speech": "おおさか",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "大阪",
+          "en": "Osaka",
+          "ja": "日本の近畿地方の都市"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.kyoto",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-bc9189bdb6097b3f",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-bc9189bdb6097b3f",
+        "language": "ja",
+        "lemma": "京都",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "京都",
+          "speech": "きょうと",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "京都",
+          "en": "Kyoto",
+          "ja": "かつて日本の都が置かれた都市"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.taipei",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-71c54c21b3df5b8b",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-71c54c21b3df5b8b",
+        "language": "ja",
+        "lemma": "台北",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "台北",
+          "speech": "たいぺい",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "台北",
+          "en": "Taipei",
+          "ja": "台湾北部の都市"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.tainan",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-a176e22cbff89460",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-a176e22cbff89460",
+        "language": "ja",
+        "lemma": "台南",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "台南",
+          "speech": "たいなん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "台南",
+          "en": "Tainan",
+          "ja": "台湾南部の都市"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.hong-kong",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-e667be90994a3c18",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-e667be90994a3c18",
+        "language": "ja",
+        "lemma": "香港",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "香港",
+          "speech": "ほんこん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "香港",
+          "en": "Hong Kong",
+          "ja": "東アジアの地名"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.japan",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-4a2252204698b321",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-4a2252204698b321",
+        "language": "ja",
+        "lemma": "日本",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "日本",
+          "speech": "にほん",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "日本",
+          "en": "Japan",
+          "ja": "東アジアの国"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.south-korea",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-be9795dc565a8dbb",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-be9795dc565a8dbb",
+        "language": "ja",
+        "lemma": "韓国",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "韓国",
+          "speech": "かんこく",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "韓國",
+          "en": "South Korea",
+          "ja": "東アジアの国。大韓民国"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.united-states",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-623e0a60beca9efe",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-623e0a60beca9efe",
+        "language": "ja",
+        "lemma": "アメリカ",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "アメリカ",
+          "speech": "アメリカ",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "美國",
+          "en": "the United States",
+          "ja": "アメリカ合衆国のこと"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.united-kingdom",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-8bea7c5676f444b2",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-8bea7c5676f444b2",
+        "language": "ja",
+        "lemma": "イギリス",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "イギリス",
+          "speech": "イギリス",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "英國",
+          "en": "the United Kingdom",
+          "ja": "ヨーロッパの国。英国"
+        }
+      }
+    },
+    {
+      "practiceKey": "lesson01.dictionary.u01.vietnam",
+      "practiceVersion": 1,
+      "dictionaryKey": "lp-a33305d4136ec5c8",
+      "dictionarySnapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+      "record": {
+        "key": "lp-a33305d4136ec5c8",
+        "language": "ja",
+        "lemma": "ベトナム",
+        "pos": "proper-noun",
+        "status": "candidate",
+        "pronunciation": {
+          "text": "ベトナム",
+          "speech": "ベトナム",
+          "lang": "ja-JP"
+        },
+        "definitions": {
+          "zh-Hant": "越南",
+          "en": "Vietnam",
+          "ja": "東南アジアの国"
+        }
+      }
+    }
+  ]
+}

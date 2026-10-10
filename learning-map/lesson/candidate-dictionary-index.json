@@ -1,0 +1,415 @@
+{
+  "format": "lingourmet.dictionary-preview.v1",
+  "availability": "candidate",
+  "snapshot": "lesson01-dictionary-preview-c01-draft-2-supplement-0363c0acefd0bd7c",
+  "entries": [
+    {
+      "key": "lp-79379c21c9173117",
+      "language": "ja",
+      "lemma": "です",
+      "pos": "auxiliary",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "です",
+        "speech": "です",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "用在名詞、い形容詞或な形容詞的述語中，使陳述更禮貌。中文譯法依整句意思而定，不一定逐字譯出「です」。",
+        "en": "A polite form used with noun, i-adjective, and na-adjective predicates. Its English wording depends on the whole sentence.",
+        "ja": "名詞・イ形容詞・ナ形容詞を述語にする文で、聞き手に丁寧に伝えるために使います。接続のしかたは、名詞や形容詞の種類によって異なります。"
+      }
+    },
+    {
+      "key": "lp-2b91d15da05b284a",
+      "language": "ja",
+      "lemma": "は",
+      "pos": "particle",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "は",
+        "speech": "わ",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "標示談話主題的助詞。承接前文時，也可以省略後面已知的內容，轉問對方。",
+        "en": "A particle that marks the topic. After a preceding statement, it can also introduce a question with the understood ending left out.",
+        "ja": "話題を示す助詞。前の話を受けて、後ろの内容を省略して相手にたずねることもある。"
+      }
+    },
+    {
+      "key": "lp-3ec490f4b30f46ad",
+      "language": "ja",
+      "lemma": "はじめまして",
+      "pos": "interjection",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "はじめまして",
+        "speech": "はじめまして",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "第一次與對方見面時使用的問候語，常用來開始自我介紹。",
+        "en": "A greeting used when meeting someone for the first time, often before introducing yourself.",
+        "ja": "初めて会う相手へのあいさつ。自己紹介の初めによく使う。"
+      }
+    },
+    {
+      "key": "lp-2e67d891f58130b3",
+      "language": "ja",
+      "lemma": "エンジニア",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "エンジニア",
+        "speech": "エンジニア",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "工程師",
+        "en": "engineer",
+        "ja": "技術の専門家"
+      }
+    },
+    {
+      "key": "lp-fcc1cd152952d8f0",
+      "language": "ja",
+      "lemma": "医者",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "医者",
+        "speech": "いしゃ",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "醫師",
+        "en": "doctor",
+        "ja": "病気やけがを診察・治療する人"
+      }
+    },
+    {
+      "key": "lp-426f973fb46c8bb8",
+      "language": "ja",
+      "lemma": "教師",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "教師",
+        "speech": "きょうし",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "教師",
+        "en": "teacher",
+        "ja": "学校などで教える人"
+      }
+    },
+    {
+      "key": "lp-dfd2076ee9747d25",
+      "language": "ja",
+      "lemma": "銀行員",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "銀行員",
+        "speech": "ぎんこういん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "銀行行員",
+        "en": "bank employee",
+        "ja": "銀行で働く人"
+      }
+    },
+    {
+      "key": "lp-56c8d586bee79cda",
+      "language": "ja",
+      "lemma": "公務員",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "公務員",
+        "speech": "こうむいん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "公務員",
+        "en": "civil servant",
+        "ja": "国や地方自治体の職員"
+      }
+    },
+    {
+      "key": "lp-148e20820a3c69c7",
+      "language": "ja",
+      "lemma": "店員",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "店員",
+        "speech": "てんいん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "店員",
+        "en": "shop assistant",
+        "ja": "店で接客や販売をする人"
+      }
+    },
+    {
+      "key": "lp-6119e22c999e6478",
+      "language": "ja",
+      "lemma": "デザイナー",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "デザイナー",
+        "speech": "デザイナー",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "設計師",
+        "en": "designer",
+        "ja": "服や製品などのデザインをする人"
+      }
+    },
+    {
+      "key": "lp-11f97d177538c8a7",
+      "language": "ja",
+      "lemma": "看護師",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "看護師",
+        "speech": "かんごし",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "護理師",
+        "en": "nurse",
+        "ja": "病気やけがをした人の看護をする専門職"
+      }
+    },
+    {
+      "key": "lp-1964d3b07dd1a747",
+      "language": "ja",
+      "lemma": "主婦",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "主婦",
+        "speech": "しゅふ",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "家庭主婦",
+        "en": "a woman whose main role is looking after her home and family",
+        "ja": "家庭で主に家事や家族の世話をする女性"
+      }
+    },
+    {
+      "key": "lp-22ea6cd0c945b5d8",
+      "language": "ja",
+      "lemma": "弁護士",
+      "pos": "noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "弁護士",
+        "speech": "べんごし",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "律師",
+        "en": "lawyer",
+        "ja": "法律相談や裁判で依頼者を助ける専門職"
+      }
+    },
+    {
+      "key": "lp-5b062fdeb9b9afcc",
+      "language": "ja",
+      "lemma": "東京",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "東京",
+        "speech": "とうきょう",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "東京",
+        "en": "Tokyo",
+        "ja": "日本の首都"
+      }
+    },
+    {
+      "key": "lp-c266c75919d1009e",
+      "language": "ja",
+      "lemma": "大阪",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "大阪",
+        "speech": "おおさか",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "大阪",
+        "en": "Osaka",
+        "ja": "日本の近畿地方の都市"
+      }
+    },
+    {
+      "key": "lp-bc9189bdb6097b3f",
+      "language": "ja",
+      "lemma": "京都",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "京都",
+        "speech": "きょうと",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "京都",
+        "en": "Kyoto",
+        "ja": "かつて日本の都が置かれた都市"
+      }
+    },
+    {
+      "key": "lp-71c54c21b3df5b8b",
+      "language": "ja",
+      "lemma": "台北",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "台北",
+        "speech": "たいぺい",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "台北",
+        "en": "Taipei",
+        "ja": "台湾北部の都市"
+      }
+    },
+    {
+      "key": "lp-a176e22cbff89460",
+      "language": "ja",
+      "lemma": "台南",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "台南",
+        "speech": "たいなん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "台南",
+        "en": "Tainan",
+        "ja": "台湾南部の都市"
+      }
+    },
+    {
+      "key": "lp-e667be90994a3c18",
+      "language": "ja",
+      "lemma": "香港",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "香港",
+        "speech": "ほんこん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "香港",
+        "en": "Hong Kong",
+        "ja": "東アジアの地名"
+      }
+    },
+    {
+      "key": "lp-4a2252204698b321",
+      "language": "ja",
+      "lemma": "日本",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "日本",
+        "speech": "にほん",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "日本",
+        "en": "Japan",
+        "ja": "東アジアの国"
+      }
+    },
+    {
+      "key": "lp-be9795dc565a8dbb",
+      "language": "ja",
+      "lemma": "韓国",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "韓国",
+        "speech": "かんこく",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "韓國",
+        "en": "South Korea",
+        "ja": "東アジアの国。大韓民国"
+      }
+    },
+    {
+      "key": "lp-623e0a60beca9efe",
+      "language": "ja",
+      "lemma": "アメリカ",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "アメリカ",
+        "speech": "アメリカ",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "美國",
+        "en": "the United States",
+        "ja": "アメリカ合衆国のこと"
+      }
+    },
+    {
+      "key": "lp-8bea7c5676f444b2",
+      "language": "ja",
+      "lemma": "イギリス",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "イギリス",
+        "speech": "イギリス",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "英國",
+        "en": "the United Kingdom",
+        "ja": "ヨーロッパの国。英国"
+      }
+    },
+    {
+      "key": "lp-a33305d4136ec5c8",
+      "language": "ja",
+      "lemma": "ベトナム",
+      "pos": "proper-noun",
+      "status": "candidate",
+      "pronunciation": {
+        "text": "ベトナム",
+        "speech": "ベトナム",
+        "lang": "ja-JP"
+      },
+      "definitions": {
+        "zh-Hant": "越南",
+        "en": "Vietnam",
+        "ja": "東南アジアの国"
+      }
+    }
+  ]
+}

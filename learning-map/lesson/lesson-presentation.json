@@ -1,0 +1,195 @@
+{
+  "format": "lingourmet.lesson-presentation.bounded-adapter.v1",
+  "version": 2,
+  "status": "candidate-language-review-pending",
+  "ownerId": "L",
+  "groupId": "first-meeting-routines",
+  "sourceFiles": {
+    "lesson.json": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e",
+    "knowledge-catalog.json": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5",
+    "lexical-analysis.json": "5be76baad61ce67bfcb3e0cece9c5c907decf11d95418627430c79c1408886eb"
+  },
+  "provenance": {
+    "sourceDeltaSHA256": "7f25e57695b6ef6965c30e83da5bfee373df3ece7b4114d9a5f52d6f81aa28ae",
+    "copySHA256": "3b1d20eb794eb3e7dab2fa7daf773fb59ced7eee4a4705061c0274966d75a89c",
+    "predecessorAuthorSHA256": "48ab987596a5588e3dd7c3ede5efe2349a291946e75ba0e68842f258ad9a8d82",
+    "scope": "lesson teaching group only; not a canonical author migration"
+  },
+  "presentation": {
+    "kind": "ref-backed-contrast",
+    "inlineExamples": false,
+    "localizations": {
+      "zh-Hant": {
+        "runs": [
+          {
+            "text": "初次見面，用"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T01.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": "開場，介紹完自己後常接"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T05.s1",
+              "from": "t1",
+              "to": "t2"
+            }
+          },
+          {
+            "text": "。"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T06.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": "則用來回應對方，帶有「我也一樣，請多指教」的意思。"
+          }
+        ]
+      },
+      "en": {
+        "runs": [
+          {
+            "text": "When meeting someone for the first time, open with "
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T01.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": ". After introducing yourself, you often add "
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T05.s1",
+              "from": "t1",
+              "to": "t2"
+            }
+          },
+          {
+            "text": ". Use "
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T06.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": " in reply, with the sense of “Likewise, I look forward to getting to know you.”"
+          }
+        ]
+      },
+      "ja": {
+        "runs": [
+          {
+            "text": "初対面では「"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T01.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": "」であいさつし、自己紹介の後によく「"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T05.s1",
+              "from": "t1",
+              "to": "t2"
+            }
+          },
+          {
+            "text": "」を添えます。「"
+          },
+          {
+            "ref": {
+              "sourceId": "L",
+              "unit": "T06.s1",
+              "from": "t1",
+              "to": "t1"
+            }
+          },
+          {
+            "text": "」は相手への返事で、自分も同じ気持ちであることを伝えます。"
+          }
+        ]
+      }
+    },
+    "entryRefIds": [
+      "E01",
+      "E02"
+    ]
+  },
+  "targets": [
+    {
+      "sourceId": "L",
+      "unit": "T01.s1",
+      "lookup": {
+        "kind": "expression",
+        "unit": "T01.s1",
+        "id": "lesson:T01.s1:e1"
+      },
+      "audio": {
+        "kind": "span",
+        "unit": "T01.s1",
+        "id": "e1"
+      },
+      "tokenLookup": "Retain original token IDs and lesson annotation identities; no retokenization."
+    },
+    {
+      "sourceId": "L",
+      "unit": "T05.s1",
+      "lookup": {
+        "kind": "expression",
+        "unit": "T05.s1",
+        "id": "lesson:T05.s1:e1"
+      },
+      "audio": {
+        "kind": "span",
+        "unit": "T05.s1",
+        "id": "e1"
+      },
+      "tokenLookup": "Retain original token IDs and lesson annotation identities; no retokenization."
+    },
+    {
+      "sourceId": "L",
+      "unit": "T06.s1",
+      "lookup": {
+        "kind": "expression",
+        "unit": "T06.s1",
+        "id": "lesson:T06.s1:e1"
+      },
+      "audio": {
+        "kind": "span",
+        "unit": "T06.s1",
+        "id": "e1"
+      },
+      "tokenLookup": "Retain original token IDs and lesson annotation identities; no retokenization."
+    }
+  ]
+}

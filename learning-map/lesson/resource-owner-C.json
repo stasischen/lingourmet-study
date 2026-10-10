@@ -1,0 +1,786 @@
+{
+  "format": "lingourmet.source-owner-slice.v1",
+  "ownerId": "C",
+  "sourceRevision": {
+    "kind": "sha256",
+    "value": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5"
+  },
+  "units": {
+    "I01.s5": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レン・リー"
+        },
+        {
+          "id": "t2",
+          "text": "と"
+        },
+        {
+          "id": "t3",
+          "text": "いいます"
+        },
+        {
+          "id": "t4",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    "I01.s6": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レン"
+        },
+        {
+          "id": "t2",
+          "text": "と"
+        },
+        {
+          "id": "t3",
+          "text": "呼んで",
+          "reading": "よんで",
+          "ruby": [
+            {
+              "text": "呼んで",
+              "reading": "よんで"
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "text": "ください"
+        },
+        {
+          "id": "t5",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t4"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t4"
+        }
+      ]
+    },
+    "I01.s7": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "台湾",
+          "reading": "たいわん",
+          "ruby": [
+            {
+              "text": "台湾",
+              "reading": "たいわん"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "text": "から"
+        },
+        {
+          "id": "t3",
+          "text": "来ました",
+          "reading": "きました",
+          "ruby": [
+            {
+              "text": "来ました",
+              "reading": "きました"
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    "T03.s1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "学生",
+          "reading": "がくせい",
+          "ruby": [
+            {
+              "text": "学生",
+              "reading": "がくせい"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "text": "です"
+        },
+        {
+          "id": "t3",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "spans": []
+    },
+    "T03.s2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レン"
+        },
+        {
+          "id": "t2",
+          "text": "さん"
+        },
+        {
+          "id": "t3",
+          "text": "は",
+          "reading": "わ"
+        },
+        {
+          "id": "t4",
+          "text": "？"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t3"
+        }
+      ]
+    },
+    "T04.s1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "会社員",
+          "reading": "かいしゃいん",
+          "ruby": [
+            {
+              "text": "会社員",
+              "reading": "かいしゃいん"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "text": "です"
+        },
+        {
+          "id": "t3",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t2"
+        }
+      ],
+      "spans": []
+    },
+    "T05.s2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "お"
+        },
+        {
+          "id": "t2",
+          "text": "会い",
+          "reading": "あい",
+          "ruby": [
+            {
+              "text": "会い",
+              "reading": "あい"
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "text": "できて"
+        },
+        {
+          "id": "t4",
+          "text": "うれしい"
+        },
+        {
+          "id": "t5",
+          "text": "です"
+        },
+        {
+          "id": "t6",
+          "text": "。"
+        }
+      ],
+      "chunks": [
+        {
+          "id": "c1",
+          "from": "t1",
+          "to": "t5"
+        }
+      ],
+      "spans": [
+        {
+          "id": "e1",
+          "from": "t1",
+          "to": "t5"
+        }
+      ]
+    }
+  },
+  "localizations": {
+    "ja": {
+      "units": {
+        "I01.s5": {
+          "meaning": "自分の名前はレン・リーだと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "レンのフルネーム"
+            },
+            "t2": {
+              "gloss": "名乗る名前を示す"
+            },
+            "t3": {
+              "gloss": "自分の名前を伝える"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "自分の名前はレン・リーだと伝えています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "自分の名前はレン・リーだと伝えています。"
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "レンという名前で呼んでほしいと頼んでいます。",
+          "tokens": {
+            "t1": {
+              "gloss": "呼んでもらいたい名前"
+            },
+            "t2": {
+              "gloss": "呼び方を示す"
+            },
+            "t3": {
+              "gloss": "その名前で呼ぶ"
+            },
+            "t4": {
+              "gloss": "相手にしてほしいことを頼む"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "レンという名前で呼んでほしいと頼んでいます。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "レンという名前で呼んでほしいと頼んでいます。"
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "台湾から来たと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "地名"
+            },
+            "t2": {
+              "gloss": "来た場所を示す"
+            },
+            "t3": {
+              "gloss": "こちらへ来たことを伝える"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "台湾から来たと伝えています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "台湾から来たと伝えています。"
+            }
+          }
+        },
+        "T03.s1": {
+          "meaning": "自分は学生だと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "学校などで勉強する人"
+            },
+            "t2": {
+              "gloss": "名前や立場の後に付ける丁寧な語尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "自分は学生だと伝えています"
+            }
+          },
+          "spans": {}
+        },
+        "T03.s2": {
+          "meaning": "レンにも同じことを聞いています。",
+          "tokens": {
+            "t1": {
+              "gloss": "人名「レン」"
+            },
+            "t2": {
+              "gloss": "相手の名前の後に付ける丁寧な呼び方"
+            },
+            "t3": {
+              "gloss": "相手を話題にして、同じことをたずねる助詞。「わ」（wa）と読む。"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "レンにも立場を聞いている"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "レンにも立場を聞いている"
+            }
+          }
+        },
+        "T04.s1": {
+          "meaning": "自分は会社で働く人だと伝えています。",
+          "tokens": {
+            "t1": {
+              "gloss": "会社で働く人"
+            },
+            "t2": {
+              "gloss": "名前や立場の後に付ける丁寧な語尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "自分は会社で働く人だと伝えています"
+            }
+          },
+          "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "会えたことをうれしく思っています。",
+          "tokens": {
+            "t1": {
+              "gloss": "相手を立てる表現の接頭辞"
+            },
+            "t2": {
+              "gloss": "人に会うこと"
+            },
+            "t3": {
+              "gloss": "可能を表す接続形"
+            },
+            "t4": {
+              "gloss": "喜びを感じている"
+            },
+            "t5": {
+              "gloss": "文を丁寧に結ぶ"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "会えたことをうれしく思っています。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "会えたことをうれしく思っています。"
+            }
+          }
+        }
+      }
+    },
+    "zh-Hant": {
+      "units": {
+        "I01.s5": {
+          "meaning": "我叫レン・リー。",
+          "tokens": {
+            "t1": {
+              "gloss": "レン的全名"
+            },
+            "t2": {
+              "gloss": "標示所說的姓名"
+            },
+            "t3": {
+              "gloss": "介紹自己的姓名"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我叫レン・リー。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "我叫レン・リー。"
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "請叫我レン。",
+          "tokens": {
+            "t1": {
+              "gloss": "希望別人使用的稱呼"
+            },
+            "t2": {
+              "gloss": "標示希望使用的稱呼"
+            },
+            "t3": {
+              "gloss": "以這個名字稱呼"
+            },
+            "t4": {
+              "gloss": "請對方這樣做"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "請叫我レン。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "請叫我レン。"
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "我來自台灣。",
+          "tokens": {
+            "t1": {
+              "gloss": "台灣"
+            },
+            "t2": {
+              "gloss": "標示來處"
+            },
+            "t3": {
+              "gloss": "來了；此處用來介紹來處"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我來自台灣。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "我來自台灣。"
+            }
+          }
+        },
+        "T03.s1": {
+          "meaning": "我是學生。",
+          "tokens": {
+            "t1": {
+              "gloss": "學生"
+            },
+            "t2": {
+              "gloss": "接在姓名或身分後的禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我是學生"
+            }
+          },
+          "spans": {}
+        },
+        "T03.s2": {
+          "meaning": "レン，你呢？",
+          "tokens": {
+            "t1": {
+              "gloss": "レン（人名）"
+            },
+            "t2": {
+              "gloss": "接在對方姓名後的禮貌稱呼"
+            },
+            "t3": {
+              "gloss": "把對方當作話題、接著問同一件事；助詞は讀わ（wa）"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "レン，你呢？（問身分）"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "レン，你呢？（問身分）"
+            }
+          }
+        },
+        "T04.s1": {
+          "meaning": "我是公司職員。",
+          "tokens": {
+            "t1": {
+              "gloss": "公司職員"
+            },
+            "t2": {
+              "gloss": "接在姓名或身分後的禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "我是公司職員"
+            }
+          },
+          "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "很高興能見到你。",
+          "tokens": {
+            "t1": {
+              "gloss": "謙讓表達的接頭辭"
+            },
+            "t2": {
+              "gloss": "見面"
+            },
+            "t3": {
+              "gloss": "能夠（連接形式）"
+            },
+            "t4": {
+              "gloss": "高興"
+            },
+            "t5": {
+              "gloss": "禮貌句尾"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "很高興能見到你。"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "很高興能見到你。"
+            }
+          }
+        }
+      }
+    },
+    "en": {
+      "units": {
+        "I01.s5": {
+          "meaning": "My name is Ren Lee.",
+          "tokens": {
+            "t1": {
+              "gloss": "Ren’s full name"
+            },
+            "t2": {
+              "gloss": "marks the name being stated"
+            },
+            "t3": {
+              "gloss": "give one’s name"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "My name is Ren Lee."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "My name is Ren Lee."
+            }
+          }
+        },
+        "I01.s6": {
+          "meaning": "Please call me Ren.",
+          "tokens": {
+            "t1": {
+              "gloss": "preferred name"
+            },
+            "t2": {
+              "gloss": "marks the requested name"
+            },
+            "t3": {
+              "gloss": "call someone by that name"
+            },
+            "t4": {
+              "gloss": "please do so"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "Please call me Ren."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "Please call me Ren."
+            }
+          }
+        },
+        "I01.s7": {
+          "meaning": "I’m from Taiwan.",
+          "tokens": {
+            "t1": {
+              "gloss": "Taiwan"
+            },
+            "t2": {
+              "gloss": "from"
+            },
+            "t3": {
+              "gloss": "came; used here to introduce where one is from"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I’m from Taiwan."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "I’m from Taiwan."
+            }
+          }
+        },
+        "T03.s1": {
+          "meaning": "I'm a student.",
+          "tokens": {
+            "t1": {
+              "gloss": "student"
+            },
+            "t2": {
+              "gloss": "a polite ending after a name or role"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I'm a student"
+            }
+          },
+          "spans": {}
+        },
+        "T03.s2": {
+          "meaning": "And you, Ren?",
+          "tokens": {
+            "t1": {
+              "gloss": "Ren (personal name)"
+            },
+            "t2": {
+              "gloss": "a polite form of address attached to the other person’s name"
+            },
+            "t3": {
+              "gloss": "marks the other person as the topic of the follow-up question; pronounced wa"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "And you, Ren? (asking about their role)"
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "And you, Ren? (asking about their role)"
+            }
+          }
+        },
+        "T04.s1": {
+          "meaning": "I'm a company employee.",
+          "tokens": {
+            "t1": {
+              "gloss": "company employee"
+            },
+            "t2": {
+              "gloss": "a polite ending after a name or role"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I'm a company employee"
+            }
+          },
+          "spans": {}
+        },
+        "T05.s2": {
+          "meaning": "I’m pleased to meet you.",
+          "tokens": {
+            "t1": {
+              "gloss": "prefix in a humble expression"
+            },
+            "t2": {
+              "gloss": "meet"
+            },
+            "t3": {
+              "gloss": "be able to (connecting form)"
+            },
+            "t4": {
+              "gloss": "pleased; happy"
+            },
+            "t5": {
+              "gloss": "polite statement ending"
+            }
+          },
+          "chunks": {
+            "c1": {
+              "meaning": "I’m pleased to meet you."
+            }
+          },
+          "spans": {
+            "e1": {
+              "meaning": "I’m pleased to meet you."
+            }
+          }
+        }
+      }
+    }
+  }
+}

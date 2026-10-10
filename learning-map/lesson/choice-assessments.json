@@ -1,0 +1,199 @@
+{
+  "format": "lingourmet.choice-assessments.v1",
+  "version": "choice-feedback-v1",
+  "sourceLessonSHA256": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e",
+  "items": {
+    "Q01": {
+      "questionSignature": "{\"id\":\"Q01\",\"responseType\":\"choice\",\"answer\":\"B\",\"options\":[{\"id\":\"A\",\"text\":{\"zh-Hant\":\"ミナ\",\"en\":\"Mina\",\"ja\":\"ミナ\"}},{\"id\":\"B\",\"text\":{\"zh-Hant\":\"レン\",\"en\":\"Ren\",\"ja\":\"レン\"}}],\"sourceRefs\":[{\"unit\":\"T04.s1\"},{\"unit\":\"I01.s5\"},{\"unit\":\"I01.s3\"},{\"unit\":\"T03.s1\"},{\"unit\":\"I01.s6\"}],\"prompt\":{\"zh-Hant\":\"對話與短自介中，誰說自己是公司職員？\",\"en\":\"In the dialogue and short introduction, who says they are a company employee?\",\"ja\":\"会話と短い自己紹介で、会社員だと言ったのは誰ですか。\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "ミナは「学生です」と言っています。「会社員です」と言った人を、話者名と一緒に確かめましょう。",
+            "zh-Hant": "ミナ說的是「学生です」（我是學生）。請對照說話者，找出誰說「会社員です」（我是公司職員）。",
+            "en": "Mina says 学生です (“I’m a student”). Match each line to its speaker to find who says 会社員です (“I’m a company employee”)."
+          },
+          "B": {
+            "ja": "レンは「会社員です」、ミナは「学生です」と言っています。",
+            "zh-Hant": "レン說「会社員です」（我是公司職員）；ミナ說「学生です」（我是學生）。",
+            "en": "Ren says 会社員です (“I’m a company employee”); Mina says 学生です (“I’m a student”)."
+          }
+        }
+      }
+    },
+    "Q02": {
+      "questionSignature": "{\"id\":\"Q02\",\"responseType\":\"choice\",\"answer\":\"A\",\"options\":[{\"id\":\"A\",\"text\":{\"zh-Hant\":\"在讀書會初次見面\",\"en\":\"A first meeting at a reading group\",\"ja\":\"読書会で初めて会う場面\"}},{\"id\":\"B\",\"text\":{\"zh-Hant\":\"第一天到公司上班時初次見面\",\"en\":\"A first meeting on the first day at a company job\",\"ja\":\"会社で働き始めた日に初めて会う場面\"}}],\"sourceRefs\":[{\"unit\":\"W01.s1\"},{\"unit\":\"T01.s1\"},{\"unit\":\"T02.s1\"},{\"unit\":\"I01.s1\"}],\"prompt\":{\"zh-Hant\":\"哪個摘要符合三份素材？\",\"en\":\"Which summary fits all three materials?\",\"ja\":\"三つの文章に合う説明はどれですか。\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "歓迎メッセージの「読書会」が活動を示し、「はじめまして」が初対面だと示しています。",
+            "zh-Hant": "歡迎訊息中的「読書会」指出活動是讀書會；「はじめまして」表示初次見面。",
+            "en": "読書会 in the welcome message identifies the reading group; はじめまして shows that this is a first meeting."
+          },
+          "B": {
+            "ja": "「会社員」はレンの仕事を表します。会っている場面は、歓迎メッセージの「読書会」で確かめられます。",
+            "zh-Hant": "「会社員」是レン的職業。見面的場合要看歡迎訊息中的「読書会」，不是看レン的職業。",
+            "en": "会社員 describes Ren’s occupation. The setting comes from 読書会 (“reading group”) in the welcome message."
+          }
+        }
+      }
+    },
+    "Q04": {
+      "questionSignature": "{\"id\":\"Q04\",\"responseType\":\"choice\",\"answer\":\"B\",\"options\":[{\"id\":\"A\",\"text\":{\"zh-Hant\":\"適合\",\"en\":\"Yes\",\"ja\":\"はい\"}},{\"id\":\"B\",\"text\":{\"zh-Hant\":\"不適合\",\"en\":\"No\",\"ja\":\"いいえ\"}}],\"sourceRefs\":[{\"unit\":\"T01.s1\"},{\"unit\":\"T02.s1\"}],\"prompt\":{\"zh-Hant\":\"下週在同一讀書會再遇到同一個人，還適合用「はじめまして」開場嗎？選一項，簡短說明理由。\",\"en\":\"Next week, you meet the same person again at the reading group. Is はじめまして a suitable opening? Choose one and briefly explain why.\",\"ja\":\"来週、同じ読書会で同じ人にまた会います。「はじめまして」であいさつしますか。一つ選んで、理由を短く説明してください。\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection-with-reason",
+        "feedbackByOption": {
+          "A": {
+            "ja": "一週間後でも、同じ人にまた会うので、初対面ではありません。「はじめまして」は初めて会う相手へのあいさつです。",
+            "zh-Hant": "即使過了一週，再遇到同一個人也不會重新變成初次見面。「はじめまして」是對初次見面的對象說的。",
+            "en": "Meeting the same person again a week later is not a first meeting. はじめまして is for someone you are meeting for the first time."
+          },
+          "B": {
+            "ja": "同じ相手にもう一度会うので、初対面のあいさつは使いません。自分の理由にも「同じ人にまた会う」という点が入っているか確認しましょう。",
+            "zh-Hant": "因為是再次遇到同一個人，不適合用初次見面的開場。再看看自己的理由是否提到「同一個人、再次見面」。",
+            "en": "You are meeting the same person again, so a first-meeting opening does not fit. Check that your reason mentions meeting the same person again."
+          }
+        }
+      }
+    },
+    "Q06": {
+      "questionSignature": "{\"id\":\"Q06\",\"responseType\":\"choice\",\"answer\":\"A\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"レン\",\"zh-Hant\":\"レン\",\"en\":\"Ren\"}},{\"id\":\"B\",\"text\":{\"ja\":\"レン・リー\",\"zh-Hant\":\"レン・リー\",\"en\":\"Ren Lee\"}}],\"sourceRefs\":[{\"unit\":\"I01.s5\"},{\"unit\":\"I01.s6\"}],\"prompt\":{\"ja\":\"レンは、メンバーに何と呼んでほしいですか。\",\"zh-Hant\":\"レン希望成員怎麼稱呼自己？\",\"en\":\"What does Ren ask the members to call them?\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "「レンと呼んでください」が、使ってほしい呼び方を示しています。「レン・リーといいます」は名前の紹介です。",
+            "zh-Hant": "「レンと呼んでください」是在請大家叫自己レン；「レン・リーといいます」則是在介紹姓名。",
+            "en": "レンと呼んでください asks people to use Ren. レン・リーといいます gives the name Ren Lee."
+          },
+          "B": {
+            "ja": "「レン・リーといいます」は名前の紹介です。使ってほしい呼び方は、その後の「レンと呼んでください」で確かめましょう。",
+            "zh-Hant": "「レン・リーといいます」是在介紹姓名。想知道レン希望大家怎麼叫自己，要看後面的「レンと呼んでください」。",
+            "en": "レン・リーといいます gives the name. For the requested form of address, look at the next sentence: レンと呼んでください (“Please call me Ren”)."
+          }
+        }
+      }
+    },
+    "Q08": {
+      "questionSignature": "{\"id\":\"Q08\",\"responseType\":\"choice\",\"answer\":\"A\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"レンに会えてうれしい\",\"zh-Hant\":\"很高興見到レン\",\"en\":\"Pleasure at meeting Ren\"}},{\"id\":\"B\",\"text\":{\"ja\":\"読書会が終わって残念だ\",\"zh-Hant\":\"對讀書會結束感到遺憾\",\"en\":\"Regret that the reading group has ended\"}}],\"sourceRefs\":[{\"unit\":\"T05.s2\"}],\"prompt\":{\"ja\":\"ミナは「お会いできてうれしいです」で、どんな気持ちを伝えていますか。\",\"zh-Hant\":\"ミナ說「お会いできてうれしいです」時，表達什麼心情？\",\"en\":\"What feeling does Mina express with お会いできてうれしいです?\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "「うれしい」は喜びを表します。ここでは、レンに会えたことを喜んでいます。",
+            "zh-Hant": "うれしい表達高興；在這句話裡，高興的原因是見到了レン。",
+            "en": "うれしい expresses happiness. Here, Mina is happy to meet Ren."
+          },
+          "B": {
+            "ja": "「うれしい」は残念な気持ちではなく、喜びを表します。この文には読書会が終わったという情報もありません。",
+            "zh-Hant": "うれしい表達高興，不是遺憾；這句話也沒有說讀書會已經結束。",
+            "en": "うれしい expresses happiness, not regret. The sentence also does not say that the reading group has ended."
+          }
+        }
+      }
+    },
+    "Q09": {
+      "questionSignature": "{\"id\":\"Q09\",\"responseType\":\"choice\",\"answer\":\"B\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"リンさんです。\",\"zh-Hant\":\"リンさんです。\",\"en\":\"リンさんです。\"}},{\"id\":\"B\",\"text\":{\"ja\":\"リンです。\",\"zh-Hant\":\"リンです。\",\"en\":\"リンです。\"}}],\"sourceRefs\":[{\"unit\":\"T01.s2\"},{\"unit\":\"T02.s2\"}],\"prompt\":{\"ja\":\"自分の名前がリンだと紹介します。自己紹介に合う文はどれですか。\",\"zh-Hant\":\"你要介紹自己的名字リン。哪一句適合用來自我介紹？\",\"en\":\"You are introducing yourself as Rin. Which sentence fits this self-introduction?\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "自分の名前を名乗るときは「さん」を付けません。「リンさんです」は、別の人をリンさんだと紹介するときなどに使えます。",
+            "zh-Hant": "介紹自己時，姓名後不加さん。「リンさんです」可用來介紹另一位叫リン的人，但不適合這裡的自介。",
+            "en": "Leave さん off your own name. リンさんです can identify someone else as Rin, but it does not fit this self-introduction."
+          },
+          "B": {
+            "ja": "自分の名前「リン」に「です」を続ければ、丁寧に名乗れます。",
+            "zh-Hant": "自己的姓名リン後接です，就能有禮貌地介紹自己。",
+            "en": "Your name リン followed by です gives a polite self-introduction."
+          }
+        }
+      }
+    },
+    "Q10": {
+      "questionSignature": "{\"id\":\"Q10\",\"responseType\":\"choice\",\"answer\":\"B\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"台湾に来ました。\",\"zh-Hant\":\"台湾に来ました。\",\"en\":\"台湾に来ました。\"}},{\"id\":\"B\",\"text\":{\"ja\":\"台湾から来ました。\",\"zh-Hant\":\"台湾から来ました。\",\"en\":\"台湾から来ました。\"}}],\"sourceRefs\":[{\"unit\":\"I01.s7\"}],\"prompt\":{\"ja\":\"自己紹介で、台湾が出発点だと伝えたいです。意味が合う文はどれですか。\",\"zh-Hant\":\"自介時，你想說自己「從台灣來」。哪一句符合這個意思？\",\"en\":\"In an introduction, you want to say that you came from Taiwan. Which sentence expresses that meaning?\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "「台湾に来ました」は、台湾が到着点という意味です。文としては正しいですが、台湾が出発点という意味にはなりません。",
+            "zh-Hant": "「台湾に来ました」是「來到台灣」，台灣是目的地。這句日文本身成立，但不表示「從台灣來」。",
+            "en": "台湾に来ました means “I came to Taiwan”: Taiwan is the destination. It is grammatical, but it does not mean “I came from Taiwan.”"
+          },
+          "B": {
+            "ja": "「から」は出発点を示します。「台湾から来ました」で、台湾から来たことを伝えられます。",
+            "zh-Hant": "から標示出發點；「台湾から来ました」表示「從台灣來」。",
+            "en": "から marks the starting point. 台湾から来ました means “I came from Taiwan.”"
+          }
+        }
+      }
+    },
+    "Q11": {
+      "questionSignature": "{\"id\":\"Q11\",\"responseType\":\"choice\",\"answer\":\"A\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"こちらこそ、よろしくお願いします。\",\"zh-Hant\":\"こちらこそ、よろしくお願いします。\",\"en\":\"こちらこそ、よろしくお願いします。\"}},{\"id\":\"B\",\"text\":{\"ja\":\"レンと呼んでください。\",\"zh-Hant\":\"レンと呼んでください。\",\"en\":\"レンと呼んでください。\"}}],\"sourceRefs\":[{\"unit\":\"T05.s1\"},{\"unit\":\"T06.s1\"}],\"prompt\":{\"ja\":\"初対面の相手が「よろしくお願いします」と言いました。同じ気持ちを返すあいさつはどれですか。\",\"zh-Hant\":\"初次見面的對方說「よろしくお願いします」。哪一句是承接對方心意的完整回應？\",\"en\":\"Someone you have just met says よろしくお願いします. Which complete response returns the same sentiment?\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "「こちらこそ」で相手の気持ちを受け、「よろしくお願いします」と同じ気持ちを返しています。会話では「こちらこそ」だけで返すこともあります。",
+            "zh-Hant": "こちらこそ承接對方的心意，再用よろしくお願いします表達「我也一樣，請多指教」。自然對話中，也可以只回「こちらこそ」。",
+            "en": "こちらこそ returns the other person’s sentiment, followed here by よろしくお願いします. In conversation, こちらこそ can also stand on its own."
+          },
+          "B": {
+            "ja": "「レンと呼んでください」は、使ってほしい呼び名を頼む文です。「よろしくお願いします」と同じ気持ちを返すあいさつではありません。",
+            "zh-Hant": "「レンと呼んでください」是請對方叫自己レン，不是在回應「請多指教」的心意。",
+            "en": "レンと呼んでください asks the other person to call you Ren. It does not return the sentiment of よろしくお願いします."
+          }
+        }
+      }
+    },
+    "Q12": {
+      "questionSignature": "{\"id\":\"Q12\",\"responseType\":\"choice\",\"answer\":\"A\",\"options\":[{\"id\":\"A\",\"text\":{\"ja\":\"台湾から来た。\",\"zh-Hant\":\"我從台灣來。\",\"en\":\"I came from Taiwan.\"}},{\"id\":\"B\",\"text\":{\"ja\":\"台湾に来た。\",\"zh-Hant\":\"我來到台灣。\",\"en\":\"I came to Taiwan.\"}}],\"sourceRefs\":[{\"unit\":\"I01.s7\"}],\"prompt\":{\"ja\":\"再生ボタンで端末の日本語音声を聞いて、文の意味を選んでください。\",\"zh-Hant\":\"按播放，聽裝置的日語語音，再選出這句話的意思。\",\"en\":\"Press play to hear your device’s Japanese speech, then choose the meaning of the sentence.\"}}",
+      "assessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "ja": "「台湾から来ました」と言っています。「から」は出発点を示すので、台湾から来たという意味です。",
+            "zh-Hant": "聽到的是「台湾から来ました」。から標示出發點，表示從台灣來。",
+            "en": "The sentence is 台湾から来ました. から marks the starting point, so it means “I came from Taiwan.”"
+          },
+          "B": {
+            "ja": "「台湾に来ました」なら台湾が到着点ですが、音声は「台湾から来ました」です。もう一度「から」を聞いてみましょう。",
+            "zh-Hant": "「台湾に来ました」才是「來到台灣」。語音說的是「台湾から来ました」，再聽一次其中的から。",
+            "en": "“I came to Taiwan” would be 台湾に来ました. The audio says 台湾から来ました. Listen again for から."
+          }
+        }
+      }
+    }
+  },
+  "presentation": {
+    "questionOrder": [
+      "Q01",
+      "Q02",
+      "Q06",
+      "Q08",
+      "Q12",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q04",
+      "Q05"
+    ],
+    "version": "learner-value-v4",
+    "previousVersions": [
+      "learner-value-v1",
+      "learner-value-v2",
+      "learner-value-v3"
+    ]
+  },
+  "feedbackRendering": "explicit-field-targets-v1"
+}

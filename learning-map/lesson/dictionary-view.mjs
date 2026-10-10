@@ -1,0 +1,3 @@
+import {learnerDictionaryView} from './dictionary-resolver.mjs';
+import {h,UI} from './i18n.mjs';
+export function renderDictionary(result,locale,uiLocale,posLabels={},audio=()=>''){const view=learnerDictionaryView(result);if(!view)return '';return `<details class="dictionary-entry"><summary>${h(UI[uiLocale].dictionary)}</summary>${view.entries.map(entry=>`<p><span lang="ja">${h(entry.lemma)}${entry.pronunciation?audio(entry.pronunciation):''}</span></p><p lang="${h(locale)}">${posLabels[entry.pos]?h(posLabels[entry.pos])+' · ':''}${entry.definitions.map(h).join('; ')}</p>`).join('')}</details>`;}

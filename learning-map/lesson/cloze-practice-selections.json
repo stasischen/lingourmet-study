@@ -1,0 +1,77 @@
+{
+  "format": "lingourmet.source-recall-cloze-selections",
+  "version": 1,
+  "sourceFiles": {
+    "lesson": "cc57c70e8ef5fe7307207940bacc8783aec433d5d6df6bc5fbc0c4640df63e7e",
+    "catalog": "24e02bc787b28e7263b6977c0d40ed33a606ea24bb2f470e1a9fc36f926067a5"
+  },
+  "items": [
+    {
+      "practiceKey": "lesson01.cloze.polite-name-ending",
+      "practiceVersion": 1,
+      "kind": "source_recall_cloze",
+      "template": "cloze",
+      "goalRefs": [
+        "L2"
+      ],
+      "sourceUnit": {
+        "document": "catalog",
+        "unitId": "X01.s2"
+      },
+      "sourceTextGuard": "ナオです。",
+      "gaps": [
+        {
+          "gapId": "ending",
+          "fromTokenId": "t2",
+          "toTokenId": "t2",
+          "start": 2,
+          "end": 4,
+          "offsetUnit": "UTF-16 code units",
+          "surfaceGuard": "です"
+        }
+      ],
+      "answer": {
+        "gapId": "ending",
+        "target": {
+          "document": "catalog",
+          "unitId": "X01.s2",
+          "tokenId": "t2"
+        },
+        "surfaceGuard": "です"
+      },
+      "answerPolicy": {
+        "mode": "source_recall_self_assessment",
+        "allowFreeText": false,
+        "automaticGrading": false,
+        "description": "Recall of the exact original source span, followed by existing reveal and self-assessment. No automatic semantic grading or unique unrestricted completion is claimed."
+      },
+      "localizations": {
+        "ja": {
+          "prompt": "原文の穴埋め"
+        },
+        "zh-Hant": {
+          "prompt": "原文填空"
+        },
+        "en": {
+          "prompt": "Complete the original text"
+        }
+      },
+      "audioTarget": {
+        "targetLanguage": "ja",
+        "source": {
+          "document": "catalog",
+          "unitId": "X01.s2",
+          "fromTokenId": "t1",
+          "toTokenId": "t3"
+        }
+      },
+      "audioPolicy": {
+        "fullSource": "answer_revealed_only"
+      },
+      "authorDecision": {
+        "goalFit": "Practices the nominal-predicate polite ending in the existing short self-introduction goal L2.",
+        "sourceIntegrity": "No source text, segmentation, reading or existing answer is changed. The answer is an exact existing source token."
+      }
+    }
+  ]
+}
