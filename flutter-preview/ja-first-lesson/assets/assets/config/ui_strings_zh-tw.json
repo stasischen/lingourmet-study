@@ -260,7 +260,12 @@
         "modeDevTitle": "開發者選單",
         "modeDevSubtitle": "內部測試選單",
         "modeDevDesc": "測試功能專區",
-        "topicExplorerComingSoon": "主題探索 - 即將推出"
+        "topicExplorerComingSoon": "主題探索 - 即將推出",
+    "lessonTextLabel": "課文",
+    "lessonTeachingLabel": "教學",
+    "lessonPracticeLabel": "練習",
+    "lessonBusyLabel": "處理中…",
+    "lessonPracticeGateLabel": "請先完成全部練習"
     },
     "onboarding": {
         "welcomeTitle": "歡迎！",
@@ -620,7 +625,9 @@
         "tagStandard": "標準",
         "grammarDetailTitle": "文法詳解",
         "grammarNoteNotFound": "找不到這則文法說明：{id}",
-        "grammarNoteLoadFailed": "無法載入文法說明：{error}"
+        "grammarNoteLoadFailed": "無法載入文法說明：{error}",
+    "readingLabel": "讀音",
+    "lessonMeaningLabel": "課內釋義"
     },
     "practice": {
         "title": "複習",
@@ -696,7 +703,12 @@
         "removedFromPracticeMessage": "已從清單移除",
         "allCaughtUpTitle": "都複習完了！",
         "noCardsDueMessage": "目前沒有到期卡片。",
-        "remainingCountLabel": "剩餘：{count}"
+        "remainingCountLabel": "剩餘：{count}",
+    "lessonCheckAction": "檢查答案",
+    "lessonCorrectContinueAction": "正確！繼續",
+    "lessonRetryAction": "再試一次",
+    "lessonRevealNotice": "已看答案，請重試並答對後完成本題。",
+    "lessonAssistedContinueAction": "參考答案後答對，繼續"
     },
     "studyPathMap": {
         "headerTitle": "語境航線",

@@ -260,7 +260,12 @@
     "modeDevTitle": "Developer Menu",
     "modeDevSubtitle": "Developer Menu",
     "modeDevDesc": "Test feature area",
-    "topicExplorerComingSoon": "Topic Explorer - Coming Soon"
+    "topicExplorerComingSoon": "Topic Explorer - Coming Soon",
+    "lessonTextLabel": "Text",
+    "lessonTeachingLabel": "Teaching",
+    "lessonPracticeLabel": "Practice",
+    "lessonBusyLabel": "Working…",
+    "lessonPracticeGateLabel": "Complete all practice tasks first"
   },
   "onboarding": {
     "welcomeTitle": "Welcome!",
@@ -620,7 +625,9 @@
     "tagStandard": "Standard",
     "grammarDetailTitle": "Grammar details",
     "grammarNoteNotFound": "Grammar note not found: {id}",
-    "grammarNoteLoadFailed": "Could not load grammar details: {error}"
+    "grammarNoteLoadFailed": "Could not load grammar details: {error}",
+    "readingLabel": "Reading",
+    "lessonMeaningLabel": "Lesson meaning"
   },
   "practice": {
     "title": "Review",
@@ -696,7 +703,12 @@
     "removedFromPracticeMessage": "Removed from practice queue",
     "allCaughtUpTitle": "All caught up!",
     "noCardsDueMessage": "No cards due for review.",
-    "remainingCountLabel": "Remaining: {count}"
+    "remainingCountLabel": "Remaining: {count}",
+    "lessonCheckAction": "Check answer",
+    "lessonCorrectContinueAction": "Correct! Continue",
+    "lessonRetryAction": "Try again",
+    "lessonRevealNotice": "Answer shown. Try again to complete this task.",
+    "lessonAssistedContinueAction": "Completed with help. Continue"
   },
   "studyPathMap": {
     "headerTitle": "Lingo Trail",

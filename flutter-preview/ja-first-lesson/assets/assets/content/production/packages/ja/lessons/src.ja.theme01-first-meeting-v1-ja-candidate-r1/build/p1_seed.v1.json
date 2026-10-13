@@ -16,7 +16,9 @@
         "ミナ",
         "です。"
       ],
-      "distractors": [],
+      "distractors": [
+        "こんにちは。"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -25,7 +27,132 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "先用はじめまして表示初見，再用名字＋です。這題固定使用ミナ；其他名字要在自由演練中替換。"
+        "zh_tw": "先用はじめまして表示初見，再用名字＋です。這題固定使用ミナ；其他名字要在自由演練中替換。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:greet",
+        "theme01-first-meeting-v1:ja:name"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:greet",
+          "theme01-first-meeting-v1:ja:name"
+        ],
+        "rules": [
+          {
+            "id": "P01:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "こんにちは。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「こんにちは」是白天相遇時的招呼；這題指定先說「初次見面」，所以請用「はじめまして」。這不代表初次見面時不能用其他招呼。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P01:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "はじめまして。",
+                "です。",
+                "ミナ"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "本題的順序是先打初見招呼，再用「名字＋です」自介。把「です」放在名字前，或把招呼插入名字和です之間，都不符合這個短句。若只是先報名再招呼，也可能能溝通，但不是題目指定的排列。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P01:order:2",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "ミナ",
+                "はじめまして。",
+                "です。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "本題的順序是先打初見招呼，再用「名字＋です」自介。把「です」放在名字前，或把招呼插入名字和です之間，都不符合這個短句。若只是先報名再招呼，也可能能溝通，但不是題目指定的排列。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P01:order:3",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "ミナ",
+                "です。",
+                "はじめまして。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "本題的順序是先打初見招呼，再用「名字＋です」自介。把「です」放在名字前，或把招呼插入名字和です之間，都不符合這個短句。若只是先報名再招呼，也可能能溝通，但不是題目指定的排列。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P01:order:4",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "です。",
+                "はじめまして。",
+                "ミナ"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "本題的順序是先打初見招呼，再用「名字＋です」自介。把「です」放在名字前，或把招呼插入名字和です之間，都不符合這個短句。若只是先報名再招呼，也可能能溝通，但不是題目指定的排列。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P01:order:5",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "です。",
+                "ミナ",
+                "はじめまして。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "本題的順序是先打初見招呼，再用「名字＋です」自介。把「です」放在名字前，或把招呼插入名字和です之間，都不符合這個短句。若只是先報名再招呼，也可能能溝通，但不是題目指定的排列。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:greet",
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     },
     {
@@ -43,7 +170,9 @@
         "ユキ",
         "です。"
       ],
-      "distractors": [],
+      "distractors": [
+        "レン"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -52,7 +181,55 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "名字在です之前；自稱不在自己名字後加さん。這題採用給定名字。"
+        "zh_tw": "名字在です之前；自稱不在自己名字後加さん。這題採用給定名字。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:name"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:name"
+        ],
+        "rules": [
+          {
+            "id": "P02:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "レン"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「レン」是另一個人的名字；題目要你自稱ユキ，所以姓名位置要選「ユキ」。人名本身沒有文法對錯，這裡依題目給的身分判斷。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          },
+          {
+            "id": "P02:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "です。",
+                "ユキ"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "姓名自介的順序是「ユキ＋です」。です 提供禮貌語氣，放在要介紹的名字後面。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:name"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     },
     {
@@ -70,7 +247,9 @@
         "お名前",
         "は？"
       ],
-      "distractors": [],
+      "distractors": [
+        "ミナ"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -79,7 +258,55 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "お名前是禮貌的「名字」；本句用は提示詢問的話題，讀作わ。"
+        "zh_tw": "お名前是禮貌的「名字」；本句用は提示詢問的話題，讀作わ。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:ask"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:ask"
+        ],
+        "rules": [
+          {
+            "id": "P03:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "ミナ"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「ミナ」是已給定的人名；本題還不知道對方的名字，要用「お名前」提出姓名這個話題。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:ask"
+            ]
+          },
+          {
+            "id": "P03:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "は？",
+                "お名前"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "短問句先說「お名前」，再接提示話題的「は？」。本句的 は 讀わ，不放在名字前。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:ask"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     },
     {
@@ -98,7 +325,9 @@
         "よろしく",
         "お願いします。"
       ],
-      "distractors": [],
+      "distractors": [
+        "はじめまして。"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -107,7 +336,124 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "こちらこそ回應對方的心意。這裡只練初見自介後的致意，不把整句譯成見面的喜悅。"
+        "zh_tw": "こちらこそ回應對方的心意。這裡只練初見自介後的致意，不把整句譯成見面的喜悅。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:respond"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:respond"
+        ],
+        "rules": [
+          {
+            "id": "P04:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "はじめまして。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「はじめまして」用來開啟初次見面的自介；本題要回應對方已表達的心意，請選「こちらこそ」。這是本題指定的回應目標。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          },
+          {
+            "id": "P04:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "こちらこそ、",
+                "お願いします。",
+                "よろしく"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題要先用「こちらこそ」回應對方，再接完整的「よろしく＋お願いします」。請保留這個致意片語內部的順序。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          },
+          {
+            "id": "P04:order:2",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "よろしく",
+                "こちらこそ、",
+                "お願いします。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題要先用「こちらこそ」回應對方，再接完整的「よろしく＋お願いします」。請保留這個致意片語內部的順序。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          },
+          {
+            "id": "P04:order:3",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "よろしく",
+                "お願いします。",
+                "こちらこそ、"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題要先用「こちらこそ」回應對方，再接完整的「よろしく＋お願いします」。請保留這個致意片語內部的順序。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          },
+          {
+            "id": "P04:order:4",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "お願いします。",
+                "こちらこそ、",
+                "よろしく"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題要先用「こちらこそ」回應對方，再接完整的「よろしく＋お願いします」。請保留這個致意片語內部的順序。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          },
+          {
+            "id": "P04:order:5",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "お願いします。",
+                "よろしく",
+                "こちらこそ、"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題要先用「こちらこそ」回應對方，再接完整的「よろしく＋お願いします」。請保留這個致意片語內部的順序。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:respond"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     },
     {
@@ -125,7 +471,9 @@
         "おはよう",
         "ございます。"
       ],
-      "distractors": [],
+      "distractors": [
+        "こんばんは。"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -134,7 +482,55 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "這是早上再相遇的禮貌招呼，無需重複初見用的はじめまして。"
+        "zh_tw": "這是早上再相遇的禮貌招呼，無需重複初見用的はじめまして。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:daily"
+        ],
+        "rules": [
+          {
+            "id": "P05:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "こんばんは。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「こんばんは」是晚上剛相遇時的招呼；題目是隔天早上，所以要用「おはようございます」。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:daily"
+            ]
+          },
+          {
+            "id": "P05:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "ございます。",
+                "おはよう"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "早安的完整禮貌說法依序是「おはよう＋ございます」。本課把它當作固定問候，不把後半段移到前面。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:daily"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     },
     {
@@ -152,7 +548,9 @@
         "じゃあ、",
         "また。"
       ],
-      "distractors": [],
+      "distractors": [
+        "こんにちは。"
+      ],
       "prompt_i18n": {
         "zh_tw": "依情境排列日文片語。"
       },
@@ -161,8 +559,57 @@
         "promptMode": "text"
       },
       "feedback_i18n": {
-        "zh_tw": "這是熟人間較輕鬆的道別；正式場合會有其他說法。本題只重排所提供的短句。"
+        "zh_tw": "這是熟人間較輕鬆的道別；正式場合會有其他說法。本題只重排所提供的短句。 本題採固定片語核對，沒有評估自由表達或發音。"
+      },
+      "knowledge_refs": [
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "wrong_answer_feedback": {
+        "version": 1,
+        "source_kind": "authored_bounded_practice_feedback",
+        "review_status": "needs_review",
+        "accepted_binding": false,
+        "knowledge_refs": [
+          "theme01-first-meeting-v1:ja:daily"
+        ],
+        "rules": [
+          {
+            "id": "P06:distractor:1",
+            "match": {
+              "kind": "contains_chunk",
+              "chunks": [
+                "こんにちは。"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "「こんにちは」是白天見面時的招呼；題目是熟人準備分開、下次再見，所以這裡選「じゃあ、また」。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:daily"
+            ]
+          },
+          {
+            "id": "P06:order:1",
+            "match": {
+              "kind": "exact_sequence",
+              "chunks": [
+                "また。",
+                "じゃあ、"
+              ]
+            },
+            "explanation_i18n": {
+              "zh_tw": "這題指定的道別順序是「じゃあ、＋また」。じゃあ 承接告別的動作，また 表達下次再見。"
+            },
+            "knowledge_refs": [
+              "theme01-first-meeting-v1:ja:daily"
+            ]
+          }
+        ],
+        "fallback_i18n": {
+          "zh_tw": "這個組合還不符合本題指定的短句。請對照情境，檢查是否漏選、多選或片語次序不同；目前沒有足夠資訊判定更具體的原因。可以回看教學後再試一次。"
+        }
       }
     }
-  ]
+  ],
+  "source_revision": "theme01-first-meeting-v1-ja-learning-repair-r1-20261013"
 }
