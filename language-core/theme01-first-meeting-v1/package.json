@@ -1,0 +1,26 @@
+{
+  "lessonId": "theme01-first-meeting-v1",
+  "status": "draft-candidate",
+  "languages": {
+    "ja": {
+      "lesson.json": "4fc8f3cab911a61eb818ca4df281806bcd1261683a8fab6cd829579e25eb6e6b",
+      "knowledge-catalog.json": "e21d0f617e0cad11eaf109a43efeb8631e42a43458e5c53938a0dab4182a2841",
+      "practice.json": "13536e4f8330208ac4658f9f7d9d1c097234ebebfc61f113b3f6aad3144e3ea2"
+    },
+    "ko": {
+      "lesson.json": "10a176ca6cc21b26f3ff6239f4fec4cc6f95c19ff665ee5071693c3d93ea40e2",
+      "knowledge-catalog.json": "e392ae76f78ee0e1f45a51e4499ff4fb0613a2a4e89aaef21c38856d057dcdc2",
+      "practice.json": "71bffddabd6e1eb482c14e7539eb1b13b906cc1e00d591e2bbfc28d479efb5b8"
+    },
+    "th": {
+      "lesson.json": "7eb1b348ddbdfce12e40c4d1108ec64ea7bef140c0296d346f321d0fccf12edc",
+      "knowledge-catalog.json": "a92efea6b3c58450cd4f4e2be9f0832b36b666e4d872f3074e6e2273125c56be",
+      "practice.json": "328e6e82eb1fd8993817d203364d4d5d9e78118a56fa46174b28a865bd4b5b36"
+    },
+    "en": {
+      "lesson.json": "e7eaab5d8961dca11374ab83c98e36aaef137ac1438e7e4e387c0bf74cedf020",
+      "knowledge-catalog.json": "309b439fb885e7a440de3c8c8d3dcb9d8170fdf0b5762b4d8ca2ca49901e3505",
+      "practice.json": "e14bbb4849e450ae9987e718013ea6ff94bfbb9b62cb7d425b4cea8c5332c244"
+    }
+  }
+}

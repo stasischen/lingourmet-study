@@ -1,0 +1,346 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "units": {
+    "x-greet-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕하세요.",
+          "reading": "annyeonghaseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저는 지우예요.",
+          "reading": "jeoneun Jiu-yeyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저는 김유진이에요.",
+          "reading": "jeoneun Gim Yujin-ieyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-ask-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "이름이 뭐예요?",
+          "reading": "ireumi mwoyeyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-respond-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저도 반가워요.",
+          "reading": "jeodo bangawoyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕히 가세요.",
+          "reading": "annyeonghi gaseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕히 계세요.",
+          "reading": "annyeonghi gyeseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "units": {
+        "x-greet-1": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-1": {
+          "meaning": "我是지우。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-2": {
+          "meaning": "我是김유진。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-ask-1": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-respond-1": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-1": {
+          "meaning": "再見，請慢走。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-2": {
+          "meaning": "再見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      },
+      "examples": {
+        "ex-greet-1": {
+          "context": "隔天再見昨天認識的夥伴。"
+        },
+        "ex-name-1": {
+          "context": "名字지우末音節沒有收尾子音。"
+        },
+        "ex-name-2": {
+          "context": "完整名字김유진的진以ㄴ結尾。"
+        },
+        "ex-ask-1": {
+          "context": "同桌夥伴還沒有介紹名字。"
+        },
+        "ex-respond-1": {
+          "context": "對方剛說만나서 반가워요。"
+        },
+        "ex-daily-1": {
+          "context": "你留下收拾，向正在離開的夥伴說。"
+        },
+        "ex-daily-2": {
+          "context": "你先走，向仍留在房間的夥伴說。"
+        }
+      }
+    }
+  },
+  "entries": {
+    "theme01-first-meeting-v1:ko:greet": {
+      "id": "theme01-first-meeting-v1:ko:greet",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "禮貌開場：안녕하세요",
+          "explanation": "안녕하세요 是常用的禮貌招呼，初次見面和再遇到認識的人都可以用。先把整句讀熟，再接名字。",
+          "usage": "它不需要像日語 はじめまして 那樣只留給初次見面；早晚也都可用於一般相遇。",
+          "limits": "本課情境是成人同輩。更正式或特殊身分關係的說法另有選擇。"
+        }
+      },
+      "exampleRefs": [
+        "ex-greet-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ko:name": {
+      "id": "theme01-first-meeting-v1:ko:name",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "介紹自己：저는〔名字〕예요／이에요",
+          "explanation": "저 是謙稱的「我」，는 標示話題；저는 在這裡引出自己。姓名末音節沒有收尾子音時，本課用 예요：유나예요；有收尾子音時用 이에요：김민준이에요。준 最下面的 ㄴ 就是收尾子音。",
+          "usage": "把 저는 保留，換名字與相應句尾。저는 和名字之間留空格，名字和 예요／이에요 連寫：저는 유나예요.",
+          "limits": "예요 是縮合形式；本課示範常用搭配，不把所有未縮合形式一律判成錯。姓名後的 예요／이에요 和名字連寫。"
+        }
+      },
+      "exampleRefs": [
+        "ex-name-1",
+        "ex-name-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ko:ask": {
+      "id": "theme01-first-meeting-v1:ko:ask",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "問名字：이름이 뭐예요?",
+          "explanation": "이름 是名字，뭐 是「什麼」。이름이 뭐예요? 在這個成人同輩的活動中，用禮貌句尾詢問對方名字。",
+          "usage": "第一次交換名字，可以先說 저는 유나예요，再問 이름이 뭐예요?；對方回答 저는 김민준이에요。",
+          "limits": "更需要尊敬的對象可能用其他問法。這裡不把本句當成對任何人都同樣合適的唯一說法。"
+        }
+      },
+      "exampleRefs": [
+        "ex-ask-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ko:respond": {
+      "id": "theme01-first-meeting-v1:ko:respond",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "把見面喜悅接下去",
+          "explanation": "만나서 반가워요 表達「很高興認識你」。聽到對方這樣說，可回答 저도 반가워요；저도 在這裡是「我也」。",
+          "usage": "本課先把 만나서 반가워요 當完整短句使用，不先要求你自行變化其他動詞。",
+          "limits": "반가워요 在實際使用中不只出現在初見；本課的對話情境是初次認識。"
+        }
+      },
+      "exampleRefs": [
+        "ex-respond-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ko:daily": {
+      "id": "theme01-first-meeting-v1:ko:daily",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "道別先看誰走、誰留",
+          "explanation": "自己離開、對方留在原處，向對方說 안녕히 계세요；自己留下、對方離開，向對方說 안녕히 가세요。不要按說話人的性別選句。",
+          "usage": "兩人各自離開、期待再見時，可用 또 봐요。또 是「再」，봐요 在這句裡和對方約定再見。",
+          "limits": "不是每次道別都必須用同一句；題目會明示誰留在原處，或指定要表達「再見面」。"
+        }
+      },
+      "exampleRefs": [
+        "ex-daily-1",
+        "ex-daily-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ko:words": {
+      "id": "theme01-first-meeting-v1:ko:words",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "本課詞語與讀音支援",
+          "explanation": "저＝我（謙稱），이름＝名字，뭐＝什麼，저도＝我也，또＝再。유나、김민준 是人名。用原文旁的讀音提示先練整句。",
+          "usage": "羅馬字中的 eo 對應ㅓ，eu 對應ㅡ，不要各自拆成兩個音節念。이름이 連讀為 i-reu-mi。韓語原文的空格仍要保留。",
+          "limits": "羅馬字是入門讀音輔助，不是韓文拼寫。讀音提示供跟讀；本課不評分發音。"
+        }
+      },
+      "exampleRefs": [],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    }
+  },
+  "examples": {
+    "ex-greet-1": {
+      "unitRefs": [
+        "x-greet-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-1": {
+      "unitRefs": [
+        "x-name-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-2": {
+      "unitRefs": [
+        "x-name-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-ask-1": {
+      "unitRefs": [
+        "x-ask-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-respond-1": {
+      "unitRefs": [
+        "x-respond-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-1": {
+      "unitRefs": [
+        "x-daily-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-2": {
+      "unitRefs": [
+        "x-daily-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    }
+  }
+}

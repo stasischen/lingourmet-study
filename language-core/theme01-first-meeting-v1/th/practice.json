@@ -1,0 +1,577 @@
+{
+  "lessonId": "theme01-first-meeting-v1:th",
+  "targetLanguage": "th",
+  "status": "draft-candidate",
+  "aSHA256": {
+    "lesson.json": "7eb1b348ddbdfce12e40c4d1108ec64ea7bef140c0296d346f321d0fccf12edc",
+    "knowledge-catalog.json": "a92efea6b3c58450cd4f4e2be9f0832b36b666e4d872f3074e6e2273125c56be"
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "title": {
+        "zh-Hant": "Ploy開口"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "依本課角色設定，Ploy第一次向Nok打招呼，哪句符合她的用語？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "สวัสดีครับ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "สวัสดีค่ะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "ไปก่อนนะคะ"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "句尾依說話人的用語，不依聽話人。"
+      },
+      "goalRefs": [
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:greet"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是Nok在本課使用的招呼句尾；本題指定Ploy。"
+          },
+          "B": {
+            "zh-Hant": "對，Ploy在本課說สวัสดีค่ะ。"
+          },
+          "C": {
+            "zh-Hant": "這是Ploy說我先走了，並非開場招呼。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q02",
+      "title": {
+        "zh-Hant": "Nok回答姓名"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Nok回應問名。哪句是他的姓名句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรคะ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "เราชื่อพลอยค่ะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "ผมชื่อนกครับ"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "ชื่อ後放名字，這個姓名句不必插入相當於「是」的詞。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u05"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是問名字，並非回答。"
+          },
+          "B": {
+            "zh-Hant": "這是Ploy的自介，不是Nok。"
+          },
+          "C": {
+            "zh-Hant": "對，Nok本課用ผม，名字นก，句尾ครับ。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q03",
+      "title": {
+        "zh-Hant": "同樣的喜悅"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Nok剛說「ยินดีที่ได้รู้จักครับ」。Ploy哪句表達「我也很高興認識你」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "ยินดีที่ได้รู้จักเช่นกันค่ะ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรคะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "แล้วเจอกันค่ะ"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "把這一來一回當完整短句練習。"
+      },
+      "goalRefs": [
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，เช่นกัน把同樣的喜悅接回去。"
+          },
+          "B": {
+            "zh-Hant": "這是在問未知的姓名。"
+          },
+          "C": {
+            "zh-Hant": "這是道別時的下次見，不是初見致意的回應。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q04",
+      "title": {
+        "zh-Hant": "Ploy問名字"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Ploy尚不知道新同桌的名字。哪個問句與句尾符合本課？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรค่ะ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรคะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "เราชื่อพลอยค่ะ"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "คะ與ค่ะ的拼寫和聲調不同；先練完整的問名句。"
+      },
+      "goalRefs": [
+        "ask"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:ask"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u03"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這個直接問名句使用คะ；ค่ะ用在她的姓名陳述句。"
+          },
+          "B": {
+            "zh-Hant": "對，คุณชื่ออะไรคะ是在問對方名字。"
+          },
+          "C": {
+            "zh-Hant": "這是Ploy自己的姓名陳述句，沒有問對方。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q05",
+      "title": {
+        "zh-Hant": "Ploy介紹自己"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "保留本課Ploy的自稱與句尾，哪句是「我叫Ploy」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "เราชื่อพลอยค่ะ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "ผมชื่อนกครับ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรคะ"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "本課不把เรา在所有情境都限定為單數；此處由角色與情境決定。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，本課情境的เรา是Ploy自稱我，ชื่อ後面是พลอย。"
+          },
+          "B": {
+            "zh-Hant": "這是Nok的姓名句。"
+          },
+          "C": {
+            "zh-Hant": "這是在問對方名字，不是介紹自己。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q06",
+      "title": {
+        "zh-Hant": "下次相遇"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "幾天後Nok再次遇見Ploy，想先打招呼。哪句符合本課Nok的用語？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "ไปก่อนนะครับ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "แล้วเจอกันครับ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "สวัสดีครับ"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "熟人再遇仍可用สวัสดี。"
+      },
+      "goalRefs": [
+        "daily",
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:greet",
+        "theme01-first-meeting-v1:th:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u04"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是Nok說我先走了。"
+          },
+          "B": {
+            "zh-Hant": "這是期待再見的道別。"
+          },
+          "C": {
+            "zh-Hant": "對，สวัสดี可用在初見和再次相遇，Nok用ครับ。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q07",
+      "title": {
+        "zh-Hant": "Ploy先走"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Ploy要先離開，Nok留下。依本課句型，她說哪句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "ไปก่อนนะค่ะ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "ไปก่อนนะคะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "คุณชื่ออะไรคะ"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "即使不是問句，這個นะ後也用คะ：นะคะ。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u10"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "นะ後在這個句型寫คะ，合起來是นะคะ。"
+          },
+          "B": {
+            "zh-Hant": "對，ไปก่อนนะคะ是Ploy先走時的說法。"
+          },
+          "C": {
+            "zh-Hant": "這是在問名字，沒有表示先離開。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q08",
+      "title": {
+        "zh-Hant": "Nok回應道別"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Ploy剛說「ไปก่อนนะคะ」。Nok想回「下次見」，選哪句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "แล้วเจอกันครับ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "แล้วเจอกันค่ะ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "ผมชื่อนกครับ"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "先判斷要完成的功能，再配上說話人的句尾。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u11"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，แล้วเจอกัน表示下次見，Nok使用ครับ。"
+          },
+          "B": {
+            "zh-Hant": "這是Ploy在本課使用的句尾，本題說話人是Nok。"
+          },
+          "C": {
+            "zh-Hant": "這是Nok報名字，沒有回應道別。"
+          }
+        }
+      }
+    }
+  ],
+  "rehearsals": [
+    {
+      "id": "R01",
+      "title": "先照角色，再換名字",
+      "prompt": "與夥伴先扮演Ploy和Nok，完成招呼、報名、問名、致意與回應。熟悉後，只把ชื่อ後的姓名換成想使用的名字，先保留所選角色的自稱與句尾。",
+      "sample": [
+        "Ploy：สวัสดีค่ะ เราชื่อพลอยค่ะ คุณชื่ออะไรคะ",
+        "Nok：สวัสดีครับ ผมชื่อนกครับ ยินดีที่ได้รู้จักครับ",
+        "Ploy：ยินดีที่ได้รู้จักเช่นกันค่ะ"
+      ],
+      "checklist": [
+        "我用說話人的句尾，不因對方角色而換句尾。",
+        "我在ชื่อ後放名字。",
+        "Ploy直接問名用คะ，姓名陳述用ค่ะ。",
+        "我能用เช่นกัน承接見面的喜悅。"
+      ],
+      "feedback": "這是角色練習，不替你的個人身分指定自稱；實際自介可依關係選用適合自己的說法。",
+      "goalRefs": [
+        "greet",
+        "name",
+        "ask",
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:greet",
+        "theme01-first-meeting-v1:th:name",
+        "theme01-first-meeting-v1:th:ask",
+        "theme01-first-meeting-v1:th:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u07"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "交換誰先離開",
+      "prompt": "先讓Nok先走、Ploy回應；下一次換Ploy先走、Nok回應。每次先說清楚正在扮演誰。",
+      "sample": [
+        "Nok：ไปก่อนนะครับ",
+        "Ploy：แล้วเจอกันค่ะ",
+        "下一次 Ploy：ไปก่อนนะคะ",
+        "Nok：แล้วเจอกันครับ"
+      ],
+      "checklist": [
+        "我用ไปก่อน表示先走。",
+        "我用แล้วเจอกัน回應下次見。",
+        "Ploy在นะ後用คะ，Nok用ครับ。"
+      ],
+      "feedback": "若句尾混淆，回看兩個道別場景，先固定角色，再交換誰先走。",
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:th:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u11"
+        }
+      ]
+    }
+  ]
+}

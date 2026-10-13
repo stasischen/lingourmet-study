@@ -1,0 +1,367 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "units": {
+    "x-greet-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Hello. I’m Sam."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "I’m Lee."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "I am Sam."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-ask-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "What’s your name?"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-respond-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Nice to meet you."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-respond-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "You too."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good evening."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good night."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "units": {
+        "x-greet-1": {
+          "meaning": "你好，我是Sam。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-1": {
+          "meaning": "我是Lee。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-2": {
+          "meaning": "我是Sam。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-ask-1": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-respond-1": {
+          "meaning": "很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-respond-2": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-1": {
+          "meaning": "晚上好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-2": {
+          "meaning": "晚安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      },
+      "examples": {
+        "ex-greet-1": {
+          "context": "Sam第一次和另一位參加者說話。"
+        },
+        "ex-name-1": {
+          "context": "新夥伴介紹想使用的名字。"
+        },
+        "ex-name-2": {
+          "context": "把縮寫展開，姓名意思仍相同。"
+        },
+        "ex-ask-1": {
+          "context": "新同桌尚未介紹名字。"
+        },
+        "ex-respond-1": {
+          "context": "第一次交換名字後致意。"
+        },
+        "ex-respond-2": {
+          "context": "回應剛聽到的Nice to meet you。"
+        },
+        "ex-daily-1": {
+          "context": "晚上剛見到同事。"
+        },
+        "ex-daily-2": {
+          "context": "晚間分開回家或準備睡覺。"
+        }
+      }
+    }
+  },
+  "entries": {
+    "theme01-first-meeting-v1:en:greet": {
+      "id": "theme01-first-meeting-v1:en:greet",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "開場：Hi／Hello",
+          "explanation": "Hi 和 Hello 都能用來打招呼。Hi 常見於較輕鬆的互動；本課成人同輩的工作坊很適合這樣開口。初見或再遇熟人都可用。",
+          "usage": "一口氣練 Hi. I’m Alex.：招呼後接姓名，對方就知道怎麼叫你。",
+          "limits": "招呼不是問名字；若還不知道對方名字，下一句再問。"
+        }
+      },
+      "exampleRefs": [
+        "ex-greet-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:en:name": {
+      "id": "theme01-first-meeting-v1:en:name",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "說自己：I’m〔名字〕",
+          "explanation": "I’m 是 I am 的縮寫，意思是「我是」。把名字放後面：I’m Alex.；I am Alex. 也成立。換成自己的名字時，保留 I’m。",
+          "usage": "I 要大寫；縮寫中的撇號標出省略的 a。口說I’m是一個音節；不要把它拆成兩個英文字母來念。",
+          "limits": "本課練姓名句；I’m也能接其他描述。沒有要求你用Alex作為自己的名字。"
+        }
+      },
+      "exampleRefs": [
+        "ex-name-1",
+        "ex-name-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:en:ask": {
+      "id": "theme01-first-meeting-v1:en:ask",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "問名字：What’s your name?",
+          "explanation": "What’s 在這句是 What is 的縮寫；your name 是「你的名字」。What’s your name? 把未知的姓名交給對方回答。",
+          "usage": "可先自介再問：I’m Alex. What’s your name? 回答用I’m Sam.，不用把整個問題重複一次。",
+          "limits": "I’m Alex.是在報自己的名字，不是在問對方。問句的what不要省掉。"
+        }
+      },
+      "exampleRefs": [
+        "ex-ask-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:en:respond": {
+      "id": "theme01-first-meeting-v1:en:respond",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "回應見面致意：You too",
+          "explanation": "Nice to meet you 表達很高興認識對方。緊接著回答 You too，意思是「我也很高興認識你」；它承接前一句的意思。",
+          "usage": "讀課文時把 Sam 的 Nice to meet you 和 Alex 的 You too 放在一起，辨認回應關係。",
+          "limits": "You too不是What’s your name?的姓名答案；在不同前話輪裡，這兩字回應的內容也會改變。"
+        }
+      },
+      "exampleRefs": [
+        "ex-respond-1",
+        "ex-respond-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:en:daily": {
+      "id": "theme01-first-meeting-v1:en:daily",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "日常相遇和告別",
+          "explanation": "上午見面可說Good morning，下午Good afternoon，晚上Good evening。Hi、Hello也能作一般招呼。離開時可說Bye；期待再見可說See you。",
+          "usage": "Good night用在晚間告別或睡前；晚上剛碰面應選Good evening或一般招呼，不用Good night開場。",
+          "limits": "本課問時段題時會指定「明說時段的招呼」；Hi/Hello在不少情境也成立，不會被一律判錯。"
+        }
+      },
+      "exampleRefs": [
+        "ex-daily-1",
+        "ex-daily-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:en:words": {
+      "id": "theme01-first-meeting-v1:en:words",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "本課詞語與讀音支援",
+          "explanation": "I＝我，you＝你，your＝你的，name＝名字，too＝也，morning＝上午，afternoon＝下午，evening＝晚上，night＝夜晚。good在問候裡與時段一起學。",
+          "usage": "Hi讀作/haɪ/，I’m讀作/aɪm/，name讀作/neɪm/；name末尾的e不另成一個音節。可按裝置朗讀先聽整句，再自己讀。",
+          "limits": "讀音符號是支援，不是新的考試內容。本課沒有錄音聽寫，也不自動評分發音。"
+        }
+      },
+      "exampleRefs": [],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    }
+  },
+  "examples": {
+    "ex-greet-1": {
+      "unitRefs": [
+        "x-greet-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-1": {
+      "unitRefs": [
+        "x-name-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-2": {
+      "unitRefs": [
+        "x-name-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-ask-1": {
+      "unitRefs": [
+        "x-ask-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-respond-1": {
+      "unitRefs": [
+        "x-respond-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-respond-2": {
+      "unitRefs": [
+        "x-respond-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-1": {
+      "unitRefs": [
+        "x-daily-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-2": {
+      "unitRefs": [
+        "x-daily-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    }
+  }
+}

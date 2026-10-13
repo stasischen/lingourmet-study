@@ -1,0 +1,375 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "units": {
+    "x-greet-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "สวัสดีค่ะ",
+          "reading": "sà-wàt-dii khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-greet-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "สวัสดีครับ",
+          "reading": "sà-wàt-dii khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "เราชื่อพลอยค่ะ",
+          "reading": "rao chʉ̂ʉ phlɔɔi khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ผมชื่อนกครับ",
+          "reading": "phǒm chʉ̂ʉ nók khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-ask-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "คุณชื่ออะไรคะ",
+          "reading": "khun chʉ̂ʉ à-rai khá"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-respond-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ยินดีที่ได้รู้จักเช่นกันค่ะ",
+          "reading": "yin-dii thîi dâi rúu-càk chên-kan khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ไปก่อนนะคะ",
+          "reading": "pai kɔ̀ɔn ná khá"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "แล้วเจอกันครับ",
+          "reading": "lɛ́ɛo cəə kan khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "units": {
+        "x-greet-1": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-greet-2": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-1": {
+          "meaning": "我叫Ploy。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-2": {
+          "meaning": "我叫Nok。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-ask-1": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-respond-1": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-1": {
+          "meaning": "我先走了。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-2": {
+          "meaning": "下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      },
+      "examples": {
+        "ex-greet-1": {
+          "context": "Ploy再次遇到Nok。"
+        },
+        "ex-greet-2": {
+          "context": "Nok向Ploy打招呼。"
+        },
+        "ex-name-1": {
+          "context": "Ploy向另一桌的同輩介紹自己。"
+        },
+        "ex-name-2": {
+          "context": "Nok回應新夥伴問名。"
+        },
+        "ex-ask-1": {
+          "context": "Ploy詢問一位尚未介紹名字的同輩。"
+        },
+        "ex-respond-1": {
+          "context": "Ploy回應對方的初見致意。"
+        },
+        "ex-daily-1": {
+          "context": "Ploy先離開。"
+        },
+        "ex-daily-2": {
+          "context": "Nok回應離開的Ploy。"
+        }
+      }
+    }
+  },
+  "entries": {
+    "theme01-first-meeting-v1:th:greet": {
+      "id": "theme01-first-meeting-v1:th:greet",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "先打招呼：สวัสดี",
+          "explanation": "สวัสดี 是招呼語，初見或日常相遇都可以用。本課Ploy說 สวัสดีค่ะ，Nok說 สวัสดีครับ。依說話人的用語選擇句尾，不看聽話人是誰。",
+          "usage": "本課把角色用語固定下來，讓你先學會兩種完整問候。換人開口時，句尾也跟著那位說話人。",
+          "limits": "不把本課角色設定當成每個人的唯一自稱或身分規則；實際稱呼與禮貌程度要看關係。"
+        }
+      },
+      "exampleRefs": [
+        "ex-greet-1",
+        "ex-greet-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:th:name": {
+      "id": "theme01-first-meeting-v1:th:name",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "報名字：〔自稱〕ชื่อ〔名字〕",
+          "explanation": "ชื่อ 表示名字／叫作。本課Ploy用 เราชื่อพลอยค่ะ，Nok用 ผมชื่อนกครับ。ชื่อ 後直接放名字，這兩句不必插入相當於「是」的詞。",
+          "usage": "保留各角色的自稱及句尾，換ชื่อ後面的名字槽。เรา 在這個同輩情境是Ploy自稱「我」；ผม 是Nok在本課使用的禮貌自稱。",
+          "limits": "เรา 也有其他人稱用法；這裡由情境解讀為單數自稱。不要把它在所有地方都固定譯作「我」。"
+        }
+      },
+      "exampleRefs": [
+        "ex-name-1",
+        "ex-name-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:th:ask": {
+      "id": "theme01-first-meeting-v1:th:ask",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "Ploy問名：คุณชื่ออะไรคะ",
+          "explanation": "คุณ＝你，ชื่อ＝名字／叫作，อะไร＝什麼。คุณชื่ออะไรคะ 詢問對方名字。Ploy的問句這裡用 คะ，介紹自己的陳述句則用 ค่ะ。",
+          "usage": "先聽問題，再用自己的姓名句回答。คะ 和 ค่ะ 不只拼寫不同，讀音也不同；讀音提示分別標作 khá、khâ。",
+          "limits": "先練這些完整句中的句尾。不能從一個例子推出所有含問意的話都用同一拼法。"
+        }
+      },
+      "exampleRefs": [
+        "ex-ask-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:th:respond": {
+      "id": "theme01-first-meeting-v1:th:respond",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "致意後接「我也很高興」",
+          "explanation": "ยินดีที่ได้รู้จัก 表達「很高興認識你」。Nok先說 ยินดีที่ได้รู้จักครับ；Ploy回答 ยินดีที่ได้รู้จักเช่นกันค่ะ，其中 เช่นกัน 表示同樣、也。",
+          "usage": "先把這兩句當完整短句練習：一人致意，另一人把同樣的心意接回去。",
+          "limits": "這段用語適合本課較有禮貌的初見；不把它要求為每次熟人碰面都必說的口令。"
+        }
+      },
+      "exampleRefs": [
+        "ex-respond-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:th:daily": {
+      "id": "theme01-first-meeting-v1:th:daily",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "先走與再見：看角色接話",
+          "explanation": "先離開的人可以說 ไปก่อนนะครับ／ไปก่อนนะคะ，意思是「我先走了」。對方可回 แล้วเจอกันครับ／ค่ะ，表示「下次見」。ก่อน 是「先」，เจอกัน 是彼此再見面。",
+          "usage": "Ploy在นะ後用คะ：นะคะ；Nok用นะครับ。比較課文兩個道別場景，句尾跟著角色，先走或留下則由情境決定。",
+          "limits": "「下次見」不是在問名字；นะคะ 不要按陳述句的ค่ะ直接拼成นะค่ะ。"
+        }
+      },
+      "exampleRefs": [
+        "ex-daily-1",
+        "ex-daily-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:th:words": {
+      "id": "theme01-first-meeting-v1:th:words",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "本課詞語與讀音支援",
+          "explanation": "ชื่อ＝名字／叫作，คุณ＝你，อะไร＝什麼，ก่อน＝先，เช่นกัน＝同樣／也。泰語通常不在每個詞間加空格；讀課文時按意思理解，不仿照日語切詞。",
+          "usage": "讀音提示：重複元音字母如 ii、ɔɔ 表示拉長；ʉ 是嘴唇不圓、舌位靠後的元音，ə 接近央元音。聲調符號：à低、á高、â降、ǎ升，無符號為中；kh、ph 的 h 表送氣。先慢慢讀ชื่อ chʉ̂ʉ、ค่ะ khâ、คะ khá。",
+          "limits": "這是一套入門轉寫提示，不是泰文正字法。讀音提示供跟讀；裝置朗讀若不可用仍可閱讀。本課不評分發音。"
+        }
+      },
+      "exampleRefs": [],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    }
+  },
+  "examples": {
+    "ex-greet-1": {
+      "unitRefs": [
+        "x-greet-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-greet-2": {
+      "unitRefs": [
+        "x-greet-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-1": {
+      "unitRefs": [
+        "x-name-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-2": {
+      "unitRefs": [
+        "x-name-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-ask-1": {
+      "unitRefs": [
+        "x-ask-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-respond-1": {
+      "unitRefs": [
+        "x-respond-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-1": {
+      "unitRefs": [
+        "x-daily-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-2": {
+      "unitRefs": [
+        "x-daily-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    }
+  }
+}

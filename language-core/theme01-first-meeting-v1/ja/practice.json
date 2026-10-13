@@ -1,0 +1,576 @@
+{
+  "lessonId": "theme01-first-meeting-v1:ja",
+  "targetLanguage": "ja",
+  "status": "draft-candidate",
+  "aSHA256": {
+    "lesson.json": "4fc8f3cab911a61eb818ca4df281806bcd1261683a8fab6cd829579e25eb6e6b",
+    "knowledge-catalog.json": "e21d0f617e0cad11eaf109a43efeb8631e42a43458e5c53938a0dab4182a2841"
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "title": {
+        "zh-Hant": "第一次開口"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "第一次參加讀書會，尚未認識同桌。哪一句明確表示「初次見面」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "おやすみなさい。"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "はじめまして。"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "じゃあ、また。"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "先說はじめまして，再接名字，就能開始認識彼此。"
+      },
+      "goalRefs": [
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:greet"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是要休息前的晚安，不是初次認識的開場。"
+          },
+          "B": {
+            "zh-Hant": "對，はじめまして明確用在第一次認識這個人。"
+          },
+          "C": {
+            "zh-Hant": "這是要分開、期待再見時的說法。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q02",
+      "title": {
+        "zh-Hant": "讀懂名字"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "レン回答「レンです」。他使用的名字是哪一個？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "ミナ"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "ユキ"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "レン"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "姓名自介把名字放在です前面。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u04"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "ミナ是先開口的另一位參加者。"
+          },
+          "B": {
+            "zh-Hant": "ユキ出現在教學例句，這段回答的是レン。"
+          },
+          "C": {
+            "zh-Hant": "對，です前面的レン就是他報的名字。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q03",
+      "title": {
+        "zh-Hant": "回應心意"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "對方剛說「よろしくお願いします」。哪一句把同樣的心意回應給對方？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "こちらこそ、よろしくお願いします。"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "お名前は？"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "こんばんは。"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "對話中由ミナ發起致意，レン用こちらこそ回應。"
+      },
+      "goalRefs": [
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u06"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，こちらこそ把「我也有同樣心意」接回去。"
+          },
+          "B": {
+            "zh-Hant": "這是在問未知的名字，沒有回應這句致意。"
+          },
+          "C": {
+            "zh-Hant": "這是晚間相遇的招呼，沒有承接請多指教的心意。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q04",
+      "title": {
+        "zh-Hant": "換自己的名字"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "你想讓同桌叫你ユキ。哪一句是本課的姓名自介？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "お名前は？"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "ユキです。"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "ユキさんです。"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "用〔自己的名字〕です，不在自稱名字後加さん。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是在問對方名字，尚未介紹你自己。"
+          },
+          "B": {
+            "zh-Hant": "對，把名字換成ユキ並保留です。"
+          },
+          "C": {
+            "zh-Hant": "這句可用來介紹別人，但本課自稱不在自己名字後加さん。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q05",
+      "title": {
+        "zh-Hant": "問未知的名字"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "先介紹自己後，還不知道新同桌名字。接哪一句詢問？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "こんにちは。"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "レンさんは？"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "お名前は？"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "先報自己的名字，再問お名前は，留時間讓對方回答。"
+      },
+      "goalRefs": [
+        "ask"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:ask"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u03"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是白天的招呼，沒有問出名字。"
+          },
+          "B": {
+            "zh-Hant": "你還不知道姓名，不能先叫對方レン；名字＋は也要依前話題理解。"
+          },
+          "C": {
+            "zh-Hant": "對，お名前は詢問尚未知的姓名。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q06",
+      "title": {
+        "zh-Hant": "隔天再相遇"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "隔天上午又遇到同一位夥伴。哪句明說早晨的招呼？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "おはようございます。"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "はじめまして。"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "おやすみなさい。"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "初見與日常再相遇要分開看。"
+      },
+      "goalRefs": [
+        "daily",
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:greet",
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，這是早上見面的禮貌招呼。"
+          },
+          "B": {
+            "zh-Hant": "昨天已經認識，這裡不再用初見開場。"
+          },
+          "C": {
+            "zh-Hant": "這是準備休息時的晚安，與上午碰面不符。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q07",
+      "title": {
+        "zh-Hant": "晚上剛抵達"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "晚上剛到活動現場，還沒有要休息或離開。哪句適合？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "おやすみなさい。"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "こんばんは。"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "じゃあ、また。"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "こんばんは是相遇；おやすみなさい是晚安。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u12"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是晚安，通常接近休息，不是剛見面的晚上好。"
+          },
+          "B": {
+            "zh-Hant": "對，こんばんは用在晚上剛碰面。"
+          },
+          "C": {
+            "zh-Hant": "這句是道別，現在還沒有要離開。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q08",
+      "title": {
+        "zh-Hant": "下次再見"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "活動後準備各自回家，下次還會在讀書會見面。哪句表示「那麼，下次見」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "お名前は？"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "こんにちは。"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "じゃあ、また。"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "先看兩人正在離開，再選道別短句。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u10"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是在問姓名，沒有道別。"
+          },
+          "B": {
+            "zh-Hant": "這是白天相遇的招呼。"
+          },
+          "C": {
+            "zh-Hant": "對，じゃあ、また表示分開並期待再見。"
+          }
+        }
+      }
+    }
+  ],
+  "rehearsals": [
+    {
+      "id": "R01",
+      "title": "把自己的名字放進去",
+      "prompt": "扮演第一次坐到同桌的人：先打招呼、介紹自己，再問對方名字。接著換成對方，回答名字並互相致意。可以用自己的名字替換ユキ和アキ。",
+      "sample": [
+        "A：はじめまして。ユキです。お名前は？",
+        "B：はじめまして。アキです。",
+        "A：よろしくお願いします。",
+        "B：こちらこそ、よろしくお願いします。"
+      ],
+      "checklist": [
+        "我用はじめまして開始初見。",
+        "我把自己的名字放在です前，沒有加さん。",
+        "我問お名前は，並留出對方回答的時間。",
+        "我有發起或回應初見致意。"
+      ],
+      "feedback": "若只能報名字，回看「問未知姓名」再試；名字可以不同，重點是完成交流功能。",
+      "goalRefs": [
+        "greet",
+        "name",
+        "ask",
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:greet",
+        "theme01-first-meeting-v1:ja:name",
+        "theme01-first-meeting-v1:ja:ask",
+        "theme01-first-meeting-v1:ja:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u03"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "相遇與道別各說一次",
+      "prompt": "同一位夥伴：早上再見面時說一句；活動後分開、下次再見時再說一句。最後另練睡前晚安。",
+      "sample": [
+        "早上：おはようございます。",
+        "分開：じゃあ、また。",
+        "睡前：おやすみなさい。"
+      ],
+      "checklist": [
+        "我沒有把はじめまして重複用於熟人日常碰面。",
+        "我區分相遇、分開與睡前。"
+      ],
+      "feedback": "若晚上好和晚安混淆，回看「晚上剛碰面」與「準備休息」兩段。",
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ja:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u12"
+        }
+      ]
+    }
+  ]
+}

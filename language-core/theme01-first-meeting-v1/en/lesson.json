@@ -1,0 +1,565 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "lessonId": "theme01-first-meeting-v1:en",
+  "targetLanguage": "en",
+  "teachingLocales": [
+    "zh-Hant"
+  ],
+  "goalOrder": [
+    "greet",
+    "name",
+    "respond",
+    "ask",
+    "daily"
+  ],
+  "sources": {
+    "meet": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "meet1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u02"
+          ]
+        },
+        {
+          "id": "meet3",
+          "speakerId": "B",
+          "unitRefs": [
+            "u03"
+          ]
+        },
+        {
+          "id": "meet4",
+          "speakerId": "A",
+          "unitRefs": [
+            "u04"
+          ]
+        }
+      ]
+    },
+    "morning": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "morning1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u05"
+          ]
+        },
+        {
+          "id": "morning2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u06"
+          ]
+        }
+      ]
+    },
+    "afternoon": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "afternoon1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u07"
+          ]
+        },
+        {
+          "id": "afternoon2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u08"
+          ]
+        }
+      ]
+    },
+    "evening": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "evening1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u09"
+          ]
+        },
+        {
+          "id": "evening2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u10"
+          ]
+        }
+      ]
+    },
+    "leave": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "leave1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u11"
+          ]
+        },
+        {
+          "id": "leave2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u12"
+          ]
+        }
+      ]
+    },
+    "night": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "night1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u13"
+          ]
+        },
+        {
+          "id": "night2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u13"
+          ]
+        }
+      ]
+    }
+  },
+  "sourceOrder": [
+    "meet",
+    "morning",
+    "afternoon",
+    "evening",
+    "leave",
+    "night"
+  ],
+  "speakers": {
+    "A": {
+      "name": "Alex"
+    },
+    "B": {
+      "name": "Sam"
+    }
+  },
+  "units": {
+    "u01": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Hi. I'm Alex."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u02": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "What's your name?"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u03": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "I'm Sam. Nice to meet you."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u04": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "You too."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u05": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good morning, Sam."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u06": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Hi, Alex."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u07": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good afternoon."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u08": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Hello."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u09": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good evening."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u10": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Hi."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u11": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Bye, Sam."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u12": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "See you, Alex."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u13": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "Good night."
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "title": "初次見面，也會日常打招呼",
+      "intro": "先完成第一次姓名交流，再看不同時段的熟人招呼與道別。不需前課；姓名槽、縮寫與常用詞在本課提供。",
+      "goals": {
+        "greet": "初次見面時，先開口打招呼。",
+        "name": "介紹自己想使用的名字。",
+        "respond": "表達見面的喜悅，並回應對方。",
+        "ask": "問還不知道的名字，並聽懂回答。",
+        "daily": "分辨熟人相遇與道別情境，選擇合適短句。"
+      },
+      "sources": {
+        "meet": {
+          "title": "工作坊的新同桌",
+          "summary": "Alex和Sam在工作坊開始前坐到同一桌，還不知道彼此的名字。"
+        },
+        "morning": {
+          "title": "隔天上午",
+          "summary": "兩人已經認識，早上在活動現場相遇。"
+        },
+        "afternoon": {
+          "title": "下午又碰面",
+          "summary": "另一天午後兩人在活動現場碰面。"
+        },
+        "evening": {
+          "title": "晚上到場",
+          "summary": "晚上剛抵達活動現場，先打招呼。"
+        },
+        "leave": {
+          "title": "白天活動結束",
+          "summary": "兩人白天離開活動現場，之後還會再見。"
+        },
+        "night": {
+          "title": "晚間告別",
+          "summary": "晚上的活動結束，兩人正各自回家，互道晚安。"
+        }
+      },
+      "units": {
+        "u01": {
+          "meaning": "嗨，我是Alex。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u02": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u03": {
+          "meaning": "我是Sam。很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u04": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u05": {
+          "meaning": "早安，Sam。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u06": {
+          "meaning": "嗨，Alex。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u07": {
+          "meaning": "午安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u08": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u09": {
+          "meaning": "晚上好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u10": {
+          "meaning": "嗨。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u11": {
+          "meaning": "再見，Sam。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u12": {
+          "meaning": "下次見，Alex。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u13": {
+          "meaning": "晚安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      }
+    }
+  },
+  "teachingRefs": [
+    {
+      "id": "greet",
+      "entryId": "theme01-first-meeting-v1:en:greet",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "entryId": "theme01-first-meeting-v1:en:name",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "entryId": "theme01-first-meeting-v1:en:ask",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "entryId": "theme01-first-meeting-v1:en:respond",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "entryId": "theme01-first-meeting-v1:en:daily",
+      "sourceRefs": [
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u11"
+        },
+        {
+          "unit": "u12"
+        },
+        {
+          "unit": "u13"
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "entryId": "theme01-first-meeting-v1:en:words",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u13"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "lessonId": "theme01-first-meeting-v1:en",
+  "targetLanguage": "en",
+  "status": "draft-candidate",
+  "aSHA256": {
+    "lesson.json": "e7eaab5d8961dca11374ab83c98e36aaef137ac1438e7e4e387c0bf74cedf020",
+    "knowledge-catalog.json": "309b439fb885e7a440de3c8c8d3dcb9d8170fdf0b5762b4d8ca2ca49901e3505"
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "title": {
+        "zh-Hant": "讀懂名字"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "課文第一位說「Hi. I’m Alex.」。他的名字是？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Sam"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "Lee"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "Alex"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "Hi先招呼，I’m Alex接著介紹姓名。"
+      },
+      "goalRefs": [
+        "greet",
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:greet",
+        "theme01-first-meeting-v1:en:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "Sam是另一位同桌。"
+          },
+          "B": {
+            "zh-Hant": "Lee出現在教學例句，這一位報Alex。"
+          },
+          "C": {
+            "zh-Hant": "對，I’m後面的Alex就是名字。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q02",
+      "title": {
+        "zh-Hant": "詢問新同桌"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "想知道新同桌的名字，哪一句是問題？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "What’s your name?"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "I’m Alex."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "Nice to meet you."
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "先自介再問名字，就能自然接起交流。"
+      },
+      "goalRefs": [
+        "ask"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:ask"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，What’s your name把未知姓名交給對方回答。"
+          },
+          "B": {
+            "zh-Hant": "這是介紹自己，不是問對方。"
+          },
+          "C": {
+            "zh-Hant": "這是初見致意，沒有問姓名。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q03",
+      "title": {
+        "zh-Hant": "接下初見致意"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "Sam剛說「Nice to meet you」。Alex可用哪句表示「我也很高興認識你」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Good night."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "You too."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "What’s your name?"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "You too要連同前一句理解，不能單獨固定翻成某個意思。"
+      },
+      "goalRefs": [
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u04"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是晚間告別或睡前晚安。"
+          },
+          "B": {
+            "zh-Hant": "對，You too在這裡承接前一句的見面喜悅。"
+          },
+          "C": {
+            "zh-Hant": "這是問姓名，沒有回應剛剛的致意。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q04",
+      "title": {
+        "zh-Hant": "姓名縮寫"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "你想讓大家叫你Lee。哪句使用本課的I am縮寫？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "You too."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "I’m Lee."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "What’s your name?"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "I要大寫，I’m中的撇號標示省略的a。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是回應前一句相同心意，沒有報姓名。"
+          },
+          "B": {
+            "zh-Hant": "對，I’m是I am的縮寫，後面接Lee。"
+          },
+          "C": {
+            "zh-Hant": "這是在問對方名字，沒有介紹你自己。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q05",
+      "title": {
+        "zh-Hant": "上午再見"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "早上又遇到同一位夥伴，要使用「明說上午時段」的招呼，選哪句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Good morning."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "Good afternoon."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "Good night."
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "Hi或Hello也可作一般招呼；本題特別要求明說上午時段。"
+      },
+      "goalRefs": [
+        "daily",
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:daily",
+        "theme01-first-meeting-v1:en:greet"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u05"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，morning是上午。"
+          },
+          "B": {
+            "zh-Hant": "這是下午時段的招呼。"
+          },
+          "C": {
+            "zh-Hant": "這是晚間告別或睡前用語，不是早上碰面。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q06",
+      "title": {
+        "zh-Hant": "晚上剛抵達"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "晚上剛到活動現場，想使用明說晚間時段的相遇招呼。哪句適合？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Good night."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "See you."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "Good evening."
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "看動作是相遇還是離開，再分Good evening和Good night。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u13"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "Good night用在晚間告別或睡前；現在才剛碰面。"
+          },
+          "B": {
+            "zh-Hant": "這是在道別，現在還沒有要離開。"
+          },
+          "C": {
+            "zh-Hant": "對，Good evening是晚間剛見面時的招呼。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q07",
+      "title": {
+        "zh-Hant": "白天分開"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "白天活動結束，之後還會再見。哪句表示「下次見」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Hello."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "See you."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "Good morning."
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "課文用Bye、See you完成白天的道別。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u12"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是相遇招呼，沒有表達分開後再見。"
+          },
+          "B": {
+            "zh-Hant": "對，See you常用於道別並期待再見。"
+          },
+          "C": {
+            "zh-Hant": "這是上午相遇的招呼。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q08",
+      "title": {
+        "zh-Hant": "晚間告別"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "晚上的活動結束，兩人正各自回家。哪一句是在此互道晚安？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "Good night."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "Good evening."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "What’s your name?"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "Good night也可用於睡前，不只限於已躺在床上。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u13"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，晚間離開時可說Good night。"
+          },
+          "B": {
+            "zh-Hant": "這是晚間剛碰面的招呼，不是本題的晚安。"
+          },
+          "C": {
+            "zh-Hant": "這是在問名字，沒有道別。"
+          }
+        }
+      }
+    }
+  ],
+  "rehearsals": [
+    {
+      "id": "R01",
+      "title": "認識新的同桌",
+      "prompt": "與夥伴輪流說：招呼、自己的名字、問對方名字，再互相致意。用自己的名字取代Lee和Sam。",
+      "sample": [
+        "A: Hi. I’m Lee. What’s your name?",
+        "B: Hello. I’m Sam. Nice to meet you.",
+        "A: You too."
+      ],
+      "checklist": [
+        "我用Hi或Hello開口。",
+        "我用I’m或I am接自己的名字。",
+        "我用What’s your name問對方。",
+        "我在Nice to meet you後接You too，不把它當姓名回答。"
+      ],
+      "feedback": "名字和招呼可以變；若卡住，先分成三步：招呼與報名、問名、致意回應。",
+      "goalRefs": [
+        "greet",
+        "name",
+        "ask",
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:greet",
+        "theme01-first-meeting-v1:en:name",
+        "theme01-first-meeting-v1:en:ask",
+        "theme01-first-meeting-v1:en:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u04"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "分清晚上好與晚安",
+      "prompt": "設想兩個時刻：晚上剛到活動現場；活動結束各自回家。分別說一句。再補一句白天離開、期待再見的道別。",
+      "sample": [
+        "剛抵達：Good evening.",
+        "夜晚告別：Good night.",
+        "白天離開、下次見：See you."
+      ],
+      "checklist": [
+        "我把Good evening放在剛碰面時。",
+        "我把Good night放在晚間告別或睡前。",
+        "我知道Hi／Hello也可作一般招呼。"
+      ],
+      "feedback": "參考句示範一種做法，不排除其他自然說法；重點是相遇與告別的功能適合情境。",
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:en:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u13"
+        },
+        {
+          "unit": "u12"
+        }
+      ]
+    }
+  ]
+}

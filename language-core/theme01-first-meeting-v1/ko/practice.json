@@ -1,0 +1,577 @@
+{
+  "lessonId": "theme01-first-meeting-v1:ko",
+  "targetLanguage": "ko",
+  "status": "draft-candidate",
+  "aSHA256": {
+    "lesson.json": "10a176ca6cc21b26f3ff6239f4fec4cc6f95c19ff665ee5071693c3d93ea40e2",
+    "knowledge-catalog.json": "e392ae76f78ee0e1f45a51e4499ff4fb0613a2a4e89aaef21c38856d057dcdc2"
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "title": {
+        "zh-Hant": "開口招呼"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "成人同輩活動中，哪句是本課的禮貌相遇招呼？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "안녕하세요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "안녕히 계세요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "또 봐요."
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "先用안녕하세요，再接自己的名字。"
+      },
+      "goalRefs": [
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:greet"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，안녕하세요可以初見或日常相遇時使用。"
+          },
+          "B": {
+            "zh-Hant": "這是離開時向留下的人道別。"
+          },
+          "C": {
+            "zh-Hant": "這是期待下次再見的道別。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q02",
+      "title": {
+        "zh-Hant": "讀懂姓名"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "另一位回答「저는 김민준이에요」。他報的是哪個名字？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "유나"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "김민준"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "김유진"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "저는引出自己，名字與이에요連寫。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u04"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "유나是先開口的那位。"
+          },
+          "B": {
+            "zh-Hant": "對，姓名是김민준。"
+          },
+          "C": {
+            "zh-Hant": "김유진是教學例子，課文這一位叫김민준。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q03",
+      "title": {
+        "zh-Hant": "接下見面的喜悅"
+      },
+      "stage": "comprehension",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "對方說「만나서 반가워요」。哪一句表達「我也很高興認識你」？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "이름이 뭐예요?"
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "안녕히 가세요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "저도 반가워요."
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "저도反映前一句的相同心情。"
+      },
+      "goalRefs": [
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u06"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是在問姓名，沒有表達「我也」。"
+          },
+          "B": {
+            "zh-Hant": "這是向離開者道別。"
+          },
+          "C": {
+            "zh-Hant": "對，저도在這裡是「我也」。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q04",
+      "title": {
+        "zh-Hant": "本課的縮合形式"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "姓名유나末音節沒有收尾子音。若用本課練的縮合形式，哪句拼寫與空格正確？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "저는 유나예요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "저는 유나 예요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "저는 유나에요."
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "本題只核本課指定的縮合形式；沒有否定所有未縮合表達。"
+      },
+      "goalRefs": [
+        "name"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:name"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，저는與名字分開，名字和예요連寫。"
+          },
+          "B": {
+            "zh-Hant": "名字和예요應連寫，不在它們中間加空格。"
+          },
+          "C": {
+            "zh-Hant": "這個姓名句的縮合拼寫是예요，不是에요。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q05",
+      "title": {
+        "zh-Hant": "詢問新同桌"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "對方還沒有報名字，哪一句是本課成人同輩問名？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "저도 반가워요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "이름이 뭐예요?"
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "저는 유나예요."
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "先自介再問이름이 뭐예요，對方就能報名。"
+      },
+      "goalRefs": [
+        "ask"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:ask"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u03"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是回應見面的喜悅。"
+          },
+          "B": {
+            "zh-Hant": "對，이름是名字，뭐在這裡問什麼。"
+          },
+          "C": {
+            "zh-Hant": "這是介紹自己的名字，沒有問對方。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q06",
+      "title": {
+        "zh-Hant": "幾天後再碰面"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "幾天後又見到同一位夥伴，還使用禮貌語氣。哪句可以繼續作為相遇招呼？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "안녕히 가세요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "안녕히 계세요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "안녕하세요."
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "zh-Hant": "不需要把日語初見限定規則套到韓語안녕하세요。"
+      },
+      "goalRefs": [
+        "daily",
+        "greet"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:greet",
+        "theme01-first-meeting-v1:ko:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這是向離開者道別，不是碰面招呼。"
+          },
+          "B": {
+            "zh-Hant": "這是離開者向留下的人道別。"
+          },
+          "C": {
+            "zh-Hant": "對，안녕하세요並不限於初次認識。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q07",
+      "title": {
+        "zh-Hant": "自己先離開"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "你先回家，同桌還留在教室收拾。你向留下的人說哪句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "안녕히 계세요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "안녕히 가세요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "이름이 뭐예요?"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "zh-Hant": "看對方是留下還是離開，不按說話人的性別選句。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "對，你離開、對方留下，向對方說안녕히 계세요。"
+          },
+          "B": {
+            "zh-Hant": "這句是向離開的人說；題目中的對方仍留下。"
+          },
+          "C": {
+            "zh-Hant": "這是問名字，沒有道別。"
+          }
+        }
+      }
+    },
+    {
+      "id": "Q08",
+      "title": {
+        "zh-Hant": "自己留下"
+      },
+      "stage": "application",
+      "responseType": "choice",
+      "prompt": {
+        "zh-Hant": "換成你留在教室，對方正離開。你向對方說哪句？"
+      },
+      "options": [
+        {
+          "id": "A",
+          "text": {
+            "zh-Hant": "안녕히 계세요."
+          }
+        },
+        {
+          "id": "B",
+          "text": {
+            "zh-Hant": "안녕히 가세요."
+          }
+        },
+        {
+          "id": "C",
+          "text": {
+            "zh-Hant": "안녕하세요."
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "zh-Hant": "自己留下、對方離開，選안녕히 가세요。"
+      },
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u08"
+        }
+      ],
+      "choiceAssessment": {
+        "version": "choice-feedback-v1",
+        "responseMode": "selection",
+        "feedbackByOption": {
+          "A": {
+            "zh-Hant": "這句是向留下的人說，題目中的對方要走。"
+          },
+          "B": {
+            "zh-Hant": "對，向離開的人說안녕히 가세요。"
+          },
+          "C": {
+            "zh-Hant": "這是相遇招呼，不是此時的道別。"
+          }
+        }
+      }
+    }
+  ],
+  "rehearsals": [
+    {
+      "id": "R01",
+      "title": "交換名字和初見致意",
+      "prompt": "你與夥伴首次在成人同輩活動相遇。輪流打招呼、報名字、問名及回應見面喜悅。參考中的지우沒有收尾子音，김유진以ㄴ結尾；可換成自己的名字並選相應句尾。",
+      "sample": [
+        "A：안녕하세요. 저는 지우예요. 이름이 뭐예요?",
+        "B：안녕하세요. 저는 김유진이에요.",
+        "A：만나서 반가워요.",
+        "B：저도 반가워요."
+      ],
+      "checklist": [
+        "我以안녕하세요開口。",
+        "我依名字末音節選예요或이에요，並與名字連寫。",
+        "我問姓名後讓對方回答。",
+        "我用저도接下見面的喜悅。"
+      ],
+      "feedback": "若名字句尾不確定，先用課文兩個名字各練一次，再換自己的名字。",
+      "goalRefs": [
+        "greet",
+        "name",
+        "ask",
+        "respond"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:greet",
+        "theme01-first-meeting-v1:ko:name",
+        "theme01-first-meeting-v1:ko:ask",
+        "theme01-first-meeting-v1:ko:respond"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u03"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "交換誰走、誰留",
+      "prompt": "先扮演離開者和留下者各說一句，再交換角色。最後練兩人各自離開、期待再見。",
+      "sample": [
+        "離開者：안녕히 계세요.",
+        "留下者：안녕히 가세요.",
+        "兩人各自離開、約再見：또 봐요."
+      ],
+      "checklist": [
+        "我先說清楚誰留在原處。",
+        "我向留下者說계세요，向離開者說가세요。",
+        "我能用또 봐요表達期待再見。"
+      ],
+      "feedback": "若選反，先看聽話人正在走還是留，再把整句重新說一次。",
+      "goalRefs": [
+        "daily"
+      ],
+      "entryRefs": [
+        "theme01-first-meeting-v1:ko:daily"
+      ],
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        }
+      ]
+    }
+  ]
+}

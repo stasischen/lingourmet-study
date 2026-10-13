@@ -1,0 +1,526 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "lessonId": "theme01-first-meeting-v1:th",
+  "targetLanguage": "th",
+  "teachingLocales": [
+    "zh-Hant"
+  ],
+  "goalOrder": [
+    "greet",
+    "name",
+    "respond",
+    "ask",
+    "daily"
+  ],
+  "sources": {
+    "meet": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "meet1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u02"
+          ]
+        },
+        {
+          "id": "meet3",
+          "speakerId": "A",
+          "unitRefs": [
+            "u03"
+          ]
+        },
+        {
+          "id": "meet4",
+          "speakerId": "B",
+          "unitRefs": [
+            "u04"
+          ]
+        },
+        {
+          "id": "meet5",
+          "speakerId": "B",
+          "unitRefs": [
+            "u05"
+          ]
+        },
+        {
+          "id": "meet6",
+          "speakerId": "B",
+          "unitRefs": [
+            "u06"
+          ]
+        },
+        {
+          "id": "meet7",
+          "speakerId": "A",
+          "unitRefs": [
+            "u07"
+          ]
+        }
+      ]
+    },
+    "daily": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "daily1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "daily2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u04"
+          ]
+        }
+      ]
+    },
+    "leave": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "leave1",
+          "speakerId": "B",
+          "unitRefs": [
+            "u08"
+          ]
+        },
+        {
+          "id": "leave2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u09"
+          ]
+        }
+      ]
+    },
+    "swap": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "swap1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u10"
+          ]
+        },
+        {
+          "id": "swap2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u11"
+          ]
+        }
+      ]
+    }
+  },
+  "sourceOrder": [
+    "meet",
+    "daily",
+    "leave",
+    "swap"
+  ],
+  "speakers": {
+    "A": {
+      "name": "พลอย"
+    },
+    "B": {
+      "name": "นก"
+    }
+  },
+  "units": {
+    "u01": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "สวัสดีค่ะ",
+          "reading": "sà-wàt-dii khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u02": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "เราชื่อพลอยค่ะ",
+          "reading": "rao chʉ̂ʉ phlɔɔi khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u03": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "คุณชื่ออะไรคะ",
+          "reading": "khun chʉ̂ʉ à-rai khá"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u04": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "สวัสดีครับ",
+          "reading": "sà-wàt-dii khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u05": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ผมชื่อนกครับ",
+          "reading": "phǒm chʉ̂ʉ nók khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u06": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ยินดีที่ได้รู้จักครับ",
+          "reading": "yin-dii thîi dâi rúu-càk khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u07": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ยินดีที่ได้รู้จักเช่นกันค่ะ",
+          "reading": "yin-dii thîi dâi rúu-càk chên-kan khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u08": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ไปก่อนนะครับ",
+          "reading": "pai kɔ̀ɔn ná khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u09": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "แล้วเจอกันค่ะ",
+          "reading": "lɛ́ɛo cəə kan khâ"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u10": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ไปก่อนนะคะ",
+          "reading": "pai kɔ̀ɔn ná khá"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u11": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "แล้วเจอกันครับ",
+          "reading": "lɛ́ɛo cəə kan khráp"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "title": "初次見面，也會日常打招呼",
+      "intro": "Ploy與Nok的自稱、禮貌句尾依各自角色學習。先讀初見對話，再對照誰先離開；原文保留泰語寫法，另有整句讀音提示。",
+      "goals": {
+        "greet": "初次見面時，先開口打招呼。",
+        "name": "介紹自己想使用的名字。",
+        "respond": "表達見面的喜悅，並回應對方。",
+        "ask": "問還不知道的名字，並聽懂回答。",
+        "daily": "分辨熟人相遇與道別情境，選擇合適短句。"
+      },
+      "sources": {
+        "meet": {
+          "title": "成人同輩初次交流",
+          "summary": "Ploy（พลอย）和Nok（นก）第一次參加交流活動。本課Ploy用เรา與ค่ะ／คะ；Nok用ผม與ครับ。"
+        },
+        "daily": {
+          "title": "下次在門口相遇",
+          "summary": "已經認識的Ploy與Nok在活動門口再碰面。"
+        },
+        "leave": {
+          "title": "Nok先離開",
+          "summary": "Nok先回家，Ploy還留在活動現場；兩人預期還會見面。"
+        },
+        "swap": {
+          "title": "換Ploy先走",
+          "summary": "另一天Ploy先離開，Nok留下來。"
+        }
+      },
+      "units": {
+        "u01": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u02": {
+          "meaning": "我叫Ploy。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u03": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u04": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u05": {
+          "meaning": "我叫Nok。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u06": {
+          "meaning": "很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u07": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u08": {
+          "meaning": "我先走了。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u09": {
+          "meaning": "下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u10": {
+          "meaning": "我先走了。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u11": {
+          "meaning": "下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      }
+    }
+  },
+  "teachingRefs": [
+    {
+      "id": "greet",
+      "entryId": "theme01-first-meeting-v1:th:greet",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "entryId": "theme01-first-meeting-v1:th:name",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "entryId": "theme01-first-meeting-v1:th:ask",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "entryId": "theme01-first-meeting-v1:th:respond",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "entryId": "theme01-first-meeting-v1:th:daily",
+      "sourceRefs": [
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u11"
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "entryId": "theme01-first-meeting-v1:th:words",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "lessonId": "theme01-first-meeting-v1:ja",
+  "targetLanguage": "ja",
+  "teachingLocales": [
+    "zh-Hant"
+  ],
+  "goalOrder": [
+    "greet",
+    "name",
+    "respond",
+    "ask",
+    "daily"
+  ],
+  "sources": {
+    "meet": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "meet1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u02"
+          ]
+        },
+        {
+          "id": "meet3",
+          "speakerId": "A",
+          "unitRefs": [
+            "u03"
+          ]
+        },
+        {
+          "id": "meet4",
+          "speakerId": "B",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet5",
+          "speakerId": "B",
+          "unitRefs": [
+            "u04"
+          ]
+        },
+        {
+          "id": "meet6",
+          "speakerId": "A",
+          "unitRefs": [
+            "u05"
+          ]
+        },
+        {
+          "id": "meet7",
+          "speakerId": "B",
+          "unitRefs": [
+            "u06"
+          ]
+        }
+      ]
+    },
+    "morning": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "morning1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u07"
+          ]
+        },
+        {
+          "id": "morning2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u07"
+          ]
+        }
+      ]
+    },
+    "day": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "day1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u08"
+          ]
+        },
+        {
+          "id": "day2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u08"
+          ]
+        }
+      ]
+    },
+    "evening": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "evening1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u09"
+          ]
+        },
+        {
+          "id": "evening2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u09"
+          ]
+        }
+      ]
+    },
+    "leave": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "leave1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u10"
+          ]
+        },
+        {
+          "id": "leave2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u11"
+          ]
+        }
+      ]
+    },
+    "night": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "night1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u12"
+          ]
+        },
+        {
+          "id": "night2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u12"
+          ]
+        }
+      ]
+    }
+  },
+  "sourceOrder": [
+    "meet",
+    "morning",
+    "day",
+    "evening",
+    "leave",
+    "night"
+  ],
+  "speakers": {
+    "A": {
+      "name": "ミナ"
+    },
+    "B": {
+      "name": "レン"
+    }
+  },
+  "units": {
+    "u01": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "はじめまして。",
+          "reading": "hajimemashite"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u02": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ミナです。",
+          "reading": "Mina desu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u03": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "お名前は？",
+          "reading": "o-namae wa"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u04": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "レンです。",
+          "reading": "Ren desu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u05": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "よろしくお願いします。",
+          "reading": "yoroshiku onegaishimasu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u06": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "こちらこそ、よろしくお願いします。",
+          "reading": "kochira koso, yoroshiku onegaishimasu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u07": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "おはようございます。",
+          "reading": "ohayō gozaimasu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u08": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "こんにちは。",
+          "reading": "konnichiwa"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u09": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "こんばんは。",
+          "reading": "konbanwa"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u10": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "じゃあ、また。",
+          "reading": "jā, mata"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u11": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "じゃあ、また。",
+          "reading": "jā, mata"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u12": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "おやすみなさい。",
+          "reading": "oyasuminasai"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "title": "初次見面，也會日常打招呼",
+      "intro": "先讀「第一次參加讀書會」，再看熟人相遇與道別的短場景。不需前課；名字槽、短句意思與讀音提示都在本課提供。",
+      "goals": {
+        "greet": "初次見面時，先開口打招呼。",
+        "name": "介紹自己想使用的名字。",
+        "respond": "表達見面的喜悅，並回應對方。",
+        "ask": "問還不知道的名字，並聽懂回答。",
+        "daily": "分辨熟人相遇與道別情境，選擇合適短句。"
+      },
+      "sources": {
+        "meet": {
+          "title": "第一次參加讀書會",
+          "summary": "活動開始前，ミナ與レン坐到同一桌。兩人還不知道彼此的名字。"
+        },
+        "morning": {
+          "title": "隔天早上再見面",
+          "summary": "隔天上午，在讀書會門口遇到昨天認識的人。"
+        },
+        "day": {
+          "title": "白天碰面",
+          "summary": "過了幾天，兩人在白天的活動現場碰面。"
+        },
+        "evening": {
+          "title": "晚上剛碰面",
+          "summary": "兩人晚上剛到活動現場；現在是打招呼，還沒有要回家。"
+        },
+        "leave": {
+          "title": "活動後各自回家",
+          "summary": "兩人準備各自回家，下次還會在讀書會見面。"
+        },
+        "night": {
+          "title": "準備休息",
+          "summary": "旅行時同住一處的兩位熟人，晚上各自回房睡覺前互道晚安。"
+        }
+      },
+      "units": {
+        "u01": {
+          "meaning": "初次見面。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u02": {
+          "meaning": "我是ミナ。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u03": {
+          "meaning": "您怎麼稱呼？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u04": {
+          "meaning": "我是レン。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u05": {
+          "meaning": "請多指教。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u06": {
+          "meaning": "我也請您多指教。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u07": {
+          "meaning": "早安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u08": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u09": {
+          "meaning": "晚上好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u10": {
+          "meaning": "那麼，下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u11": {
+          "meaning": "下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u12": {
+          "meaning": "晚安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      }
+    }
+  },
+  "teachingRefs": [
+    {
+      "id": "greet",
+      "entryId": "theme01-first-meeting-v1:ja:greet",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "entryId": "theme01-first-meeting-v1:ja:name",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "entryId": "theme01-first-meeting-v1:ja:ask",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "entryId": "theme01-first-meeting-v1:ja:respond",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "entryId": "theme01-first-meeting-v1:ja:daily",
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u11"
+        },
+        {
+          "unit": "u12"
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "entryId": "theme01-first-meeting-v1:ja:words",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u10"
+        },
+        {
+          "unit": "u11"
+        }
+      ]
+    }
+  ]
+}

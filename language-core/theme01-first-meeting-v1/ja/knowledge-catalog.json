@@ -1,0 +1,346 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "units": {
+    "x-greet-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "はじめまして。",
+          "reading": "hajimemashite"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "ユキです。",
+          "reading": "Yuki desu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-name-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "アキです。",
+          "reading": "Aki desu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-ask-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "お名前は？",
+          "reading": "o-namae wa"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-respond-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "こちらこそ、よろしくお願いします。",
+          "reading": "kochira koso, yoroshiku onegaishimasu"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-1": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "こんばんは。",
+          "reading": "konbanwa"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "x-daily-2": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "おやすみなさい。",
+          "reading": "oyasuminasai"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "units": {
+        "x-greet-1": {
+          "meaning": "初次見面。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-1": {
+          "meaning": "我是ユキ。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-name-2": {
+          "meaning": "我是アキ。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-ask-1": {
+          "meaning": "您怎麼稱呼？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-respond-1": {
+          "meaning": "我也請您多指教。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-1": {
+          "meaning": "晚上好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "x-daily-2": {
+          "meaning": "晚安。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      },
+      "examples": {
+        "ex-greet-1": {
+          "context": "工作坊第一次和同桌說話。"
+        },
+        "ex-name-1": {
+          "context": "另一位參加者介紹自己。"
+        },
+        "ex-name-2": {
+          "context": "用平常想讓人叫的名字報名。"
+        },
+        "ex-ask-1": {
+          "context": "初次見面，對方尚未告訴你名字。"
+        },
+        "ex-respond-1": {
+          "context": "對方剛向你說よろしくお願いします。"
+        },
+        "ex-daily-1": {
+          "context": "晚上第一次在活動現場碰到今天的夥伴。"
+        },
+        "ex-daily-2": {
+          "context": "睡前向同住的朋友道別。"
+        }
+      }
+    }
+  },
+  "entries": {
+    "theme01-first-meeting-v1:ja:greet": {
+      "id": "theme01-first-meeting-v1:ja:greet",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "初次見面：はじめまして",
+          "explanation": "はじめまして 是第一次與這個人見面、開始認識彼此時的開場。說完可以接自己的名字。",
+          "usage": "隔天再遇到同一個人，依時段改說 おはようございます、こんにちは 或 こんばんは。",
+          "limits": "本課把問候當成完整短句學習；不用先學它們的歷史構詞。"
+        }
+      },
+      "exampleRefs": [
+        "ex-greet-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ja:name": {
+      "id": "theme01-first-meeting-v1:ja:name",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "報名字：〔名字〕です",
+          "explanation": "把想使用的名字放在 です 前面：ミナ＋です → ミナです。對話已清楚是在自介時，通常可以省略「我」。です 提供禮貌語氣。",
+          "usage": "保留 です，換成自己的名字或暱稱即可；自稱時不在自己名字後加 さん。",
+          "limits": "です 不只用於名字；這一課先練姓名自介，沒有把它的用途限縮為自介。"
+        }
+      },
+      "exampleRefs": [
+        "ex-name-1",
+        "ex-name-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ja:ask": {
+      "id": "theme01-first-meeting-v1:ja:ask",
+      "kind": "grammar",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "問未知姓名：お名前は？",
+          "explanation": "名前（なまえ）是「名字」；お名前 是有禮貌的說法。お名前は？在自介情境詢問對方名字；這裡的 は 讀 wa。問完留時間讓對方回答。",
+          "usage": "先說自己的名字，再問 お名前は？；回答可用〔名字〕です。",
+          "limits": "レンさんは？要依前話題理解。若剛談職業，它是問「レン，你呢？」；不能一律翻成問名字。"
+        }
+      },
+      "exampleRefs": [
+        "ex-ask-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ja:respond": {
+      "id": "theme01-first-meeting-v1:ja:respond",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "致意與回應",
+          "explanation": "よろしくお願いします 在自介後表達希望好好相處的心意，這裡譯作「請多指教」。對方先說這句時，可以用 こちらこそ、よろしくお願いします 回應。",
+          "usage": "こちらこそ 帶出「我也有同樣的心意」；先辨認誰發起、誰回應，再練整句。",
+          "limits": "這不是逐字等同英語 Nice to meet you 的句子；本課聚焦初見自介後的用法。"
+        }
+      },
+      "exampleRefs": [
+        "ex-respond-1"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ja:daily": {
+      "id": "theme01-first-meeting-v1:ja:daily",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "相遇與離開：先看時段和動作",
+          "explanation": "早上見面用 おはようございます；白天用 こんにちは；晚上剛見面用 こんばんは。熟人分開、期待再見時可說 じゃあ、また。準備睡覺時說 おやすみなさい。",
+          "usage": "晚上好是「剛碰面」；晚安是「要休息」。不要只看中文都有「晚」就互換。こんにちは、こんばんは 最後的 は 讀 wa；はじめまして 開頭的 は 讀 ha。",
+          "limits": "本課給常用情境，不把道別說法限制成唯一正解；正式場合或不同關係會有其他選擇。"
+        }
+      },
+      "exampleRefs": [
+        "ex-daily-1",
+        "ex-daily-2"
+      ],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    },
+    "theme01-first-meeting-v1:ja:words": {
+      "id": "theme01-first-meeting-v1:ja:words",
+      "kind": "expression",
+      "status": "draft-candidate",
+      "localizations": {
+        "zh-Hant": {
+          "title": "本課詞語與讀音支援",
+          "explanation": "名字槽可以換：ミナ、レン、ユキ都是人名。名前（なまえ）＝名字；こちらこそ＝我才是／我也有同樣心意；また＝再、下次。先在完整句中理解。",
+          "usage": "讀音提示使用羅馬字：ō 是拉長的 o，jā 的 ā 要拉長。讀 お名前は 時，把最後的 は 讀作 wa。",
+          "limits": "羅馬字是入門輔助，不取代假名學習。讀音提示供跟讀；本課不評分發音。"
+        }
+      },
+      "exampleRefs": [],
+      "relatedRefs": [],
+      "provenance": {
+        "authoring": "Original project candidate; not source quotation",
+        "acceptedBinding": false,
+        "curriculumMapping": "external/unmapped"
+      }
+    }
+  },
+  "examples": {
+    "ex-greet-1": {
+      "unitRefs": [
+        "x-greet-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-1": {
+      "unitRefs": [
+        "x-name-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-name-2": {
+      "unitRefs": [
+        "x-name-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-ask-1": {
+      "unitRefs": [
+        "x-ask-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-respond-1": {
+      "unitRefs": [
+        "x-respond-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-1": {
+      "unitRefs": [
+        "x-daily-1"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    },
+    "ex-daily-2": {
+      "unitRefs": [
+        "x-daily-2"
+      ],
+      "presentation": {
+        "showContext": true
+      }
+    }
+  }
+}

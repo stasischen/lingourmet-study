@@ -1,0 +1,471 @@
+{
+  "prototypeVersion": 2,
+  "status": "draft-candidate",
+  "lessonId": "theme01-first-meeting-v1:ko",
+  "targetLanguage": "ko",
+  "teachingLocales": [
+    "zh-Hant"
+  ],
+  "goalOrder": [
+    "greet",
+    "name",
+    "respond",
+    "ask",
+    "daily"
+  ],
+  "sources": {
+    "meet": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "meet1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u02"
+          ]
+        },
+        {
+          "id": "meet3",
+          "speakerId": "A",
+          "unitRefs": [
+            "u03"
+          ]
+        },
+        {
+          "id": "meet4",
+          "speakerId": "B",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "meet5",
+          "speakerId": "B",
+          "unitRefs": [
+            "u04"
+          ]
+        },
+        {
+          "id": "meet6",
+          "speakerId": "A",
+          "unitRefs": [
+            "u05"
+          ]
+        },
+        {
+          "id": "meet7",
+          "speakerId": "B",
+          "unitRefs": [
+            "u06"
+          ]
+        }
+      ]
+    },
+    "daily": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "daily1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u01"
+          ]
+        },
+        {
+          "id": "daily2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u01"
+          ]
+        }
+      ]
+    },
+    "leave": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "leave1",
+          "speakerId": "B",
+          "unitRefs": [
+            "u07"
+          ]
+        },
+        {
+          "id": "leave2",
+          "speakerId": "A",
+          "unitRefs": [
+            "u08"
+          ]
+        }
+      ]
+    },
+    "again": {
+      "type": "dialogue",
+      "turns": [
+        {
+          "id": "again1",
+          "speakerId": "A",
+          "unitRefs": [
+            "u09"
+          ]
+        },
+        {
+          "id": "again2",
+          "speakerId": "B",
+          "unitRefs": [
+            "u09"
+          ]
+        }
+      ]
+    }
+  },
+  "sourceOrder": [
+    "meet",
+    "daily",
+    "leave",
+    "again"
+  ],
+  "speakers": {
+    "A": {
+      "name": "유나"
+    },
+    "B": {
+      "name": "김민준"
+    }
+  },
+  "units": {
+    "u01": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕하세요.",
+          "reading": "annyeonghaseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u02": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저는 유나예요.",
+          "reading": "jeoneun Yuna-yeyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u03": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "이름이 뭐예요?",
+          "reading": "ireumi mwoyeyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u04": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저는 김민준이에요.",
+          "reading": "jeoneun Gim Minjun-ieyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u05": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "만나서 반가워요.",
+          "reading": "mannaseo bangawoyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u06": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "저도 반가워요.",
+          "reading": "jeodo bangawoyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u07": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕히 계세요.",
+          "reading": "annyeonghi gyeseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u08": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "안녕히 가세요.",
+          "reading": "annyeonghi gaseyo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    },
+    "u09": {
+      "tokens": [
+        {
+          "id": "t1",
+          "text": "또 봐요.",
+          "reading": "tto bwayo"
+        }
+      ],
+      "chunks": [],
+      "spans": []
+    }
+  },
+  "localizations": {
+    "zh-Hant": {
+      "title": "初次見面，也會日常打招呼",
+      "intro": "先練一段成人同輩的禮貌姓名交流，再練「誰走、誰留」的道別。沒有前課要求；名字末音節、空格與固定短句在本課說明。",
+      "goals": {
+        "greet": "初次見面時，先開口打招呼。",
+        "name": "介紹自己想使用的名字。",
+        "respond": "表達見面的喜悅，並回應對方。",
+        "ask": "問還不知道的名字，並聽懂回答。",
+        "daily": "分辨熟人相遇與道別情境，選擇合適短句。"
+      },
+      "sources": {
+        "meet": {
+          "title": "活動開始前交換名字",
+          "summary": "成人同輩在語言交流活動同桌，初次見面。유나先介紹自己，再問另一位的名字。"
+        },
+        "daily": {
+          "title": "幾天後又碰面",
+          "summary": "已經認識的兩位成人在白天活動前再見面，仍用禮貌的語氣。"
+        },
+        "leave": {
+          "title": "一個人先走",
+          "summary": "김민준先回家；유나還留在教室收拾。看清楚誰離開、誰留下。"
+        },
+        "again": {
+          "title": "兩個人各自離開",
+          "summary": "另一天活動結束，兩人一起離開教室，在路口分開，下次還會再見。"
+        }
+      },
+      "units": {
+        "u01": {
+          "meaning": "你好。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u02": {
+          "meaning": "我是유나。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u03": {
+          "meaning": "你叫什麼名字？",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u04": {
+          "meaning": "我是김민준。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u05": {
+          "meaning": "很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u06": {
+          "meaning": "我也很高興認識你。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u07": {
+          "meaning": "再見。（對留下的人說）",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u08": {
+          "meaning": "再見，請慢走。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        },
+        "u09": {
+          "meaning": "下次見。",
+          "tokens": {},
+          "chunks": {},
+          "spans": {}
+        }
+      }
+    }
+  },
+  "teachingRefs": [
+    {
+      "id": "greet",
+      "entryId": "theme01-first-meeting-v1:ko:greet",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "entryId": "theme01-first-meeting-v1:ko:name",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "entryId": "theme01-first-meeting-v1:ko:ask",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "respond",
+      "entryId": "theme01-first-meeting-v1:ko:respond",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "entryId": "theme01-first-meeting-v1:ko:daily",
+      "sourceRefs": [
+        {
+          "unit": "u07"
+        },
+        {
+          "unit": "u08"
+        },
+        {
+          "unit": "u09"
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "entryId": "theme01-first-meeting-v1:ko:words",
+      "sourceRefs": [
+        {
+          "unit": "u01"
+        },
+        {
+          "unit": "u02"
+        },
+        {
+          "unit": "u03"
+        },
+        {
+          "unit": "u04"
+        },
+        {
+          "unit": "u05"
+        },
+        {
+          "unit": "u06"
+        },
+        {
+          "unit": "u09"
+        }
+      ]
+    }
+  ]
+}
