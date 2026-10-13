@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "units": [
+    {
+      "id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1",
+      "order": 1,
+      "level": "A1",
+      "title": {
+        "ja": "初対面と日常のあいさつ",
+        "zh_tw": "初次見面，也會日常打招呼"
+      },
+      "internal_only": true,
+      "review_status": "needs_review",
+      "is_verified": false
+    }
+  ]
+}

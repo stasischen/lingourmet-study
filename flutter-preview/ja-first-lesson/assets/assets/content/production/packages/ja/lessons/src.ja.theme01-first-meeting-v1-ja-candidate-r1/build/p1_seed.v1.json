@@ -1,0 +1,168 @@
+{
+  "p1_seed_tasks": [
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P01",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P01",
+      "ko_surface": "はじめまして。ミナです。",
+      "target_examples": [
+        "はじめまして。ミナです。"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "初次見面，你用ミナ這個名字。組成「初次見面。我是ミナ。」"
+      },
+      "chunks": [
+        "はじめまして。",
+        "ミナ",
+        "です。"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "先用はじめまして表示初見，再用名字＋です。這題固定使用ミナ；其他名字要在自由演練中替換。"
+      }
+    },
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P02",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P02",
+      "ko_surface": "ユキです。",
+      "target_examples": [
+        "ユキです。"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "你想讓對方叫你ユキ。組成姓名自介「我是ユキ。」"
+      },
+      "chunks": [
+        "ユキ",
+        "です。"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "名字在です之前；自稱不在自己名字後加さん。這題採用給定名字。"
+      }
+    },
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P03",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P03",
+      "ko_surface": "お名前は？",
+      "target_examples": [
+        "お名前は？"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "你已介紹自己，還不知道對方名字。組成「您怎麼稱呼？」"
+      },
+      "chunks": [
+        "お名前",
+        "は？"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "お名前是禮貌的「名字」；本句用は提示詢問的話題，讀作わ。"
+      }
+    },
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P04",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P04",
+      "ko_surface": "こちらこそ、よろしくお願いします。",
+      "target_examples": [
+        "こちらこそ、よろしくお願いします。"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "對方已說「請多指教」。把「我也請您多指教。」的回應排好。"
+      },
+      "chunks": [
+        "こちらこそ、",
+        "よろしく",
+        "お願いします。"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "こちらこそ回應對方的心意。這裡只練初見自介後的致意，不把整句譯成見面的喜悅。"
+      }
+    },
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P05",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P05",
+      "ko_surface": "おはようございます。",
+      "target_examples": [
+        "おはようございます。"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "隔天早上遇到昨天認識的人。組成有禮貌的「早安」。"
+      },
+      "chunks": [
+        "おはよう",
+        "ございます。"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "這是早上再相遇的禮貌招呼，無需重複初見用的はじめまして。"
+      }
+    },
+    {
+      "item_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:practice:P06",
+      "mastery_key": "src.ja.theme01-first-meeting-v1-ja-candidate-r1:local-practice:P06",
+      "ko_surface": "じゃあ、また。",
+      "target_examples": [
+        "じゃあ、また。"
+      ],
+      "target_examples_zh_tw": [],
+      "meaning_i18n": {
+        "zh_tw": "兩位熟人準備各自回家，下次還會見面。組成「那麼，下次見」。"
+      },
+      "chunks": [
+        "じゃあ、",
+        "また。"
+      ],
+      "distractors": [],
+      "prompt_i18n": {
+        "zh_tw": "依情境排列日文片語。"
+      },
+      "context_i18n": {
+        "ttsLanguage": "ja-JP",
+        "promptMode": "text"
+      },
+      "feedback_i18n": {
+        "zh_tw": "這是熟人間較輕鬆的道別；正式場合會有其他說法。本題只重排所提供的短句。"
+      }
+    }
+  ]
+}

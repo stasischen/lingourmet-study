@@ -1,0 +1,23 @@
+{
+  "lang": "ja",
+  "files": {},
+  "lessons": [
+    {
+      "lesson_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1",
+      "level_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1",
+      "unit_id": "src.ja.theme01-first-meeting-v1-ja-candidate-r1",
+      "lang": "ja",
+      "type": "dialogue",
+      "path": "assets/content/production/packages/ja/lessons/src.ja.theme01-first-meeting-v1-ja-candidate-r1/build/lesson_content.v1.json",
+      "title": {
+        "ja": "初対面と日常のあいさつ",
+        "zh_tw": "初次見面，也會日常打招呼"
+      },
+      "internal_only": true,
+      "review_status": "needs_review",
+      "is_verified": false
+    }
+  ],
+  "packages": {},
+  "preview_scope": "src.ja.theme01-first-meeting-v1-ja-candidate-r1"
+}
